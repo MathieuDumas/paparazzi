@@ -1,0 +1,350 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="230" ground_alt="130" lat0="48.510168" lon0="-71.646584" max_dist_from_home="2000" name="USC2013_Alma" qfu="310" security_height="100">
+
+<header>
+#include "subsystems/datalink/datalink.h"
+#include "subsystems/navigation/OSAMNav.h"
+</header>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||     START OF WAYPOINTS LIST    |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+   <waypoints>
+
+   <!--********************************-->
+   <!--            STANDART            -->
+   <!--********************************-->
+
+      <waypoint name="HOME"  lat="48.507881" lon="-71.636745"/>
+      <waypoint name="STDBY" lat="48.511816" lon="-71.645438"/>
+      <waypoint name="MOB"   lat="48.511338" lon="-71.656525"/>	
+      <waypoint name="8C"    lat="48.510598" lon="-71.645138"/>		
+      <waypoint name="82"    lat="48.512017" lon="-71.646968"/>	
+
+   <!--********************************-->
+   <!--          FLIGHT ZONE           -->
+   <!--********************************-->
+
+      <waypoint name="_FZ1A" lat="48.5113222" lon="-71.6519472"/>
+      <waypoint name="_FZ2A" lat="48.5188889" lon="-71.6494444"/>
+      <waypoint name="_FZ3A" lat="48.5138889" lon="-71.6205556"/>
+      <waypoint name="_FZ4A" lat="48.4927778" lon="-71.6294444"/>
+      <waypoint name="_FZ5A" lat="48.5074056" lon="-71.6474389"/>
+      <waypoint name="_FZ6A" lat="48.5097222" lon="-71.6461111"/>
+      
+      <waypoint name="_FZ3B" lat="48.503373"	lon="-71.624937"/>	
+      <waypoint name="_FZ4B" lat="48.506412"	lon="-71.623757"/>		
+      <waypoint name="_FZ6B" lat="48.511099"	lon="-71.645200"/>		
+            
+   <!--********************************-->
+   <!--          BUFFFER ZONE          -->
+   <!--********************************-->
+   
+      <!--<waypoint name="_BZ1A" lat="48.511146" lon="-71.651328"/>
+      <waypoint name="_BZ2A" lat="48.518405" lon="-71.649000"/>
+      <waypoint name="_BZ3A" lat="48.513652" lon="-71.621435"/>
+      <waypoint name="_BZ4A" lat="48.493706" lon="-71.629730"/>	
+      <waypoint name="_BZ5A" lat="48.507422" lon="-71.646763"/>
+      <waypoint name="_BZ6A" lat="48.509555" lon="-71.645487"/>	-->	
+
+   <!--********************************-->
+   <!--        SEARCH PATTERN          -->
+   <!--********************************-->
+      
+      <waypoint name="SR_0" lat="48.511993" lon="-71.650191"/>	
+      <waypoint name="SR_1" lat="48.517564" lon="-71.648205"/>	
+      
+      <waypoint name="SR_2" lat="48.513111" lon="-71.622584"/>	
+      <waypoint name="SR_3" lat="48.501115" lon="-71.627681"/>
+      <waypoint name="SR_4" lat="48.501488" lon="-71.629772"/>	
+      <waypoint name="SR_5" lat="48.513049" lon="-71.624843"/>	
+      
+      <waypoint name="SR_6" lat="48.513422" lon="-71.626934"/>	
+      <waypoint name="SR_7" lat="48.501861" lon="-71.631863"/>	
+      <waypoint name="SR_8" lat="48.502234" lon="-71.633954"/>	
+      <waypoint name="SR_9" lat="48.513795" lon="-71.629025"/>	
+      
+      <waypoint name="SR_10" lat="48.514168" lon="-71.631116"/>	
+      <waypoint name="SR_11" lat="48.503223" lon="-71.635807"/>	
+      <waypoint name="SR_12" lat="48.503596" lon="-71.637898"/>	
+      <waypoint name="SR_13" lat="48.514541" lon="-71.633207"/>	
+      
+      <waypoint name="SR_14" lat="48.514914" lon="-71.635298"/>	
+      <waypoint name="SR_15" lat="48.504644" lon="-71.639714"/>	
+      <waypoint name="SR_16" lat="48.505017" lon="-71.641805"/>	
+      <waypoint name="SR_17" lat="48.515287" lon="-71.637390"/>	
+      
+      <waypoint name="SR_18" lat="48.515660" lon="-71.639482"/>	
+      <waypoint name="SR_19" lat="48.506923" lon="-71.643139"/>	
+      <waypoint name="SR_20" lat="48.507296" lon="-71.645230"/>	
+      <waypoint name="SR_21" lat="48.516033" lon="-71.641574"/>	
+      
+      <waypoint name="SR_22" lat="48.516406" lon="-71.643666"/>	
+      <waypoint name="SR_23" lat="48.511180" lon="-71.645964"/>	
+      <waypoint name="SR_24" lat="48.511553" lon="-71.648055"/>	
+      <waypoint name="SR_25" lat="48.516779" lon="-71.645758"/>	
+      
+      <waypoint name="SR_26" lat="48.517152" lon="-71.647850"/>	
+      <waypoint name="SR_27" lat="48.511889" lon="-71.649431"/>	
+      <waypoint name="SR_28" lat="48.507425" lon="-71.634442"/>   	
+
+   <!--********************************-->
+   <!--            TAKE OFF            -->
+   <!--********************************-->
+
+     <!-- <waypoint name="Climb" lat="49.909719" lon="-98.273151"/> -->	
+
+   <!--********************************-->
+   <!--            LANDING             -->
+   <!--********************************-->
+	
+      <waypoint name="L1"      lat="48.510446" lon="-71.656551" height="100"/>		
+      <waypoint name="L2"      lat="48.509687" lon="-71.656597" height="80"/>		
+      <waypoint name="L3"      lat="48.508746" lon="-71.656505" height="50"/>			
+      <waypoint name="AF"      lat="48.507774" lon="-71.656367" height="20"/>	
+      <waypoint name="TD"      lat="48.507076" lon="-71.656505" height="15"/>	
+   </waypoints>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||      START OF SECTORS LIST     |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+   <sectors>
+   
+   <!--********************************-->
+   <!--          FLIGHT ZONE           -->
+   <!--********************************-->
+
+      <sector name = "Flight_Zone1" color="red">
+        <corner name ="_FZ1A"/>
+        <corner name ="_FZ2A"/>
+        <corner name ="_FZ3A"/>
+        <corner name ="_FZ3B"/>
+      </sector>
+      
+      <sector name = "Flight_Zone2" color="red">
+        <corner name ="_FZ4B"/>
+        <corner name ="_FZ4A"/>
+        <corner name ="_FZ5A"/>
+        <corner name ="_FZ6B"/>
+      </sector>
+      
+      <!--<sector name = "Search" color="green">
+        <corner name ="SR_0"/>
+        <corner name ="SR_1"/>
+        <corner name ="SR_2"/>
+        <corner name ="SR_3"/>
+        <corner name ="SR_4"/>
+        <corner name ="SR_5"/>
+        <corner name ="SR_6"/>
+        <corner name ="SR_7"/>
+        <corner name ="SR_8"/>
+        <corner name ="SR_9"/>
+        <corner name ="SR_10"/>
+        <corner name ="SR_11"/>
+        <corner name ="SR_12"/>
+        <corner name ="SR_13"/>
+        <corner name ="SR_14"/>
+        <corner name ="SR_15"/>
+        <corner name ="SR_16"/>
+        <corner name ="SR_17"/>
+        <corner name ="SR_18"/>
+        <corner name ="SR_19"/>
+        <corner name ="SR_20"/>
+        <corner name ="SR_21"/>
+        <corner name ="SR_22"/>
+        <corner name ="SR_23"/>
+        <corner name ="SR_24"/>
+        <corner name ="SR_25"/>
+        <corner name ="SR_26"/>
+        <corner name ="SR_27"/>
+        <corner name ="SR_28"/>
+      </sector>-->
+
+   </sectors>
+
+   <exceptions>
+    <exception cond="datalink_time > 10 && 120 > datalink_time && GpsFixValid() && (InsideFlight_Zone1(estimator_x, estimator_y) || InsideFlight_Zone2(estimator_x, estimator_y))" deroute="Standby"/>
+    <exception cond="datalink_time > 120" deroute="KILL"/>
+		<exception cond="!GpsFixValid() && radio_control.status == RC_REALLY_LOST" deroute="KILL"/>
+    <exception cond="!(InsideFlight_Zone1(estimator_x, estimator_y) || InsideFlight_Zone2(estimator_x, estimator_y)) && GpsFixValid() && estimator_flight_time" deroute="Standby"/>
+    <exception cond="!(InsideFlight_Zone1(estimator_x, estimator_y) || InsideFlight_Zone2(estimator_x, estimator_y)) && datalink_time > 5" deroute="KILL"/>
+   </exceptions>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||      START OF BLOCKS LIST      |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+   <blocks>
+
+   <!--********************************-->
+   <!--              INIT              -->
+   <!--********************************-->
+
+      <block name="Wait GPS">
+         <set value="1" var="kill_throttle"/>
+         <while cond="!GpsFixValid()"/>
+      </block>
+
+      <block name="Holding point">
+         <set value="1" var="kill_throttle"/>
+         <attitude roll="0" throttle="0" vmode="throttle"/>
+      </block>
+
+   <!--********************************-->
+   <!--            TAKEOFF             -->
+   <!--********************************-->
+      
+      <block name="Takeoff 100%" strip_button="Takeoff" strip_icon="takeoff.png">
+         <set value="0" var="kill_throttle"/>
+         <set value="0" var="estimator_flight_time"/>
+      </block>
+      
+   <!--********************************-->
+   <!--            STANDBY             -->
+   <!--********************************-->
+
+      <block name="Standby" strip_button="Standby" strip_icon="home.png">
+         <circle radius="nav_radius" wp="STDBY"/>
+      </block>
+      
+      <block name="Figure 8">
+        <eight center="8C" turn_around="82" radius="nav_radius"/>
+      </block>
+
+
+   <!--********************************-->
+   <!--        Turn around here        -->
+   <!--********************************-->
+
+      <block name="MOB" strip_button="Turn around here" strip_icon="mob.png">
+         <call fun="NavSetWaypointHere(WP_MOB)"/>
+         <circle radius="nav_radius" wp="MOB"/>
+      </block>
+
+   <!--********************************-->
+   <!--         SEARCH PATTERN         -->
+   <!--********************************-->
+     
+      <block name="StartSearch">
+        <go wp="SR_1" from="SR_0" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search1-2">
+        <go wp="SR_2" from="SR_1" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search2-4">
+        <go wp="SR_3" from="SR_2" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_4" from="SR_3" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search4-6">
+        <go wp="SR_5" from="SR_4" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_6" from="SR_5" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search6-8">
+        <go wp="SR_7" from="SR_6" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_8" from="SR_7" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search8-10">
+        <go wp="SR_9" from="SR_8" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_10" from="SR_9" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search10-12">
+        <go wp="SR_11" from="SR_10" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_12" from="SR_11" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search12-14">
+        <go wp="SR_13" from="SR_12" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_14" from="SR_13" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search14-16">
+        <go wp="SR_15" from="SR_14" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_16" from="SR_15" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search16-18">
+        <go wp="SR_17" from="SR_16" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_18" from="SR_17" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search18-20">
+        <go wp="SR_19" from="SR_19" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_20" from="SR_19" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search20-22">
+        <go wp="SR_21" from="SR_20" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_22" from="SR_21" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search22-24">
+        <go wp="SR_23" from="SR_22" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_24" from="SR_23" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search24-26">
+        <go wp="SR_25" from="SR_24" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_26" from="SR_25" hmode="route" approaching_time="route_ap_time"/>
+      </block>
+      
+      <block name="Search26-28">
+        <go wp="SR_27" from="SR_26" hmode="route" approaching_time="route_ap_time"/>
+        <go wp="SR_28" from="SR_27" hmode="route" approaching_time="route_ap_time"/>
+        <deroute block="Standby"/>
+      </block>
+      
+
+   <!--********************************-->
+   <!--             LANDING            -->
+   <!--********************************-->
+
+      <block name="Landing route" strip_button="Land" group="landing">
+        <go wp="L1"/>
+		    <go approaching_time="route_ap_time" from="L1" hmode="route" vmode="glide" wp="L2"/>
+		    <go approaching_time="route_ap_time" from="L2" hmode="route" vmode="glide" wp="L3"/>
+		    <deroute block="Land"/>
+      </block>
+
+      <block name="Land">
+		    <go approaching_time="1" from="L3" hmode="route" vmode="glide" wp="AF"/>
+		    <deroute block="Final"/>
+      </block>
+
+      <block name="Final">
+        <set value="1" var="kill_throttle"/>
+        <go from="AF" hmode="route" vmode="glide" wp="TD"/>
+        <while cond="TRUE"/>
+      </block>
+      
+      <block name="Abort" strip_button="Abort" group="landing">
+        <set value="0" var="kill_throttle"/>
+        <attitude roll="0" vmode="throttle" throttle="1.0" pitch="30" until="stage_time>5"/>
+        <deroute block="Standby"/>
+      </block>
+      
+      <block name="KILL" strip_button="Kill" group="Failsafe">
+	      <while cond="TRUE">
+	         <set value="1" var="kill_throttle"/>
+	         <set value="TRUE" var="h_ctl_disabled"/>
+      	         <set value="(-MAX_PPRZ)" var="h_ctl_aileron_setpoint"/>
+                 <set value="(MAX_PPRZ)" var="h_ctl_elevator_setpoint"/>
+	      </while>
+	    </block>
+	    
+	    <block name="Save" strip_button="Save" group="Failsafe">
+	      <set value="0" var="kill_throttle"/>
+	      <set value="FALSE" var="h_ctl_disabled"/>
+	      <deroute block="Holding point"/>
+	    </block>
+
+     </blocks>
+</flight_plan>

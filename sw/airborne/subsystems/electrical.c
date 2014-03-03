@@ -39,6 +39,7 @@ static struct {
 void electrical_init(void) {
   electrical.vsupply = 0;
   electrical.current = 0;
+  electrical.adc_battery = 0;
 
   adc_buf_channel(ADC_CHANNEL_VSUPPLY, &electrical_priv.vsupply_adc_buf, DEFAULT_AV_NB_SAMPLE);
 #ifdef ADC_CHANNEL_CURRENT
@@ -52,12 +53,15 @@ void electrical_init(void) {
 
 void electrical_periodic(void) {
 #ifndef SITL
-  electrical.vsupply = VoltageOfAdc((10*(electrical_priv.vsupply_adc_buf.sum/electrical_priv.vsupply_adc_buf.av_nb_sample)));
+  electrical.adc_battery = electrical_priv.vsupply_adc_buf.sum/electrical_priv.vsupply_adc_buf.av_nb_sample;
+  electrical.vsupply     = 10*(float)VoltageOfAdc((float)electrical.adc_battery);
 #endif
 
 #ifdef ADC_CHANNEL_CURRENT
 #ifndef SITL
   electrical.current = MilliAmpereOfAdc((electrical_priv.current_adc_buf.sum/electrical_priv.current_adc_buf.av_nb_sample));
+  /* Prevent an overflow on high current spikes when using the motor brake */
+  BoundAbs(electrical.current, 65000);
 #endif
 #else
 #if defined MILLIAMP_AT_FULL_THROTTLE && defined COMMAND_THROTTLE

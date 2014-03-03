@@ -1,0 +1,41 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.section	.text.startup.main,"ax",%progbits
+  13              		.align	2
+  14              		.global	main
+  16              	main:
+  17              		@ Function supports interworking.
+  18              		@ Volatile: function does not return.
+  19              		@ args = 0, pretend = 0, frame = 0
+  20              		@ frame_needed = 0, uses_anonymous_args = 0
+  21 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  22 0004 FEFFFFEB 		bl	init_fbw
+  23 0008 FEFFFFEB 		bl	init_ap
+  24              	.L2:
+  25 000c FEFFFFEB 		bl	handle_periodic_tasks_fbw
+  26 0010 FEFFFFEB 		bl	handle_periodic_tasks_ap
+  27 0014 FEFFFFEB 		bl	event_task_fbw
+  28 0018 FEFFFFEB 		bl	event_task_ap
+  29 001c FAFFFFEA 		b	.L2
+  31              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccZJB7sq.s:13     .text.startup.main:00000000 $a
+     /tmp/ccZJB7sq.s:16     .text.startup.main:00000000 main
+
+UNDEFINED SYMBOLS
+init_fbw
+init_ap
+handle_periodic_tasks_fbw
+handle_periodic_tasks_ap
+event_task_fbw
+event_task_ap

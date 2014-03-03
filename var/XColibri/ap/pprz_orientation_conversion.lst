@@ -3603,23 +3603,23 @@
  3615              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 pprz_orientation_conversion.c
-     /tmp/ccVcCcre.s:20     .text.orientationCalcQuat_i:00000000 $a
-     /tmp/ccVcCcre.s:23     .text.orientationCalcQuat_i:00000000 orientationCalcQuat_i
-     /tmp/ccVcCcre.s:1203   .text.orientationCalcQuat_i:00001020 $d
-     /tmp/ccVcCcre.s:1213   .text.orientationCalcRMat_i:00000000 $a
-     /tmp/ccVcCcre.s:1216   .text.orientationCalcRMat_i:00000000 orientationCalcRMat_i
-     /tmp/ccVcCcre.s:2018   .text.orientationCalcRMat_i:00000ad0 $d
-     /tmp/ccVcCcre.s:2028   .text.orientationCalcEulers_i:00000000 $a
-     /tmp/ccVcCcre.s:2031   .text.orientationCalcEulers_i:00000000 orientationCalcEulers_i
-     /tmp/ccVcCcre.s:2371   .text.orientationCalcEulers_i:00000510 $d
-     /tmp/ccVcCcre.s:2379   .text.orientationCalcQuat_f:00000000 $a
-     /tmp/ccVcCcre.s:2382   .text.orientationCalcQuat_f:00000000 orientationCalcQuat_f
-     /tmp/ccVcCcre.s:2818   .text.orientationCalcRMat_f:00000000 $a
-     /tmp/ccVcCcre.s:2821   .text.orientationCalcRMat_f:00000000 orientationCalcRMat_f
-     /tmp/ccVcCcre.s:3353   .text.orientationCalcRMat_f:00000810 $d
-     /tmp/ccVcCcre.s:3358   .text.orientationCalcEulers_f:00000000 $a
-     /tmp/ccVcCcre.s:3361   .text.orientationCalcEulers_f:00000000 orientationCalcEulers_f
-     /tmp/ccVcCcre.s:3613   .text.orientationCalcEulers_f:000003b0 $d
+     /tmp/ccMhSFb0.s:20     .text.orientationCalcQuat_i:00000000 $a
+     /tmp/ccMhSFb0.s:23     .text.orientationCalcQuat_i:00000000 orientationCalcQuat_i
+     /tmp/ccMhSFb0.s:1203   .text.orientationCalcQuat_i:00001020 $d
+     /tmp/ccMhSFb0.s:1213   .text.orientationCalcRMat_i:00000000 $a
+     /tmp/ccMhSFb0.s:1216   .text.orientationCalcRMat_i:00000000 orientationCalcRMat_i
+     /tmp/ccMhSFb0.s:2018   .text.orientationCalcRMat_i:00000ad0 $d
+     /tmp/ccMhSFb0.s:2028   .text.orientationCalcEulers_i:00000000 $a
+     /tmp/ccMhSFb0.s:2031   .text.orientationCalcEulers_i:00000000 orientationCalcEulers_i
+     /tmp/ccMhSFb0.s:2371   .text.orientationCalcEulers_i:00000510 $d
+     /tmp/ccMhSFb0.s:2379   .text.orientationCalcQuat_f:00000000 $a
+     /tmp/ccMhSFb0.s:2382   .text.orientationCalcQuat_f:00000000 orientationCalcQuat_f
+     /tmp/ccMhSFb0.s:2818   .text.orientationCalcRMat_f:00000000 $a
+     /tmp/ccMhSFb0.s:2821   .text.orientationCalcRMat_f:00000000 orientationCalcRMat_f
+     /tmp/ccMhSFb0.s:3353   .text.orientationCalcRMat_f:00000810 $d
+     /tmp/ccMhSFb0.s:3358   .text.orientationCalcEulers_f:00000000 $a
+     /tmp/ccMhSFb0.s:3361   .text.orientationCalcEulers_f:00000000 orientationCalcEulers_f
+     /tmp/ccMhSFb0.s:3613   .text.orientationCalcEulers_f:000003b0 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fmul

@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/airframes/examples/microjet.xml */
+/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/airframes/examples/microjet.xml */
 /* Please DO NOT EDIT */
 
 #ifndef AIRFRAME_H

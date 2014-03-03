@@ -14,7 +14,6 @@ $(TARGET).ARCHDIR = $(ARCH)
 # not needed?
 $(TARGET).OOCD_INTERFACE=flossjtag
 #$(TARGET).OOCD_INTERFACE=jtagkey-tiny
-$(TARGET).LDSCRIPT=$(SRC_ARCH)/lisa-m.ld
 
 # -----------------------------------------------------------------------
 
@@ -26,7 +25,7 @@ endif
 
 ifndef NO_LUFTBOOT
 $(TARGET).CFLAGS+=-DLUFTBOOT
-$(TARGET).LDFLAGS+=-Wl,-Ttext=0x8002000
+$(TARGET).LDSCRIPT = $(SRC_ARCH)/lisa_m_2.0_luftboot.ld
 endif
 
 #
@@ -73,10 +72,10 @@ endif
 ifndef MODEM_PORT
 MODEM_PORT=UART2
 endif
-
 ifndef MODEM_BAUD
 MODEM_BAUD=B57600
 endif
+
 
 ifndef GPS_PORT
 GPS_PORT=UART3
@@ -102,3 +101,4 @@ endif
 ifndef ADC_IR_NB_SAMPLES
 ADC_IR_NB_SAMPLES = 16
 endif
+

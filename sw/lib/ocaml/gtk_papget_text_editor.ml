@@ -20,9 +20,5 @@ class table_text_editor ?(file="/tmp/gtk_papget_text_editor.ml_widgets.glade") ?
       new GEdit.spin_button (GtkEdit.SpinButton.cast
         (Glade.get_widget_msg ~name:"spinbutton_size" ~info:"GtkSpinButton" xmldata))
     method spinbutton_size = spinbutton_size
-    val comboboxentry_color =
-      new GEdit.combo_box_entry (GtkEdit.ComboBoxEntry.cast
-        (Glade.get_widget_msg ~name:"comboboxentry_color" ~info:"GtkComboBoxEntry" xmldata))
-    method comboboxentry_color = comboboxentry_color
     method check_widgets () = ()
   end

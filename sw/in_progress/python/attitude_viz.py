@@ -13,8 +13,6 @@ import getopt
 
 import pygame
 import time
-import platform
-import os
 
 _NAME = 'attitude_viz'
 
@@ -52,8 +50,6 @@ class Visualization:
     self.airspeed = 0.0
     self.display_list = None
     self.display_dirty = True
-    self.rotate_theta = parent.rotate_theta
-
     for message_name, index, name, bfp in VEHICLE_QUATS:
       self.quats.append(TelemetryQuat(message_name, index, name, bfp))
     for message_name, index, name, offset, scale, max in BAR_VALUES:
@@ -131,8 +127,7 @@ class Visualization:
     glColor3f(0.0, 0.0, 0.0)
     glTranslate(-wingspan, -0.2, thickness + 0.01)
     glScale(0.004, 0.004, 0.004)
-    for c in name:
-        glutStrokeCharacter(GLUT_STROKE_ROMAN, ord(c))
+    glutStrokeString(GLUT_STROKE_ROMAN, name)
     glPopMatrix()
 
     glPushMatrix()
@@ -143,8 +138,7 @@ class Visualization:
     glTranslate(wingspan, -0.2, -0.01 - thickness)
     glScale(0.004, 0.004, 0.004)
     glRotate(180, 0, 1, 0)
-    for c in name:
-        glutStrokeCharacter(GLUT_STROKE_ROMAN, ord(c))
+    glutStrokeString(GLUT_STROKE_ROMAN, name)
     glPopMatrix()
 
     if self.display_list is None:
@@ -194,8 +188,7 @@ class Visualization:
     glColor3f(0, 0, 0)
     glTranslate(-bar_length, -0.09, 0.02)
     glScale(0.0015, 0.0015, 0.0015)
-    for c in name:
-        glutStrokeCharacter(GLUT_STROKE_ROMAN, ord(c))
+    glutStrokeString(GLUT_STROKE_ROMAN, name)
     glPopMatrix()
     glColor3f(0.92, 0.92, 0.92)
     glPushMatrix()
@@ -229,8 +222,7 @@ class Visualization:
       try:
         scaled_quat = [telemetry_quat.qi * telemetry_quat.scale, telemetry_quat.qx * telemetry_quat.scale, telemetry_quat.qy * telemetry_quat.scale, telemetry_quat.qz * telemetry_quat.scale]
         glRotate(360 * math.acos(scaled_quat[0] ) / math.pi, scaled_quat[2], -scaled_quat[3], -scaled_quat[1])
-        glRotate(self.rotate_theta, 1, 0, 0)
-
+        glRotate(-90, 1, 0, 0)
         self.DrawVehicle(telemetry_quat.name)
       except Exception:
         raise Exception
@@ -240,8 +232,7 @@ class Visualization:
     glPopMatrix()
 
 class Visualizer:
-  def __init__(self, rotate_theta):
-    self.rotate_theta = rotate_theta
+  def __init__(self):
     self.visualization = Visualization(self)
 
     # listen to Ivy
@@ -253,13 +244,7 @@ class Visualizer:
       lambda x, z: z
     )
 
-    if os.getenv('IVY_BUS') != None:
-      IvyStart(os.getenv('IVY_BUS'))
-    else:
-      if platform.system() == 'Darwin':
-        IvyStart("224.255.255.255:2010")
-      else:
-        IvyStart()
+    IvyStart("")
 
     # list of all message names
     messages = []
@@ -330,25 +315,21 @@ def run():
   VEHICLE_QUATS = [ ["AHRS_REF_QUAT", 6, "Estimate", True], ["AHRS_REF_QUAT", 2, "Reference", True]]
   BAR_VALUES = [ ["ROTORCRAFT_RADIO_CONTROL", 5, "Throttle (%%) %i", 0, 100, 100] ]
   window_title = "Attitude_Viz"
-  rotate_theta = -90
   try:
-    opts, args = getopt.getopt(sys.argv[1:], "t:r:", ["title", "rotate_theta"])
+    opts, args = getopt.getopt(sys.argv[1:], "t:", ["title"])
     for o, a in opts:
       if o in ("-t", "--title"):
         window_title = a
-      if o in ("-r", "--rotate_theta"):
-        rotate_theta = int(a)
   except getopt.error as msg:
     print(msg)
     print("""usage:
 -t, --title                   set window title
--r, --rotate_theta           rotate the quaternion by n degrees over the pitch axis (default: -90)
 """)
   pygame.init()
   screen = pygame.display.set_mode(SCREEN_SIZE, pygame.OPENGL|pygame.DOUBLEBUF)
   #resize(*SCREEN_SIZE)
   init()
-  visualizer = Visualizer(rotate_theta)
+  visualizer = Visualizer()
 
   try:
     while True:

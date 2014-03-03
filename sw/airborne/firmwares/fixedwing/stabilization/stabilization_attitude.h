@@ -36,6 +36,8 @@
 #include "paparazzi.h"
 #include "generated/airframe.h"
 
+extern uint8_t route_ap_time;
+
 /* outer loop parameters */
 extern float h_ctl_course_setpoint; /* rad, CW/north */
 extern float h_ctl_course_pre_bank;
@@ -99,5 +101,9 @@ extern void h_ctl_attitude_loop ( void );
 
 extern float h_ctl_roll_attitude_gain;
 extern float h_ctl_roll_rate_gain;
+
+#ifdef FLAPS
+extern float flaps_setpoint;
+#endif
 
 #endif /* FW_H_CTL_H */

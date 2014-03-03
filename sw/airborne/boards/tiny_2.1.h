@@ -86,23 +86,43 @@
 #define Set_GPS_RESET_Pin_LOW() LED_ON(GPS_RESET)
 #define Open_GPS_RESET_Pin() ClearBit(LED_DIR(GPS_RESET), LED_PIN(GPS_RESET))
 
-/* P0.5 aka MAT0.1  */
-#define SERVO_CLOCK_PIN  5
-#define SERVO_CLOCK_PINSEL PINSEL0
-#define SERVO_CLOCK_PINSEL_VAL 0x02
-#define SERVO_CLOCK_PINSEL_BIT 10
-/* p1.20          */
-#define SERVO_RESET_PIN 20
+#ifndef JOHN_AP_2012
+  /* P0.5 aka MAT0.1  */
+  #define SERVO_CLOCK_PIN  5
+  #define SERVO_CLOCK_PINSEL PINSEL0
+  #define SERVO_CLOCK_PINSEL_VAL 0x02
+  #define SERVO_CLOCK_PINSEL_BIT 10
+  /* p1.20          */
+  #define SERVO_RESET_PIN 20
 
-/* PPM : rc rx on P0.6*/
-#define PPM_PINSEL PINSEL0
-#define PPM_PINSEL_VAL 0x02
-#define PPM_PINSEL_BIT 12
-#define PPM_CRI TIR_CR2I
-#define PPM_CCR_CRF TCCR_CR2_F
-#define PPM_CCR_CRR TCCR_CR2_R
-#define PPM_CCR_CRI TCCR_CR2_I
-#define PPM_CR T0CR2
+  /* PPM : rc rx on P0.6*/
+  #define PPM_PINSEL PINSEL0
+  #define PPM_PINSEL_VAL 0x02
+  #define PPM_PINSEL_BIT 12
+  #define PPM_CRI TIR_CR2I
+  #define PPM_CCR_CRF TCCR_CR2_F
+  #define PPM_CCR_CRR TCCR_CR2_R
+  #define PPM_CCR_CRI TCCR_CR2_I
+  #define PPM_CR T0CR2
+#else
+  /* P0.5 aka MAT0.1  */
+  #define SERVO_CLOCK_PIN  29
+  #define SERVO_CLOCK_PINSEL PINSEL1
+  #define SERVO_CLOCK_PINSEL_VAL 0x03
+  #define SERVO_CLOCK_PINSEL_BIT 26
+  /* p1.20          */
+  #define SERVO_RESET_PIN 20
+
+  /* PPM : rc rx on P0.6*/
+  #define PPM_PINSEL PINSEL1
+  #define PPM_PINSEL_VAL 0x02
+  #define PPM_PINSEL_BIT 24
+  #define PPM_CRI TIR_CR2I
+  #define PPM_CCR_CRF TCCR_CR2_F
+  #define PPM_CCR_CRR TCCR_CR2_R
+  #define PPM_CCR_CRI TCCR_CR2_I
+  #define PPM_CR T0CR2
+#endif
 
 /* ADC */
 

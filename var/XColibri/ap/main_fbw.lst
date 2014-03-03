@@ -1604,38 +1604,38 @@
  1628              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 main_fbw.c
-     /tmp/ccf7gNqR.s:13     .text.inter_mcu_fill_fbw_state:00000000 $a
-     /tmp/ccf7gNqR.s:15     .text.inter_mcu_fill_fbw_state:00000000 inter_mcu_fill_fbw_state
-     /tmp/ccf7gNqR.s:68     .text.inter_mcu_fill_fbw_state:000000b4 $d
+     /tmp/cc0lJanC.s:13     .text.inter_mcu_fill_fbw_state:00000000 $a
+     /tmp/cc0lJanC.s:15     .text.inter_mcu_fill_fbw_state:00000000 inter_mcu_fill_fbw_state
+     /tmp/cc0lJanC.s:68     .text.inter_mcu_fill_fbw_state:000000b4 $d
                             *COM*:00000001 fbw_mode
-     /tmp/ccf7gNqR.s:75     .text.init_fbw:00000000 $a
-     /tmp/ccf7gNqR.s:78     .text.init_fbw:00000000 init_fbw
-     /tmp/ccf7gNqR.s:140    .text.init_fbw:000000dc $d
+     /tmp/cc0lJanC.s:75     .text.init_fbw:00000000 $a
+     /tmp/cc0lJanC.s:78     .text.init_fbw:00000000 init_fbw
+     /tmp/cc0lJanC.s:140    .text.init_fbw:000000dc $d
                             *COM*:00000001 fbw_periodic_tid
                             *COM*:00000001 electrical_tid
-     /tmp/ccf7gNqR.s:162    .text.event_task_fbw:00000000 $a
-     /tmp/ccf7gNqR.s:165    .text.event_task_fbw:00000000 event_task_fbw
-     /tmp/ccf7gNqR.s:623    .text.event_task_fbw:000006bc $d
-     /tmp/ccf7gNqR.s:657    .text.periodic_task_fbw:00000000 $a
-     /tmp/ccf7gNqR.s:660    .text.periodic_task_fbw:00000000 periodic_task_fbw
-     /tmp/ccf7gNqR.s:1515   .text.periodic_task_fbw:00000ce4 $d
-     /tmp/ccf7gNqR.s:1539   .text.handle_periodic_tasks_fbw:00000000 $a
-     /tmp/ccf7gNqR.s:1542   .text.handle_periodic_tasks_fbw:00000000 handle_periodic_tasks_fbw
-     /tmp/ccf7gNqR.s:1576   .text.handle_periodic_tasks_fbw:00000064 $d
-     /tmp/ccf7gNqR.s:1613   .bss.fbw_new_actuators:00000000 fbw_new_actuators
-     /tmp/ccf7gNqR.s:1585   .bss.i300.2997:00000000 $d
-     /tmp/ccf7gNqR.s:1589   .bss.i300.2997:00000000 i300.2997
-     /tmp/ccf7gNqR.s:1595   .bss.i120.2970:00000000 i120.2970
-     /tmp/ccf7gNqR.s:1596   .bss.i120.2970:00000000 $d
-     /tmp/ccf7gNqR.s:1601   .bss.i60.2996:00000000 i60.2996
-     /tmp/ccf7gNqR.s:1602   .bss.i60.2996:00000000 $d
-     /tmp/ccf7gNqR.s:1607   .bss.i30.2995:00000000 i30.2995
-     /tmp/ccf7gNqR.s:1608   .bss.i30.2995:00000000 $d
-     /tmp/ccf7gNqR.s:1614   .bss.fbw_new_actuators:00000000 $d
-     /tmp/ccf7gNqR.s:1616   .bss.i300.2971:00000000 $d
-     /tmp/ccf7gNqR.s:1620   .bss.i300.2971:00000000 i300.2971
-     /tmp/ccf7gNqR.s:1626   .bss._1Hz.2784:00000000 _1Hz.2784
-     /tmp/ccf7gNqR.s:1627   .bss._1Hz.2784:00000000 $d
+     /tmp/cc0lJanC.s:162    .text.event_task_fbw:00000000 $a
+     /tmp/cc0lJanC.s:165    .text.event_task_fbw:00000000 event_task_fbw
+     /tmp/cc0lJanC.s:623    .text.event_task_fbw:000006bc $d
+     /tmp/cc0lJanC.s:657    .text.periodic_task_fbw:00000000 $a
+     /tmp/cc0lJanC.s:660    .text.periodic_task_fbw:00000000 periodic_task_fbw
+     /tmp/cc0lJanC.s:1515   .text.periodic_task_fbw:00000ce4 $d
+     /tmp/cc0lJanC.s:1539   .text.handle_periodic_tasks_fbw:00000000 $a
+     /tmp/cc0lJanC.s:1542   .text.handle_periodic_tasks_fbw:00000000 handle_periodic_tasks_fbw
+     /tmp/cc0lJanC.s:1576   .text.handle_periodic_tasks_fbw:00000064 $d
+     /tmp/cc0lJanC.s:1613   .bss.fbw_new_actuators:00000000 fbw_new_actuators
+     /tmp/cc0lJanC.s:1585   .bss.i300.2997:00000000 $d
+     /tmp/cc0lJanC.s:1589   .bss.i300.2997:00000000 i300.2997
+     /tmp/cc0lJanC.s:1595   .bss.i120.2970:00000000 i120.2970
+     /tmp/cc0lJanC.s:1596   .bss.i120.2970:00000000 $d
+     /tmp/cc0lJanC.s:1601   .bss.i60.2996:00000000 i60.2996
+     /tmp/cc0lJanC.s:1602   .bss.i60.2996:00000000 $d
+     /tmp/cc0lJanC.s:1607   .bss.i30.2995:00000000 i30.2995
+     /tmp/cc0lJanC.s:1608   .bss.i30.2995:00000000 $d
+     /tmp/cc0lJanC.s:1614   .bss.fbw_new_actuators:00000000 $d
+     /tmp/cc0lJanC.s:1616   .bss.i300.2971:00000000 $d
+     /tmp/cc0lJanC.s:1620   .bss.i300.2971:00000000 i300.2971
+     /tmp/cc0lJanC.s:1626   .bss._1Hz.2784:00000000 _1Hz.2784
+     /tmp/cc0lJanC.s:1627   .bss._1Hz.2784:00000000 $d
 
 UNDEFINED SYMBOLS
 radio_control

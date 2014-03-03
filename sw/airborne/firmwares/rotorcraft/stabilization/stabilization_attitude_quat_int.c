@@ -33,7 +33,7 @@
 #include <stdio.h>
 #include "math/pprz_algebra_float.h"
 #include "math/pprz_algebra_int.h"
-#include "state.h"
+#include "subsystems/ahrs.h"
 #include "generated/airframe.h"
 
 struct Int32AttitudeGains stabilization_gains = {
@@ -80,7 +80,7 @@ void stabilization_attitude_enter(void) {
 
 #if !USE_SETPOINTS_WITH_TRANSITIONS
   /* reset psi setpoint to current psi angle */
-  stab_att_sp_euler.psi = stateGetNedToBodyEulers_i()->psi;
+  stab_att_sp_euler.psi = ahrs.ltp_to_body_euler.psi;
 #endif
 
   stabilization_attitude_ref_enter();
@@ -135,16 +135,14 @@ void stabilization_attitude_run(bool_t enable_integrator) {
 
   /* attitude error                          */
   struct Int32Quat att_err;
-  struct Int32Quat* att_quat = stateGetNedToBodyQuat_i();
-  INT32_QUAT_INV_COMP(att_err, *att_quat, stab_att_ref_quat);
+  INT32_QUAT_INV_COMP(att_err, ahrs.ltp_to_body_quat, stab_att_ref_quat);
   /* wrap it in the shortest direction       */
   INT32_QUAT_WRAP_SHORTEST(att_err);
   INT32_QUAT_NORMALIZE(att_err);
 
   /*  rate error                */
   struct Int32Rates rate_err;
-  struct Int32Rates* body_rate = stateGetBodyRates_i();
-  RATES_DIFF(rate_err, stab_att_ref_rate, *body_rate);
+  RATES_DIFF(rate_err, stab_att_ref_rate, ahrs.body_rate);
 
   /* integrated error */
   if (enable_integrator) {
@@ -186,41 +184,10 @@ void stabilization_attitude_read_rc(bool_t in_flight) {
 #if USE_SETPOINTS_WITH_TRANSITIONS
   stabilization_attitude_read_rc_absolute(in_flight);
 #else
-
-  //FIXME: remove me, do in quaternion directly
   stabilization_attitude_read_rc_setpoint_eulers(&stab_att_sp_euler, in_flight);
-
-  struct FloatQuat q_rp_cmd;
-  stabilization_attitude_read_rc_roll_pitch_quat(&q_rp_cmd);
-
-  /* get current heading */
-  const struct FloatVect3 zaxis = {0., 0., 1.};
-  struct FloatQuat q_yaw;
-  FLOAT_QUAT_OF_AXIS_ANGLE(q_yaw, zaxis, ANGLE_FLOAT_OF_BFP(stateGetNedToBodyEulers_i()->psi));
-
-  /* apply roll and pitch commands with respect to current heading */
-  struct FloatQuat q_sp;
-  FLOAT_QUAT_COMP(q_sp, q_yaw, q_rp_cmd);
-  FLOAT_QUAT_NORMALIZE(q_sp);
-
-  if (in_flight)
-  {
-    /* get current heading setpoint */
-    struct FloatQuat q_yaw_sp;
-    FLOAT_QUAT_OF_AXIS_ANGLE(q_yaw_sp, zaxis, ANGLE_FLOAT_OF_BFP(stab_att_sp_euler.psi));
-
-    /* rotation between current yaw and yaw setpoint */
-    struct FloatQuat q_yaw_diff;
-    FLOAT_QUAT_COMP_INV(q_yaw_diff, q_yaw_sp, q_yaw);
-
-    /* temporary copy with roll/pitch command and current heading */
-    struct FloatQuat q_rp_sp;
-    QUAT_COPY(q_rp_sp, q_sp);
-
-    /* compute final setpoint with yaw */
-    FLOAT_QUAT_COMP_NORM_SHORTEST(q_sp, q_rp_sp, q_yaw_diff);
-  }
-
-  QUAT_BFP_OF_REAL(stab_att_sp_quat, q_sp);
+  /* update quaternion setpoint from euler setpoint */
+  INT32_QUAT_OF_EULERS(stab_att_sp_quat, stab_att_sp_euler);
+  INT32_QUAT_WRAP_SHORTEST(stab_att_sp_quat);
 #endif
+
 }

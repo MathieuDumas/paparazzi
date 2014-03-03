@@ -46,7 +46,6 @@ MULTIMON=sw/ground_segment/multimon
 MISC=sw/ground_segment/misc
 LOGALIZER=sw/logalizer
 SIMULATOR=sw/simulator
-EXT=sw/ext
 MAKE=make PAPARAZZI_SRC=$(PAPARAZZI_SRC) PAPARAZZI_HOME=$(PAPARAZZI_HOME)
 CONF=$(PAPARAZZI_SRC)/conf
 STATICINCLUDE =$(PAPARAZZI_HOME)/var/include
@@ -57,7 +56,6 @@ MTK_PROTOCOL_H=$(STATICINCLUDE)/mtk_protocol.h
 XSENS_PROTOCOL_H=$(STATICINCLUDE)/xsens_protocol.h
 DL_PROTOCOL_H=$(STATICINCLUDE)/dl_protocol.h
 DL_PROTOCOL2_H=$(STATICINCLUDE)/dl_protocol2.h
-ABI_MESSAGES_H=$(STATICINCLUDE)/abi_messages.h
 MESSAGES_XML = $(CONF)/messages.xml
 UBX_XML = $(CONF)/ubx.xml
 MTK_XML = $(CONF)/mtk.xml
@@ -75,7 +73,7 @@ print_build_version:
 	@echo "Building Paparazzi version" $(shell ./paparazzi_version)
 	@echo "------------------------------------------------------------"
 
-static: lib center tools cockpit multimon tmtc misc logalizer lpc21iap sim_static static_h usb_lib ext
+static : lib center tools cockpit multimon tmtc misc logalizer lpc21iap sim_static static_h usb_lib
 
 conf: conf/conf.xml conf/control_panel.xml conf/maps.xml FORCE
 
@@ -115,13 +113,10 @@ misc:
 multimon:
 	cd $(MULTIMON); $(MAKE)
 
-static_h: $(MESSAGES_H) $(MESSAGES2_H) $(UBX_PROTOCOL_H) $(MTK_PROTOCOL_H) $(XSENS_PROTOCOL_H) $(DL_PROTOCOL_H) $(DL_PROTOCOL2_H) $(ABI_MESSAGES_H)
+static_h: $(MESSAGES_H) $(MESSAGES2_H) $(UBX_PROTOCOL_H) $(MTK_PROTOCOL_H) $(XSENS_PROTOCOL_H) $(DL_PROTOCOL_H) $(DL_PROTOCOL2_H)
 
 usb_lib:
 	@[ -d sw/airborne/arch/lpc21/lpcusb ] && (cd sw/airborne/arch/lpc21/lpcusb; $(MAKE)) || echo "Not building usb_lib: sw/airborne/arch/lpc21/lpcusb directory missing"
-
-ext:
-	$(MAKE) -C$(EXT) all
 
 $(MESSAGES_H) : $(MESSAGES_XML) $(CONF_XML) tools
 	$(Q)test -d $(STATICINCLUDE) || mkdir -p $(STATICINCLUDE)
@@ -161,11 +156,6 @@ $(DL_PROTOCOL2_H) : $(MESSAGES_XML) tools
 	@echo BUILD $@
 	$(Q)PAPARAZZI_SRC=$(PAPARAZZI_SRC) PAPARAZZI_HOME=$(PAPARAZZI_HOME) $(TOOLS)/gen_messages2.out $< datalink > /tmp/dl2.h
 	$(Q)mv /tmp/dl2.h $@
-
-$(ABI_MESSAGES_H) : $(MESSAGES_XML) tools
-	@echo BUILD $@
-	$(Q)PAPARAZZI_SRC=$(PAPARAZZI_SRC) PAPARAZZI_HOME=$(PAPARAZZI_HOME) $(TOOLS)/gen_abi.out $< airborne > /tmp/abi.h
-	$(Q)mv /tmp/abi.h $@
 
 include Makefile.ac
 
@@ -210,10 +200,6 @@ upload_ms ms.upload: ms
 #####
 #####
 
-doxygen:
-	mkdir -p dox
-	doxygen Doxyfile
-
 run_sitl :
 	$(PAPARAZZI_HOME)/var/$(AIRCRAFT)/sim/simsitl
 
@@ -236,17 +222,16 @@ fast_deb:
 clean:
 	$(Q)rm -fr dox build-stamp configure-stamp conf/%gconf.xml debian/files debian/paparazzi-base debian/paparazzi-bin
 	$(Q)rm -f  $(MESSAGES_H) $(MESSAGES2_H) $(UBX_PROTOCOL_H) $(MTK_PROTOCOL_H) $(DL_PROTOCOL_H)
-	$(Q)find . -mindepth 2 -name Makefile -a ! -path "./sw/ext/*" -exec sh -c 'echo "Cleaning {}"; $(MAKE) -C `dirname {}` $@' \;
-	$(Q)make -C sw/ext clean
+	$(Q)find . -mindepth 2 -name Makefile -exec sh -c 'echo "Cleaning {}"; $(MAKE) -C `dirname {}` $@' \;
 	$(Q)find . -name '*~' -exec rm -f {} \;
 	$(Q)rm -f paparazzi sw/simulator/launchsitl
 
 cleanspaces:
-	find sw -path sw/ext -prune -o -name '*.[ch]' -exec sed -i {} -e 's/[ \t]*$$//' \;
-	find conf -name '*.makefile' -exec sed -i {} -e 's/[ \t]*$$//' ';'
-	find . -path ./sw/ext -prune -o -name Makefile -exec sed -i {} -e 's/[ \t]*$$//' ';'
-	find sw -name '*.ml' -o -name '*.mli' -exec sed -i {} -e 's/[ \t]*$$//' ';'
-	find conf -name '*.xml' -exec sed -i {} -e 's/[ \t]*$$//' ';'
+	find ./sw/airborne -name '*.[ch]' -exec sed -i {} -e 's/[ \t]*$$//' \;
+	find ./conf -name '*.makefile' -exec sed -i {} -e 's/[ \t]*$$//' ';'
+	find ./sw -name '*.ml' -exec sed -i {} -e 's/[ \t]*$$//' ';'
+	find ./sw -name '*.mli' -exec sed -i {} -e 's/[ \t]*$$//' ';'
+	find ./conf -name '*.xml' -exec sed -i {} -e 's/[ \t]*$$//' ';'
 
 distclean : dist_clean
 dist_clean :
@@ -254,8 +239,12 @@ dist_clean :
 
 dist_clean_irreversible: clean
 	rm -rf conf/maps_data conf/maps.xml
-	rm -rf conf/conf.xml conf/controlpanel.xml
+	rm -rf conf/conf.xml conf/control_panel.xml
 	rm -rf var
+
+conf_clean: 
+	rm -rf conf/maps_data conf/maps.xml
+	rm -rf conf/conf.xml conf/control_panel.xml
 
 ab_clean:
 	find sw/airborne -name '*~' -exec rm -f {} \;
@@ -282,4 +271,4 @@ run_tests:
 
 test: all replace_current_conf_xml run_tests restore_conf_xml
 
-.PHONY: all print_build_version clean cleanspaces ab_clean dist_clean distclean dist_clean_irreversible doxygen run_sitl install uninstall test replace_current_conf_xml run_tests restore_conf_xml
+.PHONY: all print_build_version clean cleanspaces ab_clean dist_clean distclean dist_clean_irreversible run_sitl install uninstall test replace_current_conf_xml run_tests restore_conf_xml

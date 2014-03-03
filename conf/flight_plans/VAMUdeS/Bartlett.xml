@@ -1,0 +1,108 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="280" ground_alt="170" lat0="45.434509" lon0="-71.854116" max_dist_from_home="350" name="Arena" qfu="270" security_height="100">
+<header>
+#include "subsystems/navigation/OSAMNav.h"
+</header>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||     START OF WAYPOINTS LIST    |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+  <waypoints>
+
+   <!--********************************-->
+   <!--            STANDART            -->
+   <!--********************************-->  
+
+    <waypoint lat="45.434509" lon="-71.854116" name="HOME"/>
+    <waypoint lat="45.434317" lon="-71.852233" name="STDBY"/>	
+    <waypoint lat="45.433877" lon="-71.853528" name="E1"/>	
+    <waypoint lat="45.434958" lon="-71.854011" name="E2"/>	
+
+   
+   <!--********************************-->
+   <!--             Route              -->
+   <!--********************************--> 
+   
+    <waypoint lat="45.435361" lon="-71.853763" name="R1"/>	
+    <waypoint lat="45.433813" lon="-71.853072" name="R2"/>	
+    <waypoint lat="45.434729" lon="-71.855029" name="R3"/>	
+    <waypoint lat="45.434637" lon="-71.852693" name="R4"/>	
+    <waypoint lat="45.433794" lon="-71.854442" name="R5"/>	
+    
+  </waypoints>
+  
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||      START OF BLOCKS LIST      |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+  
+  <blocks>
+  
+   <!--********************************-->
+   <!--              INIT              -->
+   <!--********************************-->
+  
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+    
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude roll="0" throttle="0" vmode="throttle"/>
+    </block>
+    
+   <!--********************************-->
+   <!--            TAKEOFF             -->
+   <!--********************************-->
+    
+    <block name="Takeoff 100%" strip_button="Takeoff" strip_icon="takeoff.png">
+      <set value="0" var="kill_throttle"/>
+      <set value="0" var="estimator_flight_time"/>
+      <attitude pitch="20" roll="0" throttle="1.0" until="stage_time>5" vmode="throttle"/>
+      <deroute block="Standby"/>
+    </block>
+    
+   <!--********************************-->
+   <!--            STANDBY             -->
+   <!--********************************-->
+   
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <set value="0" var="kill_throttle"/>
+      <circle radius="nav_radius" wp="STDBY"/>
+    </block>
+    
+   <!--********************************-->
+   <!--            Figure 8            -->
+   <!--********************************-->
+    
+    <block name="Figure 8">
+      <eight center="E1" radius="nav_radius" turn_around="E2"/>
+    </block>
+    
+   <!--********************************-->
+   <!--              Oval              -->
+   <!--********************************-->
+    
+    <block name="oval">
+      <oval p1="E1" p2="E2" radius="nav_radius"/>
+    </block>
+    
+   <!--********************************-->
+   <!--              Route             -->
+   <!--********************************-->
+    
+    <block name="Route">
+      <go wp="R1"/>
+      <while cond="TRUE">
+        <go approaching_time="route_ap_time" from="R1" hmode="route" wp="R2"/>
+        <go approaching_time="route_ap_time" from="R2" hmode="route" wp="R3"/>
+        <go approaching_time="route_ap_time" from="R3" hmode="route" wp="R4"/>
+        <go approaching_time="route_ap_time" from="R4" hmode="route" wp="R5"/>
+        <go approaching_time="route_ap_time" from="R5" hmode="route" wp="R1"/>
+      </while>
+    </block>
+ 
+  </blocks>
+</flight_plan>

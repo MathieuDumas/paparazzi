@@ -1,0 +1,31 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"i2c.c"
+  12              		.section	.text.i2c_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	i2c_init
+  16              	i2c_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 0030A0E3 		mov	r3, #0
+  22 0004 2030C0E5 		strb	r3, [r0, #32]
+  23 0008 2130C0E5 		strb	r3, [r0, #33]
+  24 000c 2230C0E5 		strb	r3, [r0, #34]
+  25 0010 1EFF2FE1 		bx	lr
+  27              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 i2c.c
+     /tmp/ccU2x5Gz.s:13     .text.i2c_init:00000000 $a
+     /tmp/ccU2x5Gz.s:16     .text.i2c_init:00000000 i2c_init
+
+NO UNDEFINED SYMBOLS

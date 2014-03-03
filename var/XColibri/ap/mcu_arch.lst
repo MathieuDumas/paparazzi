@@ -59,9 +59,9 @@
   61              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 mcu_arch.c
-     /tmp/ccAr3i8H.s:13     .text.mcu_arch_init:00000000 $a
-     /tmp/ccAr3i8H.s:16     .text.mcu_arch_init:00000000 mcu_arch_init
-     /tmp/ccAr3i8H.s:58     .text.mcu_arch_init:00000084 $d
+     /tmp/cc9TxDBp.s:13     .text.mcu_arch_init:00000000 $a
+     /tmp/cc9TxDBp.s:16     .text.mcu_arch_init:00000000 mcu_arch_init
+     /tmp/cc9TxDBp.s:58     .text.mcu_arch_init:00000084 $d
 
 UNDEFINED SYMBOLS
 reset

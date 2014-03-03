@@ -24,17 +24,18 @@
 
 #include "cam_control/booz_cam.h"
 #include "modules/core/booz_pwm_arch.h"
-#include "state.h"
+#include "subsystems/ahrs.h"
 #include "firmwares/rotorcraft/navigation.h"
+#include "subsystems/ins.h"
 #include "generated/flight_plan.h"
 #include "std.h"
 
 uint8_t booz_cam_mode;
 
 // Tilt definition
-int16_t booz_cam_tilt;
-int16_t booz_cam_tilt_pwm;
 #ifdef BOOZ_CAM_TILT_NEUTRAL
+int16_t booz_cam_tilt_pwm;
+int16_t booz_cam_tilt;
 #ifndef BOOZ_CAM_TILT_MIN
 #define BOOZ_CAM_TILT_MIN BOOZ_CAM_TILT_NEUTRAL
 #endif
@@ -45,8 +46,8 @@ int16_t booz_cam_tilt_pwm;
 #endif
 
 // Pan definition
-int16_t booz_cam_pan;
 #ifdef BOOZ_CAM_PAN_NEUTRAL
+int16_t booz_cam_pan;
 #ifndef BOOZ_CAM_PAN_MIN
 #define BOOZ_CAM_PAN_MIN BOOZ_CAM_PAN_NEUTRAL
 #endif
@@ -77,14 +78,9 @@ void booz_cam_init(void) {
   booz_cam_tilt_pwm = BOOZ_CAM_TILT_NEUTRAL;
   BOOZ_CAM_SetPwm(booz_cam_tilt_pwm);
   booz_cam_tilt = 0;
-#else
-  booz_cam_tilt_pwm = 1500;
-  booz_cam_tilt = 0;
 #endif
 #ifdef BOOZ_CAM_USE_PAN
   booz_cam_pan = BOOZ_CAM_PAN_NEUTRAL;
-#else
-  booz_cam_pan = 0;
 #endif
 }
 
@@ -102,7 +98,7 @@ void booz_cam_periodic(void) {
       booz_cam_tilt_pwm = BOOZ_CAM_TILT_NEUTRAL;
 #endif
 #ifdef BOOZ_CAM_USE_PAN
-      booz_cam_pan = stateGetNedToBodyEulers_i()->psi;
+      booz_cam_pan = ahrs.ltp_to_body_euler.psi;
 #endif
       break;
     case BOOZ_CAM_MODE_MANUAL:
@@ -125,14 +121,14 @@ void booz_cam_periodic(void) {
 #ifdef WP_CAM
       {
         struct Int32Vect2 diff;
-        VECT2_DIFF(diff, waypoints[WP_CAM], *stateGetPositionEnu_i());
+        VECT2_DIFF(diff, waypoints[WP_CAM], ins_enu_pos);
         INT32_VECT2_RSHIFT(diff,diff,INT32_POS_FRAC);
         INT32_ATAN2(booz_cam_pan,diff.x,diff.y);
         nav_heading = booz_cam_pan;
 #ifdef BOOZ_CAM_USE_TILT_ANGLES
         int32_t dist, height;
         INT32_VECT2_NORM(dist, diff);
-        height = (waypoints[WP_CAM].z - stateGetPositionEnu_i()->z) >> INT32_POS_FRAC;
+        height = (waypoints[WP_CAM].z - ins_enu_pos.z) >> INT32_POS_FRAC;
         INT32_ATAN2(booz_cam_tilt, height, dist);
         Bound(booz_cam_tilt, CAM_TA_MIN, CAM_TA_MAX);
         booz_cam_tilt_pwm = BOOZ_CAM_TILT_MIN + D_TILT * (booz_cam_tilt - CAM_TA_MIN) / (CAM_TA_MAX - CAM_TA_MIN);

@@ -38,6 +38,11 @@
 #include "firmwares/rotorcraft/commands.h"
 #include "firmwares/rotorcraft/actuators.h"
 
+#if defined RADIO_CONTROL
+#include "subsystems/radio_control.h"
+#pragma message "CAUTION! RadioControl roll and yaw channel inputs have been reversed to follow aerospace sign conventions.\n You will have to change your radio control xml file to get a positive value when pushing roll stick right and a positive value when pushing yaw stick right!"
+#endif
+
 #include "subsystems/imu.h"
 #include "subsystems/gps.h"
 
@@ -53,8 +58,6 @@
 
 #include "subsystems/ahrs.h"
 #include "subsystems/ins.h"
-
-#include "state.h"
 
 #include "firmwares/rotorcraft/main.h"
 
@@ -97,14 +100,8 @@ STATIC_INLINE void main_init( void ) {
 
   electrical_init();
 
-  stateInit();
-
   actuators_init();
   radio_control_init();
-
-#if DATALINK == XBEE
-  xbee_init();
-#endif
 
   baro_init();
   imu_init();
@@ -128,6 +125,10 @@ STATIC_INLINE void main_init( void ) {
   settings_init();
 
   mcu_int_enable();
+
+#if DATALINK == XBEE
+  xbee_init();
+#endif
 
   // register the timers for the periodic functions
   main_periodic_tid = sys_time_register_timer((1./PERIODIC_FREQUENCY), NULL);
@@ -184,10 +185,8 @@ STATIC_INLINE void failsafe_check( void ) {
   }
 
 #if USE_GPS
-  if (autopilot_mode == AP_MODE_NAV &&
-#if NO_GPS_LOST_WITH_RC_VALID
-      radio_control.status != RC_OK &&
-#endif
+  if (radio_control.status != RC_OK &&
+      autopilot_mode == AP_MODE_NAV &&
       GpsIsLost())
   {
     autopilot_set_mode(AP_MODE_FAILSAFE);

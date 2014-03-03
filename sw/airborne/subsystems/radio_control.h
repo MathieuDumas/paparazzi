@@ -50,7 +50,7 @@ extern void radio_control_impl_init(void);
 
 struct RadioControl {
   uint8_t status;
-  uint8_t time_since_last_frame;
+  uint16_t time_since_last_frame;
   uint8_t radio_ok_cpt;
   uint8_t frame_rate;
   uint8_t frame_cpt;
@@ -91,8 +91,9 @@ static inline void radio_control_periodic_task ( void ) {
       radio_control.status = RC_LOST;
       radio_control.radio_ok_cpt = RC_OK_CPT;
     }
-    radio_control.time_since_last_frame++;
+    
   }
+radio_control.time_since_last_frame++;
 
 #if defined RADIO_CONTROL_LED
   if (radio_control.status == RC_OK) {

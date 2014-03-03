@@ -1,4 +1,6 @@
 /*
+ * $Id$
+ *
  * Copyright (C) 2010 The Paparazzi Team
  *
  * This file is part of paparazzi.
@@ -19,10 +21,9 @@
  * Boston, MA 02111-1307, USA.
  */
 
-/**
- * @file baro.h
+/*
  *
- * Common barometric sensor implementation.
+ * Brief: common barometric sensor implementation
  *
  */
 

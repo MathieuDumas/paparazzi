@@ -1,0 +1,12 @@
+<!DOCTYPE module SYSTEM "module.dtd">
+
+<module name="VAMUdeS_Board">
+  <header>
+    <file name="power_led.h"/>
+  </header>
+  <init fun="PowerLed_Init()"/>
+  <periodic fun="PowerLed_Periodic()" freq="1"/>
+  <makefile>
+    <file name="power_led.c"/>
+  </makefile>
+</module>

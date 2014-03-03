@@ -1,4 +1,6 @@
 /*
+ * $Id$
+ *
  * Copyright (C) 2003  Pascal Brisset, Antoine Drouin
  *
  * This file is part of paparazzi.
@@ -17,19 +19,20 @@
  * along with paparazzi; see the file COPYING.  If not, write to
  * the Free Software Foundation, 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
+ *
  */
 
-/** \file ins_module.h
+/** \file ins.h
  *  \brief Device independent INS code
  *
 */
 
 
-#ifndef INS_MODULE_H
-#define INS_MODULE_H
+#ifndef INS_H
+#define INS_H
 
 #include "std.h"
-#include "subsystems/ins.h"
+#include "led.h"
 
 #ifndef INS_FORMAT
 #define INS_FORMAT float
@@ -59,17 +62,18 @@ extern INS_FORMAT ins_mx;
 extern INS_FORMAT ins_my;
 extern INS_FORMAT ins_mz;
 
-#if USE_INS_MODULE
 extern INS_FORMAT ins_roll_neutral;
 extern INS_FORMAT ins_pitch_neutral;
-#endif
+
 
 extern volatile uint8_t ins_msg_received;
 extern volatile uint8_t new_ins_attitude;
 
-void handle_ins_msg(void);
-void parse_ins_msg(void);
-void parse_ins_buffer(uint8_t);
+extern void ins_init( void );
+extern void ins_periodic_task( void );
+void handle_ins_msg( void);
+void parse_ins_msg( void );
+void parse_ins_buffer( uint8_t );
 
 #ifndef SITL
 #include "mcu_periph/uart.h"
@@ -93,6 +97,7 @@ void parse_ins_buffer(uint8_t);
       ReadInsBuffer();						\
     }						                \
     if (ins_msg_received) {					\
+      LED_TOGGLE(2);						\
       parse_ins_msg();						\
       handler;							\
       ins_msg_received = FALSE;					\
@@ -100,4 +105,4 @@ void parse_ins_buffer(uint8_t);
   }
 
 
-#endif /* INS_MODULE_H */
+#endif /* INS_H */

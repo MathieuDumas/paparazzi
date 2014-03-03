@@ -6,6 +6,7 @@
 #define DL_ALIVE 2
 #define DL_PONG 3
 #define DL_TAKEOFF 4
+#define DL_VAMUDES_AIRSPEED 5
 #define DL_ATTITUDE 6
 #define DL_IR_SENSORS 7
 #define DL_GPS 8
@@ -151,13 +152,12 @@
 #define DL_AHRS_RMAT_INT 158
 #define DL_ROTORCRAFT_NAV_STATUS 159
 #define DL_ROTORCRAFT_RADIO_CONTROL 160
-#define DL_VFF_EXTENDED 161
 #define DL_VFF 162
 #define DL_BOOZ2_TUNE_FF 163
 #define DL_HFF 164
 #define DL_HFF_DBG 165
 #define DL_HFF_GPS 166
-#define DL_INS_SONAR 167
+#define DL_BOOZ2_SONAR 167
 #define DL_BOOZ2_CAM 168
 #define DL_AHRS_REF_QUAT 169
 #define DL_EKF7_XHAT 170
@@ -228,7 +228,7 @@
 #define DL_HENRY_GNSS 255
 #define DL_MSG_telemetry_NB 224
 
-#define MSG_telemetry_LENGTHS {0,(2+0+2),(2+0+1+nb_md5sum*1),(2+0),(2+0+2),0,(2+0+4+4+4),(2+0+2+2+2+2+2),(2+0+1+4+4+2+4+2+2+2+4+1+1),(2+0+4+4+1),(2+0+1+1+4+4+4+4+1+1),(2+0+1+1+1+1+1+1),(2+0+2+1+2+2+1+2+2+2),(2+0+1+1+1),(2+0+4+1),(2+0+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+2+1),(2+0+2+2),(2+0+8+4),(2+0+2+2+2+2),(2+0+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+1+4+1+4+4+4),(2+0+1+1+1+1+1+1+2),(2+0+1+nb_msg*1),(2+0+4+4+4+4),(2+0+1),(2+0+2+4+4+4+4+4+1),(2+0+1+2+2),(2+0+1+4),(2+0+1+4+4),(2+0+2+2+2+2+2+1),(2+0+2+4),(2+0+1+4+4+4+1),0,(2+0+4+4+2+4),(2+0+2+2+2+2+2+2+2+2+2+2+2),(2+0+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4),(2+0+4+4+4),(2+0+4+2+4),(2+0+4+4+4+4),(2+0+2+2+2+2),(2+0+1+4+4+4),(2+0+1+4),(2+0+1+4+4+4),(2+0+1+1+4+4),(2+0+1+1+1),(2+0+1+nb_values*2),(2+0+2+2+2),(2+0+4+4+4+4),(2+0+2+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+1+1+1+1+4+2+1+1),(2+0+2+2+4),(2+0+2+2+4),(2+0+2+2+4+4+2+2),(2+0+4+4+4+2+2+2+2+4+1+1),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+2+4+4),(2+0+2+4+4+4+1+4+4+4+4+4+4+4+2+1),(2+0+2+4+4+4+4+4+4),(2+0+2+4+4+4+4),(2+0+4+4+4+4+4+4),0,(2+0+2+4),(2+0+2+1+1),0,0,0,0,0,(2+0+4+4),(2+0+4),0,0,(2+0+4+4),(2+0+4+4+2+2+2+2+1+1+1+1+1+2),(2+0+1+1+4+4+4),(2+0+1+1+1),(2+0+4+4+4+4),(2+0+2+4+2+4),(2+0+2+4),(2+0+4+4+4),(2+0+4+2),(2+0+2+2+4+4),(2+0+2+2+2+2+1+nb_heat*1),(2+0+2+2+4+4),(2+0+4+4+4+4+4+4+4+1+1),(2+0+4+4+1+1),(2+0+4+4+4+4+4+4+2+1),(2+0+4+4+4+2),(2+0+2+4+4),(2+0+2+4),(2+0+2+4),(2+0+4+4),(2+0+1+1+nb_values*2),(2+0+1+nb_values*2),(2+0+1+nb_values*2),(2+0+1+1+1+1+4),(2+0+1+1+nb_values*2),(2+0+1+nb_values*2),(2+0+2+2+2+4+2+2+1+1),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+2+4+4+4+1+2+2+2+2+4),(2+0+1+1+1+nb_servo*2),(2+0+4),(2+0+4+4),(2+0+1+nb_values*1),(2+0+2+2+4+4),(2+0+4+4+4+4),(2+0+2+2+2+2+2+2+2+2),(2+0+2+2+2+2+2+2+2+2+2+2),(2+0+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2),(2+0+1),(2+0+1+1),(2+0+1),(2+0+1+4),(2+0+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+2+2+2+2+2+2+2+2),(2+0+2+2+4+4),(2+0+2),(2+0+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+1),0,(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+2),(2+0+4),(2+0+4+4+4+4+4+4+4+4),(2+0+2+2+2+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+2),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+2+1+1),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+2+2+1+1+1),(2+0+2+2+2+2+2+2+1),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+2+2+2),(2+0+4+4+4),(2+0+2+2),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+2+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4),(2+0+4+4),(2+0+4+4+4+4),(2+0+4+4+4),0,(2+0+4+4+4),(2+0+4),(2+0+4+4+4+4),(2+0+1+nb_raw_fault*2),(2+0+1+nb_speeds*2),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+1+nb_busvolts*2),(2+0+4+4+4+4+4+4+4+1),(2+0+2+2+1+1+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+2+2+2),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4),0,0,(2+0+4+4+4),(2+0+4),(2+0+1+1+nb_samples*4),(2+0+4+4+4+4+1),0,0,0,0,0,0,(2+0+4+4+4+4+4),(2+0+4),(2+0+4+4),0,0,0,0,0,(2+0+4),0,0,0,(2+0+4+1+1+1+1+1+1+1+1+1+1+2),(2+0+1+2),0,(2+0+2+4),(2+0+2+2),0,0,(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4),(2+0+4+4+4),(2+0+1),(2+0+1),(2+0+1+1),(2+0+4+4+4),(2+0+1+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+2+2+2+2+2+2+2+2+4+1),(2+0+4+4+4+4+4+4),(2+0+4+8+1+8+8+8+8+8+8+1+1+8+8+8),}
+#define MSG_telemetry_LENGTHS {0,(2+0+2),(2+0+1+nb_md5sum*1),(2+0),(2+0+2),(2+0+4+4),(2+0+4+4+4),(2+0+2+2+2+2+2),(2+0+1+4+4+2+4+2+2+2+4+1+1),(2+0+4+4+1),(2+0+1+1+4+4+4+4+1+1),(2+0+1+1+1+1+1+1),(2+0+2+2+2+2+2+1+2+2+2),(2+0+1+1+1),(2+0+4+1),(2+0+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+2+1),(2+0+2+2),(2+0+8+4),(2+0+2+2+2+2),(2+0+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+1+4+1+4+4+4),(2+0+1+1+1+1+1+1+2),(2+0+1+nb_msg*1),(2+0+4+4+4+4),(2+0+1),(2+0+2+4+4+4+4+4+1),(2+0+1+2+2),(2+0+1+4),(2+0+1+4+4),(2+0+2+2+2+2+2+1),(2+0+2+4),(2+0+1+4+4+4+1),0,(2+0+4+4+2+4),(2+0+2+2+2+2+2+2+2+2+2+2+2),(2+0+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4),(2+0+4+4+4),(2+0+4+2+4),(2+0+4+4+4+4),(2+0+2+2+2+2),(2+0+1+4+4+4),(2+0+1+4),(2+0+1+4+4+4),(2+0+1+1+4+4),(2+0+1+1+1),(2+0+1+nb_values*2),(2+0+2+2+2),(2+0+4+4+4+4),(2+0+2+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+1+1+1+1+4+2+1+1),(2+0+2+2+4),(2+0+2+2+4),(2+0+2+2+4+4+2+2),(2+0+4+4+4+2+2+2+2+4+1+1),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+2+4+4),(2+0+2+4+4+4+1+4+4+4+4+4+4+4+2+1),(2+0+2+4+4+4+4+4+4),(2+0+2+4+4+4+4),(2+0+4+4+4+4+4+4),0,(2+0+2+4),(2+0+2+1+1),0,0,0,0,0,(2+0+4+4),(2+0+4),0,0,(2+0+4+4),(2+0+4+4+2+2+2+2+1+1+1+1+1+2),(2+0+1+1+4+4+4),(2+0+1+1+1),(2+0+4+4+4+4),(2+0+2+4+2+4),(2+0+2+4),(2+0+4+4+4),(2+0+4+2),(2+0+2+2+4+4),(2+0+2+2+2+2+1+nb_heat*1),(2+0+2+2+4+4),(2+0+4+4+4+4+4+4+4+1+1),(2+0+4+4+1+1),(2+0+4+4+4+4+4+4+2+1),(2+0+4+4+4+2),(2+0+2+4+4),(2+0+2+4),(2+0+2+4),(2+0+4+4),(2+0+1+1+nb_values*2),(2+0+1+nb_values*2),(2+0+1+nb_values*2),(2+0+1+1+1+2+4+2),(2+0+1+1+nb_values*2),(2+0+1+nb_values*2),(2+0+2+2+2+4+2+2+1+1),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+2+4+4+4+1+2+2+2+2+4),(2+0+1+1+1+nb_servo*2),(2+0+4),(2+0+4+4),(2+0+1+nb_values*1),(2+0+2+2+4+4),(2+0+4+4+4+4),(2+0+2+2+2+2+2+2+2+2),(2+0+2+2+2+2+2+2+2+2+2+2),(2+0+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2),(2+0+1),(2+0+1+1),(2+0+1),(2+0+1+4),(2+0+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+2+2+2+2+2+2+2+2),(2+0+2+2+4+4),(2+0+2),(2+0+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+1),0,(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+2),(2+0+4),(2+0+4+4+4+4+4+4+4+4),(2+0+2+2+2+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+2),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+2+1+1),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+2+2+1+1+1),(2+0+2+2+2+2+2+2+1),0,(2+0+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4),(2+0+2+2+2),(2+0+2+2+2+2),(2+0+2+2),(2+0+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+2+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4),(2+0+4+4),(2+0+4+4+4+4),(2+0+4+4+4),0,(2+0+4+4+4),(2+0+4),(2+0+4+4+4+4),(2+0+1+nb_raw_fault*2),(2+0+1+nb_speeds*2),(2+0+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+1+nb_busvolts*2),(2+0+4+4+4+4+4+4+4+1),(2+0+2+2+1+1+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+2+2+2),(2+0+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4),(2+0+4+4+4+4+4),0,0,(2+0+4+4+4),(2+0+4),(2+0+1+1+nb_samples*4),(2+0+4+4+4+4+1),0,0,0,0,0,0,(2+0+4+4+4+4+4),(2+0+4),(2+0+4+4),0,0,0,0,0,(2+0+4),0,0,0,(2+0+4+1+1+1+1+1+1+1+1+1+2+2),(2+0+1+2),0,(2+0+2+4),(2+0+2+2),0,0,(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+4),(2+0+4+4+4),(2+0+1),(2+0+1),(2+0+1+1),(2+0+4+4+4),(2+0+1+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+8+4+4+4),(2+0+4+4+4+4+4+4+4+4+4),(2+0+4+4+4+4+4+4),(2+0+4+4+4),(2+0+2+2+2+2+2+2+2+2+4+1),(2+0+4+4+4+4+4+4),(2+0+4+8+1+8+8+8+8+8+8+1+1+8+8+8),}
 
 /*
  Size for non variable messages
@@ -278,7 +278,6 @@
 28 : DOWNLINK_STATUS
 28 : VERTICAL_ENERGY
 28 : FILTER_COR
-28 : VFF_EXTENDED
 28 : VFF
 28 : AHRS_LKF_ACC_DBG
 28 : AHRS_LKF_MAG_DBG
@@ -311,7 +310,9 @@
 20 : WEATHER
 18 : MODEM_STATUS
 18 : AMSYS_AIRSPEED
+17 : BAT
 17 : TEST_PASSTHROUGH_STATUS
+17 : ROTORCRAFT_STATUS
 16 : SEGMENT
 16 : SURVEY
 16 : ALT_KALMAN
@@ -330,9 +331,7 @@
 16 : PCAP01_STATUS
 16 : CSC_CAN_MSG
 16 : FLA_DEBUG
-16 : ROTORCRAFT_STATUS
 16 : NPS_RPMS
-14 : BAT
 14 : WP_MOVED
 14 : ENERGY
 14 : FORMATION_SLOT_TM
@@ -354,7 +353,6 @@
 12 : IMU_ACCEL_SCALED
 12 : IMU_MAG_SCALED
 12 : BOOZ2_TUNE_FF
-12 : INS_SONAR
 12 : AHRS_EULER
 12 : AHRS_MEASUREMENT_EULER
 12 : AHRS_GYRO_BIAS_INT
@@ -372,6 +370,7 @@
 12 : BOOZ2_FF_ADAP
 11 : GPS_SOL
 11 : SYS_MON
+11 : FBW_STATUS
 10 : IR_SENSORS
 10 : BARO_MS5534A
 10 : WINDTURBINE_STATUS_
@@ -381,6 +380,7 @@
 10 : GEIGER_COUNTER
  9 : NAVIGATION_REF
  9 : MARK
+ 8 : VAMUDES_AIRSPEED
  8 : SETTINGS
  8 : CAM
  8 : SVINFO
@@ -391,8 +391,8 @@
  8 : VF_UPDATE
  8 : CROSS_TRACK_ERROR
  8 : SHT_I2C_SERIAL
- 8 : FBW_STATUS
  8 : MLX_SERIAL
+ 8 : BOOZ2_SONAR
  8 : CSC_CAN_DEBUG
  8 : BARO_RAW
  7 : ROTORCRAFT_NAV_STATUS
@@ -496,6 +496,17 @@
 	  DownlinkOverrun(_trans, _dev ); \
 }
 
+#define DOWNLINK_SEND_VAMUDES_AIRSPEED(_trans, _dev, airspeedMs, temperatureC){ \
+	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4))) {\
+	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4)); \
+	  DownlinkStartMessage(_trans, _dev, "VAMUDES_AIRSPEED", DL_VAMUDES_AIRSPEED, 0+4+4) \
+	  DownlinkPutFloatByAddr(_trans, _dev, (airspeedMs)); \
+	  DownlinkPutFloatByAddr(_trans, _dev, (temperatureC)); \
+	  DownlinkEndMessage(_trans, _dev ) \
+	} else \
+	  DownlinkOverrun(_trans, _dev ); \
+}
+
 #define DOWNLINK_SEND_ATTITUDE(_trans, _dev, phi, psi, theta){ \
 	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4))) {\
 	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4)); \
@@ -586,12 +597,13 @@
 	  DownlinkOverrun(_trans, _dev ); \
 }
 
-#define DOWNLINK_SEND_BAT(_trans, _dev, throttle, voltage, amps, flight_time, kill_auto_throttle, block_time, stage_time, energy){ \
-	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+1+2+2+1+2+2+2))) {\
-	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+1+2+2+1+2+2+2)); \
-	  DownlinkStartMessage(_trans, _dev, "BAT", DL_BAT, 0+2+1+2+2+1+2+2+2) \
+#define DOWNLINK_SEND_BAT(_trans, _dev, throttle, voltage, adc, amps, flight_time, kill_auto_throttle, block_time, stage_time, energy){ \
+	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+2+2+2+2+1+2+2+2))) {\
+	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+2+2+2+2+1+2+2+2)); \
+	  DownlinkStartMessage(_trans, _dev, "BAT", DL_BAT, 0+2+2+2+2+2+1+2+2+2) \
 	  DownlinkPutInt16ByAddr(_trans, _dev, (throttle)); \
-	  DownlinkPutUint8ByAddr(_trans, _dev, (voltage)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (voltage)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (adc)); \
 	  DownlinkPutInt16ByAddr(_trans, _dev, (amps)); \
 	  DownlinkPutUint16ByAddr(_trans, _dev, (flight_time)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (kill_auto_throttle)); \
@@ -1704,15 +1716,16 @@
 	  DownlinkOverrun(_trans, _dev ); \
 }
 
-#define DOWNLINK_SEND_FBW_STATUS(_trans, _dev, rc_status, frame_rate, mode, vsupply, current){ \
-	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+1+1+1+1+4))) {\
-	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+1+1+1+1+4)); \
-	  DownlinkStartMessage(_trans, _dev, "FBW_STATUS", DL_FBW_STATUS, 0+1+1+1+1+4) \
+#define DOWNLINK_SEND_FBW_STATUS(_trans, _dev, rc_status, frame_rate, mode, vsupply, current, waza){ \
+	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+1+1+1+2+4+2))) {\
+	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+1+1+1+2+4+2)); \
+	  DownlinkStartMessage(_trans, _dev, "FBW_STATUS", DL_FBW_STATUS, 0+1+1+1+2+4+2) \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (rc_status)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (frame_rate)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (mode)); \
-	  DownlinkPutUint8ByAddr(_trans, _dev, (vsupply)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (vsupply)); \
 	  DownlinkPutInt32ByAddr(_trans, _dev, (current)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (waza)); \
 	  DownlinkEndMessage(_trans, _dev ) \
 	} else \
 	  DownlinkOverrun(_trans, _dev ); \
@@ -2653,22 +2666,6 @@
 	  DownlinkOverrun(_trans, _dev ); \
 }
 
-#define DOWNLINK_SEND_VFF_EXTENDED(_trans, _dev, measure1, measure2, z, zd, zdd, bias, offset){ \
-	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4+4+4+4+4))) {\
-	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4+4+4+4+4)); \
-	  DownlinkStartMessage(_trans, _dev, "VFF_EXTENDED", DL_VFF_EXTENDED, 0+4+4+4+4+4+4+4) \
-	  DownlinkPutFloatByAddr(_trans, _dev, (measure1)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (measure2)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (z)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (zd)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (zdd)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (bias)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (offset)); \
-	  DownlinkEndMessage(_trans, _dev ) \
-	} else \
-	  DownlinkOverrun(_trans, _dev ); \
-}
-
 #define DOWNLINK_SEND_VFF(_trans, _dev, measure, z, zd, bias, Pzz, Pzdzd, Pbb){ \
 	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4+4+4+4+4))) {\
 	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4+4+4+4+4)); \
@@ -2741,13 +2738,14 @@
 	  DownlinkOverrun(_trans, _dev ); \
 }
 
-#define DOWNLINK_SEND_INS_SONAR(_trans, _dev, raw, scaled, var){ \
-	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4))) {\
-	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+4+4)); \
-	  DownlinkStartMessage(_trans, _dev, "INS_SONAR", DL_INS_SONAR, 0+4+4+4) \
-	  DownlinkPutInt32ByAddr(_trans, _dev, (raw)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (scaled)); \
-	  DownlinkPutFloatByAddr(_trans, _dev, (var)); \
+#define DOWNLINK_SEND_BOOZ2_SONAR(_trans, _dev, front, back, right, left){ \
+	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+2+2+2))) {\
+	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+2+2+2+2)); \
+	  DownlinkStartMessage(_trans, _dev, "BOOZ2_SONAR", DL_BOOZ2_SONAR, 0+2+2+2+2) \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (front)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (back)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (right)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (left)); \
 	  DownlinkEndMessage(_trans, _dev ) \
 	} else \
 	  DownlinkOverrun(_trans, _dev ); \
@@ -3404,9 +3402,9 @@
 }
 
 #define DOWNLINK_SEND_ROTORCRAFT_STATUS(_trans, _dev, link_imu_nb_err, blmc_nb_err, rc_status, frame_rate, gps_status, ap_mode, ap_in_flight, ap_motors_on, ap_h_mode, ap_v_mode, vsupply, cpu_time){ \
-	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+1+1+1+1+1+1+1+1+1+1+2))) {\
-	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+1+1+1+1+1+1+1+1+1+1+2)); \
-	  DownlinkStartMessage(_trans, _dev, "ROTORCRAFT_STATUS", DL_ROTORCRAFT_STATUS, 0+4+1+1+1+1+1+1+1+1+1+1+2) \
+	if (DownlinkCheckFreeSpace(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+1+1+1+1+1+1+1+1+1+2+2))) {\
+	  DownlinkCountBytes(_trans, _dev, DownlinkSizeOf(_trans, _dev, 0+4+1+1+1+1+1+1+1+1+1+2+2)); \
+	  DownlinkStartMessage(_trans, _dev, "ROTORCRAFT_STATUS", DL_ROTORCRAFT_STATUS, 0+4+1+1+1+1+1+1+1+1+1+2+2) \
 	  DownlinkPutUint32ByAddr(_trans, _dev, (link_imu_nb_err)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (blmc_nb_err)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (rc_status)); \
@@ -3417,7 +3415,7 @@
 	  DownlinkPutUint8ByAddr(_trans, _dev, (ap_motors_on)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (ap_h_mode)); \
 	  DownlinkPutUint8ByAddr(_trans, _dev, (ap_v_mode)); \
-	  DownlinkPutUint8ByAddr(_trans, _dev, (vsupply)); \
+	  DownlinkPutUint16ByAddr(_trans, _dev, (vsupply)); \
 	  DownlinkPutUint16ByAddr(_trans, _dev, (cpu_time)); \
 	  DownlinkEndMessage(_trans, _dev ) \
 	} else \
@@ -3738,13 +3736,14 @@
 #define DOWNLINK_SEND_ALIVE(_trans, _dev, nb_md5sum, md5sum) {}
 #define DOWNLINK_SEND_PONG(_trans, _dev ) {}
 #define DOWNLINK_SEND_TAKEOFF(_trans, _dev, cpu_time) {}
+#define DOWNLINK_SEND_VAMUDES_AIRSPEED(_trans, _dev, airspeedMs, temperatureC) {}
 #define DOWNLINK_SEND_ATTITUDE(_trans, _dev, phi, psi, theta) {}
 #define DOWNLINK_SEND_IR_SENSORS(_trans, _dev, ir1, ir2, longitudinal, lateral, vertical) {}
 #define DOWNLINK_SEND_GPS(_trans, _dev, mode, utm_east, utm_north, course, alt, speed, climb, week, itow, utm_zone, gps_nb_err) {}
 #define DOWNLINK_SEND_NAVIGATION_REF(_trans, _dev, utm_east, utm_north, utm_zone) {}
 #define DOWNLINK_SEND_NAVIGATION(_trans, _dev, cur_block, cur_stage, pos_x, pos_y, dist2_wp, dist2_home, circle_count, oval_count) {}
 #define DOWNLINK_SEND_PPRZ_MODE(_trans, _dev, ap_mode, ap_gaz, ap_lateral, ap_horizontal, if_calib_mode, mcu1_status) {}
-#define DOWNLINK_SEND_BAT(_trans, _dev, throttle, voltage, amps, flight_time, kill_auto_throttle, block_time, stage_time, energy) {}
+#define DOWNLINK_SEND_BAT(_trans, _dev, throttle, voltage, adc, amps, flight_time, kill_auto_throttle, block_time, stage_time, energy) {}
 #define DOWNLINK_SEND_DEBUG_MCU_LINK(_trans, _dev, i2c_nb_err, i2c_mcu1_nb_err, ppm_rate) {}
 #define DOWNLINK_SEND_CALIBRATION(_trans, _dev, climb_sum_err, climb_gaz_submode) {}
 #define DOWNLINK_SEND_SETTINGS(_trans, _dev, slider_1_val, slider_2_val) {}
@@ -3826,7 +3825,7 @@
 #define DOWNLINK_SEND_PPM(_trans, _dev, ppm_rate, nb_values, values) {}
 #define DOWNLINK_SEND_RC(_trans, _dev, nb_values, values) {}
 #define DOWNLINK_SEND_COMMANDS(_trans, _dev, nb_values, values) {}
-#define DOWNLINK_SEND_FBW_STATUS(_trans, _dev, rc_status, frame_rate, mode, vsupply, current) {}
+#define DOWNLINK_SEND_FBW_STATUS(_trans, _dev, rc_status, frame_rate, mode, vsupply, current, waza) {}
 #define DOWNLINK_SEND_ADC(_trans, _dev, mcu, nb_values, values) {}
 #define DOWNLINK_SEND_ACTUATORS(_trans, _dev, nb_values, values) {}
 #define DOWNLINK_SEND_BETH(_trans, _dev, azimuth, elevation, tilt, counter, can_errs, spi_errs, thrust_out, pitch_out) {}
@@ -3883,13 +3882,12 @@
 #define DOWNLINK_SEND_AHRS_RMAT_INT(_trans, _dev, imu_m00, imu_m01, imu_m02, imu_m10, imu_m11, imu_m12, imu_m20, imu_m21, imu_m22, body_m00, body_m01, body_m02, body_m10, body_m11, body_m12, body_m20, body_m21, body_m22) {}
 #define DOWNLINK_SEND_ROTORCRAFT_NAV_STATUS(_trans, _dev, block_time, stage_time, cur_block, cur_stage, horizontal_mode) {}
 #define DOWNLINK_SEND_ROTORCRAFT_RADIO_CONTROL(_trans, _dev, roll, pitch, yaw, throttle, mode, kill, status) {}
-#define DOWNLINK_SEND_VFF_EXTENDED(_trans, _dev, measure1, measure2, z, zd, zdd, bias, offset) {}
 #define DOWNLINK_SEND_VFF(_trans, _dev, measure, z, zd, bias, Pzz, Pzdzd, Pbb) {}
 #define DOWNLINK_SEND_BOOZ2_TUNE_FF(_trans, _dev, fb_rms, dg, g) {}
 #define DOWNLINK_SEND_HFF(_trans, _dev, x, y, xd, yd, xdd, ydd) {}
 #define DOWNLINK_SEND_HFF_DBG(_trans, _dev, x_measure, y_measure, yd_measure, xd_measure, Pxx, Pyy, Pxdxd, Pydyd) {}
 #define DOWNLINK_SEND_HFF_GPS(_trans, _dev, lag_cnt, lag_cnt_err, save_cnt) {}
-#define DOWNLINK_SEND_INS_SONAR(_trans, _dev, raw, scaled, var) {}
+#define DOWNLINK_SEND_BOOZ2_SONAR(_trans, _dev, front, back, right, left) {}
 #define DOWNLINK_SEND_BOOZ2_CAM(_trans, _dev, tilt, pan) {}
 #define DOWNLINK_SEND_AHRS_REF_QUAT(_trans, _dev, ref_qi, ref_qx, ref_qy, ref_qz, body_qi, body_qx, body_qy, body_qz) {}
 #define DOWNLINK_SEND_EKF7_XHAT(_trans, _dev, c, s1, s2, s3, p, q, r, bp, bq, br) {}
@@ -3968,6 +3966,9 @@
 
 #define DL_TAKEOFF_cpu_time(_payload) ((uint16_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8))
 
+#define DL_VAMUDES_AIRSPEED_airspeedMs(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8|((uint32_t)*((uint8_t*)_payload+2+2))<<16|((uint32_t)*((uint8_t*)_payload+2+3))<<24); _f.f; }))
+#define DL_VAMUDES_AIRSPEED_temperatureC(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24); _f.f; }))
+
 #define DL_ATTITUDE_phi(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8|((uint32_t)*((uint8_t*)_payload+2+2))<<16|((uint32_t)*((uint8_t*)_payload+2+3))<<24); _f.f; }))
 #define DL_ATTITUDE_psi(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24); _f.f; }))
 #define DL_ATTITUDE_theta(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8|((uint32_t)*((uint8_t*)_payload+10+2))<<16|((uint32_t)*((uint8_t*)_payload+10+3))<<24); _f.f; }))
@@ -4011,13 +4012,14 @@
 #define DL_PPRZ_MODE_mcu1_status(_payload) ((uint8_t)(*((uint8_t*)_payload+7)))
 
 #define DL_BAT_throttle(_payload) ((int16_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8))
-#define DL_BAT_voltage(_payload) ((uint8_t)(*((uint8_t*)_payload+4)))
-#define DL_BAT_amps(_payload) ((int16_t)(*((uint8_t*)_payload+5)|*((uint8_t*)_payload+5+1)<<8))
-#define DL_BAT_flight_time(_payload) ((uint16_t)(*((uint8_t*)_payload+7)|*((uint8_t*)_payload+7+1)<<8))
-#define DL_BAT_kill_auto_throttle(_payload) ((uint8_t)(*((uint8_t*)_payload+9)))
-#define DL_BAT_block_time(_payload) ((uint16_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8))
-#define DL_BAT_stage_time(_payload) ((uint16_t)(*((uint8_t*)_payload+12)|*((uint8_t*)_payload+12+1)<<8))
-#define DL_BAT_energy(_payload) ((int16_t)(*((uint8_t*)_payload+14)|*((uint8_t*)_payload+14+1)<<8))
+#define DL_BAT_voltage(_payload) ((uint16_t)(*((uint8_t*)_payload+4)|*((uint8_t*)_payload+4+1)<<8))
+#define DL_BAT_adc(_payload) ((uint16_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8))
+#define DL_BAT_amps(_payload) ((int16_t)(*((uint8_t*)_payload+8)|*((uint8_t*)_payload+8+1)<<8))
+#define DL_BAT_flight_time(_payload) ((uint16_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8))
+#define DL_BAT_kill_auto_throttle(_payload) ((uint8_t)(*((uint8_t*)_payload+12)))
+#define DL_BAT_block_time(_payload) ((uint16_t)(*((uint8_t*)_payload+13)|*((uint8_t*)_payload+13+1)<<8))
+#define DL_BAT_stage_time(_payload) ((uint16_t)(*((uint8_t*)_payload+15)|*((uint8_t*)_payload+15+1)<<8))
+#define DL_BAT_energy(_payload) ((int16_t)(*((uint8_t*)_payload+17)|*((uint8_t*)_payload+17+1)<<8))
 
 #define DL_DEBUG_MCU_LINK_i2c_nb_err(_payload) ((uint8_t)(*((uint8_t*)_payload+2)))
 #define DL_DEBUG_MCU_LINK_i2c_mcu1_nb_err(_payload) ((uint8_t)(*((uint8_t*)_payload+3)))
@@ -4481,8 +4483,9 @@
 #define DL_FBW_STATUS_rc_status(_payload) ((uint8_t)(*((uint8_t*)_payload+2)))
 #define DL_FBW_STATUS_frame_rate(_payload) ((uint8_t)(*((uint8_t*)_payload+3)))
 #define DL_FBW_STATUS_mode(_payload) ((uint8_t)(*((uint8_t*)_payload+4)))
-#define DL_FBW_STATUS_vsupply(_payload) ((uint8_t)(*((uint8_t*)_payload+5)))
-#define DL_FBW_STATUS_current(_payload) ((int32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24))
+#define DL_FBW_STATUS_vsupply(_payload) ((uint16_t)(*((uint8_t*)_payload+5)|*((uint8_t*)_payload+5+1)<<8))
+#define DL_FBW_STATUS_current(_payload) ((int32_t)(*((uint8_t*)_payload+7)|*((uint8_t*)_payload+7+1)<<8|((uint32_t)*((uint8_t*)_payload+7+2))<<16|((uint32_t)*((uint8_t*)_payload+7+3))<<24))
+#define DL_FBW_STATUS_waza(_payload) ((uint16_t)(*((uint8_t*)_payload+11)|*((uint8_t*)_payload+11+1)<<8))
 
 #define DL_ADC_mcu(_payload) ((uint8_t)(*((uint8_t*)_payload+2)))
 #define DL_ADC_values_length(_payload) ((uint8_t)(*((uint8_t*)_payload+3)))
@@ -4975,14 +4978,6 @@
 #define DL_ROTORCRAFT_RADIO_CONTROL_kill(_payload) ((int16_t)(*((uint8_t*)_payload+12)|*((uint8_t*)_payload+12+1)<<8))
 #define DL_ROTORCRAFT_RADIO_CONTROL_status(_payload) ((uint8_t)(*((uint8_t*)_payload+14)))
 
-#define DL_VFF_EXTENDED_measure1(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8|((uint32_t)*((uint8_t*)_payload+2+2))<<16|((uint32_t)*((uint8_t*)_payload+2+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_measure2(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_z(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8|((uint32_t)*((uint8_t*)_payload+10+2))<<16|((uint32_t)*((uint8_t*)_payload+10+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_zd(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+14)|*((uint8_t*)_payload+14+1)<<8|((uint32_t)*((uint8_t*)_payload+14+2))<<16|((uint32_t)*((uint8_t*)_payload+14+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_zdd(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+18)|*((uint8_t*)_payload+18+1)<<8|((uint32_t)*((uint8_t*)_payload+18+2))<<16|((uint32_t)*((uint8_t*)_payload+18+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_bias(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+22)|*((uint8_t*)_payload+22+1)<<8|((uint32_t)*((uint8_t*)_payload+22+2))<<16|((uint32_t)*((uint8_t*)_payload+22+3))<<24); _f.f; }))
-#define DL_VFF_EXTENDED_offset(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+26)|*((uint8_t*)_payload+26+1)<<8|((uint32_t)*((uint8_t*)_payload+26+2))<<16|((uint32_t)*((uint8_t*)_payload+26+3))<<24); _f.f; }))
-
 #define DL_VFF_measure(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8|((uint32_t)*((uint8_t*)_payload+2+2))<<16|((uint32_t)*((uint8_t*)_payload+2+3))<<24); _f.f; }))
 #define DL_VFF_z(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24); _f.f; }))
 #define DL_VFF_zd(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8|((uint32_t)*((uint8_t*)_payload+10+2))<<16|((uint32_t)*((uint8_t*)_payload+10+3))<<24); _f.f; }))
@@ -5015,9 +5010,10 @@
 #define DL_HFF_GPS_lag_cnt_err(_payload) ((int16_t)(*((uint8_t*)_payload+4)|*((uint8_t*)_payload+4+1)<<8))
 #define DL_HFF_GPS_save_cnt(_payload) ((int16_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8))
 
-#define DL_INS_SONAR_raw(_payload) ((int32_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8|((uint32_t)*((uint8_t*)_payload+2+2))<<16|((uint32_t)*((uint8_t*)_payload+2+3))<<24))
-#define DL_INS_SONAR_scaled(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8|((uint32_t)*((uint8_t*)_payload+6+2))<<16|((uint32_t)*((uint8_t*)_payload+6+3))<<24); _f.f; }))
-#define DL_INS_SONAR_var(_payload) (({ union { uint32_t u; float f; } _f; _f.u = (uint32_t)(*((uint8_t*)_payload+10)|*((uint8_t*)_payload+10+1)<<8|((uint32_t)*((uint8_t*)_payload+10+2))<<16|((uint32_t)*((uint8_t*)_payload+10+3))<<24); _f.f; }))
+#define DL_BOOZ2_SONAR_front(_payload) ((uint16_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8))
+#define DL_BOOZ2_SONAR_back(_payload) ((uint16_t)(*((uint8_t*)_payload+4)|*((uint8_t*)_payload+4+1)<<8))
+#define DL_BOOZ2_SONAR_right(_payload) ((uint16_t)(*((uint8_t*)_payload+6)|*((uint8_t*)_payload+6+1)<<8))
+#define DL_BOOZ2_SONAR_left(_payload) ((uint16_t)(*((uint8_t*)_payload+8)|*((uint8_t*)_payload+8+1)<<8))
 
 #define DL_BOOZ2_CAM_tilt(_payload) ((int16_t)(*((uint8_t*)_payload+2)|*((uint8_t*)_payload+2+1)<<8))
 #define DL_BOOZ2_CAM_pan(_payload) ((int16_t)(*((uint8_t*)_payload+4)|*((uint8_t*)_payload+4+1)<<8))
@@ -5315,8 +5311,8 @@
 #define DL_ROTORCRAFT_STATUS_ap_motors_on(_payload) ((uint8_t)(*((uint8_t*)_payload+12)))
 #define DL_ROTORCRAFT_STATUS_ap_h_mode(_payload) ((uint8_t)(*((uint8_t*)_payload+13)))
 #define DL_ROTORCRAFT_STATUS_ap_v_mode(_payload) ((uint8_t)(*((uint8_t*)_payload+14)))
-#define DL_ROTORCRAFT_STATUS_vsupply(_payload) ((uint8_t)(*((uint8_t*)_payload+15)))
-#define DL_ROTORCRAFT_STATUS_cpu_time(_payload) ((uint16_t)(*((uint8_t*)_payload+16)|*((uint8_t*)_payload+16+1)<<8))
+#define DL_ROTORCRAFT_STATUS_vsupply(_payload) ((uint16_t)(*((uint8_t*)_payload+15)|*((uint8_t*)_payload+15+1)<<8))
+#define DL_ROTORCRAFT_STATUS_cpu_time(_payload) ((uint16_t)(*((uint8_t*)_payload+17)|*((uint8_t*)_payload+17+1)<<8))
 
 #define DL_STATE_FILTER_STATUS_state_filter_mode(_payload) ((uint8_t)(*((uint8_t*)_payload+2)))
 #define DL_STATE_FILTER_STATUS_value(_payload) ((uint16_t)(*((uint8_t*)_payload+3)|*((uint8_t*)_payload+3+1)<<8))

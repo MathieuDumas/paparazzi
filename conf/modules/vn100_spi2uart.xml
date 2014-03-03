@@ -1,0 +1,10 @@
+<module name="VAMUdeS_Board">
+   <header>
+      <file name="vn100.h"/>
+   </header>
+   <init fun="VN100_Init()"/>
+   <periodic fun="VN100_Periodic()" freq="1"/>
+   <makefile>
+      <file name="vn100.c"/>
+   </makefile>
+</module>

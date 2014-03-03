@@ -20,6 +20,16 @@
    gui_color="blue"
   />
   <aircraft
+   name="Colibri"
+   ac_id="2"
+   airframe="airframes/VAMUdeS/valkyrie.xml"
+   radio="radios/dx8_old_ppm.xml"
+   telemetry="telemetry/default_fixedwing.xml"
+   flight_plan="flight_plans/VAMUdeS/versatile.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml"
+   gui_color="blue"
+  />
+  <aircraft
    name="EasyStar_ETS"
    ac_id="8"
    airframe="airframes/examples/easystar_ets.xml"
@@ -38,16 +48,6 @@
    flight_plan="flight_plans/dummy.xml"
    settings="settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_att_int.xml"
    gui_color="white"
-  />
-  <aircraft
-   name="MYAC"
-   ac_id="2"
-   airframe="airframes/examples/microjet.xml"
-   radio="radios/cockpitSX.xml"
-   telemetry="telemetry/default_fixedwing.xml"
-   flight_plan="flight_plans/basic.xml"
-   settings=" settings/fixedwing_basic.xml"
-   gui_color="blue"
   />
   <aircraft
    name="MentorEnergy"
@@ -114,9 +114,9 @@
    ac_id="1"
    airframe="airframes/valkyrie.xml"
    radio="radios/cockpitSX.xml"
-   telemetry="telemetry/default_fixedwing.xml"
-   flight_plan="flight_plans/basic.xml"
-   settings=" settings/fixedwing_basic.xml"
+   telemetry="telemetry/default_fixedwing_imu_9k6.xml"
+   flight_plan="flight_plans/versatile.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml"
    gui_color="blue"
   />
   <aircraft

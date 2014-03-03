@@ -1,4 +1,4 @@
-# This file has been generated from /home/lionel/paparazziProto1/conf/airframes/valkyrie.xml by /home/lionel/paparazziProto1/sw/tools/gen_aircraft.ml
+# This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/airframes/valkyrie.xml by /home/lionel/paparazziAssembla/vamudes-paparazzi/sw/tools/gen_aircraft.ml
 # Please DO NOT EDIT
 
 ####################################################
@@ -60,12 +60,6 @@ ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox.makefile)),)
 else
 	include $(CFG_SHARED)/gps_ublox.makefile
 endif
-# -subsystem: 'ins'
-ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ins_alt_float.makefile)),)
-	include $(CFG_FIXEDWING)/ins_alt_float.makefile
-else
-	include $(CFG_SHARED)/ins_alt_float.makefile
-endif
 endif
 
 
@@ -123,12 +117,6 @@ ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox.makefile)),)
 	include $(CFG_FIXEDWING)/gps_ublox.makefile
 else
 	include $(CFG_SHARED)/gps_ublox.makefile
-endif
-# -subsystem: 'ins'
-ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ins_alt_float.makefile)),)
-	include $(CFG_FIXEDWING)/ins_alt_float.makefile
-else
-	include $(CFG_SHARED)/ins_alt_float.makefile
 endif
 endif
 

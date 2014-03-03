@@ -1,4 +1,4 @@
-/* Automatically generated from /home/lionel/paparazziProto1/conf/messages.xml */
+/* Automatically generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/messages.xml */
 /* Please DO NOT EDIT */
 
 /* Onboard middleware library ABI

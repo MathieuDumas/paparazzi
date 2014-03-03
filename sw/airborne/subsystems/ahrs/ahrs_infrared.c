@@ -25,14 +25,24 @@
 #include "subsystems/imu.h"
 #include "subsystems/gps.h"
 
-#include "state.h"
+#include "estimator.h"
 
-float heading;
+
 
 void ahrs_init(void) {
   ahrs.status = AHRS_UNINIT;
 
-  heading = 0.;
+  /* set ltp_to_body to zero */
+  FLOAT_QUAT_ZERO(ahrs_float.ltp_to_body_quat);
+  FLOAT_EULERS_ZERO(ahrs_float.ltp_to_body_euler);
+  FLOAT_RMAT_ZERO(ahrs_float.ltp_to_body_rmat);
+  FLOAT_RATES_ZERO(ahrs_float.body_rate);
+
+  /* set ltp_to_body to zero */
+  FLOAT_QUAT_ZERO(ahrs_float.ltp_to_imu_quat);
+  FLOAT_EULERS_ZERO(ahrs_float.ltp_to_imu_euler);
+  FLOAT_RMAT_ZERO(ahrs_float.ltp_to_imu_rmat);
+  FLOAT_RATES_ZERO(ahrs_float.imu_rate);
 }
 
 void ahrs_align(void) {
@@ -43,17 +53,15 @@ void ahrs_align(void) {
 }
 
 void ahrs_propagate(void) {
-  struct FloatRates body_rate = { 0., 0., 0. };
 #ifdef ADC_CHANNEL_GYRO_P
-  body_rate.p = RATE_FLOAT_OF_BFP(imu.gyro.p);
+  ahrs_float.body_rate.p = RATE_FLOAT_OF_BFP(imu.gyro.p);
 #endif
 #ifdef ADC_CHANNEL_GYRO_Q
-  body_rate.q = RATE_FLOAT_OF_BFP(imu.gyro.q);
+  ahrs_float.body_rate.q = RATE_FLOAT_OF_BFP(imu.gyro.q);
 #endif
 #ifdef ADC_CHANNEL_GYRO_R
-  body_rate.r = RATE_FLOAT_OF_BFP(imu.gyro.r);
+  ahrs_float.body_rate.r = RATE_FLOAT_OF_BFP(imu.gyro.r);
 #endif
-  stateSetBodyRates_f(&body_rate);
 }
 
 void ahrs_update_accel(void) {
@@ -69,29 +77,50 @@ void ahrs_update_gps(void) {
 
   // Heading estimator from wind-information, usually computed with -DWIND_INFO
   // wind_north and wind_east initialized to 0, so still correct if not updated
-  float w_vn = cosf(course_f) * hspeed_mod_f - stateGetHorizontalWindspeed_f()->x;
-  float w_ve = sinf(course_f) * hspeed_mod_f - stateGetHorizontalWindspeed_f()->y;
-  heading = atan2f(w_ve, w_vn);
-  if (heading < 0.)
-    heading += 2 * M_PI;
+  float w_vn = cosf(course_f) * hspeed_mod_f - wind_north;
+  float w_ve = sinf(course_f) * hspeed_mod_f - wind_east;
+  ahrs_float.ltp_to_body_euler.psi = atan2f(w_ve, w_vn);
+  if (ahrs_float.ltp_to_body_euler.psi < 0.)
+    ahrs_float.ltp_to_body_euler.psi += 2 * M_PI;
 
+  ahrs_update_fw_estimator();
 }
 
 void ahrs_update_infrared(void) {
-  float phi  = atan2(infrared.roll, infrared.top) - infrared.roll_neutral;
-  float theta  = atan2(infrared.pitch, infrared.top) - infrared.pitch_neutral;
+  ahrs_float.ltp_to_body_euler.phi  = atan2(infrared.roll, infrared.top) - infrared.roll_neutral;
 
-  if (theta < -M_PI_2) theta += M_PI;
-  else if (theta > M_PI_2) theta -= M_PI;
+  ahrs_float.ltp_to_body_euler.theta  = atan2(infrared.pitch, infrared.top) - infrared.pitch_neutral;
 
-  if (phi >= 0) phi *= infrared.correction_right;
-  else phi *= infrared.correction_left;
+  if (ahrs_float.ltp_to_body_euler.theta < -M_PI_2)
+    ahrs_float.ltp_to_body_euler.theta += M_PI;
+  else if (ahrs_float.ltp_to_body_euler.theta > M_PI_2)
+    ahrs_float.ltp_to_body_euler.theta -= M_PI;
 
-  if (theta >= 0) theta *= infrared.correction_up;
-  else theta *= infrared.correction_down;
+  if (ahrs_float.ltp_to_body_euler.phi >= 0)
+    ahrs_float.ltp_to_body_euler.phi *= infrared.correction_right;
+  else
+    ahrs_float.ltp_to_body_euler.phi *= infrared.correction_left;
 
-  struct FloatEulers att = { phi, theta, heading };
-  stateSetNedToBodyEulers_f(&att);
+  if (ahrs_float.ltp_to_body_euler.theta >= 0)
+    ahrs_float.ltp_to_body_euler.theta *= infrared.correction_up;
+  else
+    ahrs_float.ltp_to_body_euler.theta *= infrared.correction_down;
 
+  ahrs_update_fw_estimator();
 }
 
+
+// TODO use ahrs result directly
+void ahrs_update_fw_estimator(void)
+{
+  // export results to estimator
+
+  estimator_phi   = ahrs_float.ltp_to_body_euler.phi;
+  estimator_theta = ahrs_float.ltp_to_body_euler.theta;
+  estimator_psi   = ahrs_float.ltp_to_body_euler.psi;
+
+  estimator_p = ahrs_float.body_rate.p;
+  estimator_q = ahrs_float.body_rate.q;
+  estimator_r = ahrs_float.body_rate.r;
+
+}

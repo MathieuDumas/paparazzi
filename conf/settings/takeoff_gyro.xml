@@ -1,0 +1,13 @@
+<!DOCTYPE settings SYSTEM "settings.dtd">
+
+<settings>
+  <dl_settings>
+    <dl_settings NAME="Gyro">
+      <dl_setting MIN="-9600" MAX="9600" STEP="10" VAR="takeoff_gyro_value"  shortname="Value" module="takeoff_gyro">
+        <strip_button name="Gyro HM"   value="9600"  group="gyro"/>
+        <strip_button name="Gyro Off"  value="-10"   group="gyro"/>
+        <strip_button name="Gyro Rate" value="-9600" group="gyro"/>
+      </dl_setting>
+    </dl_settings>
+  </dl_settings>
+</settings>

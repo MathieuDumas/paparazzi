@@ -19,7 +19,10 @@
      <field name="cpu_time" type="uint16" unit="s"></field>
    </message>
 
-   <!-- 5 is free -->
+   <message name="VAMUDES_AIRSPEED" id="5">
+     <field name="airspeedMs"   type="float"/>
+     <field name="temperatureC" type="float"/>
+   </message>
 
    <message name="ATTITUDE" id="6">
      <field name="phi"   type="float" unit="rad" alt_unit="deg"/>
@@ -77,7 +80,8 @@
 
    <message name="BAT" id="12">
      <field name="throttle" type="int16" unit="pprz"/>
-     <field name="voltage" type="uint8" unit="1e-1V" alt_unit="V" alt_unit_coef="0.1"/>
+     <field name="voltage" type="uint16" unit="1e-1V" alt_unit="V" alt_unit_coef="0.1"/>
+     <field name="adc"  type="uint16"/>
      <field name="amps" type="int16" unit="1e-2A" alt_unit="A" alt_unit_coef="0.01"/>
      <field name="flight_time" type="uint16" unit="s"/>
      <field name="kill_auto_throttle" type="uint8" unit="bool"/>
@@ -727,8 +731,9 @@
     <field name="rc_status" type="uint8" values="OK|LOST|REALLY_LOST"/>
     <field name="frame_rate" type="uint8" unit="Hz"/>
     <field name="mode" type="uint8" values="MANUAL|AUTO|FAILSAFE"/>
-    <field name="vsupply" type="uint8" unit="decivolt"/>
+    <field name="vsupply" type="uint16" unit="decivolt"/>
     <field name="current" type="int32" unit="mA"/>
+    <field name="waza" type="uint16"/>
   </message>
 
   <message name="ADC" id="104">
@@ -1141,9 +1146,9 @@
     <field name="ref_z"     type="int32" alt_unit="m"    alt_unit_coef="0.0039063"/>
     <field name="ref_zd"    type="int32" alt_unit="m/s"  alt_unit_coef="0.0000019"/>
     <field name="ref_zdd"   type="int32" alt_unit="m/s2" alt_unit_coef="0.0009766"/>
-    <field name="adp_inv_m" type="int32" alt_unit="foo"  alt_unit_coef="0.0000000596"/>
-    <field name="adp_cov"   type="int32" alt_unit="foo"  alt_unit_coef="0.0000000596"/>
-    <field name="adp_meas"  type="int32" alt_unit="foo"  alt_unit_coef="0.0000000596"/>
+    <field name="adp_inv_m" type="int32" alt_unit="foo"  alt_unit_coef="0.0000038"/>
+    <field name="adp_cov"   type="int32" alt_unit="foo"  alt_unit_coef="0.0000038"/>
+    <field name="adp_meas"  type="int32" alt_unit="foo"  alt_unit_coef="0.0000038"/>
     <field name="sum_err"   type="int32" />
     <field name="ff_cmd"    type="int32"/>
     <field name="fb_cmd"    type="int32"/>
@@ -1335,16 +1340,6 @@
   </message>
 
   <!-- 161 is free -->
-  <message name="VFF_EXTENDED" id="161">
-      <field name="measure1"        type="float"/>
-      <field name="measure2"        type="float"/>
-      <field name="z"              type="float"/>
-      <field name="zd"             type="float"/>
-      <field name="zdd"             type="float"/>
-      <field name="bias"           type="float"/>
-      <field name="offset"           type="float"/>
-  </message>
-
 
   <message name="VFF" id="162">
       <field name="measure"        type="float"/>
@@ -1388,10 +1383,11 @@
       <field name="save_cnt"    type="int16"/>
   </message>
 
-  <message name="INS_SONAR" id="167">
-    <field name="raw" type="int32" unit="adc" alt_unit="m" alt_unit_coef="0.0039063"/>
-    <field name="scaled" type="float" unit="m"/>
-    <field name="var" type="float"/>
+  <message name="BOOZ2_SONAR" id="167">
+    <field name="front" type="uint16" unit="adc"/>
+    <field name="back" type="uint16" unit="adc"/>
+    <field name="right" type="uint16" unit="adc"/>
+    <field name="left" type="uint16" unit="adc"/>
   </message>
 
   <message name="BOOZ2_CAM" id="168">
@@ -1803,7 +1799,7 @@
     <field name="ap_motors_on" type="uint8" values="MOTORS_OFF|MOTORS_ON"/>
     <field name="ap_h_mode"    type="uint8" values="KILL|RATE|ATTITUDE|HOVER|NAV"/>
     <field name="ap_v_mode"    type="uint8" values="KILL|RC_DIRECT|RC_CLIMB|CLIMB|HOVER|NAV"/>
-    <field name="vsupply"      type="uint8" unit="decivolt"/>
+    <field name="vsupply"      type="uint16" unit="decivolt"/>
     <field name="cpu_time"     type="uint16" unit="s"/>
   </message>
 
@@ -2426,31 +2422,24 @@
 </class>
 
 
-  <class name="airborne">
-    <message name="TEST_ABI" id="0">
-      <field name="value" type="int8_t"/>
-      <field name="boo" type="struct abi_boo"/>
-      <field name="vect" type="struct Int32Vect3 *"/>
-    </message>
-  </class>
 
 
-  <class name="alert">
-    <message name="BAT_LOW" id="1">
+<class name="alert">
+   <message name="BAT_LOW" id="1">
       <field name="ac_id" type="string"/>
       <field name="level" type="string" values="CATASTROPHIC|CRITIC|WARNING"/>
       <field name="value" type="float"/>
-    </message>
-    <message name="AIR_PROX" id="2">
+  </message>
+   <message name="AIR_PROX" id="2">
       <field name="ac_id" type="string"/>
       <field name="level" type="string" values="CATASTROPHIC|CRITIC|WARNING"/>
-    </message>
-  </class>
+  </message>
+</class>
 
 
 
-  <class name="DIA"> <!-- data in audio -->
-    <message name="NAV_INFO" id="1">
+<class name="DIA"> <!-- data in audio -->
+   <message name="NAV_INFO" id="1">
       <field name="unix_time" type="float"/>
 
       <field name="lat"   type="float" unit="deg"/>
@@ -2462,8 +2451,8 @@
 
       <field name="cam_roll"  type="int16" unit="deg"/>
       <field name="cam_pitch" type="int16" unit="deg"/>
-    </message>
-  </class>
+  </message>
+</class>
 
 
 

@@ -79,15 +79,15 @@
   81              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 electrical.c
-     /tmp/cchOEJA8.s:13     .text.electrical_init:00000000 $a
-     /tmp/cchOEJA8.s:16     .text.electrical_init:00000000 electrical_init
-     /tmp/cchOEJA8.s:34     .text.electrical_init:0000002c $d
+     /tmp/ccpqFNMT.s:13     .text.electrical_init:00000000 $a
+     /tmp/ccpqFNMT.s:16     .text.electrical_init:00000000 electrical_init
+     /tmp/ccpqFNMT.s:34     .text.electrical_init:0000002c $d
                             *COM*:00000008 electrical
-     /tmp/cchOEJA8.s:42     .text.electrical_periodic:00000000 $a
-     /tmp/cchOEJA8.s:45     .text.electrical_periodic:00000000 electrical_periodic
-     /tmp/cchOEJA8.s:68     .text.electrical_periodic:00000040 $d
-     /tmp/cchOEJA8.s:75     .bss.electrical_priv:00000000 $d
-     /tmp/cchOEJA8.s:79     .bss.electrical_priv:00000000 electrical_priv
+     /tmp/ccpqFNMT.s:42     .text.electrical_periodic:00000000 $a
+     /tmp/ccpqFNMT.s:45     .text.electrical_periodic:00000000 electrical_periodic
+     /tmp/ccpqFNMT.s:68     .text.electrical_periodic:00000040 $d
+     /tmp/ccpqFNMT.s:75     .bss.electrical_priv:00000000 $d
+     /tmp/ccpqFNMT.s:79     .bss.electrical_priv:00000000 electrical_priv
 
 UNDEFINED SYMBOLS
 adc_buf_channel

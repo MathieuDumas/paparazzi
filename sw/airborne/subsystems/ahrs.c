@@ -22,4 +22,7 @@
 #include "subsystems/ahrs.h"
 
 struct Ahrs ahrs;
+struct AhrsFloat ahrs_float;
+
+float ahrs_mag_offset;
 

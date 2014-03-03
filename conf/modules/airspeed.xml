@@ -1,0 +1,13 @@
+<!DOCTYPE module SYSTEM "module.dtd">
+
+<module name="VAMUdeS_Board">
+  <header>
+    <file name="airspeed.h"/>
+  </header>
+  <init fun="airspeedInit()"/>
+  <periodic fun="airspeedRead()"   freq="60"/>
+  <periodic fun="airspeedUpdate()" freq="10"/>
+  <makefile>
+    <file name="airspeed.c"/>
+  </makefile>
+</module>

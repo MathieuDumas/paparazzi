@@ -28,7 +28,6 @@
 #include "pprz_debug.h"
 #include "subsystems/gps.h"
 #include "subsystems/ins.h"
-#include "state.h"
 
 #include "firmwares/rotorcraft/autopilot.h"
 #include "generated/modules.h"
@@ -112,7 +111,7 @@ void nav_run(void) {
 
   /* compute a vector to the waypoint */
   struct Int32Vect2 path_to_waypoint;
-  VECT2_DIFF(path_to_waypoint, navigation_target, *stateGetPositionEnu_i());
+  VECT2_DIFF(path_to_waypoint, navigation_target, ins_enu_pos);
 
   /* saturate it */
   VECT2_STRIM(path_to_waypoint, -(1<<15), (1<<15));
@@ -128,7 +127,7 @@ void nav_run(void) {
     struct Int32Vect2 path_to_carrot;
     VECT2_SMUL(path_to_carrot, path_to_waypoint, CARROT_DIST);
     VECT2_SDIV(path_to_carrot, path_to_carrot, dist_to_waypoint);
-    VECT2_SUM(navigation_carrot, path_to_carrot, *stateGetPositionEnu_i());
+    VECT2_SUM(navigation_carrot, path_to_carrot, ins_enu_pos);
   }
 #else
   // if H_REF is used, CARROT_DIST is not used
@@ -144,7 +143,7 @@ void nav_circle(uint8_t wp_center, int32_t radius) {
   }
   else {
     struct Int32Vect2 pos_diff;
-    VECT2_DIFF(pos_diff, *stateGetPositionEnu_i(), waypoints[wp_center]);
+    VECT2_DIFF(pos_diff, ins_enu_pos,waypoints[wp_center]);
     // go back to half metric precision or values are too large
     //INT32_VECT2_RSHIFT(pos_diff,pos_diff,INT32_POS_FRAC/2);
     // store last qdr
@@ -188,7 +187,7 @@ void nav_circle(uint8_t wp_center, int32_t radius) {
 void nav_route(uint8_t wp_start, uint8_t wp_end) {
   struct Int32Vect2 wp_diff,pos_diff;
   VECT2_DIFF(wp_diff, waypoints[wp_end],waypoints[wp_start]);
-  VECT2_DIFF(pos_diff, *stateGetPositionEnu_i(), waypoints[wp_start]);
+  VECT2_DIFF(pos_diff, ins_enu_pos,waypoints[wp_start]);
   // go back to metric precision or values are too large
   INT32_VECT2_RSHIFT(wp_diff,wp_diff,INT32_POS_FRAC);
   INT32_VECT2_RSHIFT(pos_diff,pos_diff,INT32_POS_FRAC);
@@ -223,7 +222,7 @@ bool_t nav_approaching_from(uint8_t wp_idx, uint8_t from_idx) {
   int32_t dist_to_point;
   struct Int32Vect2 diff;
   static uint8_t time_at_wp = 0;
-  VECT2_DIFF(diff, waypoints[wp_idx], *stateGetPositionEnu_i());
+  VECT2_DIFF(diff, waypoints[wp_idx], ins_enu_pos);
   INT32_VECT2_RSHIFT(diff,diff,INT32_POS_FRAC);
   INT32_VECT2_NORM(dist_to_point, diff);
   //printf("dist %d | %d %d\n", dist_to_point,diff.x,diff.y);
@@ -253,25 +252,24 @@ static inline void nav_set_altitude( void ) {
 /** Reset the geographic reference to the current GPS fix */
 unit_t nav_reset_reference( void ) {
   ins_ltp_initialised = FALSE;
-  ins.hf_realign = TRUE;
-  ins.vf_realign = TRUE;
+  ins_hf_realign = TRUE;
+  ins_vf_realign = TRUE;
   return 0;
 }
 
 unit_t nav_reset_alt( void ) {
-  ins.vf_realign = TRUE;
+  ins_vf_realign = TRUE;
 
 #if USE_GPS
   ins_ltp_def.lla.alt = gps.lla_pos.alt;
   ins_ltp_def.hmsl = gps.hmsl;
-  stateSetLocalOrigin_i(&ins_ltp_def);
 #endif
 
   return 0;
 }
 
 void nav_init_stage( void ) {
-  INT32_VECT3_COPY(nav_last_point, *stateGetPositionEnu_i());
+  INT32_VECT3_COPY(nav_last_point, ins_enu_pos);
   stage_time = 0;
   nav_circle_radians = 0;
   horizontal_mode = HORIZONTAL_MODE_WAYPOINT;

@@ -72,7 +72,7 @@ let functions = [
 let variables = [
   "launch";
   "estimator_z";
-  "autopilot_flight_time";
+  "estimator_flight_time";
   "estimator_hspeed_mod";
   "estimator_theta";
   "circle_count";

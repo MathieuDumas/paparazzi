@@ -73,4 +73,6 @@ void rc_settings(bool_t mode_changed);
 
 #endif /* ! (RADIO_CALIB && defined RADIO_CONTROL_SETTINGS) */
 
+#define RcChannel(x) (fbw_state->channels[x])
+
 #endif // RC_SETTINGS_H

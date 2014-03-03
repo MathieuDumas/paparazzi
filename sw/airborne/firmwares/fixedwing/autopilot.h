@@ -33,6 +33,7 @@
 #include <inttypes.h>
 #include "std.h"
 #include "mcu_periph/sys_time.h"
+#include "estimator.h"
 
 #define THRESHOLD_MANUAL_PPRZ (MIN_PPRZ / 2)
 
@@ -54,9 +55,6 @@
 extern uint8_t pprz_mode;
 extern bool_t kill_throttle;
 
-/** flight time in seconds. */
-extern uint16_t autopilot_flight_time;
-
 
 // FIXME, move to control
 #define LATERAL_MODE_MANUAL    0
@@ -67,11 +65,12 @@ extern uint16_t autopilot_flight_time;
 extern uint8_t lateral_mode;
 
 #define STICK_PUSHED(pprz) (pprz < THRESHOLD1 || pprz > THRESHOLD2)
+
 #define FLOAT_OF_PPRZ(pprz, center, travel) ((float)pprz / (float)MAX_PPRZ * travel + center)
 
 #define THROTTLE_THRESHOLD_TAKEOFF (pprz_t)(MAX_PPRZ * 0.9)
 
-extern uint8_t vsupply;
+extern uint16_t vsupply;
 extern float energy;
 
 extern bool_t launch;
@@ -97,27 +96,14 @@ extern bool_t power_switch;
 #endif // POWER_SWITCH_LED
 
 #define autopilot_ResetFlightTimeAndLaunch(_) { \
-  autopilot_flight_time = 0; launch = FALSE; \
+  estimator_flight_time = 0; launch = FALSE; \
 }
 
-/* CONTROL_RATE will be removed in the next release
- * please use CONTROL_FREQUENCY instead
- */
-#ifndef CONTROL_FREQUENCY
-#ifdef  CONTROL_RATE
-#define CONTROL_FREQUENCY CONTROL_RATE
-#pragma message "CONTROL_RATE is deprecated. using CONTROL_FREQUENCY instead. Defaults to 60Hz if not defined."
-#else
-#define CONTROL_FREQUENCY 60
-#endif  // CONTROL_RATE
-#endif  // CONTROL_FREQUENCY
 
-#ifndef NAVIGATION_FREQUENCY
-#define NAVIGATION_FREQUENCY 4
-#endif
-
-#ifndef MODULES_FREQUENCY
-#define MODULES_FREQUENCY 60
+/* For backward compatibility with old airframe files */
+#include "generated/airframe.h"
+#ifndef CONTROL_RATE
+#define CONTROL_RATE 20
 #endif
 
 #endif /* AUTOPILOT_H */

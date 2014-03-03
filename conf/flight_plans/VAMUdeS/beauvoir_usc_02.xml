@@ -1,0 +1,76 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="345" ground_alt="0" home_mode_height="50" lat0="45.47000" lon0="-71.907785" max_dist_from_home="1500" name="Versatile" qfu="270" security_height="25">
+  <header>
+#include "subsystems/datalink/datalink.h"
+#include "firmwares/fixedwing/combi_switch.h"
+#include "firmwares/fixedwing/takeoff_gyro.h"
+</header>
+  <waypoints>
+    <waypoint alt="287.0" name="HOME" x="-3.6" y="4.1"/>
+    <waypoint alt="289.0" name="STDBY" x="118.1" y="70.9"/>
+    <waypoint alt="283.0" name="1" x="30.0" y="119.4"/>
+    <waypoint alt="280.0" name="2" x="-107.1" y="125.8"/>
+    <waypoint alt="281.0" name="R1" x="98.6" y="198.0"/>
+    <waypoint alt="274.0" name="R2" x="-209.9" y="-87.5"/>
+    <waypoint alt="267.0" name="R3" x="-318.4" y="8.9"/>
+    <waypoint alt="269.0" name="R4" x="-0.3" y="282.5"/>
+    <waypoint alt="261.0" name="R5" x="-103.6" y="368.7"/>
+    <waypoint alt="257.0" name="R6" x="-418.4" y="96.7"/>
+    <waypoint alt="271.0" name="R7" x="-267.0" y="-34.0"/>
+    <waypoint alt="270.0" name="R8" x="48.2" y="245.6"/>
+    <waypoint alt="269.0" name="R9" x="-53.8" y="325.7"/>
+    <waypoint alt="264.0" name="R10" x="-371.0" y="54.8"/>
+    <waypoint name="Z1" x="-181.4" y="404.9"/>
+    <waypoint name="Z2" x="318.6" y="-95.6"/>
+    <waypoint name="Z3" x="87.4" y="-304.4"/>
+    <waypoint name="Z4" x="-404.9" y="160.1"/>
+    <waypoint name="L1" x="-201.8" y="488.2"/>
+    <waypoint name="L2" x="417.9" y="-99.2"/>
+    <waypoint name="L3" x="132.4" y="-418.4"/>
+    <waypoint name="L4" x="-495.9" y="148.7"/>
+  </waypoints>
+  <exceptions/>
+  <blocks>
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+    <block name="Geo init">
+      <while cond="LessThan(NavBlockTime(), 10)"/>
+    </block>
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude roll="0" throttle="0" vmode="throttle"/>
+    </block>
+    <block name="Takeoff" strip_button="Takeoff">
+      <exception cond="estimator_z > 210" deroute="Standby"/>
+      <set value="0" var="kill_throttle"/>
+      <attitude pitch="30.0" roll="0.0" throttle="1.0" vmode="throttle"/>
+    </block>
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <circle radius="nav_radius" wp="STDBY"/>
+    </block>
+    <block name="Figure 8" strip_button="Figure 8 (wp 1-2)" strip_icon="eight.png">
+      <eight center="1" radius="nav_radius" turn_around="2"/>
+    </block>
+    <block name="Oval 1-2" strip_button="Oval (wp 1-2)" strip_icon="oval.png">
+      <oval p1="1" p2="2" radius="nav_radius"/>
+    </block>
+    <block name="Route">
+      <go wp="R1"/>
+      <while cond="TRUE">
+        <go approaching_time="route_ap_time" from="R1" hmode="route" wp="R2"/>
+        <go approaching_time="route_ap_time" from="R2" hmode="route" wp="R3"/>
+        <go approaching_time="route_ap_time" from="R3" hmode="route" wp="R4"/>
+        <go approaching_time="route_ap_time" from="R4" hmode="route" wp="R5"/>
+        <go approaching_time="route_ap_time" from="R5" hmode="route" wp="R6"/>
+        <go approaching_time="route_ap_time" from="R6" hmode="route" wp="R7"/>
+        <go approaching_time="route_ap_time" from="R7" hmode="route" wp="R8"/>
+        <go approaching_time="route_ap_time" from="R8" hmode="route" wp="R9"/>
+        <go approaching_time="route_ap_time" from="R9" hmode="route" wp="R10"/>
+        <go approaching_time="route_ap_time" from="R10" hmode="route" wp="R1"/>
+      </while>
+    </block>
+  </blocks>
+</flight_plan>

@@ -21,10 +21,12 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <libopencm3/stm32/f1/gpio.h>
-#include <libopencm3/stm32/exti.h>
-#include <libopencm3/stm32/spi.h>
-#include <libopencm3/stm32/f1/dma.h>
+#include <stm32/gpio.h>
+#include <stm32/flash.h>
+#include <stm32/misc.h>
+#include <stm32/exti.h>
+#include <stm32/spi.h>
+#include <stm32/dma.h>
 
 #include BOARD_CONFIG
 #include "mcu.h"
@@ -42,8 +44,8 @@ static inline void main_event_task( void );
 
 static inline void main_init_hw(void);
 
-void exti2_isr(void);
-void dma1_channel4_isr(void);
+void exti2_irq_handler(void);
+void dma1_c4_irq_handler(void);
 
 int main(void) {
   main_init();
@@ -79,9 +81,6 @@ static uint8_t dma_rx_buf[7];
 
 static void write_to_reg(uint8_t addr, uint8_t val) {
 
-#warning "Needs porting to libopencm3 or the real driver!"
-
-#if 0
   AccSelect();
   SPI_I2S_SendData(SPI2, addr);
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
@@ -89,17 +88,10 @@ static void write_to_reg(uint8_t addr, uint8_t val) {
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET);
   AccUnselect();
-#endif
 
 }
 
 static uint8_t read_fom_reg(uint8_t addr) {
-
-  uint8_t ret;
-
-#warning "Needs porting to libopencm3 or the real driver!"
-
-#if 0
   AccSelect();
   SPI_I2S_SendData(SPI2, (1<<7|addr));
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
@@ -108,16 +100,10 @@ static uint8_t read_fom_reg(uint8_t addr) {
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET);
   uint8_t ret = SPI_I2S_ReceiveData(SPI2);
   AccUnselect();
-#endif
-
   return ret;
 }
 
 static void read_data(void) {
-
-#warning "Needs porting to libopencm3 or the real driver!"
-
-#if 0
   AccSelect();
 
   dma_tx_buf[0] = (1<<7|1<<6|ADXL345_REG_DATA_X0);
@@ -168,7 +154,6 @@ static void read_data(void) {
 
   /* Enable DMA1 Channel4 Transfer Complete interrupt */
   DMA_ITConfig(DMA1_Channel4, DMA_IT_TC, ENABLE);
-#endif
 
 }
 
@@ -196,7 +181,7 @@ static inline void main_periodic_task( void ) {
     /* Enable full res and interrupt active low */
     write_to_reg(ADXL345_REG_DATA_FORMAT, 1<<3|1<<5);
     /* reads data once to bring interrupt line up */
-    uint8_t ret = spi_read(SPI2);
+    uint8_t ret = SPI_I2S_ReceiveData(SPI2);
     read_data();
     acc_status = CONFIGURED;
   }
@@ -221,9 +206,6 @@ static inline void main_event_task( void ) {
 
 static inline void main_init_hw( void ) {
 
-#warning "Needs porting to libopencm3 or the real driver!"
-
-#if 0
   /* configure acc slave select */
   /* set acc slave select as output and assert it ( on PB12) */
   AccUnselect();
@@ -293,27 +275,23 @@ static inline void main_init_hw( void ) {
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 
   DEBUG_SERVO2_INIT();
-#endif
 
 }
 
 
-void exti2_isr(void) {
+void exti2_irq_handler(void) {
 
   /* clear EXTI */
-  exti_reset_request(EXTI2);
+  if(EXTI_GetITStatus(EXTI_Line2) != RESET)
+    EXTI_ClearITPendingBit(EXTI_Line2);
 
-  //DEBUG_S4_TOGGLE();
+  DEBUG_S4_TOGGLE();
 
   read_data();
 
 }
 
-void dma1_channel4_isr(void) {
-
-#warning "Needs porting to libopencm3 or to the real driver!"
-
-#if 0
+void dma1_c4_irq_handler(void) {
   AccUnselect();
   DMA_ITConfig(DMA1_Channel4, DMA_IT_TC, DISABLE);
   /* Disable SPI_2 Rx and TX request */
@@ -322,7 +300,6 @@ void dma1_channel4_isr(void) {
   /* Disable DMA1 Channel4 and 5 */
   DMA_Cmd(DMA1_Channel4, DISABLE);
   DMA_Cmd(DMA1_Channel5, DISABLE);
-#endif
 
   acc_data_available = TRUE;
 }

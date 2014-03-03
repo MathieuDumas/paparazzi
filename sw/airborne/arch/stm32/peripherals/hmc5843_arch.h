@@ -24,12 +24,12 @@
 #ifndef HMC5843_ARCH_H
 #define HMC5843_ARCH_H
 
-#include <libopencm3/stm32/f1/gpio.h>
+#include <stm32/gpio.h>
 
 /* returns true if conversion done */
 static inline int mag_eoc(void)
 {
-  return (gpio_get(GPIOB, GPIO5) != 0);
+  return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_5);
 }
 
 #endif /* HMC5843_ARCH_H */

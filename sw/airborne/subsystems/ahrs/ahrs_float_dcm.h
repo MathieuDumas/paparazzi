@@ -27,10 +27,13 @@
 struct AhrsFloatDCM {
   struct FloatRates gyro_bias;
   struct FloatRates rate_correction;
-
-  struct FloatEulers ltp_to_imu_euler;
+  /*
+    Holds float version of IMU alignement
+    in order to be able to run against the fixed point
+    version of the IMU
+  */
+  struct FloatQuat body_to_imu_quat;
   struct FloatRMat body_to_imu_rmat;
-  struct FloatRates imu_rate;
 
   float gps_speed;
   float gps_acceleration;
@@ -41,9 +44,12 @@ struct AhrsFloatDCM {
 extern struct AhrsFloatDCM ahrs_impl;
 
 
-// FIXME neutrals should be a feature of state interface ?
+#ifdef AHRS_UPDATE_FW_ESTIMATOR
 extern float ins_roll_neutral;
 extern float ins_pitch_neutral;
+
+void ahrs_update_fw_estimator(void);
+#endif
 
 
 // DCM Parameters

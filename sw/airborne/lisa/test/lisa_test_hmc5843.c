@@ -21,9 +21,11 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <libopencm3/stm32/f1/gpio.h>
-#include <libopencm3/stm32/exti.h>
-#include <libopencm3/stm32/spi.h>
+#include <stm32/gpio.h>
+#include <stm32/flash.h>
+#include <stm32/misc.h>
+#include <stm32/exti.h>
+#include <stm32/spi.h>
 
 /*
  *           lisa/L   lisa/M
@@ -59,8 +61,7 @@ struct i2c_transaction t2;
 static uint8_t mag_state = 0;
 static volatile uint8_t mag_ready_for_read = FALSE;
 static uint8_t reading_mag = FALSE;
-
-extern void exti9_5_isr(void);
+extern void exti9_5_irq_handler(void);
 
 
 int main(void) {
@@ -223,10 +224,6 @@ static void send_config(void) {
 
 
 static inline void main_init_hw( void ) {
-
-#warning "This has to be ported to libopencm3 or using the actual driver!"
-
-#if 0
   /* set mag ss as floating input (on PC12)    = shorted to I2C2 sda ----------*/
   /* set mag reset as floating input (on PC13) = shorted to I2C2 scl ----------*/
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
@@ -260,16 +257,16 @@ static inline void main_init_hw( void ) {
 
   DEBUG_SERVO1_INIT();
   DEBUG_SERVO2_INIT();
-#endif
 
 }
 
 
 
 
-void exti9_5_isr(void) {
+void exti9_5_irq_handler(void) {
   /* clear EXTI */
-  exti_reset_request(EXTI5);
+  if(EXTI_GetITStatus(EXTI_Line5) != RESET)
+    EXTI_ClearITPendingBit(EXTI_Line5);
 
   if (mag_state == INITIALIZED) mag_ready_for_read = TRUE;
 }

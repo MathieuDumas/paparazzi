@@ -1,0 +1,403 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ahrs_infrared.c"
+  12              		.section	.text.ahrs_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	ahrs_init
+  16              	ahrs_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 AC309FE5 		ldr	r3, .L2
+  22 0004 0020A0E3 		mov	r2, #0
+  23 0008 9820C3E5 		strb	r2, [r3, #152]
+  24 000c A4309FE5 		ldr	r3, .L2+4
+  25 0010 0020A0E3 		mov	r2, #0
+  26 0014 FE15A0E3 		mov	r1, #1065353216
+  27 0018 641083E5 		str	r1, [r3, #100]	@ float
+  28 001c 682083E5 		str	r2, [r3, #104]	@ float
+  29 0020 6C2083E5 		str	r2, [r3, #108]	@ float
+  30 0024 702083E5 		str	r2, [r3, #112]	@ float
+  31 0028 742083E5 		str	r2, [r3, #116]	@ float
+  32 002c 782083E5 		str	r2, [r3, #120]	@ float
+  33 0030 7C2083E5 		str	r2, [r3, #124]	@ float
+  34 0034 801083E5 		str	r1, [r3, #128]	@ float
+  35 0038 842083E5 		str	r2, [r3, #132]	@ float
+  36 003c 882083E5 		str	r2, [r3, #136]	@ float
+  37 0040 8C2083E5 		str	r2, [r3, #140]	@ float
+  38 0044 901083E5 		str	r1, [r3, #144]	@ float
+  39 0048 942083E5 		str	r2, [r3, #148]	@ float
+  40 004c 982083E5 		str	r2, [r3, #152]	@ float
+  41 0050 9C2083E5 		str	r2, [r3, #156]	@ float
+  42 0054 A01083E5 		str	r1, [r3, #160]	@ float
+  43 0058 A42083E5 		str	r2, [r3, #164]	@ float
+  44 005c A82083E5 		str	r2, [r3, #168]	@ float
+  45 0060 AC2083E5 		str	r2, [r3, #172]	@ float
+  46 0064 001083E5 		str	r1, [r3, #0]	@ float
+  47 0068 042083E5 		str	r2, [r3, #4]	@ float
+  48 006c 082083E5 		str	r2, [r3, #8]	@ float
+  49 0070 0C2083E5 		str	r2, [r3, #12]	@ float
+  50 0074 102083E5 		str	r2, [r3, #16]	@ float
+  51 0078 142083E5 		str	r2, [r3, #20]	@ float
+  52 007c 182083E5 		str	r2, [r3, #24]	@ float
+  53 0080 1C1083E5 		str	r1, [r3, #28]	@ float
+  54 0084 202083E5 		str	r2, [r3, #32]	@ float
+  55 0088 242083E5 		str	r2, [r3, #36]	@ float
+  56 008c 282083E5 		str	r2, [r3, #40]	@ float
+  57 0090 2C1083E5 		str	r1, [r3, #44]	@ float
+  58 0094 302083E5 		str	r2, [r3, #48]	@ float
+  59 0098 342083E5 		str	r2, [r3, #52]	@ float
+  60 009c 382083E5 		str	r2, [r3, #56]	@ float
+  61 00a0 3C1083E5 		str	r1, [r3, #60]	@ float
+  62 00a4 402083E5 		str	r2, [r3, #64]	@ float
+  63 00a8 442083E5 		str	r2, [r3, #68]	@ float
+  64 00ac 482083E5 		str	r2, [r3, #72]	@ float
+  65 00b0 1EFF2FE1 		bx	lr
+  66              	.L3:
+  67              		.align	2
+  68              	.L2:
+  69 00b4 00000000 		.word	ahrs
+  70 00b8 00000000 		.word	ahrs_float
+  72              		.section	.text.ahrs_align,"ax",%progbits
+  73              		.align	2
+  74              		.global	ahrs_align
+  76              	ahrs_align:
+  77              		@ Function supports interworking.
+  78              		@ args = 0, pretend = 0, frame = 0
+  79              		@ frame_needed = 0, uses_anonymous_args = 0
+  80              		@ link register save eliminated.
+  81 0000 08309FE5 		ldr	r3, .L5
+  82 0004 0120A0E3 		mov	r2, #1
+  83 0008 9820C3E5 		strb	r2, [r3, #152]
+  84 000c 1EFF2FE1 		bx	lr
+  85              	.L6:
+  86              		.align	2
+  87              	.L5:
+  88 0010 00000000 		.word	ahrs
+  90              		.section	.text.ahrs_propagate,"ax",%progbits
+  91              		.align	2
+  92              		.global	ahrs_propagate
+  94              	ahrs_propagate:
+  95              		@ Function supports interworking.
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+  99 0000 1EFF2FE1 		bx	lr
+ 101              		.section	.text.ahrs_update_accel,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	ahrs_update_accel
+ 105              	ahrs_update_accel:
+ 106              		@ Function supports interworking.
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109              		@ link register save eliminated.
+ 110 0000 1EFF2FE1 		bx	lr
+ 112              		.section	.text.ahrs_update_mag,"ax",%progbits
+ 113              		.align	2
+ 114              		.global	ahrs_update_mag
+ 116              	ahrs_update_mag:
+ 117              		@ Function supports interworking.
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120              		@ link register save eliminated.
+ 121 0000 1EFF2FE1 		bx	lr
+ 123              		.section	.text.ahrs_update_fw_estimator,"ax",%progbits
+ 124              		.align	2
+ 125              		.global	ahrs_update_fw_estimator
+ 127              	ahrs_update_fw_estimator:
+ 128              		@ Function supports interworking.
+ 129              		@ args = 0, pretend = 0, frame = 0
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		@ link register save eliminated.
+ 132 0000 48309FE5 		ldr	r3, .L11
+ 133 0004 48209FE5 		ldr	r2, .L11+4
+ 134 0008 741093E5 		ldr	r1, [r3, #116]	@ float
+ 135 000c 001082E5 		str	r1, [r2, #0]	@ float
+ 136 0010 781093E5 		ldr	r1, [r3, #120]	@ float
+ 137 0014 3C209FE5 		ldr	r2, .L11+8
+ 138 0018 001082E5 		str	r1, [r2, #0]	@ float
+ 139 001c 7C1093E5 		ldr	r1, [r3, #124]	@ float
+ 140 0020 34209FE5 		ldr	r2, .L11+12
+ 141 0024 001082E5 		str	r1, [r2, #0]	@ float
+ 142 0028 A41093E5 		ldr	r1, [r3, #164]	@ float
+ 143 002c 2C209FE5 		ldr	r2, .L11+16
+ 144 0030 001082E5 		str	r1, [r2, #0]	@ float
+ 145 0034 A81093E5 		ldr	r1, [r3, #168]	@ float
+ 146 0038 24209FE5 		ldr	r2, .L11+20
+ 147 003c 001082E5 		str	r1, [r2, #0]	@ float
+ 148 0040 AC2093E5 		ldr	r2, [r3, #172]	@ float
+ 149 0044 1C309FE5 		ldr	r3, .L11+24
+ 150 0048 002083E5 		str	r2, [r3, #0]	@ float
+ 151 004c 1EFF2FE1 		bx	lr
+ 152              	.L12:
+ 153              		.align	2
+ 154              	.L11:
+ 155 0050 00000000 		.word	ahrs_float
+ 156 0054 00000000 		.word	estimator_phi
+ 157 0058 00000000 		.word	estimator_theta
+ 158 005c 00000000 		.word	estimator_psi
+ 159 0060 00000000 		.word	estimator_p
+ 160 0064 00000000 		.word	estimator_q
+ 161 0068 00000000 		.word	estimator_r
+ 163              		.global	__aeabi_i2d
+ 164              		.global	__aeabi_f2d
+ 165              		.global	__aeabi_dsub
+ 166              		.global	__aeabi_d2f
+ 167              		.global	__aeabi_dcmplt
+ 168              		.global	__aeabi_dadd
+ 169              		.global	__aeabi_dcmpgt
+ 170              		.global	__aeabi_fcmpge
+ 171              		.global	__aeabi_fmul
+ 172              		.section	.text.ahrs_update_infrared,"ax",%progbits
+ 173              		.align	2
+ 174              		.global	ahrs_update_infrared
+ 176              	ahrs_update_infrared:
+ 177              		@ Function supports interworking.
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180 0000 F8402DE9 		stmfd	sp!, {r3, r4, r5, r6, r7, lr}
+ 181 0004 7C419FE5 		ldr	r4, .L34
+ 182 0008 F401D4E1 		ldrsh	r0, [r4, #20]
+ 183 000c FEFFFFEB 		bl	__aeabi_i2d
+ 184 0010 0060A0E1 		mov	r6, r0
+ 185 0014 F801D4E1 		ldrsh	r0, [r4, #24]
+ 186 0018 0170A0E1 		mov	r7, r1
+ 187 001c FEFFFFEB 		bl	__aeabi_i2d
+ 188 0020 0020A0E1 		mov	r2, r0
+ 189 0024 0130A0E1 		mov	r3, r1
+ 190 0028 0600A0E1 		mov	r0, r6
+ 191 002c 0710A0E1 		mov	r1, r7
+ 192 0030 FEFFFFEB 		bl	atan2
+ 193 0034 0060A0E1 		mov	r6, r0
+ 194 0038 080094E5 		ldr	r0, [r4, #8]	@ float
+ 195 003c 0170A0E1 		mov	r7, r1
+ 196 0040 FEFFFFEB 		bl	__aeabi_f2d
+ 197 0044 0020A0E1 		mov	r2, r0
+ 198 0048 0130A0E1 		mov	r3, r1
+ 199 004c 0600A0E1 		mov	r0, r6
+ 200 0050 0710A0E1 		mov	r1, r7
+ 201 0054 FEFFFFEB 		bl	__aeabi_dsub
+ 202 0058 FEFFFFEB 		bl	__aeabi_d2f
+ 203 005c 28519FE5 		ldr	r5, .L34+4
+ 204 0060 740085E5 		str	r0, [r5, #116]	@ float
+ 205 0064 F601D4E1 		ldrsh	r0, [r4, #22]
+ 206 0068 FEFFFFEB 		bl	__aeabi_i2d
+ 207 006c 0060A0E1 		mov	r6, r0
+ 208 0070 F801D4E1 		ldrsh	r0, [r4, #24]
+ 209 0074 0170A0E1 		mov	r7, r1
+ 210 0078 FEFFFFEB 		bl	__aeabi_i2d
+ 211 007c 0020A0E1 		mov	r2, r0
+ 212 0080 0130A0E1 		mov	r3, r1
+ 213 0084 0600A0E1 		mov	r0, r6
+ 214 0088 0710A0E1 		mov	r1, r7
+ 215 008c FEFFFFEB 		bl	atan2
+ 216 0090 0060A0E1 		mov	r6, r0
+ 217 0094 0C0094E5 		ldr	r0, [r4, #12]	@ float
+ 218 0098 0170A0E1 		mov	r7, r1
+ 219 009c FEFFFFEB 		bl	__aeabi_f2d
+ 220 00a0 0020A0E1 		mov	r2, r0
+ 221 00a4 0130A0E1 		mov	r3, r1
+ 222 00a8 0600A0E1 		mov	r0, r6
+ 223 00ac 0710A0E1 		mov	r1, r7
+ 224 00b0 FEFFFFEB 		bl	__aeabi_dsub
+ 225 00b4 FEFFFFEB 		bl	__aeabi_d2f
+ 226 00b8 780085E5 		str	r0, [r5, #120]	@ float
+ 227 00bc FEFFFFEB 		bl	__aeabi_f2d
+ 228 00c0 C8209FE5 		ldr	r2, .L34+8
+ 229 00c4 C8309FE5 		ldr	r3, .L34+12
+ 230 00c8 0060A0E1 		mov	r6, r0
+ 231 00cc 0170A0E1 		mov	r7, r1
+ 232 00d0 FEFFFFEB 		bl	__aeabi_dcmplt
+ 233 00d4 000050E3 		cmp	r0, #0
+ 234 00d8 0710A0E1 		mov	r1, r7
+ 235 00dc 0600A0E1 		mov	r0, r6
+ 236 00e0 A8209FE5 		ldr	r2, .L34+8
+ 237 00e4 0200000A 		beq	.L28
+ 238 00e8 A8309FE5 		ldr	r3, .L34+16
+ 239 00ec FEFFFFEB 		bl	__aeabi_dadd
+ 240 00f0 080000EA 		b	.L31
+ 241              	.L28:
+ 242 00f4 A0309FE5 		ldr	r3, .L34+20
+ 243 00f8 FEFFFFEB 		bl	__aeabi_dcmpgt
+ 244 00fc 000050E3 		cmp	r0, #0
+ 245 0100 0600000A 		beq	.L16
+ 246 0104 0600A0E1 		mov	r0, r6
+ 247 0108 0710A0E1 		mov	r1, r7
+ 248 010c 7C209FE5 		ldr	r2, .L34+8
+ 249 0110 80309FE5 		ldr	r3, .L34+16
+ 250 0114 FEFFFFEB 		bl	__aeabi_dsub
+ 251              	.L31:
+ 252 0118 FEFFFFEB 		bl	__aeabi_d2f
+ 253 011c 780085E5 		str	r0, [r5, #120]	@ float
+ 254              	.L16:
+ 255 0120 64409FE5 		ldr	r4, .L34+4
+ 256 0124 745094E5 		ldr	r5, [r4, #116]	@ float
+ 257 0128 0010A0E3 		mov	r1, #0
+ 258 012c 0500A0E1 		mov	r0, r5
+ 259 0130 FEFFFFEB 		bl	__aeabi_fcmpge
+ 260 0134 4C309FE5 		ldr	r3, .L34
+ 261 0138 000050E3 		cmp	r0, #0
+ 262 013c 2C109315 		ldrne	r1, [r3, #44]	@ float
+ 263 0140 28109305 		ldreq	r1, [r3, #40]	@ float
+ 264 0144 0500A0E1 		mov	r0, r5
+ 265 0148 FEFFFFEB 		bl	__aeabi_fmul
+ 266 014c 740084E5 		str	r0, [r4, #116]	@ float
+ 267 0150 784094E5 		ldr	r4, [r4, #120]	@ float
+ 268 0154 0010A0E3 		mov	r1, #0
+ 269 0158 0400A0E1 		mov	r0, r4
+ 270 015c FEFFFFEB 		bl	__aeabi_fcmpge
+ 271 0160 20309FE5 		ldr	r3, .L34
+ 272 0164 000050E3 		cmp	r0, #0
+ 273 0168 30109315 		ldrne	r1, [r3, #48]	@ float
+ 274 016c 0400A0E1 		mov	r0, r4
+ 275 0170 34109305 		ldreq	r1, [r3, #52]	@ float
+ 276 0174 FEFFFFEB 		bl	__aeabi_fmul
+ 277 0178 0C509FE5 		ldr	r5, .L34+4
+ 278 017c 780085E5 		str	r0, [r5, #120]	@ float
+ 279 0180 F840BDE8 		ldmfd	sp!, {r3, r4, r5, r6, r7, lr}
+ 280 0184 FEFFFFEA 		b	ahrs_update_fw_estimator
+ 281              	.L35:
+ 282              		.align	2
+ 283              	.L34:
+ 284 0188 00000000 		.word	infrared
+ 285 018c 00000000 		.word	ahrs_float
+ 286 0190 182D4454 		.word	1413754136
+ 287 0194 FB21F9BF 		.word	-1074191877
+ 288 0198 FB210940 		.word	1074340347
+ 289 019c FB21F93F 		.word	1073291771
+ 291              		.global	__aeabi_ddiv
+ 292              		.global	__aeabi_fsub
+ 293              		.global	__aeabi_fcmplt
+ 294              		.section	.text.ahrs_update_gps,"ax",%progbits
+ 295              		.align	2
+ 296              		.global	ahrs_update_gps
+ 298              	ahrs_update_gps:
+ 299              		@ Function supports interworking.
+ 300              		@ args = 0, pretend = 0, frame = 0
+ 301              		@ frame_needed = 0, uses_anonymous_args = 0
+ 302 0000 70402DE9 		stmfd	sp!, {r4, r5, r6, lr}
+ 303 0004 C0509FE5 		ldr	r5, .L40
+ 304 0008 F404D5E1 		ldrsh	r0, [r5, #68]
+ 305 000c FEFFFFEB 		bl	__aeabi_i2d
+ 306 0010 0020A0E3 		mov	r2, #0
+ 307 0014 B4309FE5 		ldr	r3, .L40+4
+ 308 0018 FEFFFFEB 		bl	__aeabi_ddiv
+ 309 001c FEFFFFEB 		bl	__aeabi_d2f
+ 310 0020 0040A0E1 		mov	r4, r0
+ 311 0024 480095E5 		ldr	r0, [r5, #72]
+ 312 0028 FEFFFFEB 		bl	__aeabi_i2d
+ 313 002c 0020A0E3 		mov	r2, #0
+ 314 0030 9C309FE5 		ldr	r3, .L40+8
+ 315 0034 FEFFFFEB 		bl	__aeabi_ddiv
+ 316 0038 FEFFFFEB 		bl	__aeabi_d2f
+ 317 003c 0050A0E1 		mov	r5, r0
+ 318 0040 FEFFFFEB 		bl	cosf
+ 319 0044 0060A0E1 		mov	r6, r0
+ 320 0048 0500A0E1 		mov	r0, r5
+ 321 004c FEFFFFEB 		bl	sinf
+ 322 0050 0410A0E1 		mov	r1, r4
+ 323 0054 FEFFFFEB 		bl	__aeabi_fmul
+ 324 0058 78309FE5 		ldr	r3, .L40+12
+ 325 005c 001093E5 		ldr	r1, [r3, #0]	@ float
+ 326 0060 FEFFFFEB 		bl	__aeabi_fsub
+ 327 0064 0410A0E1 		mov	r1, r4
+ 328 0068 0050A0E1 		mov	r5, r0
+ 329 006c 0600A0E1 		mov	r0, r6
+ 330 0070 FEFFFFEB 		bl	__aeabi_fmul
+ 331 0074 60309FE5 		ldr	r3, .L40+16
+ 332 0078 001093E5 		ldr	r1, [r3, #0]	@ float
+ 333 007c FEFFFFEB 		bl	__aeabi_fsub
+ 334 0080 0010A0E1 		mov	r1, r0
+ 335 0084 0500A0E1 		mov	r0, r5
+ 336 0088 FEFFFFEB 		bl	atan2f
+ 337 008c 4C409FE5 		ldr	r4, .L40+20
+ 338 0090 0010A0E3 		mov	r1, #0
+ 339 0094 7C0084E5 		str	r0, [r4, #124]	@ float
+ 340 0098 0050A0E1 		mov	r5, r0
+ 341 009c FEFFFFEB 		bl	__aeabi_fcmplt
+ 342 00a0 000050E3 		cmp	r0, #0
+ 343 00a4 0600000A 		beq	.L37
+ 344 00a8 0500A0E1 		mov	r0, r5
+ 345 00ac FEFFFFEB 		bl	__aeabi_f2d
+ 346 00b0 2C209FE5 		ldr	r2, .L40+24
+ 347 00b4 2C309FE5 		ldr	r3, .L40+28
+ 348 00b8 FEFFFFEB 		bl	__aeabi_dadd
+ 349 00bc FEFFFFEB 		bl	__aeabi_d2f
+ 350 00c0 7C0084E5 		str	r0, [r4, #124]	@ float
+ 351              	.L37:
+ 352 00c4 7040BDE8 		ldmfd	sp!, {r4, r5, r6, lr}
+ 353 00c8 FEFFFFEA 		b	ahrs_update_fw_estimator
+ 354              	.L41:
+ 355              		.align	2
+ 356              	.L40:
+ 357 00cc 00000000 		.word	gps
+ 358 00d0 00005940 		.word	1079574528
+ 359 00d4 D0126341 		.word	1097011920
+ 360 00d8 00000000 		.word	wind_east
+ 361 00dc 00000000 		.word	wind_north
+ 362 00e0 00000000 		.word	ahrs_float
+ 363 00e4 182D4454 		.word	1413754136
+ 364 00e8 FB211940 		.word	1075388923
+ 366              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 ahrs_infrared.c
+     /tmp/ccPGGKxa.s:13     .text.ahrs_init:00000000 $a
+     /tmp/ccPGGKxa.s:16     .text.ahrs_init:00000000 ahrs_init
+     /tmp/ccPGGKxa.s:69     .text.ahrs_init:000000b4 $d
+     /tmp/ccPGGKxa.s:73     .text.ahrs_align:00000000 $a
+     /tmp/ccPGGKxa.s:76     .text.ahrs_align:00000000 ahrs_align
+     /tmp/ccPGGKxa.s:88     .text.ahrs_align:00000010 $d
+     /tmp/ccPGGKxa.s:91     .text.ahrs_propagate:00000000 $a
+     /tmp/ccPGGKxa.s:94     .text.ahrs_propagate:00000000 ahrs_propagate
+     /tmp/ccPGGKxa.s:102    .text.ahrs_update_accel:00000000 $a
+     /tmp/ccPGGKxa.s:105    .text.ahrs_update_accel:00000000 ahrs_update_accel
+     /tmp/ccPGGKxa.s:113    .text.ahrs_update_mag:00000000 $a
+     /tmp/ccPGGKxa.s:116    .text.ahrs_update_mag:00000000 ahrs_update_mag
+     /tmp/ccPGGKxa.s:124    .text.ahrs_update_fw_estimator:00000000 $a
+     /tmp/ccPGGKxa.s:127    .text.ahrs_update_fw_estimator:00000000 ahrs_update_fw_estimator
+     /tmp/ccPGGKxa.s:155    .text.ahrs_update_fw_estimator:00000050 $d
+     /tmp/ccPGGKxa.s:173    .text.ahrs_update_infrared:00000000 $a
+     /tmp/ccPGGKxa.s:176    .text.ahrs_update_infrared:00000000 ahrs_update_infrared
+     /tmp/ccPGGKxa.s:284    .text.ahrs_update_infrared:00000188 $d
+     /tmp/ccPGGKxa.s:295    .text.ahrs_update_gps:00000000 $a
+     /tmp/ccPGGKxa.s:298    .text.ahrs_update_gps:00000000 ahrs_update_gps
+     /tmp/ccPGGKxa.s:357    .text.ahrs_update_gps:000000cc $d
+
+UNDEFINED SYMBOLS
+ahrs
+ahrs_float
+estimator_phi
+estimator_theta
+estimator_psi
+estimator_p
+estimator_q
+estimator_r
+__aeabi_i2d
+__aeabi_f2d
+__aeabi_dsub
+__aeabi_d2f
+__aeabi_dcmplt
+__aeabi_dadd
+__aeabi_dcmpgt
+__aeabi_fcmpge
+__aeabi_fmul
+atan2
+infrared
+__aeabi_ddiv
+__aeabi_fsub
+__aeabi_fcmplt
+cosf
+sinf
+atan2f
+gps
+wind_east
+wind_north

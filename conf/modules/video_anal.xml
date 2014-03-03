@@ -1,0 +1,12 @@
+<!DOCTYPE module SYSTEM "module.dtd">
+
+<module name="VAMUdeS_Board">
+  <header>
+    <file name="video_anal.h"/>
+  </header>
+  <init fun="VideoAnal_Init()"/>
+  <periodic fun="VideoAnal_Periodic()" freq="1"/>
+  <makefile>
+    <file name="video_anal.c"/>
+  </makefile>
+</module>

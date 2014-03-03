@@ -1,0 +1,12 @@
+<!DOCTYPE settings SYSTEM "settings.dtd">
+
+<settings>
+  <dl_settings>
+    <dl_settings NAME="Power LED">
+      <dl_setting MIN="0" MAX="3" STEP="1" VAR="LeftWing_State" shortname="Left" values="Off|On|1Hz|0.5Hz"/>
+      <dl_setting MIN="0" MAX="3" STEP="1" VAR="RightWing_State" shortname="Right" values="Off|On|1Hz|0.5Hz"/>
+      <dl_setting MIN="0" MAX="3" STEP="1" VAR="Tail_State" shortname="Tail" values="Off|On|1Hz|0.5Hz"/>
+    </dl_settings>
+  </dl_settings>
+</settings>
+

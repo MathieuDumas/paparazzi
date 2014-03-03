@@ -1,0 +1,7 @@
+The air vehicle shall automatically return home or terminate flight after loss of transmit signal of more than 30 sec
+
+The air vehicle shall automatically terminate flight after loss of signal of more than 3 minutes
+
+The flight termination system shall be capable of activation by the safety pilot.
+
+

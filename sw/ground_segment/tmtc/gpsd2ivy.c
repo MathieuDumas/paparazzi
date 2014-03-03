@@ -1,6 +1,6 @@
 /*
  * $Id$
- *
+ *  
  * Copyright (C) 2009  Martin Mueller
  *
  * This file is part of paparazzi.
@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with paparazzi; see the file COPYING.  If not, write to
  * the Free Software Foundation, 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Boston, MA 02111-1307, USA. 
  *
  */
 
@@ -30,7 +30,7 @@
  * on the map
  */
 
-/*
+/* 
   <message name="FLIGHT_PARAM" id="11">
     <field name="ac_id"  type="string"/>
     <field name="roll"   type="float" unit="deg"/>
@@ -62,7 +62,7 @@
 #include "gps.h"
 
 #define MSG_DEST	"ground"
-#define MSG_NAME    "FLIGHT_PARAM"
+#define MSG_NAME 	"FLIGHT_PARAM"
 #define MSG_ID		"GCS"
 
 #define TIMEOUT_PERIOD 200
@@ -94,7 +94,7 @@ static void update_gps(struct gps_data_t *gpsdata,
             if (isnan(gpsdata->fix.climb) != 0) fix_climb = gpsdata->fix.climb;
         }
 
-        IvySendMsg("%s %s %s %f %f %f %f %f %f %f %f %f %f %f %d",
+    	IvySendMsg("%s %s %s %f %f %f %f %f %f %f %f %f %f %f %d",
                 MSG_DEST,
                 MSG_NAME,
                 MSG_ID, // ac_id
@@ -117,16 +117,16 @@ static void update_gps(struct gps_data_t *gpsdata,
 
 static gboolean gps_periodic(gpointer data __attribute__ ((unused)))
 {
-    if (gps_waiting (gpsdata, 500)) {
-        if (gps_read (gpsdata) == -1) {
-            perror("gps read error");
-            //exit 2;
-            //ret = 2;
-            //running = false;
-        } else {
-            update_gps(gpsdata, NULL, 0);
-        }
-    }
+        if (gps_waiting (gpsdata, 500)) {
+            if (gps_read (gpsdata) == -1) {
+		    perror("gps read error");
+		    //exit 2;
+		    //ret = 2;
+		    //running = false;
+	    } else {
+		    update_gps(gpsdata, NULL, 0);
+	    }
+	}
 }
 
 int main(int argc, char *argv[])
@@ -135,18 +135,18 @@ int main(int argc, char *argv[])
     bool running = true;
     int ret = 0;
     GMainLoop *ml =  g_main_loop_new(NULL, FALSE);
-
+    
 
     gpsdata = malloc(sizeof(struct gps_data_t));
 
     ret = gps_open(NULL, port, gpsdata);
     if (ret != 0) {
-        perror("error connecting to gpsd");
-        return 1;
+	    perror("error connecting to gpsd");
+	    return 1;
     }
 
     gps_stream(gpsdata, WATCH_ENABLE, NULL);
-
+    
     IvyInit ("GPSd2Ivy", "GPSd2Ivy READY", NULL, NULL, NULL, NULL);
     IvyStart("224.255.255.255:2010");
 
@@ -161,3 +161,4 @@ int main(int argc, char *argv[])
 
     return ret;
 }
+

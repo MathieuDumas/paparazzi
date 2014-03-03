@@ -305,10 +305,12 @@ let mark = fun (geomap:G.widget) ac_id track plugin_frame ->
       incr i;
 
       (* Computing the footprint: front_left and back_right *)
-      let cam_aperture = 2.4/.1.9 in (* width over distance FIXME *)
+      (* let cam_aperture = 2.4/.1.9 in (* width over distance FIXME *) *)
+      let cam_aperture = 252. /. 200. in (* width over distance FIXME *)
       let alt = track#last_altitude -. float (Srtm.of_wgs84 geo) in
       let width = cam_aperture *. alt in
-      let height = width *. 3. /. 4. in
+      (*let height = width *. 3. /. 4. in*)
+      let height = width *. 252. /. 198. in
       let utm = utm_of WGS84 geo in
       let a = (Deg>>Rad)track#last_heading in
       let (xfl,yfl) = rotate a (-.width/.2., height/.2.)
@@ -322,7 +324,7 @@ let mark = fun (geomap:G.widget) ac_id track plugin_frame ->
 
 (** Light display of attributes in the flight plan. *)
 let attributes_pretty_printer = fun attribs ->
-  (* Remove the optional attributes *)
+  (* Remove the optional attributes\A0*)
   let valid = fun a ->
     let a = String.lowercase a in
     a <> "no" && a <> "strip_icon" && a <> "strip_button" && a <> "pre_call"
@@ -697,7 +699,7 @@ let create_ac = fun alert (geomap:G.widget) (acs_notebook:GPack.notebook) (ac_id
     connect "kill_throttle" ac.strip#connect_kill;
     connect "nav_shift" ac.strip#connect_shift_lateral;
     connect "pprz_mode" ac.strip#connect_mode;
-    connect "autopilot_flight_time" ac.strip#connect_flight_time;
+    connect "estimator_flight_time" ac.strip#connect_flight_time;
     let get_ac_unix_time = fun () -> ac.last_unix_time in
     connect ~warning:false "snav_desired_tow" (ac.strip#connect_apt get_ac_unix_time);
     begin (* Periodically update the appointment *)
@@ -1289,12 +1291,13 @@ let listen_telemetry_status = fun () ->
 
 let mark_dcshot = fun (geomap:G.widget) _sender vs ->
   let ac = find_ac !active_ac in
+    let photonumber = Pprz.string_assoc "photo_nr" vs in
 (*  let ac = get_ac vs in *)
     match ac.track#last with
       Some geo ->
     begin
       let group = geomap#background in
-      let point = geomap#circle ~group ~fill_color:"yellow" geo 3. in
+      let point = geomap#photoprojection ~group ~fill_color:"yellow" ~number:photonumber geo 3. in
       point#raise_to_top ()
     end
     | None -> ()

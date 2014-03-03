@@ -17,7 +17,6 @@ $(TARGET).ARCHDIR = $(ARCH)
 # not needed?
 $(TARGET).OOCD_INTERFACE=flossjtag
 #$(TARGET).OOCD_INTERFACE=jtagkey-tiny
-$(TARGET).LDSCRIPT=$(SRC_ARCH)/lisa-m.ld
 
 # -----------------------------------------------------------------------
 

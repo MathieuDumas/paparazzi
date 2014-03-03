@@ -1,0 +1,168 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="100" ground_alt="3" lat0="38.14483889" lon0="-76.42895000" max_dist_from_home="100000" name="AUVSI_2012" qfu="70" security_height="30">
+
+<header>
+#include "datalink.h"
+#include "subsystems/navigation/OSAMNav.h"
+</header>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||     START OF WAYPOINTS LIST    |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+  <waypoints>
+
+  <!--********************************-->
+  <!--           Flight Zone          -->
+  <!--********************************-->
+  
+    <waypoint name="_A1"  x="-229.8" y="65.8"/>
+    <waypoint name="_A2"  x="-564.0" y="-148.2"/>
+    <waypoint name="_A3"  x="-329.9" y="-488.8"/>
+    <waypoint name="_A4"  x="-56.2"  y="-362.0"/>
+    <waypoint name="_A5"  x="232.9"  y="-564.1"/>
+    <waypoint name="_A6"  x="464.8"  y="-366.0"/>
+    <waypoint name="_A7"  x="314.0"  y="-84.1"/>
+    <waypoint name="_A8"  x="603.4"  y="102.0"/>
+    <waypoint name="_A9"  x="530.6"  y="273.9"/>
+    <waypoint name="_A10" x="168.1"  y="131.8"/>
+    <waypoint name="_A11" x="-5.5"   y="720.0"/>
+    <waypoint name="_A12" x="-492.7" y="701.9"/>
+    
+  <!--********************************-->
+  <!--           Search Zone          -->
+  <!--********************************-->    
+  
+    <waypoint name="_S1" x="-396.3" y="636.0"/>
+    <waypoint name="_S2" x="-201.7" y="153.9"/>
+    <waypoint name="_S3" x="105.5"  y="176.6"/>
+    <waypoint name="_S4" x="-35.8"  y="645.8"/>
+    <waypoint name="_S5" x="-35.8"  y="645.8"/>
+    <waypoint name="_S6" x="-35.8"  y="645.8"/>
+    <waypoint name="_S7" x="-35.8"  y="645.8"/>
+
+  <!--********************************-->
+  <!--            STANDART            -->
+  <!--********************************-->
+
+    <waypoint name="HOME"  x="0" y="0"/>
+    <waypoint name="STDBY" x="38.144615" y="-76.429295"/>	
+    <waypoint name="MOB"   lat="38.148500" lon="-76.423880"/>
+
+    <waypoint name="SRIC" x="115.3" y="-292.2"/>
+
+
+  <!--********************************-->
+  <!--            TAKE OFF            -->
+  <!--********************************-->
+
+
+  <!--********************************-->
+  <!--            LANDING             -->
+  <!--********************************-->
+
+    <waypoint name="TD" lat="38.143899" lon="-76.430170" alt="4"/>
+    <waypoint name="AF" lat="38.142912" lon="-76.433021" alt="40"/>
+    <waypoint name="_BASELEG" x="50" y="0"/>
+      
+   <!--********************************-->
+   <!--             Route              -->
+   <!--********************************-->   
+      
+    <waypoint name="W1" x="-59.9"  y="16.0"   alt="100"/>
+    <waypoint name="W2" x="-233.9" y="-58.7"  alt="130"/>
+    <waypoint name="W3" x="-430.0" y="-142.0" alt="150"/>
+    <waypoint name="W4" lat="38.142586" lon="-76.433219" alt="150"/>	
+    <waypoint name="W5" x="-71.9"  y="-114.2" alt="160"/>
+    <waypoint name="W6" x="338.3"  y="-360.1" alt="60"/>
+    <waypoint name="W7" x="126.2"  y="-75.9"  alt="60"/>
+    <waypoint name="W8" x="23.3"   y="56.1"   alt="200"/>
+    <waypoint name="W9" x="-26.1"  y="167.8"  alt="200"/>
+    
+  </waypoints>
+  
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||      START OF SECTORS LIST     |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+   
+  <sectors>
+
+    <sector name="NO_FLY_ZONE" color="red">
+      <corner name="_A1"/>
+      <corner name="_A2"/>
+      <corner name="_A3"/>
+      <corner name="_A4"/>
+      <corner name="_A5"/>
+      <corner name="_A6"/>
+      <corner name="_A7"/>
+      <corner name="_A8"/>
+      <corner name="_A9"/>
+      <corner name="_A10"/>
+      <corner name="_A11"/>
+      <corner name="_A12"/>
+    </sector>
+
+    <sector name="Search_Area" color="blue">
+      <corner name="_S2"/>
+      <corner name="_S1"/>
+      <corner name="_S4"/>
+      <corner name="_S3"/>
+      <corner name="_S5"/>
+      <corner name="_S6"/>
+      <corner name="_S7"/>
+    </sector>
+  
+  </sectors>
+  
+  <exceptions>
+    <exception cond="GetRCChannel(RADIO_FLAPS) > 6500" deroute="KILL"/>
+    <exception cond="datalink_time > 180" deroute="KILL"/>
+    <exception cond="radio_control.time_since_last_frame > 10800" deroute="KILL"/>
+    
+    <exception cond="6500 > GetRCChannel(RADIO_FLAPS) && GetRCChannel(RADIO_FLAPS) > 2500 &&
+                     180 > datalink_time &&
+                     10800 > radio_control.time_since_last_frame"
+                     deroute="Standby"/>
+    <exception cond="179 > datalink_time && datalink_time > 30 &&
+                     6500 > GetRCChannel(RADIO_FLAPS)"
+                     deroute="Standby"/>
+    <exception cond="10800 > radio_control.time_since_last_frame && radio_control.time_since_last_frame > 1800 &&
+                     6500 > GetRCChannel(RADIO_FLAPS) &&
+                     180 > datalink_time"
+                     deroute="Standby"/>
+	</exceptions>
+
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||      START OF BLOCKS LIST      |||||-->
+<!--||||||||||||||||||||||||||||||||||||||||||-->
+
+  <blocks>
+
+  <!--********************************-->
+  <!--              INIT              -->
+  <!--********************************-->
+
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude roll="0" pitch="0" throttle="0" vmode="throttle"/>
+    </block>
+
+  <!--********************************-->
+  <!--            STANDBY             -->
+  <!--********************************-->
+
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <set value="FALSE" var="h_ctl_disabled"/>
+      <set value="0" var="flaps_setpoint"/>
+      <set value="0" var="kill_throttle"/>
+      <circle radius="nav_radius" wp="STDBY"/>
+    </block>
+
+  </blocks>
+</flight_plan>

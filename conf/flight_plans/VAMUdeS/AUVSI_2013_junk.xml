@@ -1,0 +1,219 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="100" ground_alt="3" lat0="38.14483889" lon0="-76.42895000" max_dist_from_home="2000" name="AUVSI_2013" qfu="70" security_height="30">
+  <header>
+#include "subsystems/datalink/datalink.h"
+#include "subsystems/navigation/OSAMNav.h"
+#include "rc_settings.h"
+#include "firmwares/fixedwing/combi_switch.h"
+#include "firmwares/fixedwing/takeoff_gyro.h"
+#include "subsystems/radio_control.h"
+</header>
+  <waypoints>
+    <waypoint name="_A1" x="-229.8" y="65.8"/>
+    <waypoint name="_A2" x="-564.0" y="-148.2"/>
+    <waypoint name="_A3" x="-329.9" y="-488.8"/>
+    <waypoint name="_A4" x="-56.2" y="-362.0"/>
+    <waypoint name="_A5" x="232.9" y="-564.1"/>
+    <waypoint name="_A6" x="464.8" y="-366.0"/>
+    <waypoint name="_A7" x="314.0" y="-84.1"/>
+    <waypoint name="_A8" x="603.4" y="102.0"/>
+    <waypoint name="_A9" x="530.6" y="273.9"/>
+    <waypoint name="_A10" x="168.1" y="131.8"/>
+    <waypoint name="_A11" x="-5.5" y="720.0"/>
+    <waypoint name="_A12" x="-492.7" y="701.9"/>
+    <waypoint name="_S1" x="-265.3" y="-26.1"/>
+    <waypoint name="_S2" x="188.1" y="-468.1"/>
+    <waypoint name="_S3" x="370.7" y="-310.0"/>
+    <waypoint name="_S4" x="262.0" y="-60.1"/>
+    <waypoint name="_S5" x="523.1" y="103.9"/>
+    <waypoint name="_S6" x="468.9" y="220.0"/>
+    <waypoint name="_S7" x="174.8" y="96.0"/>
+    <waypoint alt="114.0" name="SP_0" x="1.2" y="22.4"/>
+    <waypoint name="SP_1" x="121.6" y="29.1"/>
+    <waypoint name="SP_2" x="476.7" y="197.5"/>
+    <waypoint name="SP_3" x="504.3" y="136.8"/>
+    <waypoint name="SP_4" x="201.0" y="-39.0"/>
+    <waypoint name="SP_5" x="366.3" y="-331.1"/>
+    <waypoint name="SP_6" x="269.1" y="-407.8"/>
+    <waypoint name="SP_7" x="-50.6" y="-101.9"/>
+    <waypoint name="SP_8" x="73.2" y="-52.0"/>
+    <waypoint name="SP_9" x="331.5" y="-366.0"/>
+    <waypoint name="SP_10" x="224.6" y="-447.8"/>
+    <waypoint name="SP_11" x="-196.1" y="-42.2"/>
+    <waypoint name="SP_12" x="57.9" y="19.1"/>
+    <waypoint alt="112.0" name="O_1" x="-211.8" y="-67.1"/>
+    <waypoint alt="113.0" name="O_2" x="-126.3" y="-203.8"/>
+    <waypoint alt="113.0" name="P_1" x="-101.2" y="-357.3"/>
+    <waypoint alt="113.0" name="P_2" x="-167.8" y="-380.1"/>
+    <waypoint alt="113.0" name="P_3" x="-229.0" y="-408.5"/>
+    <waypoint alt="113.0" name="P_4" x="-297.7" y="-445.9"/>
+    <waypoint name="HOME" x="0" y="0"/>
+    <waypoint lat="38.144189" lon="-76.428828" name="STDBY"/>
+    <waypoint lat="38.145741" lon="-76.428219" name="MOB"/>
+    <waypoint name="SRIC_C" x="152.1" y="-34.6"/>
+    <waypoint name="SRIC" x="149.7" y="43.3"/>
+    <waypoint alt="100" name="W1" x="-3.6" y="47.8"/>
+    <waypoint alt="140" name="W2" x="18.2" y="518.0"/>
+    <waypoint alt="166" name="W3" x="-198.4" y="681.9"/>
+    <waypoint alt="166.0" lat="38.150419" lon="-76.432361" name="W4"/>
+    <waypoint alt="160" name="W5" x="-310.4" y="525.2"/>
+    <waypoint alt="66.0" name="W6" x="-253.0" y="455.9"/>
+    <waypoint alt="66.0" name="W7" x="-57.4" y="196.0"/>
+    <waypoint alt="66.0" name="W8" x="-4.8" y="132.0"/>
+    <waypoint alt="66.0" name="W9" x="-3.6" y="47.8"/>
+    <waypoint name="OTarget" x="-117.8" y="159.1"/>
+    <waypoint alt="62.0" name="L1" x="-427.0" y="-139.6"/>
+    <waypoint alt="33.0" name="L2" x="-395.4" y="-227.5"/>
+    <waypoint alt="11.0" name="L3" x="-251.8" y="-163.8"/>
+    <waypoint alt="5.0" name="AF" x="42.1" y="-36.6"/>
+    <waypoint alt="0.0" name="TD" x="882.3" y="323.3"/>
+  </waypoints>
+  <sectors>
+    <sector color="red" name="Flight_Zone1">
+      <corner name="_A1"/>
+      <corner name="_A2"/>
+      <corner name="_A3"/>
+      <corner name="_A4"/>
+    </sector>
+    <sector color="red" name="Flight_Zone2">
+      <corner name="_A4"/>
+      <corner name="_A5"/>
+      <corner name="_A6"/>
+      <corner name="_A7"/>
+    </sector>
+    <sector color="red" name="Flight_Zone3">
+      <corner name="_A7"/>
+      <corner name="_A8"/>
+      <corner name="_A9"/>
+      <corner name="_A10"/>
+    </sector>
+    <sector color="red" name="Flight_Zone4">
+      <corner name="_A10"/>
+      <corner name="_A11"/>
+      <corner name="_A12"/>
+      <corner name="_A1"/>
+    </sector>
+    <sector color="red" name="Flight_Zone5">
+      <corner name="_A1"/>
+      <corner name="_A4"/>
+      <corner name="_A7"/>
+      <corner name="_A10"/>
+    </sector>
+    <sector color="black" name="Search_Area">
+      <corner name="_S1"/>
+      <corner name="_S2"/>
+      <corner name="_S3"/>
+      <corner name="_S4"/>
+      <corner name="_S5"/>
+      <corner name="_S6"/>
+      <corner name="_S7"/>
+    </sector>
+  </sectors>
+  <exceptions>
+    <exception cond="RcChannel(RADIO_GEAR) > 6500" deroute="KILL"/>
+    <exception cond="radio_control.time_since_last_frame > 10800" deroute="KILL"/>
+    <exception cond="datalink_time > 30 && 180 > datalink_time && GpsFixValid() &&  6500 > RcChannel(RADIO_GEAR) && radio_control.status == RC_OK" deroute="Standby"/>
+    <exception cond="datalink_time > 180" deroute="KILL"/>
+    <exception cond="!GpsFixValid() && radio_control.status == RC_REALLY_LOST" deroute="KILL"/>
+  </exceptions>
+  <blocks>
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude pitch="0" roll="0" throttle="0" vmode="throttle"/>
+    </block>
+    <block name="Takeoff 100%" strip_button="Takeoff" strip_icon="takeoff.png">
+      <exception cond="estimator_z > ground_alt + 30" deroute="Standby"/>
+      <set value="0" var="kill_throttle"/>
+      <set value="0" var="combi_switch_status"/>
+      <set value="8100" var="takeoff_gyro_value"/>
+      <attitude pitch="30.0" roll="0.0" throttle="1.0" vmode="throttle"/>
+    </block>
+    <block key="s" name="Standby" strip_button="Standby" strip_icon="home.png">
+      <set value="FALSE" var="h_ctl_disabled"/>
+      <set value="-1000" var="takeoff_gyro_value"/>
+      <set value="1" var="combi_switch_status"/>
+      <set value="0" var="kill_throttle"/>
+      <circle radius="nav_radius" wp="STDBY"/>
+    </block>
+    <block name="MOB" strip_button="Turn around here" strip_icon="mob.png">
+      <call fun="NavSetWaypointHere(WP_MOB)"/>
+      <circle radius="nav_radius" wp="MOB"/>
+    </block>
+    <block name="Oval 1-2" strip_button="Oval (wp 1-2)" strip_icon="oval.png">
+      <oval p1="O_1" p2="O_2" radius="nav_radius"/>
+    </block>
+    <block group="mission" name="Route" strip_button="Route">
+      <set value="5" var="route_ap_time"/>
+      <go approaching_time="route_ap_time" wp="W1"/>
+      <go approaching_time="route_ap_time" from="W1" hmode="route" vmode="glide" wp="W2"/>
+      <go approaching_time="route_ap_time" from="W2" hmode="route" vmode="glide" wp="W3"/>
+      <go approaching_time="route_ap_time" from="W3" hmode="route" vmode="glide" wp="W4"/>
+      <go approaching_time="route_ap_time" from="W4" hmode="route" vmode="glide" wp="W5"/>
+      <go approaching_time="route_ap_time" from="W5" hmode="route" vmode="glide" wp="W6"/>
+      <go approaching_time="route_ap_time" from="W6" hmode="route" vmode="glide" wp="W7"/>
+      <go approaching_time="route_ap_time" from="W7" hmode="route" vmode="glide" wp="W8"/>
+      <go approaching_time="route_ap_time" from="W8" hmode="route" vmode="glide" wp="W9"/>
+      <deroute block="Standby"/>
+    </block>
+    <block group="mission" name="Search" strip_button="Search">
+      <set value="5" var="route_ap_time"/>
+      <go approaching_time="route_ap_time" wp="SP_0"/>
+      <go approaching_time="route_ap_time" from="SP_0" hmode="route" vmode="glide" wp="SP_1"/>
+      <go approaching_time="route_ap_time" from="SP_1" hmode="route" vmode="glide" wp="SP_2"/>
+      <go approaching_time="route_ap_time" from="SP_2" hmode="route" vmode="glide" wp="SP_3"/>
+      <go approaching_time="route_ap_time" from="SP_3" hmode="route" vmode="glide" wp="SP_4"/>
+      <go approaching_time="route_ap_time" from="SP_4" hmode="route" vmode="glide" wp="SP_5"/>
+      <go approaching_time="route_ap_time" from="SP_5" hmode="route" vmode="glide" wp="SP_6"/>
+      <go approaching_time="route_ap_time" from="SP_6" hmode="route" vmode="glide" wp="SP_7"/>
+      <go approaching_time="route_ap_time" from="SP_7" hmode="route" vmode="glide" wp="SP_8"/>
+      <go approaching_time="route_ap_time" from="SP_8" hmode="route" vmode="glide" wp="SP_9"/>
+      <go approaching_time="route_ap_time" from="SP_9" hmode="route" vmode="glide" wp="SP_10"/>
+      <go approaching_time="route_ap_time" from="SP_10" hmode="route" vmode="glide" wp="SP_11"/>
+      <go approaching_time="route_ap_time" from="SP_11" hmode="route" vmode="glide" wp="SP_12"/>
+      <deroute block="Standby"/>
+    </block>
+    <block group="mission" name="SRIC" strip_button="SRIC">
+      <circle radius="nav_radius" wp="SRIC_C"/>
+    </block>
+    <block group="landing" name="Landing route" strip_button="Land">
+      <go wp="L1"/>
+      <go approaching_time="route_ap_time" from="L1" hmode="route" vmode="glide" wp="L2"/>
+      <go approaching_time="route_ap_time" from="L2" hmode="route" vmode="glide" wp="L3"/>
+      <deroute block="Land"/>
+    </block>
+    <block name="Land">
+      <go approaching_time="1" from="L3" hmode="route" vmode="glide" wp="AF"/>
+      <deroute block="Final"/>
+    </block>
+    <block key="F" name="Final">
+      <set value="1" var="kill_throttle"/>
+      <attitude pitch="0" roll="0" throttle="0.0" vmode="throttle"/>
+      <while cond="TRUE"/>
+    </block>
+    <block group="landing" key="A" name="Abort" strip_button="Abort">
+      <set value="0" var="kill_throttle"/>
+      <attitude pitch="30" roll="0" throttle="1.0" until="stage_time>5" vmode="throttle"/>
+      <deroute block="Standby"/>
+    </block>
+    <block group="Failsafe" name="KILL" strip_button="Kill">
+      <while cond="TRUE">
+        <set value="1" var="kill_throttle"/>
+        <set value="TRUE" var="h_ctl_disabled"/>
+        <set value="(-MAX_PPRZ)" var="h_ctl_aileron_setpoint"/>
+        <set value="(MAX_PPRZ)" var="h_ctl_elevator_setpoint"/>
+        <set value="MAX_PPRZ" var="flaps_setpoint"/>
+      </while>
+    </block>
+    <block group="Failsafe" name="Save" strip_button="Save">
+      <set value="1" var="kill_throttle"/>
+      <set value="FALSE" var="h_ctl_disabled"/>
+      <set value="0" var="flaps_setpoint"/>
+      <deroute block="Holding point"/>
+    </block>
+  </blocks>
+</flight_plan>

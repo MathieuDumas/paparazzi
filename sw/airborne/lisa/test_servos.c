@@ -1,4 +1,6 @@
 /*
+ * $Id$
+ *
  * Copyright (C) 2010 Antoine Drouin <poinix@gmail.com>
  *
  * This file is part of paparazzi.
@@ -23,7 +25,7 @@
 
 #include "mcu.h"
 #include "mcu_periph/sys_time.h"
-#include "subsystems/actuators/actuators_pwm.h"
+#include "firmwares/rotorcraft/actuators/actuators_pwm.h"
 #include "led.h"
 
 static inline void main_init( void );

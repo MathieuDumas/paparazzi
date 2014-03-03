@@ -1,0 +1,99 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="100" ground_alt="3" lat0="38.14483889" lon0="-76.42895000" max_dist_from_home="100000" name="AUVSI_2012" qfu="70" security_height="30">
+  <header>
+#include "datalink.h"
+#include "subsystems/navigation/OSAMNav.h"
+</header>
+  <waypoints>
+    <waypoint name="_A1" x="-229.8" y="65.8"/>
+    <waypoint name="_A2" x="-565.8" y="-148.2"/>
+    <waypoint name="_A3" x="-329.9" y="-488.8"/>
+    <waypoint name="_A4" x="-56.2" y="-362.0"/>
+    <waypoint name="_A5" x="231.1" y="-564.1"/>
+    <waypoint name="_A6" x="464.8" y="-366.0"/>
+    <waypoint name="_A7" x="314.0" y="-84.1"/>
+    <waypoint name="_A8" x="603.4" y="101.1"/>
+    <waypoint name="_A9" x="530.6" y="272.1"/>
+    <waypoint name="_A10" x="168.1" y="131.8"/>
+    <waypoint name="_A11" x="-5.5" y="720.0"/>
+    <waypoint name="_A12" x="-492.7" y="701.9"/>
+    <waypoint name="_S1" x="-265.3" y="-26.1"/>
+    <waypoint name="_S2" x="188.1" y="-468.1"/>
+    <waypoint name="_S3" x="370.7" y="-310.0"/>
+    <waypoint name="_S4" x="262.0" y="-60.1"/>
+    <waypoint name="_S5" x="523.1" y="103.9"/>
+    <waypoint name="_S6" x="468.9" y="220.0"/>
+    <waypoint name="_S7" x="174.8" y="96.0"/>
+    <waypoint name="HOME" x="0" y="0"/>
+    <waypoint name="STDBY" x="38.144615" y="-76.429295"/>
+    <waypoint lat="38.148500" lon="-76.423880" name="MOB"/>
+    <waypoint name="SRIC" x="115.3" y="-292.2"/>
+    <waypoint alt="4" lat="38.143899" lon="-76.430170" name="TD"/>
+    <waypoint alt="40" lat="38.142912" lon="-76.433021" name="AF"/>
+    <waypoint name="_BASELEG" x="50" y="0"/>
+    <waypoint name="W1" x="-3.6" y="47.8"/>
+    <waypoint alt="130.0" name="W2" x="18.2" y="518.0"/>
+    <waypoint alt="150.0" name="W3" x="-198.4" y="681.9"/>
+    <waypoint alt="150.0" lat="38.150717" lon="-76.433222" name="W4"/>
+    <waypoint alt="160.0" name="W5" x="-310.4" y="525.2"/>
+    <waypoint alt="60.0" name="W6" x="-253.0" y="455.9"/>
+    <waypoint alt="60.0" name="W7" x="-57.4" y="196.0"/>
+    <waypoint alt="200.0" name="W8" x="-4.8" y="132.0"/>
+    <waypoint alt="200.0" name="W9" x="-3.6" y="47.8"/>
+  </waypoints>
+  <sectors>
+    <sector color="red" name="NO_FLY_ZONE">
+      <corner name="_A1"/>
+      <corner name="_A2"/>
+      <corner name="_A3"/>
+      <corner name="_A4"/>
+      <corner name="_A5"/>
+      <corner name="_A6"/>
+      <corner name="_A7"/>
+      <corner name="_A8"/>
+      <corner name="_A9"/>
+      <corner name="_A10"/>
+      <corner name="_A11"/>
+      <corner name="_A12"/>
+    </sector>
+    <sector color="blue" name="Search_Area">
+      <corner name="_S1"/>
+      <corner name="_S2"/>
+      <corner name="_S3"/>
+      <corner name="_S4"/>
+      <corner name="_S5"/>
+      <corner name="_S6"/>
+      <corner name="_S7"/>
+    </sector>
+  </sectors>
+  <exceptions>
+    <exception cond="GetRCChannel(RADIO_FLAPS) > 6500" deroute="KILL"/>
+    <exception cond="datalink_time > 180" deroute="KILL"/>
+    <exception cond="radio_control.time_since_last_frame > 10800" deroute="KILL"/>
+    <exception cond="6500 > GetRCChannel(RADIO_FLAPS) && GetRCChannel(RADIO_FLAPS) > 2500 &&
+                     180 > datalink_time &&
+                     10800 > radio_control.time_since_last_frame" deroute="Standby"/>
+    <exception cond="179 > datalink_time && datalink_time > 30 &&
+                     6500 > GetRCChannel(RADIO_FLAPS)" deroute="Standby"/>
+    <exception cond="10800 > radio_control.time_since_last_frame && radio_control.time_since_last_frame > 1800 &&
+                     6500 > GetRCChannel(RADIO_FLAPS) &&
+                     180 > datalink_time" deroute="Standby"/>
+  </exceptions>
+  <blocks>
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude pitch="0" roll="0" throttle="0" vmode="throttle"/>
+    </block>
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <set value="FALSE" var="h_ctl_disabled"/>
+      <set value="0" var="flaps_setpoint"/>
+      <set value="0" var="kill_throttle"/>
+      <circle radius="nav_radius" wp="MOB"/>
+    </block>
+  </blocks>
+</flight_plan>

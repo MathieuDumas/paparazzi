@@ -1,0 +1,25 @@
+<!DOCTYPE layout SYSTEM "layout.dtd">
+
+<layout width="1366" height="768">
+  <columns>
+    <rows size="400">
+      <widget size="220" name="strips"/>
+      <widget size="400" name="aircraft"/>
+    </rows>
+    <rows>
+      <widget size="700" name="map2d">
+        <papget type="expression" display="text" x="900" y="630">
+          <property name="expr" value="ESTIMATOR.z*3.2808399"/>
+          <property name="size" value="17"/>
+          <property name="format" value="Alt:%.1fft"/>
+        </papget>
+      </widget>
+      <columns>
+        <rows>
+          <widget size="75" name="altgraph"/>
+          <widget name="alarms"/>
+        </rows>
+      </columns>
+    </rows>
+  </columns>
+</layout>

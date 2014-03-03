@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/basic.xml */
+/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/flight_plans/versatile.xml */
 /* Please DO NOT EDIT */
 
 #ifndef FLIGHT_PLAN_H
@@ -6,64 +6,59 @@
 
 #include "std.h"
 #include "generated/modules.h"
-#include "subsystems/navigation/nav_line.h"
 #include "subsystems/datalink/datalink.h"
-#define FLIGHT_PLAN_NAME "Basic"
-#define NAV_UTM_EAST0 360285
-#define NAV_UTM_NORTH0 4813595
+#include "firmwares/fixedwing/combi_switch.h"
+#include "firmwares/fixedwing/takeoff_gyro.h"
+#define FLIGHT_PLAN_NAME "Versatile"
+#define NAV_UTM_EAST0 360286
+#define NAV_UTM_NORTH0 4813592
 #define NAV_UTM_ZONE0 31
-#define NAV_LAT0 434622300 /* 1e7deg */
-#define NAV_LON0 12728900 /* 1e7deg */
+#define NAV_LAT0 434622000 /* 1e7deg */
+#define NAV_LON0 12729000 /* 1e7deg */
 #define NAV_ALT0 0 /* mm above msl */
 #define NAV_MSL0 51850 /* mm, EGM96 geoid-height (msl) over ellipsoid */
-#define QFU 0.0
+#define QFU 270.0
 #define WP_dummy 0
 #define WP_HOME 1
 #define WP_STDBY 2
 #define WP_1 3
 #define WP_2 4
-#define WP_MOB 5
-#define WP_S1 6
-#define WP_S2 7
-#define WP_AF 8
-#define WP_TD 9
-#define WP__BASELEG 10
-#define WP_CLIMB 11
+#define WP_R1 5
+#define WP_R2 6
+#define WP_R3 7
+#define WP_R4 8
+#define WP_R5 9
 #define WAYPOINTS { \
  {42.0, 42.0, 75},\
  {0.0, 0.0, 75},\
- {49.5, 100.1, 75},\
- {10.1, 189.9, 75},\
- {132.3, 139.1, 75},\
- {137.0, -11.6, 75},\
- {-119.2, 69.6, 75},\
- {274.4, 209.5, 75},\
- {177.4, 45.1, 30.0},\
- {28.8, 57.0, 0.0},\
- {168.8, -13.8, 75},\
- {-114.5, 162.3, 75},\
+ {20.0, 80.0, 75},\
+ {44.8, 102.2, 75},\
+ {-63.5, 122.9, 75},\
+ {-20.0, -50.0, 75},\
+ {-20.0, -25.0, 75},\
+ {-20.0, 0.0, 75},\
+ {-20.0, 25.0, 75},\
+ {-20.0, 50.0, 75},\
 };
 #define WAYPOINTS_LLA { \
- {434626158, 12733981, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434622299, 12728900, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434631401, 12734759, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434639410, 12729661, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434635066, 12744890, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434621511, 12745857, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434628341, 12713992, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434641667, 12762269, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434626690, 12750704, 3000}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434627483, 12732312, 0}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434621372, 12749792, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434636693, 12714335, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434625858, 12734081, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434621999, 12729000, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434629237, 12731266, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434631281, 12734273, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434632942, 12720838, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434617462, 12726656, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434619712, 12726592, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434621962, 12726528, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434624212, 12726464, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {434626462, 12726400, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
 };
-#define NB_WAYPOINT 12
-#define NB_BLOCK 17
+#define NB_WAYPOINT 10
+#define NB_BLOCK 9
 #define GROUND_ALT 0.
 #define GROUND_ALT_CM 0
 #define SECURITY_HEIGHT 25.
 #define SECURITY_ALT 25.
-#define HOME_MODE_HEIGHT 25.
+#define HOME_MODE_HEIGHT 50.
 #define MAX_DIST_FROM_HOME 1500.
 #ifdef NAV_C
 
@@ -135,20 +130,20 @@ static inline void auto_nav(void) {
 
     Block(3) // Takeoff
     ; // pre_call
-    if ((nav_block != 4) && (GetPosAlt()>(ground_alt+25))) { GotoBlock(4); return; }
+    if ((nav_block != 4) && (estimator_z>210)) { GotoBlock(4); return; }
     switch(nav_stage) {
       Stage(0)
         kill_throttle = 0;
         NextStageAndBreak();
         break;
       Stage(1)
-        autopilot_flight_time = 0;
+        combi_switch_status = 0;
         NextStageAndBreak();
         break;
       Stage(2)
-        if (NavApproachingFrom(11,1,CARROT)) NextStageAndBreakFrom(11) else {
-          NavGotoWaypoint(11);
-          NavVerticalAutoThrottleMode(RadOfDeg(15));
+        {
+          NavAttitude(RadOfDeg(0.000000));
+          NavVerticalAutoThrottleMode(RadOfDeg(30.000000));
           NavVerticalThrottleMode(9600*(1.000000));
         }
         break;
@@ -164,19 +159,23 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
+        combi_switch_status = 1;
+        NextStageAndBreak();
+        break;
+      Stage(1)
         NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
         NavVerticalAltitudeMode(WaypointAlt(2), 0.);
         NavCircleWaypoint(2, nav_radius);
         break;
       default:
-      Stage(1)
+      Stage(2)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(5) // Figure 8 around wp 1
+    Block(5) // Figure 8
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
@@ -214,216 +213,66 @@ static inline void auto_nav(void) {
     ; // post_call
     break;
 
-    Block(7) // MOB
+    Block(7) // Route
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        if (! (NavSetWaypointHere(WP_MOB)))
-          NextStageAndBreak();
-        break;
-      Stage(1)
-        nav_radius = DEFAULT_CIRCLE_RADIUS;
-        NextStageAndBreak();
-        break;
-      Stage(2)
-        NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-        NavVerticalAltitudeMode(WaypointAlt(5), 0.);
-        NavCircleWaypoint(5, nav_radius);
-        break;
-      default:
-      Stage(3)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(8) // Line 1-2
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if (! (nav_line_init()))
-          NextStageAndBreak();
-        break;
-      Stage(1)
-        if (! (nav_line(WP_1, WP_2, nav_radius)))
-          NextStageAndBreak();
-        break;
-      default:
-      Stage(2)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(9) // Survey S1-S2
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        NavSurveyRectangleInit(6, 7, 150, NS);
-        NextStageAndBreak();
-      Stage(1)
-        NavSurveyRectangle(6, 7);
-        break;
-      default:
-      Stage(2)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(10) // Path 1,2,S1,S2,STDBY
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if (NavApproachingFrom(4,3,CARROT)) NextStageAndBreakFrom(4) else {
-          NavSegment(3, 4);
+        if (NavApproaching(5,CARROT)) NextStageAndBreakFrom(5) else {
+          NavGotoWaypoint(5);
           NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalAltitudeMode(WaypointAlt(4), 0.);
+          NavVerticalAltitudeMode(WaypointAlt(5), 0.);
         }
         break;
+      Label(while_5)
       Stage(1)
-        if (NavApproachingFrom(6,4,CARROT)) NextStageAndBreakFrom(6) else {
-          NavSegment(4, 6);
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalAltitudeMode(WaypointAlt(6), 0.);
-        }
-        break;
-      Stage(2)
-        if (NavApproachingFrom(7,6,1)) NextStageAndBreakFrom(7) else {
-          NavSegment(6, 7);
-          NavVerticalAutoPitchMode(9600*(0.400000));
-          NavVerticalAltitudeMode(WaypointAlt(7), 0.);
-        }
-        break;
-      Stage(3)
-        if (NavApproachingFrom(2,7,1)) NextStageAndBreakFrom(2) else {
-          NavSegment(7, 2);
-          NavVerticalAutoPitchMode(9600*(0.400000));
-          NavVerticalAltitudeMode(WaypointAlt(2), 0.);
-        }
-        break;
-      Stage(4)
-        GotoBlock(4);
-        break;
+        if (! (TRUE)) Goto(endwhile_6) else NextStageAndBreak();
+        Stage(2)
+          if (NavApproachingFrom(6,5,route_ap_time)) NextStageAndBreakFrom(6) else {
+            NavSegment(5, 6);
+            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
+            NavVerticalAltitudeMode(WaypointAlt(6), 0.);
+          }
+          break;
+        Stage(3)
+          if (NavApproachingFrom(7,6,route_ap_time)) NextStageAndBreakFrom(7) else {
+            NavSegment(6, 7);
+            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
+            NavVerticalAltitudeMode(WaypointAlt(7), 0.);
+          }
+          break;
+        Stage(4)
+          if (NavApproachingFrom(8,7,route_ap_time)) NextStageAndBreakFrom(8) else {
+            NavSegment(7, 8);
+            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
+            NavVerticalAltitudeMode(WaypointAlt(8), 0.);
+          }
+          break;
+        Stage(5)
+          if (NavApproachingFrom(9,8,route_ap_time)) NextStageAndBreakFrom(9) else {
+            NavSegment(8, 9);
+            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
+            NavVerticalAltitudeMode(WaypointAlt(9), 0.);
+          }
+          break;
+        Stage(6)
+          if (NavApproachingFrom(5,9,route_ap_time)) NextStageAndBreakFrom(5) else {
+            NavSegment(9, 5);
+            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
+            NavVerticalAltitudeMode(WaypointAlt(5), 0.);
+          }
+          break;
+        Stage(7)
+          Goto(while_5)
+        Label(endwhile_6)
       default:
-      Stage(5)
+      Stage(8)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(11) // Land Right AF-TD
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        nav_radius = DEFAULT_CIRCLE_RADIUS;
-        NextStageAndBreak();
-        break;
-      Stage(1)
-        GotoBlock(13);
-        break;
-      default:
-      Stage(2)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(12) // Land Left AF-TD
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        nav_radius = -(DEFAULT_CIRCLE_RADIUS);
-        NextStageAndBreak();
-        break;
-      Stage(1)
-        GotoBlock(13);
-        break;
-      default:
-      Stage(2)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(13) // land
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if (! (nav_compute_baseleg(WP_AF, WP_TD, WP__BASELEG, nav_radius)))
-          NextStageAndBreak();
-        break;
-      Stage(1)
-        NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-        NavVerticalAltitudeMode(WaypointAlt(10), 0.);
-        NavCircleWaypoint(10, nav_radius);
-        if ((NavCircleCount()>0.500000)) NextStageAndBreak();
-        break;
-      Stage(2)
-        NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-        NavVerticalAltitudeMode(WaypointAlt(10), 0.);
-        NavCircleWaypoint(10, nav_radius);
-        if (And(NavQdrCloseTo((DegOfRad(baseleg_out_qdr)-((nav_radius/fabs(nav_radius))*10))),(10>fabs((GetPosAlt()-WaypointAlt(WP__BASELEG)))))) NextStageAndBreak();
-        break;
-      default:
-      Stage(3)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(14) // final
-    ; // pre_call
-    if ((nav_block != 15) && ((ground_alt+10)>GetPosAlt())) { GotoBlock(15); return; }
-    switch(nav_stage) {
-      Stage(0)
-        if (NavApproachingFrom(9,8,CARROT)) NextStageAndBreakFrom(9) else {
-          NavSegment(8, 9);
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavGlide(8, 9);
-        }
-        break;
-      default:
-      Stage(1)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(15) // flare
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if (NavApproachingFrom(9,8,0)) NextStageAndBreakFrom(9) else {
-          NavSegment(8, 9);
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalThrottleMode(9600*(0.000000));
-        }
-        break;
-      Stage(1)
-        if (FALSE) NextStageAndBreak() else {
-          NavAttitude(RadOfDeg(0.000000));
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalThrottleMode(9600*(0.000000));
-        }
-        break;
-      default:
-      Stage(2)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(16) // HOME
+    Block(8) // HOME
     ; // pre_call
     switch(nav_stage) {
       Stage(0)

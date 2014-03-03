@@ -1,0 +1,17 @@
+<!DOCTYPE settings SYSTEM "settings.dtd">
+
+<settings>
+  <dl_settings>
+    <dl_settings NAME="combi_switch">
+      <dl_setting MIN="0" MAX="1" STEP="0.1" VAR="combi_switch_value"  shortname="Value"  param="COMBI_SWITCH" module="combi_switch"/>
+      <dl_setting MIN="0" MAX="1" STEP="1"   VAR="combi_switch_status" shortname="Status" values="OFF|ON">
+        <strip_button name="Combi On" value="1" group="combi"/>
+        <strip_button name="Combi Off" value="0" group="combi"/>
+      </dl_setting>
+      <dl_setting MIN="-9600" MAX="9600" STEP="10" VAR="takeoff_gyro_value"  shortname="Value" module="takeoff_gyro">
+        <strip_button name="Gyro HM"   value="8100"  group="gyro"/>
+        <strip_button name="Gyro Off"  value="-1000" group="gyro"/>
+      </dl_setting>
+    </dl_settings>
+  </dl_settings>
+</settings>

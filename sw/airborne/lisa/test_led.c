@@ -21,11 +21,14 @@
  * Boston, MA 02111-1307, USA.
  */
 
+#include <stm32/flash.h>
+#include <stm32/misc.h>
+
 #include BOARD_CONFIG
 #include "mcu.h"
 #include "led.h"
 
-void Delay(volatile uint32_t nCount);
+void Delay(__IO uint32_t nCount);
 void led_on(int i);
 void led_off(int i);
 
@@ -100,13 +103,7 @@ int main(void) {
   return 0;
 }
 
-/*
- * XXX: do we really need volatile here?
- *
- * Also we should probably use systime instead as it is being linked into this
- * test anyways...
- */
-void Delay(volatile uint32_t nCount) {
+void Delay(__IO uint32_t nCount) {
   for(; nCount != 0; nCount--);
 }
 

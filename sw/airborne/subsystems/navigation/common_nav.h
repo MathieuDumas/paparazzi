@@ -26,7 +26,6 @@
 #define COMMON_NAV_H
 
 #include "std.h"
-#include "state.h"
 #include "subsystems/navigation/common_flight_plan.h"
 
 extern float max_dist_from_home;
@@ -67,8 +66,8 @@ void common_nav_periodic_task_4Hz(void);
 #define NavSetGroundReferenceHere() ({ nav_reset_reference(); nav_update_waypoints_alt(); FALSE; })
 
 #define NavSetWaypointHere(_wp) ({ \
-  waypoints[_wp].x = stateGetPositionEnu_f()->x; \
-  waypoints[_wp].y = stateGetPositionEnu_f()->y; \
+  waypoints[_wp].x = estimator_x; \
+  waypoints[_wp].y = estimator_y; \
   FALSE; \
 })
 

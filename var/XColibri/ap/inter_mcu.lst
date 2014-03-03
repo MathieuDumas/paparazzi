@@ -49,17 +49,17 @@ DEFINED SYMBOLS
                             *ABS*:00000000 inter_mcu.c
                             *COM*:00000001 time_since_last_ap
                             *COM*:00000001 ap_ok
-     /tmp/ccOd14fQ.s:21     .bss.inter_mcu_received_ap:00000000 inter_mcu_received_ap
-     /tmp/ccOd14fQ.s:38     .bss.inter_mcu_received_fbw:00000000 inter_mcu_received_fbw
-     /tmp/ccOd14fQ.s:44     .data.ap_state:00000000 ap_state
-     /tmp/ccOd14fQ.s:33     .data.fbw_state:00000000 fbw_state
-     /tmp/ccOd14fQ.s:22     .bss.inter_mcu_received_ap:00000000 $d
-     /tmp/ccOd14fQ.s:24     .bss._ap_state:00000000 $d
-     /tmp/ccOd14fQ.s:27     .bss._ap_state:00000000 _ap_state
-     /tmp/ccOd14fQ.s:30     .data.fbw_state:00000000 $d
-     /tmp/ccOd14fQ.s:50     .bss._fbw_state:00000000 _fbw_state
-     /tmp/ccOd14fQ.s:39     .bss.inter_mcu_received_fbw:00000000 $d
-     /tmp/ccOd14fQ.s:41     .data.ap_state:00000000 $d
-     /tmp/ccOd14fQ.s:47     .bss._fbw_state:00000000 $d
+     /tmp/ccW0z25w.s:21     .bss.inter_mcu_received_ap:00000000 inter_mcu_received_ap
+     /tmp/ccW0z25w.s:38     .bss.inter_mcu_received_fbw:00000000 inter_mcu_received_fbw
+     /tmp/ccW0z25w.s:44     .data.ap_state:00000000 ap_state
+     /tmp/ccW0z25w.s:33     .data.fbw_state:00000000 fbw_state
+     /tmp/ccW0z25w.s:22     .bss.inter_mcu_received_ap:00000000 $d
+     /tmp/ccW0z25w.s:24     .bss._ap_state:00000000 $d
+     /tmp/ccW0z25w.s:27     .bss._ap_state:00000000 _ap_state
+     /tmp/ccW0z25w.s:30     .data.fbw_state:00000000 $d
+     /tmp/ccW0z25w.s:50     .bss._fbw_state:00000000 _fbw_state
+     /tmp/ccW0z25w.s:39     .bss.inter_mcu_received_fbw:00000000 $d
+     /tmp/ccW0z25w.s:41     .data.ap_state:00000000 $d
+     /tmp/ccW0z25w.s:47     .bss._fbw_state:00000000 $d
 
 NO UNDEFINED SYMBOLS

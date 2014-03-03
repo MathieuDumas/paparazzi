@@ -61,9 +61,6 @@
       <!-- GPS -->
       <subsystem name="gps" type="ublox"/>
 
-      <!--INS (added) -->
-      <subsystem name="ins" type="alt_float"/>
-
     </firmware>
 
 

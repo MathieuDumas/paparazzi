@@ -66,7 +66,9 @@ PERIODIC_FREQUENCY = 512
 COMMON_TEST_CFLAGS  = -I$(SRC_FIRMWARE) -I$(ARCH) -DPERIPHERALS_AUTO_INIT
 COMMON_TEST_CFLAGS += -DBOARD_CONFIG=$(BOARD_CFG)
 COMMON_TEST_SRCS    = $(SRC_AIRBORNE)/mcu.c            \
-                      $(SRC_ARCH)/mcu_arch.c
+                      $(SRC_ARCH)/mcu_arch.c           \
+                      $(SRC_ARCH)/stm32_exceptions.c   \
+                      $(SRC_ARCH)/stm32_vector_table.c
 COMMON_TEST_CFLAGS += -DUSE_SYS_TIME
 ifneq ($(SYS_TIME_LED),none)
   COMMON_TEST_CFLAGS += -DSYS_TIME_LED=$(SYS_TIME_LED)
@@ -137,11 +139,11 @@ test_servos.ARCHDIR = $(ARCH)
 test_servos.CFLAGS  = $(COMMON_TEST_CFLAGS)
 test_servos.srcs    = $(COMMON_TEST_SRCS)
 
-test_servos.CFLAGS  += -I$(SRC_LISA)
+test_servos.CFLAGS  += -I$(SRC_FIRMWARE)/actuators/arch/$(ARCH) -I$(SRC_LISA)
 test_servos.LDFLAGS += -lm
 test_servos.srcs    += $(SRC_LISA)/test_servos.c
-test_servos.srcs    += subsystems/actuators/actuators_pwm.c
-test_servos.srcs    += $(SRC_ARCH)/subsystems/actuators/actuators_pwm_arch.c
+test_servos.srcs    += $(SRC_FIRMWARE)/actuators/actuators_pwm.c
+test_servos.srcs    += $(SRC_FIRMWARE)/actuators/arch/$(ARCH)/actuators_pwm_arch.c
 ifeq ($(BOARD), lisa_m)
   test_servos.CFLAGS += -DUSE_SERVOS_7AND8
 endif
@@ -562,8 +564,10 @@ test_actuators_asctecv1.srcs   += mcu_periph/i2c.c $(SRC_ARCH)/mcu_periph/i2c_ar
 #
 #test_manual.srcs   += test/test_manual.c
 #test_manual.srcs   += $(SRC_FIRMWARE)/commands.c
-##test_manual.srcs   += subsystems/actuators/actuators_pwm.c
-#test_manual.srcs   += $(SRC_ARCH)/subsystems/actuators/actuators_pwm_arch.c
+#test_manual.CFLAGS += -I$(SRC_FIRMWARE)/actuators/arch/$(ARCH)
+##test_manual.srcs   += $(SRC_FIRMWARE)/actuators/actuators_pwm.c
+#test_manual.srcs   += $(SRC_FIRMWARE)/actuators/arch/$(ARCH)/actuators_pwm_arch.c
+#test_manual.srcs   += $(SRC_FIRMWARE)/actuators/actuators_heli.c
 #
 #test_manual.CFLAGS += -DRADIO_CONTROL
 #ifneq ($(RADIO_CONTROL_LED),none)

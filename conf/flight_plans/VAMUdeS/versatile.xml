@@ -1,0 +1,64 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="75" ground_alt="0" lat0="43.4622" lon0="1.2729" max_dist_from_home="1500" name="Versatile" qfu="270" security_height="25" home_mode_height="50">
+  <header>
+#include "subsystems/datalink/datalink.h"
+#include "firmwares/fixedwing/combi_switch.h"
+#include "firmwares/fixedwing/takeoff_gyro.h"
+</header>
+  <waypoints>
+    <waypoint name="HOME" x="0" y="0"/>
+    <waypoint name="STDBY" x="20" y="80"/>
+    <waypoint name="1" x="44.8" y="102.2"/>
+    <waypoint name="2" x="-63.5" y="122.9"/>
+    <waypoint x="-20" y="-50" name="R1"/>	
+    <waypoint x="-20" y="-25" name="R2"/>	
+    <waypoint x="-20" y="0" name="R3"/>	
+    <waypoint x="-20" y="25" name="R4"/>	
+    <waypoint x="-20" y="50" name="R5"/>
+  </waypoints>
+  <exceptions/>
+  <blocks>
+    <block name="Wait GPS">
+      <set value="1" var="kill_throttle"/>
+      <while cond="!GpsFixValid()"/>
+    </block>
+    
+    <block name="Geo init">
+      <while cond="LessThan(NavBlockTime(), 10)"/>
+      <call fun="NavSetGroundReferenceHere()"/>
+    </block>
+    <block name="Holding point">
+      <set value="1" var="kill_throttle"/>
+      <attitude roll="0" throttle="0" vmode="throttle"/>
+    </block>
+    <block name="Takeoff" strip_button="Takeoff">
+      <exception cond="estimator_z > 210" deroute="Standby"/>
+      <set value="0" var="kill_throttle"/>
+      <set value="0" var="combi_switch_status"/> 
+     <!--> <set value="8100" var = "takeoff_gyro_value"/> <-->
+      <attitude pitch="30.0" roll="0.0" vmode="throttle" throttle="1.0"/>
+    </block>
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <!--><set value="-1000" var = "takeoff_gyro_value"/> <-->
+      <set value="1" var="combi_switch_status"/> 
+      <circle radius="nav_radius" wp="STDBY"/>
+    </block>
+    <block name="Figure 8" strip_button="Figure 8 (wp 1-2)" strip_icon="eight.png">
+      <eight center="1" radius="nav_radius" turn_around="2"/>
+    </block>
+    <block name="Oval 1-2" strip_button="Oval (wp 1-2)" strip_icon="oval.png">
+      <oval p1="1" p2="2" radius="nav_radius"/>
+    </block>
+    <block name="Route">
+      <go wp="R1"/>
+      <while cond="TRUE">
+        <go approaching_time="route_ap_time" from="R1" hmode="route" wp="R2"/>
+        <go approaching_time="route_ap_time" from="R2" hmode="route" wp="R3"/>
+        <go approaching_time="route_ap_time" from="R3" hmode="route" wp="R4"/>
+        <go approaching_time="route_ap_time" from="R4" hmode="route" wp="R5"/>
+        <go approaching_time="route_ap_time" from="R5" hmode="route" wp="R1"/>
+      </while>
+    </block>
+  </blocks>
+</flight_plan>

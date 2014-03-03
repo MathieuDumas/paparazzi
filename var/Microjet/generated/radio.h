@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/radios/cockpitMM.xml */
+/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/radios/cockpitMM.xml */
 /* Please DO NOT EDIT */
 
 #ifndef RADIO_H

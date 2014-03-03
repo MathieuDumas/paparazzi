@@ -24,66 +24,128 @@
 #include "subsystems/radio_control.h"
 #include "subsystems/radio_control/ppm.h"
 
-#include <libopencm3/stm32/f1/rcc.h>
-#include <libopencm3/stm32/f1/gpio.h>
-#include <libopencm3/stm32/timer.h>
-#include <libopencm3/stm32/nvic.h>
+#include <stm32/rcc.h>
+#include <stm32/gpio.h>
+#include <stm32/tim.h>
+#include <stm32/misc.h>
 
 #include "mcu_periph/sys_time.h"
 
 /*
- *
- * This a radio control ppm driver for stm32
- * signal on PA1 TIM2/CH2 (uart1 trig on lisa/L)
- *
- */
-uint8_t  ppm_cur_pulse;
+*
+* This a radio control ppm driver for stm32
+* Either on:
+* signal on PA1 TIM2/CH2 (uart1 trig on lisa/L)  (Servo 6 on Lisa/M2)
+* or signal on PA10 TIM1/CH3 (uart1 trig on lisa/L) (uart1 rx on Lisa/M2)
+*
+*/
+uint8_t ppm_cur_pulse;
 uint32_t ppm_last_pulse_time;
-bool_t   ppm_data_valid;
+bool_t ppm_data_valid;
 static uint32_t timer_rollover_cnt;
 
-void tim2_isr(void);
+#ifdef USE_TIM1_IRQ
+#pragma message "UART1 RX pin is used for PPM input"
+void tim1_up_irq_handler(void);
+void tim1_cc_irq_handler(void);
+#endif
+
+#ifdef USE_TIM2_IRQ
+#pragma message "Servo pin 6 is used for PPM input"
+void tim2_irq_handler(void);
+#endif
+
 
 void ppm_arch_init ( void ) {
+  GPIO_InitTypeDef GPIO_InitStructure;
+#ifdef USE_TIM1_IRQ
+  /* TIM1 channel 3 pin (PA.10) configuration */
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+#elif defined USE_TIM2_IRQ
+  /* TIM2 channel 2 pin (PA.01) configuration */
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+#endif
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_Init(GPIOA, &GPIO_InitStructure);
 
+#ifdef USE_TIM1_IRQ
+  /* TIM1 clock enable */
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
+#elif defined USE_TIM2_IRQ
   /* TIM2 clock enable */
-  rcc_peripheral_enable_clock(&RCC_APB1ENR, RCC_APB1ENR_TIM2EN);
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+#endif
 
   /* GPIOA clock enable */
-  rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_IOPAEN);
-
-  /* TIM2 channel 2 pin (PA.01) configuration */
-  gpio_set_mode(GPIOA, GPIO_MODE_INPUT,
-		GPIO_CNF_INPUT_FLOAT, GPIO1);
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 
   /* Time Base configuration */
-  timer_reset(TIM2);
-  timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT,
-		 TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
-  timer_set_period(TIM2, 0xFFFF);
-  timer_set_prescaler(TIM2, 0x8);
+  TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+  TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
+  TIM_TimeBaseStructure.TIM_Period = 0xFFFF;
+  TIM_TimeBaseStructure.TIM_Prescaler = 0x8;
+  TIM_TimeBaseStructure.TIM_ClockDivision = 0x0;
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+#ifdef USE_TIM1_IRQ
+  TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+#elif defined USE_TIM2_IRQ
+  TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+#endif
 
- /* TIM2 configuration: Input Capture mode ---------------------
-     The external signal is connected to TIM2 CH2 pin (PA.01)
-     The Rising edge is used as active edge,
-  ------------------------------------------------------------ */
-  timer_ic_set_polarity(TIM2, TIM_IC2, TIM_IC_RISING);
-  timer_ic_set_input(TIM2, TIM_IC2, TIM_IC_IN_TI2);
-  timer_ic_set_prescaler(TIM2, TIM_IC2, TIM_IC_PSC_OFF);
-  timer_ic_set_filter(TIM2, TIM_IC2, TIM_IC_OFF);
+/* TIM2 configuration: Input Capture mode ---------------------
+The external signal is connected to TIM2 CH2 pin (PA.01)
+TIM1 configuration: Input Capture mode ---------------------
+The external signal is connected to TIM1 CH3 pin (PA.10)
+The Rising edge is used as active edge,
+------------------------------------------------------------ */
+  TIM_ICInitTypeDef TIM_ICInitStructure;
+#ifdef USE_TIM1_IRQ
+  TIM_ICInitStructure.TIM_Channel = TIM_Channel_3;
+#elif defined USE_TIM2_IRQ
+  TIM_ICInitStructure.TIM_Channel = TIM_Channel_2;
+#endif
+  TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Rising;
+  TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;
+  TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;
+  TIM_ICInitStructure.TIM_ICFilter = 0x00;
+#ifdef USE_TIM1_IRQ
+  TIM_ICInit(TIM1, &TIM_ICInitStructure);
+#elif defined USE_TIM2_IRQ
+  TIM_ICInit(TIM2, &TIM_ICInitStructure);
+#endif
+  /* Enable the TIM1 global Interrupt */
+  /* Enable the TIM2 global Interrupt */
+  NVIC_InitTypeDef NVIC_InitStructure;
+#ifdef USE_TIM1_IRQ
+  NVIC_InitStructure.NVIC_IRQChannel = TIM1_UP_IRQn;
+#elif defined USE_TIM2_IRQ
+  NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
+#endif
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&NVIC_InitStructure);
+#ifdef USE_TIM1_IRQ
+  NVIC_InitStructure.NVIC_IRQChannel = TIM1_CC_IRQn;
+  NVIC_Init(&NVIC_InitStructure);
+#endif
 
-  /* Enable the TIM2 global Interrupt. */
-  nvic_set_priority(NVIC_TIM2_IRQ, 2);
-  nvic_enable_irq(NVIC_TIM2_IRQ);
-
-  /* Enable the CC2 and Update interrupt requests. */
-  timer_enable_irq(TIM2, TIM_DIER_CC2IE | TIM_DIER_UIE);
-
-  /* Enable capture channel. */
-  timer_ic_enable(TIM2, TIM_IC2);
-
+#ifdef USE_TIM1_IRQ
+  /* TIM1 enable counter */
+  TIM_Cmd(TIM1, ENABLE);
+#elif defined USE_TIM2_IRQ
   /* TIM2 enable counter */
-  timer_enable_counter(TIM2);
+  TIM_Cmd(TIM2, ENABLE);
+#endif
+
+#ifdef USE_TIM1_IRQ
+  /* Enable the CC3 Interrupt Request */
+  TIM_ITConfig(TIM1, TIM_IT_CC3|TIM_IT_Update, ENABLE);
+#elif defined USE_TIM2_IRQ
+  /* Enable the CC2 Interrupt Request */
+  TIM_ITConfig(TIM2, TIM_IT_CC2|TIM_IT_Update, ENABLE);
+#endif
 
   ppm_last_pulse_time = 0;
   ppm_cur_pulse = RADIO_CONTROL_NB_CHANNEL;
@@ -91,18 +153,32 @@ void ppm_arch_init ( void ) {
 
 }
 
+#ifdef USE_TIM1_IRQ
+void tim1_up_irq_handler(void) {
+  if(TIM_GetITStatus(TIM1, TIM_IT_Update) == SET) {
+    timer_rollover_cnt+=(1<<16);
+    TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
+  }
+}
 
-void tim2_isr(void) {
+void tim1_cc_irq_handler(void) {
+  if(TIM_GetITStatus(TIM1, TIM_IT_CC3) == SET) {
+    TIM_ClearITPendingBit(TIM1, TIM_IT_CC3);
 
-  if((TIM2_SR & TIM_SR_CC2IF) != 0) {
-    timer_clear_flag(TIM2, TIM_SR_CC2IF);
-
-    uint32_t now = timer_get_counter(TIM2) + timer_rollover_cnt;
+    uint32_t now = TIM_GetCapture3(TIM1) + timer_rollover_cnt;
     DecodePpmFrame(now);
   }
-  else if((TIM2_SR & TIM_SR_UIF) != 0) {
-    timer_rollover_cnt+=(1<<16);
-    timer_clear_flag(TIM2, TIM_SR_UIF);
-  }
-
 }
+#elif defined USE_TIM2_IRQ
+void tim2_irq_handler(void) {
+  if(TIM_GetITStatus(TIM2, TIM_IT_CC2) == SET) {
+     TIM_ClearITPendingBit(TIM2, TIM_IT_CC2);
+     uint32_t now = TIM_GetCapture2(TIM2) + timer_rollover_cnt;
+     DecodePpmFrame(now);
+  }
+  else if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET) {
+    timer_rollover_cnt+=(1<<16);
+    TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+  }
+}
+#endif

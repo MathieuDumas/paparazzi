@@ -1,4 +1,6 @@
 /*
+ * $Id$
+ *
  * Copyright (C) 2008-2009 Antoine Drouin <poinix@gmail.com>
  *
  * This file is part of paparazzi.
@@ -22,8 +24,12 @@
 #include "firmwares/rotorcraft/actuators.h"
 
 
+
+
 void actuators_init(void) {
+
 }
+
 
 void actuators_set(bool_t motors_on) {
 }

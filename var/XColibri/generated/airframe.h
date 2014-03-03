@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/airframes/valkyrie.xml */
+/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/airframes/valkyrie.xml */
 /* Please DO NOT EDIT */
 
 #ifndef AIRFRAME_H
@@ -6,7 +6,7 @@
 
 #define AIRFRAME_NAME "XColibri"
 #define AC_ID 1
-#define MD5SUM ((uint8_t*)"\306\254\046\201\152\254\233\063\022\127\070\202\251\235\065\363")
+#define MD5SUM ((uint8_t*)"\156\350\351\206\063\216\105\125\326\151\050\022\026\310\164\236")
 
 #define SERVOS_NB 8
 

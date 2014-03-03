@@ -28,9 +28,11 @@
  */
 
 
-#include <libopencm3/stm32/f1/gpio.h>
-#include <libopencm3/stm32/exti.h>
-#include <libopencm3/stm32/spi.h>
+#include <stm32/gpio.h>
+#include <stm32/flash.h>
+#include <stm32/misc.h>
+#include <stm32/exti.h>
+#include <stm32/spi.h>
 
 #include BOARD_CONFIG
 #include "mcu.h"
@@ -47,7 +49,7 @@ static inline void main_event_task( void );
 
 static inline void main_init_hw(void);
 
-void exti2_isr(void);
+void exti2_irq_handler(void);
 
 int main(void) {
   main_init();
@@ -81,9 +83,6 @@ static uint8_t values[6];
 
 static void write_to_reg(uint8_t addr, uint8_t val) {
 
-#warning "Needs porting to libopencm3 or use the real driver!"
-
-#if 0
   AccSelect();
   SPI_I2S_SendData(SPI2, addr);
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
@@ -91,15 +90,10 @@ static void write_to_reg(uint8_t addr, uint8_t val) {
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET);
   AccUnselect();
-#endif
 
 }
 
 static uint8_t read_fom_reg(uint8_t addr) {
-
-#warning "Needs porting to libopencm3 or use the real driver!"
-
-#if 0
   AccSelect();
   SPI_I2S_SendData(SPI2, (1<<7|addr));
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
@@ -108,14 +102,10 @@ static uint8_t read_fom_reg(uint8_t addr) {
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET);
   uint8_t ret = SPI_I2S_ReceiveData(SPI2);
   AccUnselect();
-#endif
   return ret;
 }
 
 static void read_data(void) {
-#warning "Needs porting to libopencm3 or use the real driver!"
-
-#if 0
   AccSelect();
   SPI_I2S_SendData(SPI2, (1<<7|1<<6|ADXL345_REG_DATA_X0));
   while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
@@ -150,8 +140,6 @@ static void read_data(void) {
   values[5] = SPI_I2S_ReceiveData(SPI2);
 
   AccUnselect();
-
-#endif
 
 }
 
@@ -217,9 +205,6 @@ static inline void main_event_task( void ) {
 
 static inline void main_init_hw( void ) {
 
-#warning "Needs porting to libopencm3 or use the real driver!"
-
-#if 0
   /* configure acc slave select */
   /* set acc slave select as output and assert it ( on PB12) */
   AccUnselect();
@@ -277,7 +262,6 @@ static inline void main_init_hw( void ) {
   SPI_Init(SPI2, &SPI_InitStructure);
 
   DEBUG_SERVO2_INIT();
-#endif
 
 }
 
@@ -285,9 +269,10 @@ static inline void main_init_hw( void ) {
 void exti2_irq_handler(void) {
 
   /* clear EXTI */
-  exti_reset_request(EXTI2);
+  if(EXTI_GetITStatus(EXTI_Line2) != RESET)
+    EXTI_ClearITPendingBit(EXTI_Line2);
 
-  //DEBUG_S4_TOGGLE();
+  DEBUG_S4_TOGGLE();
 
   acc_ready_for_read = TRUE;
 

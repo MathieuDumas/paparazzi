@@ -18,6 +18,7 @@
     <target name="sim"          board="pc"/>
 
     <define name="LOITER_TRIM"/>
+    <define name="ALT_KALMAN"/>
     <define name="AGR_CLIMB"/>
 
     <subsystem name="radio_control" type="ppm"/>
@@ -27,7 +28,6 @@
     <subsystem name="gps"           type="ublox_hitl"/>
     <subsystem name="navigation"/>
     <subsystem name="joystick"/>
-    <subsystem name="ins"           type="gps_passthrough"/>
   </firmware>
 
   <firmware name="setup">
