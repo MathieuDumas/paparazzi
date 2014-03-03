@@ -1,0 +1,1429 @@
+/home/lionel/paparazziProto1/var/MYAC/ap/mcu.o: mcu.c mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h
+/home/lionel/paparazziProto1/var/MYAC/ap/mcu_arch.o: arch/lpc21/mcu_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h
+/home/lionel/paparazziProto1/var/MYAC/ap/sys_time.o: mcu_periph/sys_time.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/sys_time_arch.o: arch/lpc21/mcu_periph/sys_time_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/servos_4015_MAT_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h
+/home/lionel/paparazziProto1/var/MYAC/ap/inter_mcu.o: inter_mcu.c inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h paparazzi.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ subsystems/electrical.h firmwares/fixedwing/main_fbw.h
+/home/lionel/paparazziProto1/var/MYAC/ap/pprz_geodetic_int.o: math/pprz_geodetic_int.c math/pprz_geodetic_int.h \
+ math/pprz_geodetic.h /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ math/pprz_geodetic_float.h math/pprz_algebra_float.h math/pprz_algebra.h \
+ math/pprz_geodetic_double.h math/pprz_algebra_double.h
+/home/lionel/paparazziProto1/var/MYAC/ap/pprz_geodetic_float.o: math/pprz_geodetic_float.c \
+ math/pprz_geodetic_float.h math/pprz_geodetic.h \
+ math/pprz_algebra_float.h math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ math/pprz_geodetic_double.h math/pprz_algebra_double.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_utm.h
+/home/lionel/paparazziProto1/var/MYAC/ap/pprz_geodetic_double.o: math/pprz_geodetic_double.c \
+ math/pprz_geodetic_double.h math/pprz_geodetic.h \
+ math/pprz_algebra_double.h math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_utm.h
+/home/lionel/paparazziProto1/var/MYAC/ap/pprz_trig_int.o: math/pprz_trig_int.c math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h
+/home/lionel/paparazziProto1/var/MYAC/ap/pprz_orientation_conversion.o: math/pprz_orientation_conversion.c \
+ math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h
+/home/lionel/paparazziProto1/var/MYAC/ap/i2c.o: mcu_periph/i2c.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h
+/home/lionel/paparazziProto1/var/MYAC/ap/i2c_arch.o: arch/lpc21/mcu_periph/i2c_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/interrupt_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h
+/home/lionel/paparazziProto1/var/MYAC/ap/main_fbw.o: firmwares/fixedwing/main_fbw.c \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/commands.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/servos_4015_MAT_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ firmwares/fixedwing/fbw_downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h \
+ firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/pprz_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h
+/home/lionel/paparazziProto1/var/MYAC/ap/electrical.o: subsystems/electrical.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/commands.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/commands.o: commands.c commands.h paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/fbw_downlink.o: firmwares/fixedwing/fbw_downlink.c \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/main_ap.o: firmwares/fixedwing/main_ap.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_ap.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/link_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/link_mcu_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu/imu_analog.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins/ins_alt_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/pprz_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ /home/lionel/paparazziProto1/sw/airborne/rc_settings.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/gpio.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ap_downlink.o: firmwares/fixedwing/ap_downlink.c \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/state.o: state.c state.h math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ math/pprz_algebra_float.h math/pprz_algebra.h math/pprz_geodetic_int.h \
+ math/pprz_geodetic.h math/pprz_algebra_int.h math/pprz_geodetic_float.h \
+ math/pprz_algebra_float.h math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ins.o: subsystems/ins.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins/ins_alt_float.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ins_alt_float.o: subsystems/ins/ins_alt_float.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ins/ins_alt_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h
+/home/lionel/paparazziProto1/var/MYAC/ap/armVIC.o: arch/lpc21/armVIC.c arch/lpc21/include/types.h \
+ arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/main.o: firmwares/fixedwing/main.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_ap.h
+/home/lionel/paparazziProto1/var/MYAC/ap/uart.o: mcu_periph/uart.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h
+/home/lionel/paparazziProto1/var/MYAC/ap/uart_arch.o: arch/lpc21/mcu_periph/uart_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/settings.o: subsystems/settings.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h
+/home/lionel/paparazziProto1/var/MYAC/ap/settings_arch.o: arch/lpc21/subsystems/settings_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h
+/home/lionel/paparazziProto1/var/MYAC/ap/adc_arch.o: arch/lpc21/mcu_periph/adc_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/servos_4015_MAT_hw.o: arch/lpc21/servos_4015_MAT_hw.c \
+ firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/servos_4015_MAT_hw.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/actuators.o: actuators.c firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/servos_4015_MAT_hw.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/radio_control.o: subsystems/radio_control.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ppm.o: subsystems/radio_control/ppm.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ppm_arch.o: arch/lpc21/subsystems/radio_control/ppm_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h
+/home/lionel/paparazziProto1/var/MYAC/ap/downlink.o: subsystems/datalink/downlink.c \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/xbee.o: subsystems/datalink/xbee.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/print.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/usb_serial.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h
+/home/lionel/paparazziProto1/var/MYAC/ap/datalink.o: firmwares/fixedwing/datalink.c \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/pprz_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h \
+ firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu/imu_analog.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h
+/home/lionel/paparazziProto1/var/MYAC/ap/stabilization_attitude.o: \
+ firmwares/fixedwing/stabilization/stabilization_attitude.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/guidance_v.o: firmwares/fixedwing/guidance/guidance_v.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/imu.o: subsystems/imu.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu/imu_analog.h
+/home/lionel/paparazziProto1/var/MYAC/ap/imu_analog.o: subsystems/imu/imu_analog.c subsystems/imu/imu_analog.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu/imu_analog.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ahrs.o: subsystems/ahrs.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h
+/home/lionel/paparazziProto1/var/MYAC/ap/ahrs_infrared.o: subsystems/ahrs/ahrs_infrared.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu/imu_analog.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h
+/home/lionel/paparazziProto1/var/MYAC/ap/gps_ubx.o: subsystems/gps/gps_ubx.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h
+/home/lionel/paparazziProto1/var/MYAC/ap/gps.o: subsystems/gps.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h
+/home/lionel/paparazziProto1/var/MYAC/ap/nav.o: subsystems/nav.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+ arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+ arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+ arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+ arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+ arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+ arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.c \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h
+/home/lionel/paparazziProto1/var/MYAC/ap/common_flight_plan.o: subsystems/navigation/common_flight_plan.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/MYAC/ap/traffic_info.o: subsystems/navigation/traffic_info.c \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/nav_survey_rectangle.o: subsystems/navigation/nav_survey_rectangle.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/MYAC/ap/nav_line.o: subsystems/navigation/nav_line.c \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h
+/home/lionel/paparazziProto1/var/MYAC/ap/openlog.o: modules/openlog/openlog.c modules/openlog/openlog.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ /home/lionel/paparazziProto1/sw/include/std.h modules/openlog/openlog.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/pprz_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h
+/home/lionel/paparazziProto1/var/MYAC/ap/infrared.o: subsystems/sensors/infrared.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h
+/home/lionel/paparazziProto1/var/MYAC/ap/infrared_adc.o: subsystems/sensors/infrared_adc.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h
+/home/lionel/paparazziProto1/var/MYAC/ap/servo_cam_ctrl.o: modules/digital_cam/servo_cam_ctrl.c \
+ modules/digital_cam/servo_cam_ctrl.h modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h
+/home/lionel/paparazziProto1/var/MYAC/ap/dc.o: modules/digital_cam/dc.c modules/digital_cam/dc.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/inttypes.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/led_hw.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_1.1.h \
+ arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+ arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+ arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+ arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+ arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+ arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+ arch/lpc21/include/lpcCAN.h \
+ /home/lionel/paparazziProto1/sw/airborne/state.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_ubx.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+ arch/lpc21/include/types.h \
+ /home/lionel/paparazziProto1/var/include/ubx_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/armVIC.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/modules.h \
+ modules/openlog/openlog.h modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ modules/digital_cam/servo_cam_ctrl.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+ /home/lionel/paparazziProto1/var/MYAC/generated/radio.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/pprz_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h

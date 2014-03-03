@@ -1,0 +1,74 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"mcu.c"
+  12              		.section	.text.mcu_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	mcu_init
+  16              	mcu_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  21 0004 FEFFFFEB 		bl	mcu_arch_init
+  22 0008 FEFFFFEB 		bl	sys_time_init
+  23 000c 88309FE5 		ldr	r3, .L2
+  24 0010 182093E5 		ldr	r2, [r3, #24]
+  25 0014 022882E3 		orr	r2, r2, #131072
+  26 0018 182083E5 		str	r2, [r3, #24]
+  27 001c 0228A0E3 		mov	r2, #131072
+  28 0020 142083E5 		str	r2, [r3, #20]
+  29 0024 182093E5 		ldr	r2, [r3, #24]
+  30 0028 012882E3 		orr	r2, r2, #65536
+  31 002c 182083E5 		str	r2, [r3, #24]
+  32 0030 0128A0E3 		mov	r2, #65536
+  33 0034 142083E5 		str	r2, [r3, #20]
+  34 0038 182093E5 		ldr	r2, [r3, #24]
+  35 003c 022582E3 		orr	r2, r2, #8388608
+  36 0040 182083E5 		str	r2, [r3, #24]
+  37 0044 0225A0E3 		mov	r2, #8388608
+  38 0048 142083E5 		str	r2, [r3, #20]
+  39 004c 182093E5 		ldr	r2, [r3, #24]
+  40 0050 012782E3 		orr	r2, r2, #262144
+  41 0054 182083E5 		str	r2, [r3, #24]
+  42 0058 0127A0E3 		mov	r2, #262144
+  43 005c 142083E5 		str	r2, [r3, #20]
+  44 0060 182093E5 		ldr	r2, [r3, #24]
+  45 0064 012582E3 		orr	r2, r2, #4194304
+  46 0068 182083E5 		str	r2, [r3, #24]
+  47 006c 0125A0E3 		mov	r2, #4194304
+  48 0070 142083E5 		str	r2, [r3, #20]
+  49 0074 182093E5 		ldr	r2, [r3, #24]
+  50 0078 022682E3 		orr	r2, r2, #2097152
+  51 007c 182083E5 		str	r2, [r3, #24]
+  52 0080 0226A0E3 		mov	r2, #2097152
+  53 0084 142083E5 		str	r2, [r3, #20]
+  54 0088 FEFFFFEB 		bl	uart0_init
+  55 008c FEFFFFEB 		bl	uart1_init
+  56 0090 FEFFFFEB 		bl	adc_init
+  57 0094 0840BDE8 		ldmfd	sp!, {r3, lr}
+  58 0098 1EFF2FE1 		bx	lr
+  59              	.L3:
+  60              		.align	2
+  61              	.L2:
+  62 009c 008002E0 		.word	-536707072
+  64              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 mcu.c
+     /tmp/ccUgEEWR.s:13     .text.mcu_init:00000000 $a
+     /tmp/ccUgEEWR.s:16     .text.mcu_init:00000000 mcu_init
+     /tmp/ccUgEEWR.s:62     .text.mcu_init:0000009c $d
+
+UNDEFINED SYMBOLS
+mcu_arch_init
+sys_time_init
+uart0_init
+uart1_init
+adc_init

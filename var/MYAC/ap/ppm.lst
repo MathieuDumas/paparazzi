@@ -1,0 +1,42 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ppm.c"
+  12              		.section	.text.radio_control_impl_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	radio_control_impl_init
+  16              	radio_control_impl_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  21 0004 10309FE5 		ldr	r3, .L2
+  22 0008 0020A0E3 		mov	r2, #0
+  23 000c 0020C3E5 		strb	r2, [r3, #0]
+  24 0010 FEFFFFEB 		bl	ppm_arch_init
+  25 0014 0840BDE8 		ldmfd	sp!, {r3, lr}
+  26 0018 1EFF2FE1 		bx	lr
+  27              	.L3:
+  28              		.align	2
+  29              	.L2:
+  30 001c 00000000 		.word	ppm_frame_available
+  32              		.comm	ppm_frame_available,1,1
+  33              		.comm	ppm_pulses,14,2
+  34              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 ppm.c
+     /tmp/cci1KIs1.s:13     .text.radio_control_impl_init:00000000 $a
+     /tmp/cci1KIs1.s:16     .text.radio_control_impl_init:00000000 radio_control_impl_init
+     /tmp/cci1KIs1.s:30     .text.radio_control_impl_init:0000001c $d
+                            *COM*:00000001 ppm_frame_available
+                            *COM*:0000000e ppm_pulses
+
+UNDEFINED SYMBOLS
+ppm_arch_init

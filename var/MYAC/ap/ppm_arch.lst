@@ -1,0 +1,60 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ppm_arch.c"
+  12              		.section	.text.ppm_arch_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	ppm_arch_init
+  16              	ppm_arch_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 40309FE5 		ldr	r3, .L2
+  22 0004 002093E5 		ldr	r2, [r3, #0]
+  23 0008 022A82E3 		orr	r2, r2, #8192
+  24 000c 002083E5 		str	r2, [r3, #0]
+  25 0010 052DA0E3 		mov	r2, #320
+  26 0014 0A3943E2 		sub	r3, r3, #163840
+  27 0018 282083E5 		str	r2, [r3, #40]
+  28 001c 28209FE5 		ldr	r2, .L2+4
+  29 0020 0030A0E3 		mov	r3, #0
+  30 0024 003082E5 		str	r3, [r2, #0]
+  31 0028 20209FE5 		ldr	r2, .L2+8
+  32 002c 0710A0E3 		mov	r1, #7
+  33 0030 0010C2E5 		strb	r1, [r2, #0]
+  34 0034 18209FE5 		ldr	r2, .L2+12
+  35 0038 0030C2E5 		strb	r3, [r2, #0]
+  36 003c 14209FE5 		ldr	r2, .L2+16
+  37 0040 0030C2E5 		strb	r3, [r2, #0]
+  38 0044 1EFF2FE1 		bx	lr
+  39              	.L3:
+  40              		.align	2
+  41              	.L2:
+  42 0048 00C002E0 		.word	-536690688
+  43 004c 00000000 		.word	ppm_last_pulse_time
+  44 0050 00000000 		.word	ppm_cur_pulse
+  45 0054 00000000 		.word	ppm_data_valid
+  46 0058 00000000 		.word	ppm_frame_available
+  48              		.comm	ppm_data_valid,1,1
+  49              		.comm	ppm_last_pulse_time,4,4
+  50              		.comm	ppm_cur_pulse,1,1
+  51              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 ppm_arch.c
+     /tmp/cc0kpk94.s:13     .text.ppm_arch_init:00000000 $a
+     /tmp/cc0kpk94.s:16     .text.ppm_arch_init:00000000 ppm_arch_init
+     /tmp/cc0kpk94.s:42     .text.ppm_arch_init:00000048 $d
+                            *COM*:00000004 ppm_last_pulse_time
+                            *COM*:00000001 ppm_cur_pulse
+                            *COM*:00000001 ppm_data_valid
+
+UNDEFINED SYMBOLS
+ppm_frame_available

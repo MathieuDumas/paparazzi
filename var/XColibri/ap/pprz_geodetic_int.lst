@@ -1,0 +1,741 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"pprz_geodetic_int.c"
+  12              		.section	.text.enu_of_ecef_point_i,"ax",%progbits
+  13              		.align	2
+  14              		.global	enu_of_ecef_point_i
+  16              	enu_of_ecef_point_i:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 00C092E5 		ldr	ip, [r2, #0]
+  22 0004 003091E5 		ldr	r3, [r1, #0]
+  23 0008 F0012DE9 		stmfd	sp!, {r4, r5, r6, r7, r8}
+  24 000c 0C3063E0 		rsb	r3, r3, ip
+  25 0010 044092E5 		ldr	r4, [r2, #4]
+  26 0014 04C091E5 		ldr	ip, [r1, #4]
+  27 0018 186081E2 		add	r6, r1, #24
+  28 001c C00096E8 		ldmia	r6, {r6, r7}
+  29 0020 04C06CE0 		rsb	ip, ip, r4
+  30 0024 084092E5 		ldr	r4, [r2, #8]
+  31 0028 082091E5 		ldr	r2, [r1, #8]
+  32 002c 042062E0 		rsb	r2, r2, r4
+  33 0030 974CC5E0 		smull	r4, r5, r7, ip
+  34 0034 9346E5E0 		smlal	r4, r5, r3, r6
+  35 0038 247081E2 		add	r7, r1, #36
+  36 003c 800197E8 		ldmia	r7, {r7, r8}
+  37 0040 244AA0E1 		mov	r4, r4, lsr #20
+  38 0044 054684E1 		orr	r4, r4, r5, asl #12
+  39 0048 004080E5 		str	r4, [r0, #0]
+  40 004c 984CC5E0 		smull	r4, r5, r8, ip
+  41 0050 9347E5E0 		smlal	r4, r5, r3, r7
+  42 0054 2C6091E5 		ldr	r6, [r1, #44]
+  43 0058 9246E5E0 		smlal	r4, r5, r2, r6
+  44 005c 306081E2 		add	r6, r1, #48
+  45 0060 C00096E8 		ldmia	r6, {r6, r7}
+  46 0064 244AA0E1 		mov	r4, r4, lsr #20
+  47 0068 054684E1 		orr	r4, r4, r5, asl #12
+  48 006c 044080E5 		str	r4, [r0, #4]
+  49 0070 974CC5E0 		smull	r4, r5, r7, ip
+  50 0074 9346E5E0 		smlal	r4, r5, r3, r6
+  51 0078 381091E5 		ldr	r1, [r1, #56]
+  52 007c 9241E5E0 		smlal	r4, r5, r2, r1
+  53 0080 243AA0E1 		mov	r3, r4, lsr #20
+  54 0084 053683E1 		orr	r3, r3, r5, asl #12
+  55 0088 083080E5 		str	r3, [r0, #8]
+  56 008c F001BDE8 		ldmfd	sp!, {r4, r5, r6, r7, r8}
+  57 0090 1EFF2FE1 		bx	lr
+  59              		.section	.text.ned_of_ecef_point_i,"ax",%progbits
+  60              		.align	2
+  61              		.global	ned_of_ecef_point_i
+  63              	ned_of_ecef_point_i:
+  64              		@ Function supports interworking.
+  65              		@ args = 0, pretend = 0, frame = 16
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67 0000 1F402DE9 		stmfd	sp!, {r0, r1, r2, r3, r4, lr}
+  68 0004 0040A0E1 		mov	r4, r0
+  69 0008 04008DE2 		add	r0, sp, #4
+  70 000c FEFFFFEB 		bl	enu_of_ecef_point_i
+  71 0010 08309DE5 		ldr	r3, [sp, #8]
+  72 0014 003084E5 		str	r3, [r4, #0]
+  73 0018 04309DE5 		ldr	r3, [sp, #4]
+  74 001c 043084E5 		str	r3, [r4, #4]
+  75 0020 0C309DE5 		ldr	r3, [sp, #12]
+  76 0024 003063E2 		rsb	r3, r3, #0
+  77 0028 083084E5 		str	r3, [r4, #8]
+  78 002c 1F40BDE8 		ldmfd	sp!, {r0, r1, r2, r3, r4, lr}
+  79 0030 1EFF2FE1 		bx	lr
+  81              		.section	.text.enu_of_ecef_vect_i,"ax",%progbits
+  82              		.align	2
+  83              		.global	enu_of_ecef_vect_i
+  85              	enu_of_ecef_vect_i:
+  86              		@ Function supports interworking.
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		@ link register save eliminated.
+  90 0000 F0012DE9 		stmfd	sp!, {r4, r5, r6, r7, r8}
+  91 0004 1C5091E5 		ldr	r5, [r1, #28]
+  92 0008 044092E5 		ldr	r4, [r2, #4]
+  93 000c 9564C7E0 		smull	r6, r7, r5, r4
+  94 0010 00C092E5 		ldr	ip, [r2, #0]
+  95 0014 183091E5 		ldr	r3, [r1, #24]
+  96 0018 9C63E7E0 		smlal	r6, r7, ip, r3
+  97 001c 263AA0E1 		mov	r3, r6, lsr #20
+  98 0020 073683E1 		orr	r3, r3, r7, asl #12
+  99 0024 247081E2 		add	r7, r1, #36
+ 100 0028 800197E8 		ldmia	r7, {r7, r8}
+ 101 002c 085092E5 		ldr	r5, [r2, #8]
+ 102 0030 003080E5 		str	r3, [r0, #0]
+ 103 0034 9824C3E0 		smull	r2, r3, r8, r4
+ 104 0038 9C27E3E0 		smlal	r2, r3, ip, r7
+ 105 003c 2C6091E5 		ldr	r6, [r1, #44]
+ 106 0040 9526E3E0 		smlal	r2, r3, r5, r6
+ 107 0044 306081E2 		add	r6, r1, #48
+ 108 0048 C00096E8 		ldmia	r6, {r6, r7}
+ 109 004c 222AA0E1 		mov	r2, r2, lsr #20
+ 110 0050 032682E1 		orr	r2, r2, r3, asl #12
+ 111 0054 042080E5 		str	r2, [r0, #4]
+ 112 0058 9724C3E0 		smull	r2, r3, r7, r4
+ 113 005c 9C26E3E0 		smlal	r2, r3, ip, r6
+ 114 0060 381091E5 		ldr	r1, [r1, #56]
+ 115 0064 9521E3E0 		smlal	r2, r3, r5, r1
+ 116 0068 222AA0E1 		mov	r2, r2, lsr #20
+ 117 006c 032682E1 		orr	r2, r2, r3, asl #12
+ 118 0070 082080E5 		str	r2, [r0, #8]
+ 119 0074 F001BDE8 		ldmfd	sp!, {r4, r5, r6, r7, r8}
+ 120 0078 1EFF2FE1 		bx	lr
+ 122              		.section	.text.ned_of_ecef_vect_i,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	ned_of_ecef_vect_i
+ 126              	ned_of_ecef_vect_i:
+ 127              		@ Function supports interworking.
+ 128              		@ args = 0, pretend = 0, frame = 16
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130 0000 1F402DE9 		stmfd	sp!, {r0, r1, r2, r3, r4, lr}
+ 131 0004 0040A0E1 		mov	r4, r0
+ 132 0008 04008DE2 		add	r0, sp, #4
+ 133 000c FEFFFFEB 		bl	enu_of_ecef_vect_i
+ 134 0010 08309DE5 		ldr	r3, [sp, #8]
+ 135 0014 003084E5 		str	r3, [r4, #0]
+ 136 0018 04309DE5 		ldr	r3, [sp, #4]
+ 137 001c 043084E5 		str	r3, [r4, #4]
+ 138 0020 0C309DE5 		ldr	r3, [sp, #12]
+ 139 0024 003063E2 		rsb	r3, r3, #0
+ 140 0028 083084E5 		str	r3, [r4, #8]
+ 141 002c 1F40BDE8 		ldmfd	sp!, {r0, r1, r2, r3, r4, lr}
+ 142 0030 1EFF2FE1 		bx	lr
+ 144              		.section	.text.ecef_of_enu_point_i,"ax",%progbits
+ 145              		.align	2
+ 146              		.global	ecef_of_enu_point_i
+ 148              	ecef_of_enu_point_i:
+ 149              		@ Function supports interworking.
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152              		@ link register save eliminated.
+ 153 0000 F0002DE9 		stmfd	sp!, {r4, r5, r6, r7}
+ 154 0004 044092E5 		ldr	r4, [r2, #4]
+ 155 0008 245091E5 		ldr	r5, [r1, #36]
+ 156 000c 940505E0 		mul	r5, r4, r5
+ 157 0010 00C092E5 		ldr	ip, [r2, #0]
+ 158 0014 083092E5 		ldr	r3, [r2, #8]
+ 159 0018 182091E5 		ldr	r2, [r1, #24]
+ 160 001c 925C25E0 		mla	r5, r2, ip, r5
+ 161 0020 302091E5 		ldr	r2, [r1, #48]
+ 162 0024 925325E0 		mla	r5, r2, r3, r5
+ 163 0028 282091E5 		ldr	r2, [r1, #40]
+ 164 002c 940202E0 		mul	r2, r4, r2
+ 165 0030 1C6091E5 		ldr	r6, [r1, #28]
+ 166 0034 2C7091E5 		ldr	r7, [r1, #44]
+ 167 0038 962C22E0 		mla	r2, r6, ip, r2
+ 168 003c 970404E0 		mul	r4, r7, r4
+ 169 0040 346091E5 		ldr	r6, [r1, #52]
+ 170 0044 962322E0 		mla	r2, r6, r3, r2
+ 171 0048 206091E5 		ldr	r6, [r1, #32]
+ 172 004c 964C2CE0 		mla	ip, r6, ip, r4
+ 173 0050 384091E5 		ldr	r4, [r1, #56]
+ 174 0054 94C323E0 		mla	r3, r4, r3, ip
+ 175 0058 4557A0E1 		mov	r5, r5, asr #14
+ 176 005c 005080E5 		str	r5, [r0, #0]
+ 177 0060 4227A0E1 		mov	r2, r2, asr #14
+ 178 0064 042080E5 		str	r2, [r0, #4]
+ 179 0068 00C091E5 		ldr	ip, [r1, #0]
+ 180 006c 4337A0E1 		mov	r3, r3, asr #14
+ 181 0070 0C5085E0 		add	r5, r5, ip
+ 182 0074 04C091E5 		ldr	ip, [r1, #4]
+ 183 0078 083080E5 		str	r3, [r0, #8]
+ 184 007c 0C2082E0 		add	r2, r2, ip
+ 185 0080 042080E5 		str	r2, [r0, #4]
+ 186 0084 082091E5 		ldr	r2, [r1, #8]
+ 187 0088 023083E0 		add	r3, r3, r2
+ 188 008c 005080E5 		str	r5, [r0, #0]
+ 189 0090 083080E5 		str	r3, [r0, #8]
+ 190 0094 F000BDE8 		ldmfd	sp!, {r4, r5, r6, r7}
+ 191 0098 1EFF2FE1 		bx	lr
+ 193              		.section	.text.ecef_of_ned_point_i,"ax",%progbits
+ 194              		.align	2
+ 195              		.global	ecef_of_ned_point_i
+ 197              	ecef_of_ned_point_i:
+ 198              		@ Function supports interworking.
+ 199              		@ args = 0, pretend = 0, frame = 16
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
+ 201 0000 1F402DE9 		stmfd	sp!, {r0, r1, r2, r3, r4, lr}
+ 202 0004 043092E5 		ldr	r3, [r2, #4]
+ 203 0008 04308DE5 		str	r3, [sp, #4]
+ 204 000c 003092E5 		ldr	r3, [r2, #0]
+ 205 0010 08308DE5 		str	r3, [sp, #8]
+ 206 0014 083092E5 		ldr	r3, [r2, #8]
+ 207 0018 04208DE2 		add	r2, sp, #4
+ 208 001c 003063E2 		rsb	r3, r3, #0
+ 209 0020 0C308DE5 		str	r3, [sp, #12]
+ 210 0024 FEFFFFEB 		bl	ecef_of_enu_point_i
+ 211 0028 14D08DE2 		add	sp, sp, #20
+ 212 002c 04E09DE4 		ldr	lr, [sp], #4
+ 213 0030 1EFF2FE1 		bx	lr
+ 215              		.section	.text.ecef_of_enu_vect_i,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	ecef_of_enu_vect_i
+ 219              	ecef_of_enu_vect_i:
+ 220              		@ Function supports interworking.
+ 221              		@ args = 0, pretend = 0, frame = 0
+ 222              		@ frame_needed = 0, uses_anonymous_args = 0
+ 223              		@ link register save eliminated.
+ 224 0000 00C092E5 		ldr	ip, [r2, #0]
+ 225 0004 083092E5 		ldr	r3, [r2, #8]
+ 226 0008 30002DE9 		stmfd	sp!, {r4, r5}
+ 227 000c 044092E5 		ldr	r4, [r2, #4]
+ 228 0010 242091E5 		ldr	r2, [r1, #36]
+ 229 0014 940202E0 		mul	r2, r4, r2
+ 230 0018 185091E5 		ldr	r5, [r1, #24]
+ 231 001c 952C22E0 		mla	r2, r5, ip, r2
+ 232 0020 305091E5 		ldr	r5, [r1, #48]
+ 233 0024 952322E0 		mla	r2, r5, r3, r2
+ 234 0028 4227A0E1 		mov	r2, r2, asr #14
+ 235 002c 002080E5 		str	r2, [r0, #0]
+ 236 0030 282091E5 		ldr	r2, [r1, #40]
+ 237 0034 940202E0 		mul	r2, r4, r2
+ 238 0038 1C5091E5 		ldr	r5, [r1, #28]
+ 239 003c 952C22E0 		mla	r2, r5, ip, r2
+ 240 0040 345091E5 		ldr	r5, [r1, #52]
+ 241 0044 952322E0 		mla	r2, r5, r3, r2
+ 242 0048 2C5091E5 		ldr	r5, [r1, #44]
+ 243 004c 950404E0 		mul	r4, r5, r4
+ 244 0050 4227A0E1 		mov	r2, r2, asr #14
+ 245 0054 042080E5 		str	r2, [r0, #4]
+ 246 0058 202091E5 		ldr	r2, [r1, #32]
+ 247 005c 924C2CE0 		mla	ip, r2, ip, r4
+ 248 0060 384091E5 		ldr	r4, [r1, #56]
+ 249 0064 94C323E0 		mla	r3, r4, r3, ip
+ 250 0068 4337A0E1 		mov	r3, r3, asr #14
+ 251 006c 083080E5 		str	r3, [r0, #8]
+ 252 0070 3000BDE8 		ldmfd	sp!, {r4, r5}
+ 253 0074 1EFF2FE1 		bx	lr
+ 255              		.section	.text.ecef_of_ned_vect_i,"ax",%progbits
+ 256              		.align	2
+ 257              		.global	ecef_of_ned_vect_i
+ 259              	ecef_of_ned_vect_i:
+ 260              		@ Function supports interworking.
+ 261              		@ args = 0, pretend = 0, frame = 16
+ 262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 263 0000 1F402DE9 		stmfd	sp!, {r0, r1, r2, r3, r4, lr}
+ 264 0004 043092E5 		ldr	r3, [r2, #4]
+ 265 0008 04308DE5 		str	r3, [sp, #4]
+ 266 000c 003092E5 		ldr	r3, [r2, #0]
+ 267 0010 08308DE5 		str	r3, [sp, #8]
+ 268 0014 083092E5 		ldr	r3, [r2, #8]
+ 269 0018 04208DE2 		add	r2, sp, #4
+ 270 001c 003063E2 		rsb	r3, r3, #0
+ 271 0020 0C308DE5 		str	r3, [sp, #12]
+ 272 0024 FEFFFFEB 		bl	ecef_of_enu_vect_i
+ 273 0028 14D08DE2 		add	sp, sp, #20
+ 274 002c 04E09DE4 		ldr	lr, [sp], #4
+ 275 0030 1EFF2FE1 		bx	lr
+ 277              		.global	__aeabi_i2d
+ 278              		.global	__aeabi_ddiv
+ 279              		.global	__aeabi_dmul
+ 280              		.global	__aeabi_d2iz
+ 281              		.section	.text.lla_of_ecef_i,"ax",%progbits
+ 282              		.align	2
+ 283              		.global	lla_of_ecef_i
+ 285              	lla_of_ecef_i:
+ 286              		@ Function supports interworking.
+ 287              		@ args = 0, pretend = 0, frame = 48
+ 288              		@ frame_needed = 0, uses_anonymous_args = 0
+ 289 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 290 0004 0040A0E1 		mov	r4, r0
+ 291 0008 34D04DE2 		sub	sp, sp, #52
+ 292 000c 000091E5 		ldr	r0, [r1, #0]
+ 293 0010 0150A0E1 		mov	r5, r1
+ 294 0014 FEFFFFEB 		bl	__aeabi_i2d
+ 295 0018 0020A0E3 		mov	r2, #0
+ 296 001c B0309FE5 		ldr	r3, .L10
+ 297 0020 FEFFFFEB 		bl	__aeabi_ddiv
+ 298 0024 03008DE8 		stmia	sp, {r0-r1}
+ 299 0028 040095E5 		ldr	r0, [r5, #4]
+ 300 002c FEFFFFEB 		bl	__aeabi_i2d
+ 301 0030 0020A0E3 		mov	r2, #0
+ 302 0034 98309FE5 		ldr	r3, .L10
+ 303 0038 FEFFFFEB 		bl	__aeabi_ddiv
+ 304 003c 08008DE5 		str	r0, [sp, #8]
+ 305 0040 0C108DE5 		str	r1, [sp, #12]
+ 306 0044 080095E5 		ldr	r0, [r5, #8]
+ 307 0048 FEFFFFEB 		bl	__aeabi_i2d
+ 308 004c 0020A0E3 		mov	r2, #0
+ 309 0050 7C309FE5 		ldr	r3, .L10
+ 310 0054 FEFFFFEB 		bl	__aeabi_ddiv
+ 311 0058 10008DE5 		str	r0, [sp, #16]
+ 312 005c 14108DE5 		str	r1, [sp, #20]
+ 313 0060 18008DE2 		add	r0, sp, #24
+ 314 0064 0D10A0E1 		mov	r1, sp
+ 315 0068 FEFFFFEB 		bl	lla_of_ecef_d
+ 316 006c 0020A0E3 		mov	r2, #0
+ 317 0070 60309FE5 		ldr	r3, .L10+4
+ 318 0074 18108DE2 		add	r1, sp, #24
+ 319 0078 030091E8 		ldmia	r1, {r0-r1}
+ 320 007c FEFFFFEB 		bl	__aeabi_dmul
+ 321 0080 FEFFFFEB 		bl	rint
+ 322 0084 FEFFFFEB 		bl	__aeabi_d2iz
+ 323 0088 0020A0E3 		mov	r2, #0
+ 324 008c 44309FE5 		ldr	r3, .L10+4
+ 325 0090 000084E5 		str	r0, [r4, #0]
+ 326 0094 20108DE2 		add	r1, sp, #32
+ 327 0098 030091E8 		ldmia	r1, {r0-r1}
+ 328 009c FEFFFFEB 		bl	__aeabi_dmul
+ 329 00a0 FEFFFFEB 		bl	rint
+ 330 00a4 FEFFFFEB 		bl	__aeabi_d2iz
+ 331 00a8 0020A0E3 		mov	r2, #0
+ 332 00ac 040084E5 		str	r0, [r4, #4]
+ 333 00b0 24309FE5 		ldr	r3, .L10+8
+ 334 00b4 28108DE2 		add	r1, sp, #40
+ 335 00b8 030091E8 		ldmia	r1, {r0-r1}
+ 336 00bc FEFFFFEB 		bl	__aeabi_dmul
+ 337 00c0 FEFFFFEB 		bl	__aeabi_d2iz
+ 338 00c4 080084E5 		str	r0, [r4, #8]
+ 339 00c8 34D08DE2 		add	sp, sp, #52
+ 340 00cc 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 341 00d0 1EFF2FE1 		bx	lr
+ 342              	.L11:
+ 343              		.align	2
+ 344              	.L10:
+ 345 00d4 00005940 		.word	1079574528
+ 346 00d8 D0126341 		.word	1097011920
+ 347 00dc 00408F40 		.word	1083129856
+ 349              		.global	__aeabi_i2f
+ 350              		.global	__aeabi_fdiv
+ 351              		.global	__aeabi_fmul
+ 352              		.global	__aeabi_f2d
+ 353              		.section	.text.ltp_def_from_ecef_i,"ax",%progbits
+ 354              		.align	2
+ 355              		.global	ltp_def_from_ecef_i
+ 357              	ltp_def_from_ecef_i:
+ 358              		@ Function supports interworking.
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361 0000 F8452DE9 		stmfd	sp!, {r3, r4, r5, r6, r7, r8, sl, lr}
+ 362 0004 003091E5 		ldr	r3, [r1, #0]
+ 363 0008 003080E5 		str	r3, [r0, #0]
+ 364 000c 043091E5 		ldr	r3, [r1, #4]
+ 365 0010 043080E5 		str	r3, [r0, #4]
+ 366 0014 083091E5 		ldr	r3, [r1, #8]
+ 367 0018 0040A0E1 		mov	r4, r0
+ 368 001c 083080E5 		str	r3, [r0, #8]
+ 369 0020 0410A0E1 		mov	r1, r4
+ 370 0024 0C0080E2 		add	r0, r0, #12
+ 371 0028 FEFFFFEB 		bl	lla_of_ecef_i
+ 372 002c 100094E5 		ldr	r0, [r4, #16]
+ 373 0030 FEFFFFEB 		bl	__aeabi_i2f
+ 374 0034 30119FE5 		ldr	r1, .L13
+ 375 0038 FEFFFFEB 		bl	__aeabi_fdiv
+ 376 003c FEFFFFEB 		bl	sinf
+ 377 0040 28119FE5 		ldr	r1, .L13+4
+ 378 0044 FEFFFFEB 		bl	__aeabi_fmul
+ 379 0048 FEFFFFEB 		bl	__aeabi_f2d
+ 380 004c FEFFFFEB 		bl	rint
+ 381 0050 FEFFFFEB 		bl	__aeabi_d2iz
+ 382 0054 00A0A0E1 		mov	sl, r0
+ 383 0058 100094E5 		ldr	r0, [r4, #16]
+ 384 005c FEFFFFEB 		bl	__aeabi_i2f
+ 385 0060 04119FE5 		ldr	r1, .L13
+ 386 0064 FEFFFFEB 		bl	__aeabi_fdiv
+ 387 0068 FEFFFFEB 		bl	cosf
+ 388 006c FC109FE5 		ldr	r1, .L13+4
+ 389 0070 FEFFFFEB 		bl	__aeabi_fmul
+ 390 0074 FEFFFFEB 		bl	__aeabi_f2d
+ 391 0078 FEFFFFEB 		bl	rint
+ 392 007c FEFFFFEB 		bl	__aeabi_d2iz
+ 393 0080 0080A0E1 		mov	r8, r0
+ 394 0084 0C0094E5 		ldr	r0, [r4, #12]
+ 395 0088 FEFFFFEB 		bl	__aeabi_i2f
+ 396 008c D8109FE5 		ldr	r1, .L13
+ 397 0090 FEFFFFEB 		bl	__aeabi_fdiv
+ 398 0094 FEFFFFEB 		bl	sinf
+ 399 0098 D0109FE5 		ldr	r1, .L13+4
+ 400 009c FEFFFFEB 		bl	__aeabi_fmul
+ 401 00a0 FEFFFFEB 		bl	__aeabi_f2d
+ 402 00a4 FEFFFFEB 		bl	rint
+ 403 00a8 FEFFFFEB 		bl	__aeabi_d2iz
+ 404 00ac 0050A0E1 		mov	r5, r0
+ 405 00b0 0C0094E5 		ldr	r0, [r4, #12]
+ 406 00b4 FEFFFFEB 		bl	__aeabi_i2f
+ 407 00b8 AC109FE5 		ldr	r1, .L13
+ 408 00bc FEFFFFEB 		bl	__aeabi_fdiv
+ 409 00c0 FEFFFFEB 		bl	cosf
+ 410 00c4 A4109FE5 		ldr	r1, .L13+4
+ 411 00c8 FEFFFFEB 		bl	__aeabi_fmul
+ 412 00cc FEFFFFEB 		bl	__aeabi_f2d
+ 413 00d0 FEFFFFEB 		bl	rint
+ 414 00d4 FEFFFFEB 		bl	__aeabi_d2iz
+ 415 00d8 003065E2 		rsb	r3, r5, #0
+ 416 00dc 183084E5 		str	r3, [r4, #24]
+ 417 00e0 0030A0E3 		mov	r3, #0
+ 418 00e4 203084E5 		str	r3, [r4, #32]
+ 419 00e8 0A20A0E1 		mov	r2, sl
+ 420 00ec CA3FA0E1 		mov	r3, sl, asr #31
+ 421 00f0 002072E2 		rsbs	r2, r2, #0
+ 422 00f4 0030E3E2 		rsc	r3, r3, #0
+ 423 00f8 C01FA0E1 		mov	r1, r0, asr #31
+ 424 00fc 920101E0 		mul	r1, r2, r1
+ 425 0100 926087E0 		umull	r6, r7, r2, r0
+ 426 0104 901321E0 		mla	r1, r0, r3, r1
+ 427 0108 077081E0 		add	r7, r1, r7
+ 428 010c 261AA0E1 		mov	r1, r6, lsr #20
+ 429 0110 071681E1 		orr	r1, r1, r7, asl #12
+ 430 0114 241084E5 		str	r1, [r4, #36]
+ 431 0118 C51FA0E1 		mov	r1, r5, asr #31
+ 432 011c 920101E0 		mul	r1, r2, r1
+ 433 0120 926587E0 		umull	r6, r7, r2, r5
+ 434 0124 951321E0 		mla	r1, r5, r3, r1
+ 435 0128 263AA0E1 		mov	r3, r6, lsr #20
+ 436 012c 077081E0 		add	r7, r1, r7
+ 437 0130 073683E1 		orr	r3, r3, r7, asl #12
+ 438 0134 283084E5 		str	r3, [r4, #40]
+ 439 0138 9820C3E0 		smull	r2, r3, r8, r0
+ 440 013c 1C0084E5 		str	r0, [r4, #28]
+ 441 0140 9805C1E0 		smull	r0, r1, r8, r5
+ 442 0144 222AA0E1 		mov	r2, r2, lsr #20
+ 443 0148 032682E1 		orr	r2, r2, r3, asl #12
+ 444 014c 203AA0E1 		mov	r3, r0, lsr #20
+ 445 0150 013683E1 		orr	r3, r3, r1, asl #12
+ 446 0154 2C8084E5 		str	r8, [r4, #44]
+ 447 0158 302084E5 		str	r2, [r4, #48]
+ 448 015c 343084E5 		str	r3, [r4, #52]
+ 449 0160 38A084E5 		str	sl, [r4, #56]
+ 450 0164 F845BDE8 		ldmfd	sp!, {r3, r4, r5, r6, r7, r8, sl, lr}
+ 451 0168 1EFF2FE1 		bx	lr
+ 452              	.L14:
+ 453              		.align	2
+ 454              	.L13:
+ 455 016c 8096184B 		.word	1259902592
+ 456 0170 00008049 		.word	1233125376
+ 458              		.section	.text.ecef_of_lla_i,"ax",%progbits
+ 459              		.align	2
+ 460              		.global	ecef_of_lla_i
+ 462              	ecef_of_lla_i:
+ 463              		@ Function supports interworking.
+ 464              		@ args = 0, pretend = 0, frame = 48
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 467 0004 0040A0E1 		mov	r4, r0
+ 468 0008 34D04DE2 		sub	sp, sp, #52
+ 469 000c 000091E5 		ldr	r0, [r1, #0]
+ 470 0010 0150A0E1 		mov	r5, r1
+ 471 0014 FEFFFFEB 		bl	__aeabi_i2d
+ 472 0018 0020A0E3 		mov	r2, #0
+ 473 001c A8309FE5 		ldr	r3, .L16
+ 474 0020 FEFFFFEB 		bl	__aeabi_ddiv
+ 475 0024 03008DE8 		stmia	sp, {r0-r1}
+ 476 0028 040095E5 		ldr	r0, [r5, #4]
+ 477 002c FEFFFFEB 		bl	__aeabi_i2d
+ 478 0030 0020A0E3 		mov	r2, #0
+ 479 0034 90309FE5 		ldr	r3, .L16
+ 480 0038 FEFFFFEB 		bl	__aeabi_ddiv
+ 481 003c 08008DE5 		str	r0, [sp, #8]
+ 482 0040 0C108DE5 		str	r1, [sp, #12]
+ 483 0044 080095E5 		ldr	r0, [r5, #8]
+ 484 0048 FEFFFFEB 		bl	__aeabi_i2d
+ 485 004c 0020A0E3 		mov	r2, #0
+ 486 0050 78309FE5 		ldr	r3, .L16+4
+ 487 0054 FEFFFFEB 		bl	__aeabi_ddiv
+ 488 0058 10008DE5 		str	r0, [sp, #16]
+ 489 005c 14108DE5 		str	r1, [sp, #20]
+ 490 0060 18008DE2 		add	r0, sp, #24
+ 491 0064 0D10A0E1 		mov	r1, sp
+ 492 0068 FEFFFFEB 		bl	ecef_of_lla_d
+ 493 006c 0020A0E3 		mov	r2, #0
+ 494 0070 5C309FE5 		ldr	r3, .L16+8
+ 495 0074 18108DE2 		add	r1, sp, #24
+ 496 0078 030091E8 		ldmia	r1, {r0-r1}
+ 497 007c FEFFFFEB 		bl	__aeabi_dmul
+ 498 0080 FEFFFFEB 		bl	__aeabi_d2iz
+ 499 0084 0020A0E3 		mov	r2, #0
+ 500 0088 44309FE5 		ldr	r3, .L16+8
+ 501 008c 000084E5 		str	r0, [r4, #0]
+ 502 0090 20108DE2 		add	r1, sp, #32
+ 503 0094 030091E8 		ldmia	r1, {r0-r1}
+ 504 0098 FEFFFFEB 		bl	__aeabi_dmul
+ 505 009c FEFFFFEB 		bl	__aeabi_d2iz
+ 506 00a0 0020A0E3 		mov	r2, #0
+ 507 00a4 040084E5 		str	r0, [r4, #4]
+ 508 00a8 24309FE5 		ldr	r3, .L16+8
+ 509 00ac 28108DE2 		add	r1, sp, #40
+ 510 00b0 030091E8 		ldmia	r1, {r0-r1}
+ 511 00b4 FEFFFFEB 		bl	__aeabi_dmul
+ 512 00b8 FEFFFFEB 		bl	__aeabi_d2iz
+ 513 00bc 080084E5 		str	r0, [r4, #8]
+ 514 00c0 34D08DE2 		add	sp, sp, #52
+ 515 00c4 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 516 00c8 1EFF2FE1 		bx	lr
+ 517              	.L17:
+ 518              		.align	2
+ 519              	.L16:
+ 520 00cc D0126341 		.word	1097011920
+ 521 00d0 00408F40 		.word	1083129856
+ 522 00d4 00005940 		.word	1079574528
+ 524              		.section	.text.ned_of_lla_vect_i,"ax",%progbits
+ 525              		.align	2
+ 526              		.global	ned_of_lla_vect_i
+ 528              	ned_of_lla_vect_i:
+ 529              		@ Function supports interworking.
+ 530              		@ args = 0, pretend = 0, frame = 16
+ 531              		@ frame_needed = 0, uses_anonymous_args = 0
+ 532 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 533 0004 14D04DE2 		sub	sp, sp, #20
+ 534 0008 0050A0E1 		mov	r5, r0
+ 535 000c 0140A0E1 		mov	r4, r1
+ 536 0010 04008DE2 		add	r0, sp, #4
+ 537 0014 0210A0E1 		mov	r1, r2
+ 538 0018 FEFFFFEB 		bl	ecef_of_lla_i
+ 539 001c 0500A0E1 		mov	r0, r5
+ 540 0020 0410A0E1 		mov	r1, r4
+ 541 0024 04208DE2 		add	r2, sp, #4
+ 542 0028 FEFFFFEB 		bl	ned_of_ecef_vect_i
+ 543 002c 14D08DE2 		add	sp, sp, #20
+ 544 0030 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 545 0034 1EFF2FE1 		bx	lr
+ 547              		.section	.text.enu_of_lla_vect_i,"ax",%progbits
+ 548              		.align	2
+ 549              		.global	enu_of_lla_vect_i
+ 551              	enu_of_lla_vect_i:
+ 552              		@ Function supports interworking.
+ 553              		@ args = 0, pretend = 0, frame = 16
+ 554              		@ frame_needed = 0, uses_anonymous_args = 0
+ 555 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 556 0004 14D04DE2 		sub	sp, sp, #20
+ 557 0008 0050A0E1 		mov	r5, r0
+ 558 000c 0140A0E1 		mov	r4, r1
+ 559 0010 04008DE2 		add	r0, sp, #4
+ 560 0014 0210A0E1 		mov	r1, r2
+ 561 0018 FEFFFFEB 		bl	ecef_of_lla_i
+ 562 001c 0500A0E1 		mov	r0, r5
+ 563 0020 0410A0E1 		mov	r1, r4
+ 564 0024 04208DE2 		add	r2, sp, #4
+ 565 0028 FEFFFFEB 		bl	enu_of_ecef_vect_i
+ 566 002c 14D08DE2 		add	sp, sp, #20
+ 567 0030 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 568 0034 1EFF2FE1 		bx	lr
+ 570              		.section	.text.ned_of_lla_point_i,"ax",%progbits
+ 571              		.align	2
+ 572              		.global	ned_of_lla_point_i
+ 574              	ned_of_lla_point_i:
+ 575              		@ Function supports interworking.
+ 576              		@ args = 0, pretend = 0, frame = 16
+ 577              		@ frame_needed = 0, uses_anonymous_args = 0
+ 578 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 579 0004 14D04DE2 		sub	sp, sp, #20
+ 580 0008 0050A0E1 		mov	r5, r0
+ 581 000c 0140A0E1 		mov	r4, r1
+ 582 0010 04008DE2 		add	r0, sp, #4
+ 583 0014 0210A0E1 		mov	r1, r2
+ 584 0018 FEFFFFEB 		bl	ecef_of_lla_i
+ 585 001c 0500A0E1 		mov	r0, r5
+ 586 0020 0410A0E1 		mov	r1, r4
+ 587 0024 04208DE2 		add	r2, sp, #4
+ 588 0028 FEFFFFEB 		bl	ned_of_ecef_point_i
+ 589 002c 14D08DE2 		add	sp, sp, #20
+ 590 0030 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 591 0034 1EFF2FE1 		bx	lr
+ 593              		.section	.text.enu_of_lla_point_i,"ax",%progbits
+ 594              		.align	2
+ 595              		.global	enu_of_lla_point_i
+ 597              	enu_of_lla_point_i:
+ 598              		@ Function supports interworking.
+ 599              		@ args = 0, pretend = 0, frame = 16
+ 600              		@ frame_needed = 0, uses_anonymous_args = 0
+ 601 0000 30402DE9 		stmfd	sp!, {r4, r5, lr}
+ 602 0004 14D04DE2 		sub	sp, sp, #20
+ 603 0008 0050A0E1 		mov	r5, r0
+ 604 000c 0140A0E1 		mov	r4, r1
+ 605 0010 04008DE2 		add	r0, sp, #4
+ 606 0014 0210A0E1 		mov	r1, r2
+ 607 0018 FEFFFFEB 		bl	ecef_of_lla_i
+ 608 001c 0500A0E1 		mov	r0, r5
+ 609 0020 0410A0E1 		mov	r1, r4
+ 610 0024 04208DE2 		add	r2, sp, #4
+ 611 0028 FEFFFFEB 		bl	enu_of_ecef_point_i
+ 612 002c 14D08DE2 		add	sp, sp, #20
+ 613 0030 3040BDE8 		ldmfd	sp!, {r4, r5, lr}
+ 614 0034 1EFF2FE1 		bx	lr
+ 616              		.section	.text.ltp_def_from_lla_i,"ax",%progbits
+ 617              		.align	2
+ 618              		.global	ltp_def_from_lla_i
+ 620              	ltp_def_from_lla_i:
+ 621              		@ Function supports interworking.
+ 622              		@ args = 0, pretend = 0, frame = 0
+ 623              		@ frame_needed = 0, uses_anonymous_args = 0
+ 624 0000 F8452DE9 		stmfd	sp!, {r3, r4, r5, r6, r7, r8, sl, lr}
+ 625 0004 043091E5 		ldr	r3, [r1, #4]
+ 626 0008 103080E5 		str	r3, [r0, #16]
+ 627 000c 003091E5 		ldr	r3, [r1, #0]
+ 628 0010 0C3080E5 		str	r3, [r0, #12]
+ 629 0014 083091E5 		ldr	r3, [r1, #8]
+ 630 0018 0040A0E1 		mov	r4, r0
+ 631 001c 143080E5 		str	r3, [r0, #20]
+ 632 0020 0C1080E2 		add	r1, r0, #12
+ 633 0024 FEFFFFEB 		bl	ecef_of_lla_i
+ 634 0028 100094E5 		ldr	r0, [r4, #16]
+ 635 002c FEFFFFEB 		bl	__aeabi_i2f
+ 636 0030 30119FE5 		ldr	r1, .L23
+ 637 0034 FEFFFFEB 		bl	__aeabi_fdiv
+ 638 0038 FEFFFFEB 		bl	sinf
+ 639 003c 28119FE5 		ldr	r1, .L23+4
+ 640 0040 FEFFFFEB 		bl	__aeabi_fmul
+ 641 0044 FEFFFFEB 		bl	__aeabi_f2d
+ 642 0048 FEFFFFEB 		bl	rint
+ 643 004c FEFFFFEB 		bl	__aeabi_d2iz
+ 644 0050 00A0A0E1 		mov	sl, r0
+ 645 0054 100094E5 		ldr	r0, [r4, #16]
+ 646 0058 FEFFFFEB 		bl	__aeabi_i2f
+ 647 005c 04119FE5 		ldr	r1, .L23
+ 648 0060 FEFFFFEB 		bl	__aeabi_fdiv
+ 649 0064 FEFFFFEB 		bl	cosf
+ 650 0068 FC109FE5 		ldr	r1, .L23+4
+ 651 006c FEFFFFEB 		bl	__aeabi_fmul
+ 652 0070 FEFFFFEB 		bl	__aeabi_f2d
+ 653 0074 FEFFFFEB 		bl	rint
+ 654 0078 FEFFFFEB 		bl	__aeabi_d2iz
+ 655 007c 0080A0E1 		mov	r8, r0
+ 656 0080 0C0094E5 		ldr	r0, [r4, #12]
+ 657 0084 FEFFFFEB 		bl	__aeabi_i2f
+ 658 0088 D8109FE5 		ldr	r1, .L23
+ 659 008c FEFFFFEB 		bl	__aeabi_fdiv
+ 660 0090 FEFFFFEB 		bl	sinf
+ 661 0094 D0109FE5 		ldr	r1, .L23+4
+ 662 0098 FEFFFFEB 		bl	__aeabi_fmul
+ 663 009c FEFFFFEB 		bl	__aeabi_f2d
+ 664 00a0 FEFFFFEB 		bl	rint
+ 665 00a4 FEFFFFEB 		bl	__aeabi_d2iz
+ 666 00a8 0050A0E1 		mov	r5, r0
+ 667 00ac 0C0094E5 		ldr	r0, [r4, #12]
+ 668 00b0 FEFFFFEB 		bl	__aeabi_i2f
+ 669 00b4 AC109FE5 		ldr	r1, .L23
+ 670 00b8 FEFFFFEB 		bl	__aeabi_fdiv
+ 671 00bc FEFFFFEB 		bl	cosf
+ 672 00c0 A4109FE5 		ldr	r1, .L23+4
+ 673 00c4 FEFFFFEB 		bl	__aeabi_fmul
+ 674 00c8 FEFFFFEB 		bl	__aeabi_f2d
+ 675 00cc FEFFFFEB 		bl	rint
+ 676 00d0 FEFFFFEB 		bl	__aeabi_d2iz
+ 677 00d4 003065E2 		rsb	r3, r5, #0
+ 678 00d8 183084E5 		str	r3, [r4, #24]
+ 679 00dc 0030A0E3 		mov	r3, #0
+ 680 00e0 203084E5 		str	r3, [r4, #32]
+ 681 00e4 0A20A0E1 		mov	r2, sl
+ 682 00e8 CA3FA0E1 		mov	r3, sl, asr #31
+ 683 00ec 002072E2 		rsbs	r2, r2, #0
+ 684 00f0 0030E3E2 		rsc	r3, r3, #0
+ 685 00f4 C01FA0E1 		mov	r1, r0, asr #31
+ 686 00f8 920101E0 		mul	r1, r2, r1
+ 687 00fc 926087E0 		umull	r6, r7, r2, r0
+ 688 0100 901321E0 		mla	r1, r0, r3, r1
+ 689 0104 077081E0 		add	r7, r1, r7
+ 690 0108 261AA0E1 		mov	r1, r6, lsr #20
+ 691 010c 071681E1 		orr	r1, r1, r7, asl #12
+ 692 0110 241084E5 		str	r1, [r4, #36]
+ 693 0114 C51FA0E1 		mov	r1, r5, asr #31
+ 694 0118 920101E0 		mul	r1, r2, r1
+ 695 011c 926587E0 		umull	r6, r7, r2, r5
+ 696 0120 951321E0 		mla	r1, r5, r3, r1
+ 697 0124 263AA0E1 		mov	r3, r6, lsr #20
+ 698 0128 077081E0 		add	r7, r1, r7
+ 699 012c 073683E1 		orr	r3, r3, r7, asl #12
+ 700 0130 283084E5 		str	r3, [r4, #40]
+ 701 0134 9820C3E0 		smull	r2, r3, r8, r0
+ 702 0138 1C0084E5 		str	r0, [r4, #28]
+ 703 013c 9805C1E0 		smull	r0, r1, r8, r5
+ 704 0140 222AA0E1 		mov	r2, r2, lsr #20
+ 705 0144 032682E1 		orr	r2, r2, r3, asl #12
+ 706 0148 203AA0E1 		mov	r3, r0, lsr #20
+ 707 014c 013683E1 		orr	r3, r3, r1, asl #12
+ 708 0150 2C8084E5 		str	r8, [r4, #44]
+ 709 0154 302084E5 		str	r2, [r4, #48]
+ 710 0158 343084E5 		str	r3, [r4, #52]
+ 711 015c 38A084E5 		str	sl, [r4, #56]
+ 712 0160 F845BDE8 		ldmfd	sp!, {r3, r4, r5, r6, r7, r8, sl, lr}
+ 713 0164 1EFF2FE1 		bx	lr
+ 714              	.L24:
+ 715              		.align	2
+ 716              	.L23:
+ 717 0168 8096184B 		.word	1259902592
+ 718 016c 00008049 		.word	1233125376
+ 720              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 pprz_geodetic_int.c
+     /tmp/cckzRjRR.s:13     .text.enu_of_ecef_point_i:00000000 $a
+     /tmp/cckzRjRR.s:16     .text.enu_of_ecef_point_i:00000000 enu_of_ecef_point_i
+     /tmp/cckzRjRR.s:60     .text.ned_of_ecef_point_i:00000000 $a
+     /tmp/cckzRjRR.s:63     .text.ned_of_ecef_point_i:00000000 ned_of_ecef_point_i
+     /tmp/cckzRjRR.s:82     .text.enu_of_ecef_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:85     .text.enu_of_ecef_vect_i:00000000 enu_of_ecef_vect_i
+     /tmp/cckzRjRR.s:123    .text.ned_of_ecef_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:126    .text.ned_of_ecef_vect_i:00000000 ned_of_ecef_vect_i
+     /tmp/cckzRjRR.s:145    .text.ecef_of_enu_point_i:00000000 $a
+     /tmp/cckzRjRR.s:148    .text.ecef_of_enu_point_i:00000000 ecef_of_enu_point_i
+     /tmp/cckzRjRR.s:194    .text.ecef_of_ned_point_i:00000000 $a
+     /tmp/cckzRjRR.s:197    .text.ecef_of_ned_point_i:00000000 ecef_of_ned_point_i
+     /tmp/cckzRjRR.s:216    .text.ecef_of_enu_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:219    .text.ecef_of_enu_vect_i:00000000 ecef_of_enu_vect_i
+     /tmp/cckzRjRR.s:256    .text.ecef_of_ned_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:259    .text.ecef_of_ned_vect_i:00000000 ecef_of_ned_vect_i
+     /tmp/cckzRjRR.s:282    .text.lla_of_ecef_i:00000000 $a
+     /tmp/cckzRjRR.s:285    .text.lla_of_ecef_i:00000000 lla_of_ecef_i
+     /tmp/cckzRjRR.s:345    .text.lla_of_ecef_i:000000d4 $d
+     /tmp/cckzRjRR.s:354    .text.ltp_def_from_ecef_i:00000000 $a
+     /tmp/cckzRjRR.s:357    .text.ltp_def_from_ecef_i:00000000 ltp_def_from_ecef_i
+     /tmp/cckzRjRR.s:455    .text.ltp_def_from_ecef_i:0000016c $d
+     /tmp/cckzRjRR.s:459    .text.ecef_of_lla_i:00000000 $a
+     /tmp/cckzRjRR.s:462    .text.ecef_of_lla_i:00000000 ecef_of_lla_i
+     /tmp/cckzRjRR.s:520    .text.ecef_of_lla_i:000000cc $d
+     /tmp/cckzRjRR.s:525    .text.ned_of_lla_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:528    .text.ned_of_lla_vect_i:00000000 ned_of_lla_vect_i
+     /tmp/cckzRjRR.s:548    .text.enu_of_lla_vect_i:00000000 $a
+     /tmp/cckzRjRR.s:551    .text.enu_of_lla_vect_i:00000000 enu_of_lla_vect_i
+     /tmp/cckzRjRR.s:571    .text.ned_of_lla_point_i:00000000 $a
+     /tmp/cckzRjRR.s:574    .text.ned_of_lla_point_i:00000000 ned_of_lla_point_i
+     /tmp/cckzRjRR.s:594    .text.enu_of_lla_point_i:00000000 $a
+     /tmp/cckzRjRR.s:597    .text.enu_of_lla_point_i:00000000 enu_of_lla_point_i
+     /tmp/cckzRjRR.s:617    .text.ltp_def_from_lla_i:00000000 $a
+     /tmp/cckzRjRR.s:620    .text.ltp_def_from_lla_i:00000000 ltp_def_from_lla_i
+     /tmp/cckzRjRR.s:717    .text.ltp_def_from_lla_i:00000168 $d
+
+UNDEFINED SYMBOLS
+__aeabi_i2d
+__aeabi_ddiv
+__aeabi_dmul
+__aeabi_d2iz
+lla_of_ecef_d
+rint
+__aeabi_i2f
+__aeabi_fdiv
+__aeabi_fmul
+__aeabi_f2d
+sinf
+cosf
+ecef_of_lla_d

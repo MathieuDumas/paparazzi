@@ -1,0 +1,249 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"adc_arch.c"
+  12              		.section	.text.adcISR0,"ax",%progbits
+  13              		.align	2
+  14              		.global	adcISR0
+  16              	adcISR0:
+  17              		@ Function supports interworking.
+  18              		@ Naked Function: prologue and epilogue provided by programmer.
+  19              		@ args = 0, pretend = 0, frame = 0
+  20              		@ frame_needed = 0, uses_anonymous_args = 0
+  21              	@ 229 "arch/lpc21/mcu_periph/adc_arch.c" 1
+  22 0000 04E04EE2 		 sub   lr, lr,#4
+  23 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+  24 0008 00104FE1 	 mrs   r1, spsr
+  25 000c 02002DE9 	 stmfd sp!,{r1}
+  26              	@ 0 "" 2
+  27 0010 7C309FE5 		ldr	r3, .L5
+  28 0014 043093E5 		ldr	r3, [r3, #4]
+  29 0018 0318A0E1 		mov	r1, r3, asl #16
+  30 001c 233CA0E1 		mov	r3, r3, lsr #24
+  31 0020 073003E2 		and	r3, r3, #7
+  32 0024 6C009FE5 		ldr	r0, .L5+4
+  33 0028 8320A0E1 		mov	r2, r3, asl #1
+  34 002c 211BA0E1 		mov	r1, r1, lsr #22
+  35 0030 B21080E1 		strh	r1, [r0, r2]	@ movhi
+  36 0034 60209FE5 		ldr	r2, .L5+8
+  37 0038 033192E7 		ldr	r3, [r2, r3, asl #2]
+  38 003c 000053E3 		cmp	r3, #0
+  39 0040 0D00000A 		beq	.L2
+  40 0044 4420D3E5 		ldrb	r2, [r3, #68]	@ zero_extendqisi2
+  41 0048 4500D3E5 		ldrb	r0, [r3, #69]	@ zero_extendqisi2
+  42 004c 012082E2 		add	r2, r2, #1
+  43 0050 FF2002E2 		and	r2, r2, #255
+  44 0054 020050E1 		cmp	r0, r2
+  45 0058 0020A093 		movls	r2, #0
+  46 005c 004093E5 		ldr	r4, [r3, #0]
+  47 0060 820083E0 		add	r0, r3, r2, asl #1
+  48 0064 B4C0D0E1 		ldrh	ip, [r0, #4]
+  49 0068 B410C0E1 		strh	r1, [r0, #4]	@ movhi
+  50 006c 041081E0 		add	r1, r1, r4
+  51 0070 01106CE0 		rsb	r1, ip, r1
+  52 0074 001083E5 		str	r1, [r3, #0]
+  53 0078 4420C3E5 		strb	r2, [r3, #68]
+  54              	.L2:
+  55 007c 0020A0E3 		mov	r2, #0
+  56 0080 0030E0E3 		mvn	r3, #0
+  57 0084 CF2F03E5 		str	r2, [r3, #-4047]
+  58              	@ 246 "arch/lpc21/mcu_periph/adc_arch.c" 1
+  59 0088 0200BDE8 		 ldmfd sp!,{r1}
+  60 008c 01F061E1 	 msr   spsr_c,r1
+  61 0090 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+  62              	@ 0 "" 2
+  63              	.L6:
+  64              		.align	2
+  65              	.L5:
+  66 0094 004003E0 		.word	-536657920
+  67 0098 00000000 		.word	.LANCHOR0
+  68 009c 00000000 		.word	.LANCHOR1
+  70              		.section	.text.adcISR1,"ax",%progbits
+  71              		.align	2
+  72              		.global	adcISR1
+  74              	adcISR1:
+  75              		@ Function supports interworking.
+  76              		@ Naked Function: prologue and epilogue provided by programmer.
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79              	@ 250 "arch/lpc21/mcu_periph/adc_arch.c" 1
+  80 0000 04E04EE2 		 sub   lr, lr,#4
+  81 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+  82 0008 00104FE1 	 mrs   r1, spsr
+  83 000c 02002DE9 	 stmfd sp!,{r1}
+  84              	@ 0 "" 2
+  85 0010 80309FE5 		ldr	r3, .L11
+  86 0014 043093E5 		ldr	r3, [r3, #4]
+  87 0018 0318A0E1 		mov	r1, r3, asl #16
+  88 001c 233CA0E1 		mov	r3, r3, lsr #24
+  89 0020 073003E2 		and	r3, r3, #7
+  90 0024 70009FE5 		ldr	r0, .L11+4
+  91 0028 8320A0E1 		mov	r2, r3, asl #1
+  92 002c 211BA0E1 		mov	r1, r1, lsr #22
+  93 0030 B21080E1 		strh	r1, [r0, r2]	@ movhi
+  94 0034 64209FE5 		ldr	r2, .L11+8
+  95 0038 083083E2 		add	r3, r3, #8
+  96 003c 033192E7 		ldr	r3, [r2, r3, asl #2]
+  97 0040 000053E3 		cmp	r3, #0
+  98 0044 0D00000A 		beq	.L8
+  99 0048 4420D3E5 		ldrb	r2, [r3, #68]	@ zero_extendqisi2
+ 100 004c 4500D3E5 		ldrb	r0, [r3, #69]	@ zero_extendqisi2
+ 101 0050 012082E2 		add	r2, r2, #1
+ 102 0054 FF2002E2 		and	r2, r2, #255
+ 103 0058 020050E1 		cmp	r0, r2
+ 104 005c 0020A093 		movls	r2, #0
+ 105 0060 004093E5 		ldr	r4, [r3, #0]
+ 106 0064 820083E0 		add	r0, r3, r2, asl #1
+ 107 0068 B4C0D0E1 		ldrh	ip, [r0, #4]
+ 108 006c B410C0E1 		strh	r1, [r0, #4]	@ movhi
+ 109 0070 041081E0 		add	r1, r1, r4
+ 110 0074 01106CE0 		rsb	r1, ip, r1
+ 111 0078 001083E5 		str	r1, [r3, #0]
+ 112 007c 4420C3E5 		strb	r2, [r3, #68]
+ 113              	.L8:
+ 114 0080 0020A0E3 		mov	r2, #0
+ 115 0084 0030E0E3 		mvn	r3, #0
+ 116 0088 CF2F03E5 		str	r2, [r3, #-4047]
+ 117              	@ 266 "arch/lpc21/mcu_periph/adc_arch.c" 1
+ 118 008c 0200BDE8 		 ldmfd sp!,{r1}
+ 119 0090 01F061E1 	 msr   spsr_c,r1
+ 120 0094 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 121              	@ 0 "" 2
+ 122              	.L12:
+ 123              		.align	2
+ 124              	.L11:
+ 125 0098 000006E0 		.word	-536477696
+ 126 009c 00000000 		.word	.LANCHOR2
+ 127 00a0 00000000 		.word	.LANCHOR1
+ 129              		.section	.text.adc_buf_channel,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	adc_buf_channel
+ 133              	adc_buf_channel:
+ 134              		@ Function supports interworking.
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+ 138 0000 08309FE5 		ldr	r3, .L14
+ 139 0004 4520C1E5 		strb	r2, [r1, #69]
+ 140 0008 001183E7 		str	r1, [r3, r0, asl #2]
+ 141 000c 1EFF2FE1 		bx	lr
+ 142              	.L15:
+ 143              		.align	2
+ 144              	.L14:
+ 145 0010 00000000 		.word	.LANCHOR1
+ 147              		.section	.text.adc_init,"ax",%progbits
+ 148              		.align	2
+ 149              		.global	adc_init
+ 151              	adc_init:
+ 152              		@ Function supports interworking.
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155              		@ link register save eliminated.
+ 156 0000 80309FE5 		ldr	r3, .L17
+ 157 0004 002093E5 		ldr	r2, [r3, #0]
+ 158 0008 032182E3 		orr	r2, r2, #-1073741824
+ 159 000c 002083E5 		str	r2, [r3, #0]
+ 160 0010 042093E5 		ldr	r2, [r3, #4]
+ 161 0014 412A82E3 		orr	r2, r2, #266240
+ 162 0018 022B82E3 		orr	r2, r2, #2048
+ 163 001c 042083E5 		str	r2, [r3, #4]
+ 164 0020 64209FE5 		ldr	r2, .L17+4
+ 165 0024 023983E2 		add	r3, r3, #32768
+ 166 0028 002083E5 		str	r2, [r3, #0]
+ 167 002c 0030E0E3 		mvn	r3, #0
+ 168 0030 F32F13E5 		ldr	r2, [r3, #-4083]
+ 169 0034 0127C2E3 		bic	r2, r2, #262144
+ 170 0038 F32F03E5 		str	r2, [r3, #-4083]
+ 171 003c 0127A0E3 		mov	r2, #262144
+ 172 0040 EF2F03E5 		str	r2, [r3, #-4079]
+ 173 0044 3220A0E3 		mov	r2, #50
+ 174 0048 F72D03E5 		str	r2, [r3, #-3575]
+ 175 004c 3C209FE5 		ldr	r2, .L17+8
+ 176 0050 3C109FE5 		ldr	r1, .L17+12
+ 177 0054 F72E03E5 		str	r2, [r3, #-3831]
+ 178 0058 38209FE5 		ldr	r2, .L17+16
+ 179 005c 001082E5 		str	r1, [r2, #0]
+ 180 0060 F32F13E5 		ldr	r2, [r3, #-4083]
+ 181 0064 0226C2E3 		bic	r2, r2, #2097152
+ 182 0068 F32F03E5 		str	r2, [r3, #-4083]
+ 183 006c 0226A0E3 		mov	r2, #2097152
+ 184 0070 EF2F03E5 		str	r2, [r3, #-4079]
+ 185 0074 3520A0E3 		mov	r2, #53
+ 186 0078 EF2D03E5 		str	r2, [r3, #-3567]
+ 187 007c 18209FE5 		ldr	r2, .L17+20
+ 188 0080 EF2E03E5 		str	r2, [r3, #-3823]
+ 189 0084 1EFF2FE1 		bx	lr
+ 190              	.L18:
+ 191              		.align	2
+ 192              	.L17:
+ 193 0088 00C002E0 		.word	-536690688
+ 194 008c 10FF2100 		.word	2227984
+ 195 0090 00000000 		.word	adcISR0
+ 196 0094 E0FF2100 		.word	2228192
+ 197 0098 000006E0 		.word	-536477696
+ 198 009c 00000000 		.word	adcISR1
+ 200              		.global	adc1_val
+ 201              		.global	adc0_val
+ 202              		.section	.bss.buffers,"aw",%nobits
+ 203              		.align	2
+ 204              		.set	.LANCHOR1,. + 0
+ 207              	buffers:
+ 208 0000 00000000 		.space	64
+ 208      00000000 
+ 208      00000000 
+ 208      00000000 
+ 208      00000000 
+ 209              		.section	.data.adc0_val,"aw",%progbits
+ 210              		.align	1
+ 211              		.set	.LANCHOR0,. + 0
+ 214              	adc0_val:
+ 215 0000 0100     		.short	1
+ 216 0002 0200     		.short	2
+ 217 0004 0300     		.short	3
+ 218 0006 0400     		.short	4
+ 219 0008 0500     		.short	5
+ 220 000a 0600     		.short	6
+ 221 000c 0700     		.short	7
+ 222 000e 0800     		.short	8
+ 223              		.section	.data.adc1_val,"aw",%progbits
+ 224              		.align	1
+ 225              		.set	.LANCHOR2,. + 0
+ 228              	adc1_val:
+ 229 0000 0900     		.short	9
+ 230 0002 0A00     		.short	10
+ 231 0004 0B00     		.short	11
+ 232 0006 0C00     		.short	12
+ 233 0008 0D00     		.short	13
+ 234 000a 0E00     		.short	14
+ 235 000c 0F00     		.short	15
+ 236 000e 1000     		.short	16
+ 237              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc_arch.c
+     /tmp/cc6nnzR3.s:13     .text.adcISR0:00000000 $a
+     /tmp/cc6nnzR3.s:16     .text.adcISR0:00000000 adcISR0
+     /tmp/cc6nnzR3.s:66     .text.adcISR0:00000094 $d
+     /tmp/cc6nnzR3.s:71     .text.adcISR1:00000000 $a
+     /tmp/cc6nnzR3.s:74     .text.adcISR1:00000000 adcISR1
+     /tmp/cc6nnzR3.s:125    .text.adcISR1:00000098 $d
+     /tmp/cc6nnzR3.s:130    .text.adc_buf_channel:00000000 $a
+     /tmp/cc6nnzR3.s:133    .text.adc_buf_channel:00000000 adc_buf_channel
+     /tmp/cc6nnzR3.s:145    .text.adc_buf_channel:00000010 $d
+     /tmp/cc6nnzR3.s:148    .text.adc_init:00000000 $a
+     /tmp/cc6nnzR3.s:151    .text.adc_init:00000000 adc_init
+     /tmp/cc6nnzR3.s:193    .text.adc_init:00000088 $d
+     /tmp/cc6nnzR3.s:228    .data.adc1_val:00000000 adc1_val
+     /tmp/cc6nnzR3.s:214    .data.adc0_val:00000000 adc0_val
+     /tmp/cc6nnzR3.s:203    .bss.buffers:00000000 $d
+     /tmp/cc6nnzR3.s:207    .bss.buffers:00000000 buffers
+     /tmp/cc6nnzR3.s:210    .data.adc0_val:00000000 $d
+     /tmp/cc6nnzR3.s:224    .data.adc1_val:00000000 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,92 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"servos_4015_MAT_hw.c"
+  12              		.section	.text.actuators_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	actuators_init
+  16              	actuators_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 AC309FE5 		ldr	r3, .L2
+  22 0004 082093E5 		ldr	r2, [r3, #8]
+  23 0008 202082E3 		orr	r2, r2, #32
+  24 000c 082083E5 		str	r2, [r3, #8]
+  25 0010 A0209FE5 		ldr	r2, .L2+4
+  26 0014 001092E5 		ldr	r1, [r2, #0]
+  27 0018 021B81E3 		orr	r1, r1, #2048
+  28 001c 001082E5 		str	r1, [r2, #0]
+  29 0020 181093E5 		ldr	r1, [r3, #24]
+  30 0024 011481E3 		orr	r1, r1, #16777216
+  31 0028 181083E5 		str	r1, [r3, #24]
+  32 002c 141092E5 		ldr	r1, [r2, #20]
+  33 0030 0810C1E3 		bic	r1, r1, #8
+  34 0034 141082E5 		str	r1, [r2, #20]
+  35 0038 0124A0E3 		mov	r2, #16777216
+  36 003c 142083E5 		str	r2, [r3, #20]
+  37 0040 182093E5 		ldr	r2, [r3, #24]
+  38 0044 022582E3 		orr	r2, r2, #8388608
+  39 0048 182083E5 		str	r2, [r3, #24]
+  40 004c 093943E2 		sub	r3, r3, #147456
+  41 0050 142093E5 		ldr	r2, [r3, #20]
+  42 0054 082082E3 		orr	r2, r2, #8
+  43 0058 142083E5 		str	r2, [r3, #20]
+  44 005c 3C2093E5 		ldr	r2, [r3, #60]
+  45 0060 0220C2E3 		bic	r2, r2, #2
+  46 0064 3C2083E5 		str	r2, [r3, #60]
+  47 0068 3C2093E5 		ldr	r2, [r3, #60]
+  48 006c 802082E3 		orr	r2, r2, #128
+  49 0070 3C2083E5 		str	r2, [r3, #60]
+  50 0074 40209FE5 		ldr	r2, .L2+8
+  51 0078 1C2083E5 		str	r2, [r3, #28]
+  52 007c 3C309FE5 		ldr	r3, .L2+12
+  53 0080 0820A0E3 		mov	r2, #8
+  54 0084 0020C3E5 		strb	r2, [r3, #0]
+  55 0088 34309FE5 		ldr	r3, .L2+16
+  56 008c 34209FE5 		ldr	r2, .L2+20
+  57 0090 B020C3E1 		strh	r2, [r3, #0]	@ movhi
+  58 0094 B220C3E1 		strh	r2, [r3, #2]	@ movhi
+  59 0098 B420C3E1 		strh	r2, [r3, #4]	@ movhi
+  60 009c B620C3E1 		strh	r2, [r3, #6]	@ movhi
+  61 00a0 B820C3E1 		strh	r2, [r3, #8]	@ movhi
+  62 00a4 BA20C3E1 		strh	r2, [r3, #10]	@ movhi
+  63 00a8 BC20C3E1 		strh	r2, [r3, #12]	@ movhi
+  64 00ac BE20C3E1 		strh	r2, [r3, #14]	@ movhi
+  65 00b0 1EFF2FE1 		bx	lr
+  66              	.L3:
+  67              		.align	2
+  68              	.L2:
+  69 00b4 008002E0 		.word	-536707072
+  70 00b8 00C002E0 		.word	-536690688
+  71 00bc FFFF0000 		.word	65535
+  72 00c0 00000000 		.word	servos_4015_idx
+  73 00c4 00000000 		.word	servos_values
+  74 00c8 E4570000 		.word	22500
+  76              		.comm	servos_values,16,2
+  77              		.global	servos_delay
+  78              		.comm	servos_4015_idx,1,1
+  79              		.section	.data.servos_delay,"aw",%progbits
+  80              		.align	2
+  83              	servos_delay:
+  84 0000 E0930400 		.word	300000
+  85              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 servos_4015_MAT_hw.c
+     /tmp/ccYkNE6W.s:13     .text.actuators_init:00000000 $a
+     /tmp/ccYkNE6W.s:16     .text.actuators_init:00000000 actuators_init
+     /tmp/ccYkNE6W.s:69     .text.actuators_init:000000b4 $d
+                            *COM*:00000001 servos_4015_idx
+                            *COM*:00000010 servos_values
+     /tmp/ccYkNE6W.s:83     .data.servos_delay:00000000 servos_delay
+     /tmp/ccYkNE6W.s:80     .data.servos_delay:00000000 $d
+
+NO UNDEFINED SYMBOLS

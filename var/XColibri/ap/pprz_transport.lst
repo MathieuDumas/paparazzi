@@ -1,0 +1,22 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"pprz_transport.c"
+  12              		.comm	pprz_tp,264,1
+  13              		.comm	ck_b,1,1
+  14              		.comm	ck_a,1,1
+  15              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 pprz_transport.c
+                            *COM*:00000108 pprz_tp
+                            *COM*:00000001 ck_b
+                            *COM*:00000001 ck_a
+
+NO UNDEFINED SYMBOLS

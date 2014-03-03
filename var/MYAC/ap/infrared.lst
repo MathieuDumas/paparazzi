@@ -1,0 +1,50 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"infrared.c"
+  12              		.section	.text.infrared_struct_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	infrared_struct_init
+  16              	infrared_struct_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 34309FE5 		ldr	r3, .L2
+  22 0004 34209FE5 		ldr	r2, .L2+4
+  23 0008 082083E5 		str	r2, [r3, #8]	@ float
+  24 000c 30209FE5 		ldr	r2, .L2+8
+  25 0010 0C2083E5 		str	r2, [r3, #12]	@ float
+  26 0014 FE25A0E3 		mov	r2, #1065353216
+  27 0018 282083E5 		str	r2, [r3, #40]	@ float
+  28 001c 2C2083E5 		str	r2, [r3, #44]	@ float
+  29 0020 302083E5 		str	r2, [r3, #48]	@ float
+  30 0024 342083E5 		str	r2, [r3, #52]	@ float
+  31 0028 1C2083E5 		str	r2, [r3, #28]	@ float
+  32 002c 202083E5 		str	r2, [r3, #32]	@ float
+  33 0030 FF25A0E3 		mov	r2, #1069547520
+  34 0034 242083E5 		str	r2, [r3, #36]	@ float
+  35 0038 1EFF2FE1 		bx	lr
+  36              	.L3:
+  37              		.align	2
+  38              	.L2:
+  39 003c 00000000 		.word	infrared
+  40 0040 FDAD80BD 		.word	-1115640323
+  41 0044 C2B8B23D 		.word	1035122882
+  43              		.comm	infrared,56,4
+  44              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 infrared.c
+     /tmp/ccQs0b5G.s:13     .text.infrared_struct_init:00000000 $a
+     /tmp/ccQs0b5G.s:16     .text.infrared_struct_init:00000000 infrared_struct_init
+     /tmp/ccQs0b5G.s:39     .text.infrared_struct_init:0000003c $d
+                            *COM*:00000038 infrared
+
+NO UNDEFINED SYMBOLS

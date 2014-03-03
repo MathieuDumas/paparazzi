@@ -1,0 +1,171 @@
+# This file has been generated from /home/lionel/paparazziProto1/conf/airframes/valkyrie.xml by /home/lionel/paparazziProto1/sw/tools/gen_aircraft.ml
+# Please DO NOT EDIT
+
+####################################################
+# makefile firmware 'fixedwing'
+####################################################
+
+###########
+# -target: 'sim'
+ifeq ($(TARGET), sim)
+SYS_TIME_LED = 1
+$(TARGET).CFLAGS += -DJOHN_AP_2012
+$(TARGET).CFLAGS += -DJOHN_AP_2012_V1
+$(TARGET).CFLAGS += -DBATTERY_CELL=6
+$(TARGET).CFLAGS += -DCATASTROPHIC_BAT_LEVEL=5
+$(TARGET).CFLAGS += -DRC_LOST_MODE=PPRZ_MODE_AUTO2
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DAGR_CLIMB
+include $(PAPARAZZI_SRC)/conf/boards/pc.makefile
+include $(PAPARAZZI_SRC)/conf/firmwares/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_datalink.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_datalink.makefile
+else
+	include $(CFG_SHARED)/radio_control_datalink.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation_extra.makefile)),)
+	include $(CFG_FIXEDWING)/navigation_extra.makefile
+else
+	include $(CFG_SHARED)/navigation_extra.makefile
+endif
+# -subsystem: 'telemetry'
+MODEM_BAUD = B57600
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'ahrs'
+ADC_IR1 = ADC_1
+ADC_IR2 = ADC_2
+ADC_IR_TOP = ADC_0
+ADC_IR_NB_SAMPLES = 16
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ahrs_infrared.makefile)),)
+	include $(CFG_FIXEDWING)/ahrs_infrared.makefile
+else
+	include $(CFG_SHARED)/ahrs_infrared.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox.makefile
+else
+	include $(CFG_SHARED)/gps_ublox.makefile
+endif
+# -subsystem: 'ins'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ins_alt_float.makefile)),)
+	include $(CFG_FIXEDWING)/ins_alt_float.makefile
+else
+	include $(CFG_SHARED)/ins_alt_float.makefile
+endif
+endif
+
+
+###########
+# -target: 'ap'
+ifeq ($(TARGET), ap)
+SYS_TIME_LED = 1
+$(TARGET).CFLAGS += -DJOHN_AP_2012
+$(TARGET).CFLAGS += -DJOHN_AP_2012_V1
+$(TARGET).CFLAGS += -DBATTERY_CELL=6
+$(TARGET).CFLAGS += -DCATASTROPHIC_BAT_LEVEL=5
+$(TARGET).CFLAGS += -DRC_LOST_MODE=PPRZ_MODE_AUTO2
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DAGR_CLIMB
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.1.makefile
+include $(PAPARAZZI_SRC)/conf/firmwares/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_datalink.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_datalink.makefile
+else
+	include $(CFG_SHARED)/radio_control_datalink.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation_extra.makefile)),)
+	include $(CFG_FIXEDWING)/navigation_extra.makefile
+else
+	include $(CFG_SHARED)/navigation_extra.makefile
+endif
+# -subsystem: 'telemetry'
+MODEM_BAUD = B57600
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'ahrs'
+ADC_IR1 = ADC_1
+ADC_IR2 = ADC_2
+ADC_IR_TOP = ADC_0
+ADC_IR_NB_SAMPLES = 16
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ahrs_infrared.makefile)),)
+	include $(CFG_FIXEDWING)/ahrs_infrared.makefile
+else
+	include $(CFG_SHARED)/ahrs_infrared.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox.makefile
+else
+	include $(CFG_SHARED)/gps_ublox.makefile
+endif
+# -subsystem: 'ins'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/ins_alt_float.makefile)),)
+	include $(CFG_FIXEDWING)/ins_alt_float.makefile
+else
+	include $(CFG_SHARED)/ins_alt_float.makefile
+endif
+endif
+
+
+####################################################
+# modules makefile section
+####################################################
+
+# include modules directory for all targets
+$(TARGET).CFLAGS += -I modules -I arch/$(ARCH)/modules
+SENSORS_DIR = modules/sensors
+
+# makefile for module ir_adc in modules/sensors
+ap.CFLAGS += -DUSE_INFRARED_TELEMETRY
+jsbsim.CFLAGS += -DUSE_INFRARED_TELEMETRY
+sim.CFLAGS += -DUSE_INFRARED_TELEMETRY
+ap.srcs += subsystems/sensors/infrared.c
+jsbsim.srcs += subsystems/sensors/infrared.c
+sim.srcs += subsystems/sensors/infrared.c
+ap.srcs += subsystems/sensors/infrared_adc.c
+jsbsim.srcs += subsystems/sensors/infrared_adc.c
+sim.srcs += subsystems/sensors/infrared_adc.c
+#
+# LPC only has one ADC
+#
+ifeq ($(ARCH), lpc21)
+ap.CFLAGS += -DADC_CHANNEL_IR1=$(ADC_IR1) -DUSE_$(ADC_IR1)
+ap.CFLAGS += -DADC_CHANNEL_IR2=$(ADC_IR2) -DUSE_$(ADC_IR2)
+ap.CFLAGS += -DADC_CHANNEL_IR_TOP=$(ADC_IR_TOP) -DUSE_$(ADC_IR_TOP)
+endif
+#
+# On STM32 let's hardwire infrared sensors to AD1 for now
+#
+ifeq ($(ARCH), stm32)
+ap.CFLAGS += -DUSE_AD1
+ap.CFLAGS += -DADC_CHANNEL_IR1=$(ADC_IR1_CHAN) -DUSE_AD1_$(ADC_IR1)
+ap.CFLAGS += -DADC_CHANNEL_IR2=$(ADC_IR2_CHAN) -DUSE_AD1_$(ADC_IR2)
+ap.CFLAGS += -DADC_CHANNEL_IR_TOP=$(ADC_IR_TOP_CHAN) -DUSE_AD1_$(ADC_IR_TOP)
+endif
+ap.CFLAGS += -DADC_CHANNEL_IR_NB_SAMPLES=$(ADC_IR_NB_SAMPLES)

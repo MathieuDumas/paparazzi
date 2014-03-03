@@ -1,0 +1,64 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"inter_mcu.c"
+  12              		.comm	time_since_last_ap,1,1
+  13              		.comm	ap_ok,1,1
+  14              		.global	inter_mcu_received_ap
+  15              		.global	inter_mcu_received_fbw
+  16              		.global	ap_state
+  17              		.global	fbw_state
+  18              		.section	.bss.inter_mcu_received_ap,"aw",%nobits
+  21              	inter_mcu_received_ap:
+  22 0000 00       		.space	1
+  23              		.section	.bss._ap_state,"aw",%nobits
+  24              		.align	1
+  27              	_ap_state:
+  28 0000 00000000 		.space	12
+  28      00000000 
+  28      00000000 
+  29              		.section	.data.fbw_state,"aw",%progbits
+  30              		.align	2
+  33              	fbw_state:
+  34 0000 00000000 		.word	_fbw_state
+  35              		.section	.bss.inter_mcu_received_fbw,"aw",%nobits
+  38              	inter_mcu_received_fbw:
+  39 0000 00       		.space	1
+  40              		.section	.data.ap_state,"aw",%progbits
+  41              		.align	2
+  44              	ap_state:
+  45 0000 00000000 		.word	_ap_state
+  46              		.section	.bss._fbw_state,"aw",%nobits
+  47              		.align	2
+  50              	_fbw_state:
+  51 0000 00000000 		.space	24
+  51      00000000 
+  51      00000000 
+  51      00000000 
+  51      00000000 
+  52              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 inter_mcu.c
+                            *COM*:00000001 time_since_last_ap
+                            *COM*:00000001 ap_ok
+     /tmp/ccZGwW3G.s:21     .bss.inter_mcu_received_ap:00000000 inter_mcu_received_ap
+     /tmp/ccZGwW3G.s:38     .bss.inter_mcu_received_fbw:00000000 inter_mcu_received_fbw
+     /tmp/ccZGwW3G.s:44     .data.ap_state:00000000 ap_state
+     /tmp/ccZGwW3G.s:33     .data.fbw_state:00000000 fbw_state
+     /tmp/ccZGwW3G.s:22     .bss.inter_mcu_received_ap:00000000 $d
+     /tmp/ccZGwW3G.s:24     .bss._ap_state:00000000 $d
+     /tmp/ccZGwW3G.s:27     .bss._ap_state:00000000 _ap_state
+     /tmp/ccZGwW3G.s:30     .data.fbw_state:00000000 $d
+     /tmp/ccZGwW3G.s:50     .bss._fbw_state:00000000 _fbw_state
+     /tmp/ccZGwW3G.s:39     .bss.inter_mcu_received_fbw:00000000 $d
+     /tmp/ccZGwW3G.s:41     .data.ap_state:00000000 $d
+     /tmp/ccZGwW3G.s:47     .bss._fbw_state:00000000 $d
+
+NO UNDEFINED SYMBOLS

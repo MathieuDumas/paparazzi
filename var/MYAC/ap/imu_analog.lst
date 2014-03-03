@@ -1,0 +1,106 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"imu_analog.c"
+  12              		.section	.text.imu_impl_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	imu_impl_init
+  16              	imu_impl_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20 0000 28209FE5 		ldr	r2, .L2
+  21 0004 08402DE9 		stmfd	sp!, {r3, lr}
+  22 0008 0030A0E3 		mov	r3, #0
+  23 000c 0030C2E5 		strb	r3, [r2, #0]
+  24 0010 1C209FE5 		ldr	r2, .L2+4
+  25 0014 0400A0E3 		mov	r0, #4
+  26 0018 003082E5 		str	r3, [r2, #0]
+  27 001c 14109FE5 		ldr	r1, .L2+8
+  28 0020 1020A0E3 		mov	r2, #16
+  29 0024 FEFFFFEB 		bl	adc_buf_channel
+  30 0028 0840BDE8 		ldmfd	sp!, {r3, lr}
+  31 002c 1EFF2FE1 		bx	lr
+  32              	.L3:
+  33              		.align	2
+  34              	.L2:
+  35 0030 00000000 		.word	analog_imu_available
+  36 0034 00000000 		.word	imu_overrun
+  37 0038 00000000 		.word	.LANCHOR0
+  39              		.section	.text.imu_periodic,"ax",%progbits
+  40              		.align	2
+  41              		.global	imu_periodic
+  43              	imu_periodic:
+  44              		@ Function supports interworking.
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 0, uses_anonymous_args = 0
+  47              		@ link register save eliminated.
+  48 0000 44C09FE5 		ldr	ip, .L6
+  49 0004 44009FE5 		ldr	r0, .L6+4
+  50 0008 4420DCE5 		ldrb	r2, [ip, #68]	@ zero_extendqisi2
+  51 000c 003090E5 		ldr	r3, [r0, #0]
+  52 0010 3C109FE5 		ldr	r1, .L6+8
+  53 0014 023063E0 		rsb	r3, r3, r2
+  54 0018 000053E3 		cmp	r3, #0
+  55 001c 003081E5 		str	r3, [r1, #0]
+  56 0020 002080E5 		str	r2, [r0, #0]
+  57 0024 103083B2 		addlt	r3, r3, #16
+  58 0028 00209CE5 		ldr	r2, [ip, #0]
+  59 002c 003081B5 		strlt	r3, [r1, #0]
+  60 0030 20309FE5 		ldr	r3, .L6+12
+  61 0034 2222A0E1 		mov	r2, r2, lsr #4
+  62 0038 602083E5 		str	r2, [r3, #96]
+  63 003c 18309FE5 		ldr	r3, .L6+16
+  64 0040 0120A0E3 		mov	r2, #1
+  65 0044 0020C3E5 		strb	r2, [r3, #0]
+  66 0048 1EFF2FE1 		bx	lr
+  67              	.L7:
+  68              		.align	2
+  69              	.L6:
+  70 004c 00000000 		.word	.LANCHOR0
+  71 0050 00000000 		.word	.LANCHOR1
+  72 0054 00000000 		.word	imu_overrun
+  73 0058 00000000 		.word	imu
+  74 005c 00000000 		.word	analog_imu_available
+  76              		.comm	imu_overrun,4,4
+  77              		.comm	analog_imu_available,1,1
+  78              		.section	.bss.analog_imu_adc_buf,"aw",%nobits
+  79              		.align	2
+  80              		.set	.LANCHOR0,. + 0
+  83              	analog_imu_adc_buf:
+  84 0000 00000000 		.space	432
+  84      00000000 
+  84      00000000 
+  84      00000000 
+  84      00000000 
+  85              		.section	.bss.last_head.2665,"aw",%nobits
+  86              		.align	2
+  87              		.set	.LANCHOR1,. + 0
+  90              	last_head.2665:
+  91 0000 00000000 		.space	4
+  92              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 imu_analog.c
+     /tmp/cco6y4vz.s:13     .text.imu_impl_init:00000000 $a
+     /tmp/cco6y4vz.s:16     .text.imu_impl_init:00000000 imu_impl_init
+     /tmp/cco6y4vz.s:35     .text.imu_impl_init:00000030 $d
+                            *COM*:00000001 analog_imu_available
+                            *COM*:00000004 imu_overrun
+     /tmp/cco6y4vz.s:40     .text.imu_periodic:00000000 $a
+     /tmp/cco6y4vz.s:43     .text.imu_periodic:00000000 imu_periodic
+     /tmp/cco6y4vz.s:70     .text.imu_periodic:0000004c $d
+     /tmp/cco6y4vz.s:79     .bss.analog_imu_adc_buf:00000000 $d
+     /tmp/cco6y4vz.s:83     .bss.analog_imu_adc_buf:00000000 analog_imu_adc_buf
+     /tmp/cco6y4vz.s:86     .bss.last_head.2665:00000000 $d
+     /tmp/cco6y4vz.s:90     .bss.last_head.2665:00000000 last_head.2665
+
+UNDEFINED SYMBOLS
+adc_buf_channel
+imu

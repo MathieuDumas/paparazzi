@@ -1,0 +1,42 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"settings.c"
+  12              		.section	.text.settings_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	settings_init
+  16              	settings_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 1EFF2FE1 		bx	lr
+  23              		.section	.text.settings_store,"ax",%progbits
+  24              		.align	2
+  25              		.global	settings_store
+  27              	settings_store:
+  28              		@ Function supports interworking.
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 1EFF2FE1 		bx	lr
+  34              		.comm	settings_store_now,1,1
+  35              		.comm	pers_settings,0,1
+  36              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 settings.c
+     /tmp/ccE1IUuU.s:13     .text.settings_init:00000000 $a
+     /tmp/ccE1IUuU.s:16     .text.settings_init:00000000 settings_init
+     /tmp/ccE1IUuU.s:24     .text.settings_store:00000000 $a
+     /tmp/ccE1IUuU.s:27     .text.settings_store:00000000 settings_store
+                            *COM*:00000001 settings_store_now
+                            *COM*:00000000 pers_settings
+
+NO UNDEFINED SYMBOLS
