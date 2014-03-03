@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/flight_plans/VAMUdeS/versatile.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/VAMUdeS/versatile.xml */
 /* Please DO NOT EDIT */
 
 #ifndef FLIGHT_PLAN_H

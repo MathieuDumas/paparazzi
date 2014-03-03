@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/var/Colibri/settings_modules.xml /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/settings/control/ctl_basic.xml /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/settings/fixedwing_basic.xml /home/lionel/paparazziAssembla/vamudes-paparazzi/var/Colibri/settings_telemetry.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/var/Colibri/settings_modules.xml /home/lionel/paparazziProto1/conf/settings/control/ctl_basic.xml /home/lionel/paparazziProto1/conf/settings/fixedwing_basic.xml /home/lionel/paparazziProto1/var/Colibri/settings_telemetry.xml */
 /* Please DO NOT EDIT */
 
 #ifndef SETTINGS_H

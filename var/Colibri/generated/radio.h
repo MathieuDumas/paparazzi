@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/radios/dx8_old_ppm.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/conf/radios/dx8_old_ppm.xml */
 /* Please DO NOT EDIT */
 
 #ifndef RADIO_H
