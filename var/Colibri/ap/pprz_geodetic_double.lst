@@ -1498,36 +1498,36 @@
  1524              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 pprz_geodetic_double.c
-     /tmp/ccRfe0IE.s:17     .text.lla_of_ecef_d:00000000 $a
-     /tmp/ccRfe0IE.s:20     .text.lla_of_ecef_d:00000000 lla_of_ecef_d
-     /tmp/ccRfe0IE.s:336    .text.lla_of_ecef_d:000004d4 $d
-     /tmp/ccRfe0IE.s:361    .text.ltp_def_from_ecef_d:00000000 $a
-     /tmp/ccRfe0IE.s:364    .text.ltp_def_from_ecef_d:00000000 ltp_def_from_ecef_d
-     /tmp/ccRfe0IE.s:456    .text.ecef_of_lla_d:00000000 $a
-     /tmp/ccRfe0IE.s:459    .text.ecef_of_lla_d:00000000 ecef_of_lla_d
-     /tmp/ccRfe0IE.s:551    .text.ecef_of_lla_d:00000154 $d
-     /tmp/ccRfe0IE.s:559    .text.enu_of_ecef_point_d:00000000 $a
-     /tmp/ccRfe0IE.s:562    .text.enu_of_ecef_point_d:00000000 enu_of_ecef_point_d
-     /tmp/ccRfe0IE.s:681    .text.ned_of_ecef_point_d:00000000 $a
-     /tmp/ccRfe0IE.s:684    .text.ned_of_ecef_point_d:00000000 ned_of_ecef_point_d
-     /tmp/ccRfe0IE.s:709    .text.enu_of_ecef_vect_d:00000000 $a
-     /tmp/ccRfe0IE.s:712    .text.enu_of_ecef_vect_d:00000000 enu_of_ecef_vect_d
-     /tmp/ccRfe0IE.s:818    .text.ned_of_ecef_vect_d:00000000 $a
-     /tmp/ccRfe0IE.s:821    .text.ned_of_ecef_vect_d:00000000 ned_of_ecef_vect_d
-     /tmp/ccRfe0IE.s:846    .text.ecef_of_enu_point_d:00000000 $a
-     /tmp/ccRfe0IE.s:849    .text.ecef_of_enu_point_d:00000000 ecef_of_enu_point_d
-     /tmp/ccRfe0IE.s:984    .text.ecef_of_ned_point_d:00000000 $a
-     /tmp/ccRfe0IE.s:987    .text.ecef_of_ned_point_d:00000000 ecef_of_ned_point_d
-     /tmp/ccRfe0IE.s:1011   .text.ecef_of_enu_vect_d:00000000 $a
-     /tmp/ccRfe0IE.s:1014   .text.ecef_of_enu_vect_d:00000000 ecef_of_enu_vect_d
-     /tmp/ccRfe0IE.s:1120   .text.ecef_of_ned_vect_d:00000000 $a
-     /tmp/ccRfe0IE.s:1123   .text.ecef_of_ned_vect_d:00000000 ecef_of_ned_vect_d
-     /tmp/ccRfe0IE.s:1147   .text.gc_of_gd_lat_d:00000000 $a
-     /tmp/ccRfe0IE.s:1150   .text.gc_of_gd_lat_d:00000000 gc_of_gd_lat_d
-     /tmp/ccRfe0IE.s:1232   .text.gc_of_gd_lat_d:0000012c $d
-     /tmp/ccRfe0IE.s:1239   .text.lla_of_utm_d:00000000 $a
-     /tmp/ccRfe0IE.s:1242   .text.lla_of_utm_d:00000000 lla_of_utm_d
-     /tmp/ccRfe0IE.s:1506   .text.lla_of_utm_d:000003f8 $d
+     /tmp/ccrsROPO.s:17     .text.lla_of_ecef_d:00000000 $a
+     /tmp/ccrsROPO.s:20     .text.lla_of_ecef_d:00000000 lla_of_ecef_d
+     /tmp/ccrsROPO.s:336    .text.lla_of_ecef_d:000004d4 $d
+     /tmp/ccrsROPO.s:361    .text.ltp_def_from_ecef_d:00000000 $a
+     /tmp/ccrsROPO.s:364    .text.ltp_def_from_ecef_d:00000000 ltp_def_from_ecef_d
+     /tmp/ccrsROPO.s:456    .text.ecef_of_lla_d:00000000 $a
+     /tmp/ccrsROPO.s:459    .text.ecef_of_lla_d:00000000 ecef_of_lla_d
+     /tmp/ccrsROPO.s:551    .text.ecef_of_lla_d:00000154 $d
+     /tmp/ccrsROPO.s:559    .text.enu_of_ecef_point_d:00000000 $a
+     /tmp/ccrsROPO.s:562    .text.enu_of_ecef_point_d:00000000 enu_of_ecef_point_d
+     /tmp/ccrsROPO.s:681    .text.ned_of_ecef_point_d:00000000 $a
+     /tmp/ccrsROPO.s:684    .text.ned_of_ecef_point_d:00000000 ned_of_ecef_point_d
+     /tmp/ccrsROPO.s:709    .text.enu_of_ecef_vect_d:00000000 $a
+     /tmp/ccrsROPO.s:712    .text.enu_of_ecef_vect_d:00000000 enu_of_ecef_vect_d
+     /tmp/ccrsROPO.s:818    .text.ned_of_ecef_vect_d:00000000 $a
+     /tmp/ccrsROPO.s:821    .text.ned_of_ecef_vect_d:00000000 ned_of_ecef_vect_d
+     /tmp/ccrsROPO.s:846    .text.ecef_of_enu_point_d:00000000 $a
+     /tmp/ccrsROPO.s:849    .text.ecef_of_enu_point_d:00000000 ecef_of_enu_point_d
+     /tmp/ccrsROPO.s:984    .text.ecef_of_ned_point_d:00000000 $a
+     /tmp/ccrsROPO.s:987    .text.ecef_of_ned_point_d:00000000 ecef_of_ned_point_d
+     /tmp/ccrsROPO.s:1011   .text.ecef_of_enu_vect_d:00000000 $a
+     /tmp/ccrsROPO.s:1014   .text.ecef_of_enu_vect_d:00000000 ecef_of_enu_vect_d
+     /tmp/ccrsROPO.s:1120   .text.ecef_of_ned_vect_d:00000000 $a
+     /tmp/ccrsROPO.s:1123   .text.ecef_of_ned_vect_d:00000000 ecef_of_ned_vect_d
+     /tmp/ccrsROPO.s:1147   .text.gc_of_gd_lat_d:00000000 $a
+     /tmp/ccrsROPO.s:1150   .text.gc_of_gd_lat_d:00000000 gc_of_gd_lat_d
+     /tmp/ccrsROPO.s:1232   .text.gc_of_gd_lat_d:0000012c $d
+     /tmp/ccrsROPO.s:1239   .text.lla_of_utm_d:00000000 $a
+     /tmp/ccrsROPO.s:1242   .text.lla_of_utm_d:00000000 lla_of_utm_d
+     /tmp/ccrsROPO.s:1506   .text.lla_of_utm_d:000003f8 $d
 
 UNDEFINED SYMBOLS
 __aeabi_dmul

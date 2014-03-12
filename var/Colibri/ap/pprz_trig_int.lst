@@ -6450,7 +6450,7 @@
  6452              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 pprz_trig_int.c
-     /tmp/cc1MQdbN.s:17     .data.pprz_trig_int:00000000 pprz_trig_int
-     /tmp/cc1MQdbN.s:14     .data.pprz_trig_int:00000000 $d
+     /tmp/cc2QngLX.s:17     .data.pprz_trig_int:00000000 pprz_trig_int
+     /tmp/cc2QngLX.s:14     .data.pprz_trig_int:00000000 $d
 
 NO UNDEFINED SYMBOLS

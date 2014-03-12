@@ -8,8 +8,8 @@
   <channel average="10" min="1000" neutral="1500" max="2000" function="MODE" ctl="aux2"/>
   <channel average="10" min="1000" neutral="1500" max="2000" function="AUX3" ctl="aux3"/>
   <channel average="0"  min="1000" neutral="1500" max="2000" function="YAW"  ctl="left_stick_horiz"/>
-  <channel average="10" min="1000" neutral="1500" max="2000" function="PITCH" ctl="gear"/>
-  <channel average="0"  min="1000" neutral="1500" max="2000" function="GEAR" ctl="right_stick_vert"/> <!--EX ptich. Change for throttle for tests-->
+  <channel average="10" min="1000" neutral="1500" max="2000" function="GEAR" ctl="gear"/>
+  <channel average="0"  min="1000" neutral="1500" max="2000" function="PITCH" ctl="right_stick_vert"/>
   <channel average="0"  min="1000" neutral="1500" max="2000" function="ROLL" ctl="right_stick_horiz"/>
-  <channel average="0"  min="800" neutral="1500" max="2000" function="TRHOTTLE" ctl="left_stick_vert"/>  <!--EX throttle -->
+  <channel average="0"  min="800" neutral="1500" max="2000" function="THROTTLE" ctl="left_stick_vert"/>
 </radio>

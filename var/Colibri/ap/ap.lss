@@ -21066,7 +21066,7 @@ Disassembly of section .text:
    17fc4:	3ff00000 	.word	0x3ff00000
    17fc8:	40000000 	.word	0x40000000
    17fcc:	0001d872 	.word	0x0001d872
-   17fd0:	0001d88f 	.word	0x0001d88f
+   17fd0:	0001d870 	.word	0x0001d870
    17fd4:	46c0      	nop			; (mov r8, r8)
    17fd6:	46c0      	nop			; (mov r8, r8)
 
@@ -21374,7 +21374,7 @@ Disassembly of section .text:
    1828c:	fff00000 	.word	0xfff00000
    18290:	40000000 	.word	0x40000000
    18294:	0001d880 	.word	0x0001d880
-   18298:	0001d88f 	.word	0x0001d88f
+   18298:	0001d870 	.word	0x0001d870
    1829c:	46c0      	nop			; (mov r8, r8)
    1829e:	46c0      	nop			; (mov r8, r8)
 
@@ -29445,8 +29445,8 @@ Disassembly of section .text:
 	...
 
 0001d85e <version>:
-   1d85e:	77c50001 225bed06 ddf75fbb 52df0cd7     ...w..["._.....R
-   1d86e:	0a00a639                                         9..
+   1d85e:	b4fc0001 8a6c21cf 65e16c2e 23e8cf89     .....!l..l.e...#
+   1d86e:	0a002154                                         T!.
 
 0001d871 <nb_waypoint>:
    1d871:	6973610a 6f63006e 65006873 6c007078     .asin.cosh.exp.l

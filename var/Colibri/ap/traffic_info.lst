@@ -58,14 +58,14 @@
   62              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 traffic_info.c
-     /tmp/ccNhxyFF.s:13     .text.traffic_info_init:00000000 $a
-     /tmp/ccNhxyFF.s:16     .text.traffic_info_init:00000000 traffic_info_init
-     /tmp/ccNhxyFF.s:35     .text.traffic_info_init:0000002c $d
+     /tmp/ccfBkbKW.s:13     .text.traffic_info_init:00000000 $a
+     /tmp/ccfBkbKW.s:16     .text.traffic_info_init:00000000 traffic_info_init
+     /tmp/ccfBkbKW.s:35     .text.traffic_info_init:0000002c $d
                             *COM*:00000100 the_acs_id
                             *COM*:00000300 the_acs
                             *COM*:00000001 acs_idx
-     /tmp/ccNhxyFF.s:40     .text.get_ac_info:00000000 $a
-     /tmp/ccNhxyFF.s:43     .text.get_ac_info:00000000 get_ac_info
-     /tmp/ccNhxyFF.s:56     .text.get_ac_info:00000014 $d
+     /tmp/ccfBkbKW.s:40     .text.get_ac_info:00000000 $a
+     /tmp/ccfBkbKW.s:43     .text.get_ac_info:00000000 get_ac_info
+     /tmp/ccfBkbKW.s:56     .text.get_ac_info:00000014 $d
 
 NO UNDEFINED SYMBOLS

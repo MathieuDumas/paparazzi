@@ -102,15 +102,15 @@
  110              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c_arch.c
-     /tmp/ccR3qwGT.s:13     .text.i2c_idle:00000000 $a
-     /tmp/ccR3qwGT.s:16     .text.i2c_idle:00000000 i2c_idle
-     /tmp/ccR3qwGT.s:27     .text.i2c_submit:00000000 $a
-     /tmp/ccR3qwGT.s:30     .text.i2c_submit:00000000 i2c_submit
-     /tmp/ccR3qwGT.s:67     .text.i2c_event:00000000 $a
-     /tmp/ccR3qwGT.s:70     .text.i2c_event:00000000 i2c_event
-     /tmp/ccR3qwGT.s:79     .text.i2c_setbitrate:00000000 $a
-     /tmp/ccR3qwGT.s:82     .text.i2c_setbitrate:00000000 i2c_setbitrate
-     /tmp/ccR3qwGT.s:107    .text.i2c_setbitrate:00000044 $d
+     /tmp/ccvMAHB6.s:13     .text.i2c_idle:00000000 $a
+     /tmp/ccvMAHB6.s:16     .text.i2c_idle:00000000 i2c_idle
+     /tmp/ccvMAHB6.s:27     .text.i2c_submit:00000000 $a
+     /tmp/ccvMAHB6.s:30     .text.i2c_submit:00000000 i2c_submit
+     /tmp/ccvMAHB6.s:67     .text.i2c_event:00000000 $a
+     /tmp/ccvMAHB6.s:70     .text.i2c_event:00000000 i2c_event
+     /tmp/ccvMAHB6.s:79     .text.i2c_setbitrate:00000000 $a
+     /tmp/ccvMAHB6.s:82     .text.i2c_setbitrate:00000000 i2c_setbitrate
+     /tmp/ccvMAHB6.s:107    .text.i2c_setbitrate:00000044 $d
 
 UNDEFINED SYMBOLS
 disableIRQ

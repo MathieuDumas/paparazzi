@@ -637,21 +637,21 @@
  645              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 gps_ubx.c
-     /tmp/ccU3eCJH.s:13     .text.gps_impl_init:00000000 $a
-     /tmp/ccU3eCJH.s:16     .text.gps_impl_init:00000000 gps_impl_init
-     /tmp/ccU3eCJH.s:32     .text.gps_impl_init:00000020 $d
+     /tmp/cctgPc2U.s:13     .text.gps_impl_init:00000000 $a
+     /tmp/cctgPc2U.s:16     .text.gps_impl_init:00000000 gps_impl_init
+     /tmp/cctgPc2U.s:32     .text.gps_impl_init:00000020 $d
                             *COM*:00000118 gps_ubx
-     /tmp/ccU3eCJH.s:44     .text.gps_ubx_read_message:00000000 $a
-     /tmp/ccU3eCJH.s:47     .text.gps_ubx_read_message:00000000 gps_ubx_read_message
-     /tmp/ccU3eCJH.s:386    .text.gps_ubx_read_message:00000510 $d
-     /tmp/ccU3eCJH.s:397    .text.gps_ubx_parse:00000000 $a
-     /tmp/ccU3eCJH.s:400    .text.gps_ubx_parse:00000000 gps_ubx_parse
-     /tmp/ccU3eCJH.s:421    .text.gps_ubx_parse:00000038 $d
-     /tmp/ccU3eCJH.s:431    .text.gps_ubx_parse:0000005c $a
-     /tmp/ccU3eCJH.s:529    .text.gps_ubx_parse:0000019c $d
-     /tmp/ccU3eCJH.s:533    .text.ubxsend_cfg_rst:00000000 $a
-     /tmp/ccU3eCJH.s:536    .text.ubxsend_cfg_rst:00000000 ubxsend_cfg_rst
-     /tmp/ccU3eCJH.s:641    .text.ubxsend_cfg_rst:00000188 $d
+     /tmp/cctgPc2U.s:44     .text.gps_ubx_read_message:00000000 $a
+     /tmp/cctgPc2U.s:47     .text.gps_ubx_read_message:00000000 gps_ubx_read_message
+     /tmp/cctgPc2U.s:386    .text.gps_ubx_read_message:00000510 $d
+     /tmp/cctgPc2U.s:397    .text.gps_ubx_parse:00000000 $a
+     /tmp/cctgPc2U.s:400    .text.gps_ubx_parse:00000000 gps_ubx_parse
+     /tmp/cctgPc2U.s:421    .text.gps_ubx_parse:00000038 $d
+     /tmp/cctgPc2U.s:431    .text.gps_ubx_parse:0000005c $a
+     /tmp/cctgPc2U.s:529    .text.gps_ubx_parse:0000019c $d
+     /tmp/cctgPc2U.s:533    .text.ubxsend_cfg_rst:00000000 $a
+     /tmp/cctgPc2U.s:536    .text.ubxsend_cfg_rst:00000000 ubxsend_cfg_rst
+     /tmp/cctgPc2U.s:641    .text.ubxsend_cfg_rst:00000188 $d
 
 UNDEFINED SYMBOLS
 __aeabi_i2d
