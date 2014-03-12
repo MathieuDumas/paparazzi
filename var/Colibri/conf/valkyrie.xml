@@ -121,8 +121,8 @@
   ##########################################################-->
 
     <section name="MIXER">
-      <define name="AILERON_DIFF" value="0.66"/>
-      <define name="COMBI_SWITCH" value="-0.4"/>
+      <define name="AILERON_DIFF" value="1"/> <!-- 0.66 -->
+      <define name="COMBI_SWITCH" value="-0.4"/> <!-- -0.4 -->
     </section>
 
     <command_laws>

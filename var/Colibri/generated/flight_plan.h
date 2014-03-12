@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/VAMUdeS/versatile.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/VAMUdeS/colibri.xml */
 /* Please DO NOT EDIT */
 
 #ifndef FLIGHT_PLAN_H
@@ -7,16 +7,14 @@
 #include "std.h"
 #include "generated/modules.h"
 #include "subsystems/datalink/datalink.h"
-#include "firmwares/fixedwing/combi_switch.h"
-#include "firmwares/fixedwing/takeoff_gyro.h"
 #define FLIGHT_PLAN_NAME "Versatile"
-#define NAV_UTM_EAST0 360286
-#define NAV_UTM_NORTH0 4813592
-#define NAV_UTM_ZONE0 31
-#define NAV_LAT0 434622000 /* 1e7deg */
-#define NAV_LON0 12729000 /* 1e7deg */
+#define NAV_UTM_EAST0 374889
+#define NAV_UTM_NORTH0 4223058
+#define NAV_UTM_ZONE0 18
+#define NAV_LAT0 381467240 /* 1e7deg */
+#define NAV_LON0 -764278110 /* 1e7deg */
 #define NAV_ALT0 0 /* mm above msl */
-#define NAV_MSL0 51850 /* mm, EGM96 geoid-height (msl) over ellipsoid */
+#define NAV_MSL0 -37210 /* mm, EGM96 geoid-height (msl) over ellipsoid */
 #define QFU 270.0
 #define WP_dummy 0
 #define WP_HOME 1
@@ -41,16 +39,16 @@
  {-20.0, 50.0, 75},\
 };
 #define WAYPOINTS_LLA { \
- {434625858, 12734081, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434621999, 12729000, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434629237, 12731266, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434631281, 12734273, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434632942, 12720838, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434617462, 12726656, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434619712, 12726592, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434621962, 12726528, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434624212, 12726464, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
- {434626462, 12726400, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=51.85m) */ \
+ {381471082, -764273391, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381467239, -764278109, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381474475, -764275968, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381476510, -764273178, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381478225, -764285570, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381462707, -764280303, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381464959, -764280347, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381467212, -764280391, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381469464, -764280435, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
+ {381471717, -764280479, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
 };
 #define NB_WAYPOINT 10
 #define NB_BLOCK 9
@@ -137,10 +135,6 @@ static inline void auto_nav(void) {
         NextStageAndBreak();
         break;
       Stage(1)
-        combi_switch_status = 0;
-        NextStageAndBreak();
-        break;
-      Stage(2)
         {
           NavAttitude(RadOfDeg(0.000000));
           NavVerticalAutoThrottleMode(RadOfDeg(30.000000));
@@ -148,7 +142,7 @@ static inline void auto_nav(void) {
         }
         break;
       default:
-      Stage(3)
+      Stage(2)
         NextBlock();
         break;
     }
@@ -159,16 +153,12 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        combi_switch_status = 1;
-        NextStageAndBreak();
-        break;
-      Stage(1)
         NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
         NavVerticalAltitudeMode(WaypointAlt(2), 0.);
         NavCircleWaypoint(2, nav_radius);
         break;
       default:
-      Stage(2)
+      Stage(1)
         NextBlock();
         break;
     }

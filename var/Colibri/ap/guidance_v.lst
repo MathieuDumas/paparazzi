@@ -531,9 +531,9 @@
  541              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 guidance_v.c
-     /tmp/ccEkWHsN.s:13     .text.v_ctl_init:00000000 $a
-     /tmp/ccEkWHsN.s:16     .text.v_ctl_init:00000000 v_ctl_init
-     /tmp/ccEkWHsN.s:79     .text.v_ctl_init:000000dc $d
+     /tmp/cc1lZE9c.s:13     .text.v_ctl_init:00000000 $a
+     /tmp/cc1lZE9c.s:16     .text.v_ctl_init:00000000 v_ctl_init
+     /tmp/cc1lZE9c.s:79     .text.v_ctl_init:000000dc $d
                             *COM*:00000001 v_ctl_mode
                             *COM*:00000004 v_ctl_altitude_setpoint
                             *COM*:00000004 v_ctl_altitude_pre_climb
@@ -556,21 +556,21 @@ DEFINED SYMBOLS
                             *COM*:00000004 v_ctl_auto_throttle_pitch_of_vz_pgain
                             *COM*:00000004 v_ctl_auto_throttle_pitch_of_vz_dgain
                             *COM*:00000002 v_ctl_throttle_setpoint
-     /tmp/ccEkWHsN.s:113    .text.v_ctl_altitude_loop:00000000 $a
-     /tmp/ccEkWHsN.s:116    .text.v_ctl_altitude_loop:00000000 v_ctl_altitude_loop
-     /tmp/ccEkWHsN.s:186    .text.v_ctl_altitude_loop:000000ec $d
-     /tmp/ccEkWHsN.s:206    .text.v_ctl_climb_loop:00000000 $a
-     /tmp/ccEkWHsN.s:209    .text.v_ctl_climb_loop:00000000 v_ctl_climb_loop
-     /tmp/ccEkWHsN.s:432    .text.v_ctl_climb_loop:0000032c $d
-     /tmp/ccEkWHsN.s:461    .text.v_ctl_throttle_slew:00000000 $a
-     /tmp/ccEkWHsN.s:464    .text.v_ctl_throttle_slew:00000000 v_ctl_throttle_slew
-     /tmp/ccEkWHsN.s:502    .text.v_ctl_throttle_slew:00000078 $d
+     /tmp/cc1lZE9c.s:113    .text.v_ctl_altitude_loop:00000000 $a
+     /tmp/cc1lZE9c.s:116    .text.v_ctl_altitude_loop:00000000 v_ctl_altitude_loop
+     /tmp/cc1lZE9c.s:186    .text.v_ctl_altitude_loop:000000ec $d
+     /tmp/cc1lZE9c.s:206    .text.v_ctl_climb_loop:00000000 $a
+     /tmp/cc1lZE9c.s:209    .text.v_ctl_climb_loop:00000000 v_ctl_climb_loop
+     /tmp/cc1lZE9c.s:432    .text.v_ctl_climb_loop:0000032c $d
+     /tmp/cc1lZE9c.s:461    .text.v_ctl_throttle_slew:00000000 $a
+     /tmp/cc1lZE9c.s:464    .text.v_ctl_throttle_slew:00000000 v_ctl_throttle_slew
+     /tmp/cc1lZE9c.s:502    .text.v_ctl_throttle_slew:00000078 $d
                             *COM*:00000002 v_ctl_throttle_slewed
                             *COM*:00000004 v_ctl_auto_pitch_sum_err
                             *COM*:00000004 v_ctl_auto_pitch_igain
                             *COM*:00000004 v_ctl_auto_pitch_pgain
-     /tmp/ccEkWHsN.s:535    .bss.last_err.2969:00000000 $d
-     /tmp/ccEkWHsN.s:539    .bss.last_err.2969:00000000 last_err.2969
+     /tmp/cc1lZE9c.s:535    .bss.last_err.2969:00000000 $d
+     /tmp/cc1lZE9c.s:539    .bss.last_err.2969:00000000 last_err.2969
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

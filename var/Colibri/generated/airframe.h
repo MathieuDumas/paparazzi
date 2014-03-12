@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziAssembla/vamudes-paparazzi/conf/airframes/VAMUdeS/valkyrie.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/conf/airframes/VAMUdeS/valkyrie.xml */
 /* Please DO NOT EDIT */
 
 #ifndef AIRFRAME_H
@@ -6,7 +6,7 @@
 
 #define AIRFRAME_NAME "Colibri"
 #define AC_ID 2
-#define MD5SUM ((uint8_t*)"\102\031\132\326\032\207\365\074\304\124\323\267\373\131\062\072")
+#define MD5SUM ((uint8_t*)"\305\167\006\355\133\042\273\137\367\335\327\014\337\122\071\246")
 
 #define SERVOS_NB 8
 
@@ -70,7 +70,7 @@
 
 
 #define SECTION_MIXER 1
-#define AILERON_DIFF 0.66
+#define AILERON_DIFF 1
 #define COMBI_SWITCH -0.4
 
 #define SetActuatorsFromCommands(values) { \

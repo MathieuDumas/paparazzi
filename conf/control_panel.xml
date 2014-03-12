@@ -57,7 +57,7 @@
       <program name="Joystick">
         <arg flag="-ac" constant="'Colibri'"/>
         <arg flag="arpvec.xml"/>
-        <arg flag="-d" constant="/dev/input/js2"/>
+        <arg flag="-d" constant="/dev/input/js1"/>
       </program>
       <program name="Data Link">
         <arg flag="-d" constant="/dev/ttyUSB0"/>

@@ -5,25 +5,6 @@
       <dl_setting min="0" step="1" max="2" var="telemetry_mode_Ap" shortname="Ap" values="default|minimal|extremal"/>
       <dl_setting min="0" step="1" max="1" var="telemetry_mode_Fbw" shortname="Fbw" values="default|debug"/>
     </dl_settings>
-    <dl_settings name="flight params">
-      <dl_setting var="flight_altitude" step="10" shortname="altitude" min="0" max="1000"/>
-      <dl_setting var="nav_course" step="1" min="0" max="360"/>
-      <dl_setting var="nav_shift" step="5" shortname="inc. shift" module="subsystems/nav" min="-10" max="10" handler="IncreaseShift"/>
-      <dl_setting var="estimator_flight_time" step="1" shortname="flight time" module="autopilot" min="0" max="0" handler="ResetFlightTimeAndLaunch"/>
-      <dl_setting var="nav_radius" step="10" module="subsystems/nav" min="-200" max="200" handler="SetNavRadius">
-        <strip_button value="1" name="Circle right" icon="circle-right.png" group="circle"/>
-        <strip_button value="-1" name="Circle left" icon="circle-left.png" group="circle"/>
-        <key_press value="1" key="greater"/>
-        <key_press value="-1" key="less"/>
-      </dl_setting>
-      <dl_setting var="route_ap_time" step="0" shortname="Route pre turn" min="0" max="15"/>
-    </dl_settings>
-    <dl_settings name="mode">
-      <dl_setting var="pprz_mode" values="MANUAL|AUTO1|AUTO2|HOME|NOGPS|FAILSAFE" step="1" module="autopilot" min="0" max="2"/>
-      <dl_setting var="launch" step="1" min="0" max="1"/>
-      <dl_setting var="kill_throttle" step="1" min="0" max="1"/>
-      <dl_setting var="gps.reset" step="1" shortname="GPS reset" module="subsystems/gps" min="0" max="2" handler="Reset"/>
-    </dl_settings>
     <dl_settings name="Control">
       <dl_settings name="Pitch">
         <dl_setting var="h_ctl_pitch_pgain" step="10" shortname="P" param="H_CTL_PITCH_PGAIN" module="stabilization/stabilization_attitude" min="0" max="50000"/>
@@ -58,6 +39,25 @@
         <dl_setting var="v_ctl_auto_throttle_pitch_of_vz_pgain" step="0.01" shortname="pitch_of_vz" param="V_CTL_AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" min="0" max="1"/>
         <dl_setting var="v_ctl_auto_throttle_pitch_of_vz_dgain" step="0.1" shortname="pitch_of_vz (d)" min="-10" max="10"/>
       </dl_settings>
+    </dl_settings>
+    <dl_settings name="flight params">
+      <dl_setting var="flight_altitude" step="10" shortname="altitude" min="0" max="1000"/>
+      <dl_setting var="nav_course" step="1" min="0" max="360"/>
+      <dl_setting var="nav_shift" step="5" shortname="inc. shift" module="subsystems/nav" min="-10" max="10" handler="IncreaseShift"/>
+      <dl_setting var="estimator_flight_time" step="1" shortname="flight time" module="autopilot" min="0" max="0" handler="ResetFlightTimeAndLaunch"/>
+      <dl_setting var="nav_radius" step="10" module="subsystems/nav" min="-200" max="200" handler="SetNavRadius">
+        <strip_button value="1" name="Circle right" icon="circle-right.png" group="circle"/>
+        <strip_button value="-1" name="Circle left" icon="circle-left.png" group="circle"/>
+        <key_press value="1" key="greater"/>
+        <key_press value="-1" key="less"/>
+      </dl_setting>
+      <dl_setting var="route_ap_time" step="0" shortname="Route pre turn" min="0" max="15"/>
+    </dl_settings>
+    <dl_settings name="mode">
+      <dl_setting var="pprz_mode" values="MANUAL|AUTO1|AUTO2|HOME|NOGPS|FAILSAFE" step="1" module="autopilot" min="0" max="2"/>
+      <dl_setting var="launch" step="1" min="0" max="1"/>
+      <dl_setting var="kill_throttle" step="1" min="0" max="1"/>
+      <dl_setting var="gps.reset" step="1" shortname="GPS reset" module="subsystems/gps" min="0" max="2" handler="Reset"/>
     </dl_settings>
   </dl_settings>
 </settings>

@@ -4891,35 +4891,35 @@
  4942              		.set	.LANCHOR10,. + 0
  4945              	Fly2Y:
  4946 0000 00000000 		.space	4
- 4947              		.section	.bss.Flowerradius,"aw",%nobits
+ 4947              		.section	.bss.EntryPoint.3133,"aw",%nobits
  4948              		.align	2
- 4949              		.set	.LANCHOR4,. + 0
- 4952              	Flowerradius:
- 4953 0000 00000000 		.space	4
- 4954              		.section	.bss.SurveySize,"aw",%nobits
- 4955              		.set	.LANCHOR47,. + 0
- 4958              	SurveySize:
- 4959 0000 00       		.space	1
- 4960              		.section	.bss.LandCircle,"aw",%nobits
- 4961              		.align	2
- 4962              		.set	.LANCHOR34,. + 0
- 4965              	LandCircle:
- 4966 0000 00000000 		.space	8
- 4966      00000000 
- 4967              		.section	.bss.TDWaypoint,"aw",%nobits
- 4968              		.set	.LANCHOR28,. + 0
- 4971              	TDWaypoint:
- 4972 0000 00       		.space	1
- 4973              		.section	.bss.line_status,"aw",%nobits
- 4974              		.set	.LANCHOR26,. + 0
- 4977              	line_status:
- 4978 0000 00       		.space	1
- 4979              		.section	.bss.EntryPoint.3136,"aw",%nobits
- 4980              		.align	2
- 4981              		.set	.LANCHOR49,. + 0
- 4984              	EntryPoint.3136:
- 4985 0000 00000000 		.space	8
- 4985      00000000 
+ 4949              		.set	.LANCHOR49,. + 0
+ 4952              	EntryPoint.3133:
+ 4953 0000 00000000 		.space	8
+ 4953      00000000 
+ 4954              		.section	.bss.Flowerradius,"aw",%nobits
+ 4955              		.align	2
+ 4956              		.set	.LANCHOR4,. + 0
+ 4959              	Flowerradius:
+ 4960 0000 00000000 		.space	4
+ 4961              		.section	.bss.SurveySize,"aw",%nobits
+ 4962              		.set	.LANCHOR47,. + 0
+ 4965              	SurveySize:
+ 4966 0000 00       		.space	1
+ 4967              		.section	.bss.LandCircle,"aw",%nobits
+ 4968              		.align	2
+ 4969              		.set	.LANCHOR34,. + 0
+ 4972              	LandCircle:
+ 4973 0000 00000000 		.space	8
+ 4973      00000000 
+ 4974              		.section	.bss.TDWaypoint,"aw",%nobits
+ 4975              		.set	.LANCHOR28,. + 0
+ 4978              	TDWaypoint:
+ 4979 0000 00       		.space	1
+ 4980              		.section	.bss.line_status,"aw",%nobits
+ 4981              		.set	.LANCHOR26,. + 0
+ 4984              	line_status:
+ 4985 0000 00       		.space	1
  4986              		.section	.bss.FLCircle,"aw",%nobits
  4987              		.align	2
  4988              		.set	.LANCHOR42,. + 0
@@ -5021,62 +5021,62 @@
  5116              		.set	.LANCHOR54,. + 0
  5119              	dSweep:
  5120 0000 00000000 		.space	4
- 5121              		.section	.bss.FlowerTheta,"aw",%nobits
+ 5121              		.section	.bss.LastPoint.3171,"aw",%nobits
  5122              		.align	2
- 5123              		.set	.LANCHOR8,. + 0
- 5126              	FlowerTheta:
- 5127 0000 00000000 		.space	4
- 5128              		.section	.bss.AFWaypoint,"aw",%nobits
- 5129              		.set	.LANCHOR27,. + 0
- 5132              	AFWaypoint:
- 5133 0000 00       		.space	1
- 5134              		.section	.bss.TransCurrentX,"aw",%nobits
- 5135              		.align	2
- 5136              		.set	.LANCHOR5,. + 0
- 5139              	TransCurrentX:
- 5140 0000 00000000 		.space	4
- 5141              		.section	.bss.CLandingStatus,"aw",%nobits
- 5142              		.set	.LANCHOR29,. + 0
- 5145              	CLandingStatus:
- 5146 0000 00       		.space	1
- 5147              		.section	.bss.initialx,"aw",%nobits
- 5148              		.align	2
- 5149              		.set	.LANCHOR16,. + 0
- 5152              	initialx:
- 5153 0000 00000000 		.space	4
- 5154              		.section	.bss.initialy,"aw",%nobits
+ 5123              		.set	.LANCHOR60,. + 0
+ 5126              	LastPoint.3171:
+ 5127 0000 00000000 		.space	8
+ 5127      00000000 
+ 5128              		.section	.bss.FlowerTheta,"aw",%nobits
+ 5129              		.align	2
+ 5130              		.set	.LANCHOR8,. + 0
+ 5133              	FlowerTheta:
+ 5134 0000 00000000 		.space	4
+ 5135              		.section	.bss.AFWaypoint,"aw",%nobits
+ 5136              		.set	.LANCHOR27,. + 0
+ 5139              	AFWaypoint:
+ 5140 0000 00       		.space	1
+ 5141              		.section	.bss.TransCurrentX,"aw",%nobits
+ 5142              		.align	2
+ 5143              		.set	.LANCHOR5,. + 0
+ 5146              	TransCurrentX:
+ 5147 0000 00000000 		.space	4
+ 5148              		.section	.bss.CLandingStatus,"aw",%nobits
+ 5149              		.set	.LANCHOR29,. + 0
+ 5152              	CLandingStatus:
+ 5153 0000 00       		.space	1
+ 5154              		.section	.bss.initialx,"aw",%nobits
  5155              		.align	2
- 5156              		.set	.LANCHOR17,. + 0
- 5159              	initialy:
+ 5156              		.set	.LANCHOR16,. + 0
+ 5159              	initialx:
  5160 0000 00000000 		.space	4
- 5161              		.section	.bss.EdgeMaxY,"aw",%nobits
+ 5161              		.section	.bss.initialy,"aw",%nobits
  5162              		.align	2
- 5163              		.set	.LANCHOR52,. + 0
- 5166              	EdgeMaxY:
- 5167 0000 00000000 		.space	40
- 5167      00000000 
- 5167      00000000 
- 5167      00000000 
- 5167      00000000 
- 5168              		.section	.bss.CTakeoffStatus,"aw",%nobits
- 5169              		.set	.LANCHOR25,. + 0
- 5172              	CTakeoffStatus:
- 5173 0000 00       		.space	1
- 5174              		.section	.bss.TransCurrentY,"aw",%nobits
- 5175              		.align	2
- 5176              		.set	.LANCHOR6,. + 0
- 5179              	TransCurrentY:
- 5180 0000 00000000 		.space	4
- 5181              		.section	.bss.SmallestCorner,"aw",%nobits
+ 5163              		.set	.LANCHOR17,. + 0
+ 5166              	initialy:
+ 5167 0000 00000000 		.space	4
+ 5168              		.section	.bss.EdgeMaxY,"aw",%nobits
+ 5169              		.align	2
+ 5170              		.set	.LANCHOR52,. + 0
+ 5173              	EdgeMaxY:
+ 5174 0000 00000000 		.space	40
+ 5174      00000000 
+ 5174      00000000 
+ 5174      00000000 
+ 5174      00000000 
+ 5175              		.section	.bss.CTakeoffStatus,"aw",%nobits
+ 5176              		.set	.LANCHOR25,. + 0
+ 5179              	CTakeoffStatus:
+ 5180 0000 00       		.space	1
+ 5181              		.section	.bss.TransCurrentY,"aw",%nobits
  5182              		.align	2
- 5183              		.set	.LANCHOR44,. + 0
- 5186              	SmallestCorner:
- 5187 0000 00000000 		.space	8
- 5187      00000000 
- 5188              		.section	.bss.LastPoint.3174,"aw",%nobits
+ 5183              		.set	.LANCHOR6,. + 0
+ 5186              	TransCurrentY:
+ 5187 0000 00000000 		.space	4
+ 5188              		.section	.bss.SmallestCorner,"aw",%nobits
  5189              		.align	2
- 5190              		.set	.LANCHOR60,. + 0
- 5193              	LastPoint.3174:
+ 5190              		.set	.LANCHOR44,. + 0
+ 5193              	SmallestCorner:
  5194 0000 00000000 		.space	8
  5194      00000000 
  5195              		.section	.bss.CFlowerStatus,"aw",%nobits
@@ -5146,184 +5146,184 @@
  5282              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 OSAMNav.c
-     /tmp/ccPKBgdE.s:21     .text.InitializeFlower:00000000 $a
-     /tmp/ccPKBgdE.s:24     .text.InitializeFlower:00000000 InitializeFlower
-     /tmp/ccPKBgdE.s:190    .text.InitializeFlower:0000027c $d
-     /tmp/ccPKBgdE.s:215    .text.FlowerNav:00000000 $a
-     /tmp/ccPKBgdE.s:218    .text.FlowerNav:00000000 FlowerNav
-     /tmp/ccPKBgdE.s:602    .text.FlowerNav:000005d0 $d
-     /tmp/ccPKBgdE.s:633    .text.InitializeBungeeTakeoff:00000000 $a
-     /tmp/ccPKBgdE.s:636    .text.InitializeBungeeTakeoff:00000000 InitializeBungeeTakeoff
-     /tmp/ccPKBgdE.s:804    .text.InitializeBungeeTakeoff:00000274 $d
-     /tmp/ccPKBgdE.s:825    .text.BungeeTakeoff:00000000 $a
-     /tmp/ccPKBgdE.s:828    .text.BungeeTakeoff:00000000 BungeeTakeoff
-     /tmp/ccPKBgdE.s:1135   .text.BungeeTakeoff:00000488 $d
-     /tmp/ccPKBgdE.s:1166   .text.InitializeVerticalRaster:00000000 $a
-     /tmp/ccPKBgdE.s:1169   .text.InitializeVerticalRaster:00000000 InitializeVerticalRaster
-     /tmp/ccPKBgdE.s:1181   .text.InitializeVerticalRaster:00000010 $d
-     /tmp/ccPKBgdE.s:1185   .text.VerticalRaster:00000000 $a
-     /tmp/ccPKBgdE.s:1188   .text.VerticalRaster:00000000 VerticalRaster
-     /tmp/ccPKBgdE.s:1338   .text.VerticalRaster:00000244 $d
-     /tmp/ccPKBgdE.s:1347   .text.VerticalRaster:00000264 $a
-     /tmp/ccPKBgdE.s:2236   .text.VerticalRaster:00000f08 $d
-     /tmp/ccPKBgdE.s:2262   .text.InitializeSkidLanding:00000000 $a
-     /tmp/ccPKBgdE.s:2265   .text.InitializeSkidLanding:00000000 InitializeSkidLanding
-     /tmp/ccPKBgdE.s:2407   .text.InitializeSkidLanding:00000214 $d
-     /tmp/ccPKBgdE.s:2428   .text.SkidLanding:00000000 $a
-     /tmp/ccPKBgdE.s:2431   .text.SkidLanding:00000000 SkidLanding
-     /tmp/ccPKBgdE.s:2442   .text.SkidLanding:00000018 $d
-     /tmp/ccPKBgdE.s:2447   .text.SkidLanding:00000028 $a
-     /tmp/ccPKBgdE.s:2840   .text.SkidLanding:000005d4 $d
-     /tmp/ccPKBgdE.s:2875   .text.TranslateAndRotateFromWorld:00000000 $a
-     /tmp/ccPKBgdE.s:2878   .text.TranslateAndRotateFromWorld:00000000 TranslateAndRotateFromWorld
-     /tmp/ccPKBgdE.s:2949   .text.FlightLine:00000000 $a
-     /tmp/ccPKBgdE.s:2952   .text.FlightLine:00000000 FlightLine
-     /tmp/ccPKBgdE.s:2967   .text.FlightLine:00000028 $d
-     /tmp/ccPKBgdE.s:2972   .text.FlightLine:00000038 $a
-     /tmp/ccPKBgdE.s:3322   .text.FlightLine:0000055c $d
-     /tmp/ccPKBgdE.s:3350   .text.FlightLineBlock:00000000 $a
-     /tmp/ccPKBgdE.s:3353   .text.FlightLineBlock:00000000 FlightLineBlock
-     /tmp/ccPKBgdE.s:3412   .text.FlightLineBlock:000000c0 $d
-     /tmp/ccPKBgdE.s:3418   .text.InitializePolygonSurvey:00000000 $a
-     /tmp/ccPKBgdE.s:3421   .text.InitializePolygonSurvey:00000000 InitializePolygonSurvey
-     /tmp/ccPKBgdE.s:3982   .text.InitializePolygonSurvey:0000084c $d
+     /tmp/ccFCITx6.s:21     .text.InitializeFlower:00000000 $a
+     /tmp/ccFCITx6.s:24     .text.InitializeFlower:00000000 InitializeFlower
+     /tmp/ccFCITx6.s:190    .text.InitializeFlower:0000027c $d
+     /tmp/ccFCITx6.s:215    .text.FlowerNav:00000000 $a
+     /tmp/ccFCITx6.s:218    .text.FlowerNav:00000000 FlowerNav
+     /tmp/ccFCITx6.s:602    .text.FlowerNav:000005d0 $d
+     /tmp/ccFCITx6.s:633    .text.InitializeBungeeTakeoff:00000000 $a
+     /tmp/ccFCITx6.s:636    .text.InitializeBungeeTakeoff:00000000 InitializeBungeeTakeoff
+     /tmp/ccFCITx6.s:804    .text.InitializeBungeeTakeoff:00000274 $d
+     /tmp/ccFCITx6.s:825    .text.BungeeTakeoff:00000000 $a
+     /tmp/ccFCITx6.s:828    .text.BungeeTakeoff:00000000 BungeeTakeoff
+     /tmp/ccFCITx6.s:1135   .text.BungeeTakeoff:00000488 $d
+     /tmp/ccFCITx6.s:1166   .text.InitializeVerticalRaster:00000000 $a
+     /tmp/ccFCITx6.s:1169   .text.InitializeVerticalRaster:00000000 InitializeVerticalRaster
+     /tmp/ccFCITx6.s:1181   .text.InitializeVerticalRaster:00000010 $d
+     /tmp/ccFCITx6.s:1185   .text.VerticalRaster:00000000 $a
+     /tmp/ccFCITx6.s:1188   .text.VerticalRaster:00000000 VerticalRaster
+     /tmp/ccFCITx6.s:1338   .text.VerticalRaster:00000244 $d
+     /tmp/ccFCITx6.s:1347   .text.VerticalRaster:00000264 $a
+     /tmp/ccFCITx6.s:2236   .text.VerticalRaster:00000f08 $d
+     /tmp/ccFCITx6.s:2262   .text.InitializeSkidLanding:00000000 $a
+     /tmp/ccFCITx6.s:2265   .text.InitializeSkidLanding:00000000 InitializeSkidLanding
+     /tmp/ccFCITx6.s:2407   .text.InitializeSkidLanding:00000214 $d
+     /tmp/ccFCITx6.s:2428   .text.SkidLanding:00000000 $a
+     /tmp/ccFCITx6.s:2431   .text.SkidLanding:00000000 SkidLanding
+     /tmp/ccFCITx6.s:2442   .text.SkidLanding:00000018 $d
+     /tmp/ccFCITx6.s:2447   .text.SkidLanding:00000028 $a
+     /tmp/ccFCITx6.s:2840   .text.SkidLanding:000005d4 $d
+     /tmp/ccFCITx6.s:2875   .text.TranslateAndRotateFromWorld:00000000 $a
+     /tmp/ccFCITx6.s:2878   .text.TranslateAndRotateFromWorld:00000000 TranslateAndRotateFromWorld
+     /tmp/ccFCITx6.s:2949   .text.FlightLine:00000000 $a
+     /tmp/ccFCITx6.s:2952   .text.FlightLine:00000000 FlightLine
+     /tmp/ccFCITx6.s:2967   .text.FlightLine:00000028 $d
+     /tmp/ccFCITx6.s:2972   .text.FlightLine:00000038 $a
+     /tmp/ccFCITx6.s:3322   .text.FlightLine:0000055c $d
+     /tmp/ccFCITx6.s:3350   .text.FlightLineBlock:00000000 $a
+     /tmp/ccFCITx6.s:3353   .text.FlightLineBlock:00000000 FlightLineBlock
+     /tmp/ccFCITx6.s:3412   .text.FlightLineBlock:000000c0 $d
+     /tmp/ccFCITx6.s:3418   .text.InitializePolygonSurvey:00000000 $a
+     /tmp/ccFCITx6.s:3421   .text.InitializePolygonSurvey:00000000 InitializePolygonSurvey
+     /tmp/ccFCITx6.s:3982   .text.InitializePolygonSurvey:0000084c $d
                             *COM*:00000002 PolySurveySweepNum
                             *COM*:00000002 PolySurveySweepBackNum
-     /tmp/ccPKBgdE.s:4011   .text.RotateAndTranslateToWorld:00000000 $a
-     /tmp/ccPKBgdE.s:4014   .text.RotateAndTranslateToWorld:00000000 RotateAndTranslateToWorld
-     /tmp/ccPKBgdE.s:4088   .text.PolygonSurvey:00000000 $a
-     /tmp/ccPKBgdE.s:4091   .text.PolygonSurvey:00000000 PolygonSurvey
-     /tmp/ccPKBgdE.s:4717   .text.PolygonSurvey:000008f4 $d
-     /tmp/ccPKBgdE.s:4757   .text.FindInterceptOfTwoLines:00000000 $a
-     /tmp/ccPKBgdE.s:4760   .text.FindInterceptOfTwoLines:00000000 FindInterceptOfTwoLines
-     /tmp/ccPKBgdE.s:4794   .text.EvaluateLineForY:00000000 $a
-     /tmp/ccPKBgdE.s:4797   .text.EvaluateLineForY:00000000 EvaluateLineForY
-     /tmp/ccPKBgdE.s:4813   .text.EvaluateLineForX:00000000 $a
-     /tmp/ccPKBgdE.s:4816   .text.EvaluateLineForX:00000000 EvaluateLineForX
-     /tmp/ccPKBgdE.s:4832   .text.DistanceEquation:00000000 $a
-     /tmp/ccPKBgdE.s:4835   .text.DistanceEquation:00000000 DistanceEquation
-     /tmp/ccPKBgdE.s:4872   .bss.DistanceFromCenter:00000000 $d
-     /tmp/ccPKBgdE.s:4876   .bss.DistanceFromCenter:00000000 DistanceFromCenter
-     /tmp/ccPKBgdE.s:4879   .bss.EdgeMinY:00000000 $d
-     /tmp/ccPKBgdE.s:4883   .bss.EdgeMinY:00000000 EdgeMinY
-     /tmp/ccPKBgdE.s:4886   .bss.SurveyTheta:00000000 $d
-     /tmp/ccPKBgdE.s:4890   .bss.SurveyTheta:00000000 SurveyTheta
-     /tmp/ccPKBgdE.s:4893   .bss.SurveyCircleQdr:00000000 $d
-     /tmp/ccPKBgdE.s:4897   .bss.SurveyCircleQdr:00000000 SurveyCircleQdr
-     /tmp/ccPKBgdE.s:4900   .bss.FlyFromX:00000000 $d
-     /tmp/ccPKBgdE.s:4904   .bss.FlyFromX:00000000 FlyFromX
-     /tmp/ccPKBgdE.s:4907   .bss.FlyFromY:00000000 $d
-     /tmp/ccPKBgdE.s:4911   .bss.FlyFromY:00000000 FlyFromY
-     /tmp/ccPKBgdE.s:4917   .bss.FLBlockCount:00000000 FLBlockCount
-     /tmp/ccPKBgdE.s:4918   .bss.FLBlockCount:00000000 $d
-     /tmp/ccPKBgdE.s:4920   .bss.LandAppAlt:00000000 $d
-     /tmp/ccPKBgdE.s:4924   .bss.LandAppAlt:00000000 LandAppAlt
-     /tmp/ccPKBgdE.s:4927   .bss.SurveyCircle:00000000 $d
-     /tmp/ccPKBgdE.s:4931   .bss.SurveyCircle:00000000 SurveyCircle
-     /tmp/ccPKBgdE.s:4934   .bss.Fly2X:00000000 $d
-     /tmp/ccPKBgdE.s:4938   .bss.Fly2X:00000000 Fly2X
-     /tmp/ccPKBgdE.s:4941   .bss.Fly2Y:00000000 $d
-     /tmp/ccPKBgdE.s:4945   .bss.Fly2Y:00000000 Fly2Y
-     /tmp/ccPKBgdE.s:4948   .bss.Flowerradius:00000000 $d
-     /tmp/ccPKBgdE.s:4952   .bss.Flowerradius:00000000 Flowerradius
-     /tmp/ccPKBgdE.s:4958   .bss.SurveySize:00000000 SurveySize
-     /tmp/ccPKBgdE.s:4959   .bss.SurveySize:00000000 $d
-     /tmp/ccPKBgdE.s:4961   .bss.LandCircle:00000000 $d
-     /tmp/ccPKBgdE.s:4965   .bss.LandCircle:00000000 LandCircle
-     /tmp/ccPKBgdE.s:4971   .bss.TDWaypoint:00000000 TDWaypoint
-     /tmp/ccPKBgdE.s:4972   .bss.TDWaypoint:00000000 $d
-     /tmp/ccPKBgdE.s:4977   .bss.line_status:00000000 line_status
-     /tmp/ccPKBgdE.s:4978   .bss.line_status:00000000 $d
-     /tmp/ccPKBgdE.s:4980   .bss.EntryPoint.3136:00000000 $d
-     /tmp/ccPKBgdE.s:4984   .bss.EntryPoint.3136:00000000 EntryPoint.3136
-     /tmp/ccPKBgdE.s:4987   .bss.FLCircle:00000000 $d
-     /tmp/ccPKBgdE.s:4991   .bss.FLCircle:00000000 FLCircle
-     /tmp/ccPKBgdE.s:4994   .bss.FLFROMWP:00000000 $d
-     /tmp/ccPKBgdE.s:4998   .bss.FLFROMWP:00000000 FLFROMWP
-     /tmp/ccPKBgdE.s:5001   .bss.EdgeCurrentX:00000000 $d
-     /tmp/ccPKBgdE.s:5005   .bss.EdgeCurrentX:00000000 EdgeCurrentX
-     /tmp/ccPKBgdE.s:5011   .bss.Edge:00000000 Edge
-     /tmp/ccPKBgdE.s:5012   .bss.Edge:00000000 $d
-     /tmp/ccPKBgdE.s:5014   .bss.EdgeCurrentY:00000000 $d
-     /tmp/ccPKBgdE.s:5018   .bss.EdgeCurrentY:00000000 EdgeCurrentY
-     /tmp/ccPKBgdE.s:5021   .bss.BungeeAlt:00000000 $d
-     /tmp/ccPKBgdE.s:5025   .bss.BungeeAlt:00000000 BungeeAlt
-     /tmp/ccPKBgdE.s:5028   .bss.ThrottleSlope:00000000 $d
-     /tmp/ccPKBgdE.s:5032   .bss.ThrottleSlope:00000000 ThrottleSlope
-     /tmp/ccPKBgdE.s:5035   .bss.throttlePy:00000000 $d
-     /tmp/ccPKBgdE.s:5039   .bss.throttlePy:00000000 throttlePy
-     /tmp/ccPKBgdE.s:5042   .bss.Edges:00000000 $d
-     /tmp/ccPKBgdE.s:5046   .bss.Edges:00000000 Edges
-     /tmp/ccPKBgdE.s:5049   .bss.throttlePx:00000000 $d
-     /tmp/ccPKBgdE.s:5053   .bss.throttlePx:00000000 throttlePx
-     /tmp/ccPKBgdE.s:5056   .bss.TDistance:00000000 $d
-     /tmp/ccPKBgdE.s:5060   .bss.TDistance:00000000 TDistance
-     /tmp/ccPKBgdE.s:5063   .bss.FinalLandAltitude:00000000 $d
-     /tmp/ccPKBgdE.s:5067   .bss.FinalLandAltitude:00000000 FinalLandAltitude
-     /tmp/ccPKBgdE.s:5070   .bss.LandCircleQDR:00000000 $d
-     /tmp/ccPKBgdE.s:5074   .bss.LandCircleQDR:00000000 LandCircleQDR
-     /tmp/ccPKBgdE.s:5080   .bss.SurveyEntryWP:00000000 SurveyEntryWP
-     /tmp/ccPKBgdE.s:5081   .bss.SurveyEntryWP:00000000 $d
-     /tmp/ccPKBgdE.s:5083   .bss.CircleX:00000000 $d
-     /tmp/ccPKBgdE.s:5087   .bss.CircleX:00000000 CircleX
-     /tmp/ccPKBgdE.s:5090   .bss.CircleY:00000000 $d
-     /tmp/ccPKBgdE.s:5094   .bss.CircleY:00000000 CircleY
-     /tmp/ccPKBgdE.s:5100   .bss.CFLStatus:00000000 CFLStatus
-     /tmp/ccPKBgdE.s:5101   .bss.CFLStatus:00000000 $d
-     /tmp/ccPKBgdE.s:5106   .bss.BungeeWaypoint:00000000 BungeeWaypoint
-     /tmp/ccPKBgdE.s:5107   .bss.BungeeWaypoint:00000000 $d
-     /tmp/ccPKBgdE.s:5112   .bss.FinalLandCount:00000000 FinalLandCount
-     /tmp/ccPKBgdE.s:5113   .bss.FinalLandCount:00000000 $d
-     /tmp/ccPKBgdE.s:5115   .bss.dSweep:00000000 $d
-     /tmp/ccPKBgdE.s:5119   .bss.dSweep:00000000 dSweep
-     /tmp/ccPKBgdE.s:5122   .bss.FlowerTheta:00000000 $d
-     /tmp/ccPKBgdE.s:5126   .bss.FlowerTheta:00000000 FlowerTheta
-     /tmp/ccPKBgdE.s:5132   .bss.AFWaypoint:00000000 AFWaypoint
-     /tmp/ccPKBgdE.s:5133   .bss.AFWaypoint:00000000 $d
-     /tmp/ccPKBgdE.s:5135   .bss.TransCurrentX:00000000 $d
-     /tmp/ccPKBgdE.s:5139   .bss.TransCurrentX:00000000 TransCurrentX
-     /tmp/ccPKBgdE.s:5145   .bss.CLandingStatus:00000000 CLandingStatus
-     /tmp/ccPKBgdE.s:5146   .bss.CLandingStatus:00000000 $d
-     /tmp/ccPKBgdE.s:5148   .bss.initialx:00000000 $d
-     /tmp/ccPKBgdE.s:5152   .bss.initialx:00000000 initialx
-     /tmp/ccPKBgdE.s:5155   .bss.initialy:00000000 $d
-     /tmp/ccPKBgdE.s:5159   .bss.initialy:00000000 initialy
-     /tmp/ccPKBgdE.s:5162   .bss.EdgeMaxY:00000000 $d
-     /tmp/ccPKBgdE.s:5166   .bss.EdgeMaxY:00000000 EdgeMaxY
-     /tmp/ccPKBgdE.s:5172   .bss.CTakeoffStatus:00000000 CTakeoffStatus
-     /tmp/ccPKBgdE.s:5173   .bss.CTakeoffStatus:00000000 $d
-     /tmp/ccPKBgdE.s:5175   .bss.TransCurrentY:00000000 $d
-     /tmp/ccPKBgdE.s:5179   .bss.TransCurrentY:00000000 TransCurrentY
-     /tmp/ccPKBgdE.s:5182   .bss.SmallestCorner:00000000 $d
-     /tmp/ccPKBgdE.s:5186   .bss.SmallestCorner:00000000 SmallestCorner
-     /tmp/ccPKBgdE.s:5189   .bss.LastPoint.3174:00000000 $d
-     /tmp/ccPKBgdE.s:5193   .bss.LastPoint.3174:00000000 LastPoint.3174
-     /tmp/ccPKBgdE.s:5199   .bss.CFlowerStatus:00000000 CFlowerStatus
-     /tmp/ccPKBgdE.s:5200   .bss.CFlowerStatus:00000000 $d
-     /tmp/ccPKBgdE.s:5202   .bss.SurveyFromWP:00000000 $d
-     /tmp/ccPKBgdE.s:5206   .bss.SurveyFromWP:00000000 SurveyFromWP
-     /tmp/ccPKBgdE.s:5209   .bss.SurveyToWP:00000000 $d
-     /tmp/ccPKBgdE.s:5213   .bss.SurveyToWP:00000000 SurveyToWP
-     /tmp/ccPKBgdE.s:5216   .bss.MaxY:00000000 $d
-     /tmp/ccPKBgdE.s:5220   .bss.MaxY:00000000 MaxY
-     /tmp/ccPKBgdE.s:5223   .bss.FLTOWP:00000000 $d
-     /tmp/ccPKBgdE.s:5227   .bss.FLTOWP:00000000 FLTOWP
-     /tmp/ccPKBgdE.s:5230   .bss.LandRadius:00000000 $d
-     /tmp/ccPKBgdE.s:5234   .bss.LandRadius:00000000 LandRadius
-     /tmp/ccPKBgdE.s:5240   .bss.Center:00000000 Center
-     /tmp/ccPKBgdE.s:5241   .bss.Center:00000000 $d
-     /tmp/ccPKBgdE.s:5243   .bss.FLQDR:00000000 $d
-     /tmp/ccPKBgdE.s:5247   .bss.FLQDR:00000000 FLQDR
-     /tmp/ccPKBgdE.s:5250   .bss.SurveyRadius:00000000 $d
-     /tmp/ccPKBgdE.s:5254   .bss.SurveyRadius:00000000 SurveyRadius
-     /tmp/ccPKBgdE.s:5260   .bss.AboveLine:00000000 AboveLine
-     /tmp/ccPKBgdE.s:5261   .bss.AboveLine:00000000 $d
-     /tmp/ccPKBgdE.s:5266   .bss.CSurveyStatus:00000000 CSurveyStatus
-     /tmp/ccPKBgdE.s:5267   .bss.CSurveyStatus:00000000 $d
-     /tmp/ccPKBgdE.s:5269   .bss.FLRadius:00000000 $d
-     /tmp/ccPKBgdE.s:5273   .bss.FLRadius:00000000 FLRadius
-     /tmp/ccPKBgdE.s:5276   .bss.ApproachQDR:00000000 $d
-     /tmp/ccPKBgdE.s:5280   .bss.ApproachQDR:00000000 ApproachQDR
+     /tmp/ccFCITx6.s:4011   .text.RotateAndTranslateToWorld:00000000 $a
+     /tmp/ccFCITx6.s:4014   .text.RotateAndTranslateToWorld:00000000 RotateAndTranslateToWorld
+     /tmp/ccFCITx6.s:4088   .text.PolygonSurvey:00000000 $a
+     /tmp/ccFCITx6.s:4091   .text.PolygonSurvey:00000000 PolygonSurvey
+     /tmp/ccFCITx6.s:4717   .text.PolygonSurvey:000008f4 $d
+     /tmp/ccFCITx6.s:4757   .text.FindInterceptOfTwoLines:00000000 $a
+     /tmp/ccFCITx6.s:4760   .text.FindInterceptOfTwoLines:00000000 FindInterceptOfTwoLines
+     /tmp/ccFCITx6.s:4794   .text.EvaluateLineForY:00000000 $a
+     /tmp/ccFCITx6.s:4797   .text.EvaluateLineForY:00000000 EvaluateLineForY
+     /tmp/ccFCITx6.s:4813   .text.EvaluateLineForX:00000000 $a
+     /tmp/ccFCITx6.s:4816   .text.EvaluateLineForX:00000000 EvaluateLineForX
+     /tmp/ccFCITx6.s:4832   .text.DistanceEquation:00000000 $a
+     /tmp/ccFCITx6.s:4835   .text.DistanceEquation:00000000 DistanceEquation
+     /tmp/ccFCITx6.s:4872   .bss.DistanceFromCenter:00000000 $d
+     /tmp/ccFCITx6.s:4876   .bss.DistanceFromCenter:00000000 DistanceFromCenter
+     /tmp/ccFCITx6.s:4879   .bss.EdgeMinY:00000000 $d
+     /tmp/ccFCITx6.s:4883   .bss.EdgeMinY:00000000 EdgeMinY
+     /tmp/ccFCITx6.s:4886   .bss.SurveyTheta:00000000 $d
+     /tmp/ccFCITx6.s:4890   .bss.SurveyTheta:00000000 SurveyTheta
+     /tmp/ccFCITx6.s:4893   .bss.SurveyCircleQdr:00000000 $d
+     /tmp/ccFCITx6.s:4897   .bss.SurveyCircleQdr:00000000 SurveyCircleQdr
+     /tmp/ccFCITx6.s:4900   .bss.FlyFromX:00000000 $d
+     /tmp/ccFCITx6.s:4904   .bss.FlyFromX:00000000 FlyFromX
+     /tmp/ccFCITx6.s:4907   .bss.FlyFromY:00000000 $d
+     /tmp/ccFCITx6.s:4911   .bss.FlyFromY:00000000 FlyFromY
+     /tmp/ccFCITx6.s:4917   .bss.FLBlockCount:00000000 FLBlockCount
+     /tmp/ccFCITx6.s:4918   .bss.FLBlockCount:00000000 $d
+     /tmp/ccFCITx6.s:4920   .bss.LandAppAlt:00000000 $d
+     /tmp/ccFCITx6.s:4924   .bss.LandAppAlt:00000000 LandAppAlt
+     /tmp/ccFCITx6.s:4927   .bss.SurveyCircle:00000000 $d
+     /tmp/ccFCITx6.s:4931   .bss.SurveyCircle:00000000 SurveyCircle
+     /tmp/ccFCITx6.s:4934   .bss.Fly2X:00000000 $d
+     /tmp/ccFCITx6.s:4938   .bss.Fly2X:00000000 Fly2X
+     /tmp/ccFCITx6.s:4941   .bss.Fly2Y:00000000 $d
+     /tmp/ccFCITx6.s:4945   .bss.Fly2Y:00000000 Fly2Y
+     /tmp/ccFCITx6.s:4948   .bss.EntryPoint.3133:00000000 $d
+     /tmp/ccFCITx6.s:4952   .bss.EntryPoint.3133:00000000 EntryPoint.3133
+     /tmp/ccFCITx6.s:4955   .bss.Flowerradius:00000000 $d
+     /tmp/ccFCITx6.s:4959   .bss.Flowerradius:00000000 Flowerradius
+     /tmp/ccFCITx6.s:4965   .bss.SurveySize:00000000 SurveySize
+     /tmp/ccFCITx6.s:4966   .bss.SurveySize:00000000 $d
+     /tmp/ccFCITx6.s:4968   .bss.LandCircle:00000000 $d
+     /tmp/ccFCITx6.s:4972   .bss.LandCircle:00000000 LandCircle
+     /tmp/ccFCITx6.s:4978   .bss.TDWaypoint:00000000 TDWaypoint
+     /tmp/ccFCITx6.s:4979   .bss.TDWaypoint:00000000 $d
+     /tmp/ccFCITx6.s:4984   .bss.line_status:00000000 line_status
+     /tmp/ccFCITx6.s:4985   .bss.line_status:00000000 $d
+     /tmp/ccFCITx6.s:4987   .bss.FLCircle:00000000 $d
+     /tmp/ccFCITx6.s:4991   .bss.FLCircle:00000000 FLCircle
+     /tmp/ccFCITx6.s:4994   .bss.FLFROMWP:00000000 $d
+     /tmp/ccFCITx6.s:4998   .bss.FLFROMWP:00000000 FLFROMWP
+     /tmp/ccFCITx6.s:5001   .bss.EdgeCurrentX:00000000 $d
+     /tmp/ccFCITx6.s:5005   .bss.EdgeCurrentX:00000000 EdgeCurrentX
+     /tmp/ccFCITx6.s:5011   .bss.Edge:00000000 Edge
+     /tmp/ccFCITx6.s:5012   .bss.Edge:00000000 $d
+     /tmp/ccFCITx6.s:5014   .bss.EdgeCurrentY:00000000 $d
+     /tmp/ccFCITx6.s:5018   .bss.EdgeCurrentY:00000000 EdgeCurrentY
+     /tmp/ccFCITx6.s:5021   .bss.BungeeAlt:00000000 $d
+     /tmp/ccFCITx6.s:5025   .bss.BungeeAlt:00000000 BungeeAlt
+     /tmp/ccFCITx6.s:5028   .bss.ThrottleSlope:00000000 $d
+     /tmp/ccFCITx6.s:5032   .bss.ThrottleSlope:00000000 ThrottleSlope
+     /tmp/ccFCITx6.s:5035   .bss.throttlePy:00000000 $d
+     /tmp/ccFCITx6.s:5039   .bss.throttlePy:00000000 throttlePy
+     /tmp/ccFCITx6.s:5042   .bss.Edges:00000000 $d
+     /tmp/ccFCITx6.s:5046   .bss.Edges:00000000 Edges
+     /tmp/ccFCITx6.s:5049   .bss.throttlePx:00000000 $d
+     /tmp/ccFCITx6.s:5053   .bss.throttlePx:00000000 throttlePx
+     /tmp/ccFCITx6.s:5056   .bss.TDistance:00000000 $d
+     /tmp/ccFCITx6.s:5060   .bss.TDistance:00000000 TDistance
+     /tmp/ccFCITx6.s:5063   .bss.FinalLandAltitude:00000000 $d
+     /tmp/ccFCITx6.s:5067   .bss.FinalLandAltitude:00000000 FinalLandAltitude
+     /tmp/ccFCITx6.s:5070   .bss.LandCircleQDR:00000000 $d
+     /tmp/ccFCITx6.s:5074   .bss.LandCircleQDR:00000000 LandCircleQDR
+     /tmp/ccFCITx6.s:5080   .bss.SurveyEntryWP:00000000 SurveyEntryWP
+     /tmp/ccFCITx6.s:5081   .bss.SurveyEntryWP:00000000 $d
+     /tmp/ccFCITx6.s:5083   .bss.CircleX:00000000 $d
+     /tmp/ccFCITx6.s:5087   .bss.CircleX:00000000 CircleX
+     /tmp/ccFCITx6.s:5090   .bss.CircleY:00000000 $d
+     /tmp/ccFCITx6.s:5094   .bss.CircleY:00000000 CircleY
+     /tmp/ccFCITx6.s:5100   .bss.CFLStatus:00000000 CFLStatus
+     /tmp/ccFCITx6.s:5101   .bss.CFLStatus:00000000 $d
+     /tmp/ccFCITx6.s:5106   .bss.BungeeWaypoint:00000000 BungeeWaypoint
+     /tmp/ccFCITx6.s:5107   .bss.BungeeWaypoint:00000000 $d
+     /tmp/ccFCITx6.s:5112   .bss.FinalLandCount:00000000 FinalLandCount
+     /tmp/ccFCITx6.s:5113   .bss.FinalLandCount:00000000 $d
+     /tmp/ccFCITx6.s:5115   .bss.dSweep:00000000 $d
+     /tmp/ccFCITx6.s:5119   .bss.dSweep:00000000 dSweep
+     /tmp/ccFCITx6.s:5122   .bss.LastPoint.3171:00000000 $d
+     /tmp/ccFCITx6.s:5126   .bss.LastPoint.3171:00000000 LastPoint.3171
+     /tmp/ccFCITx6.s:5129   .bss.FlowerTheta:00000000 $d
+     /tmp/ccFCITx6.s:5133   .bss.FlowerTheta:00000000 FlowerTheta
+     /tmp/ccFCITx6.s:5139   .bss.AFWaypoint:00000000 AFWaypoint
+     /tmp/ccFCITx6.s:5140   .bss.AFWaypoint:00000000 $d
+     /tmp/ccFCITx6.s:5142   .bss.TransCurrentX:00000000 $d
+     /tmp/ccFCITx6.s:5146   .bss.TransCurrentX:00000000 TransCurrentX
+     /tmp/ccFCITx6.s:5152   .bss.CLandingStatus:00000000 CLandingStatus
+     /tmp/ccFCITx6.s:5153   .bss.CLandingStatus:00000000 $d
+     /tmp/ccFCITx6.s:5155   .bss.initialx:00000000 $d
+     /tmp/ccFCITx6.s:5159   .bss.initialx:00000000 initialx
+     /tmp/ccFCITx6.s:5162   .bss.initialy:00000000 $d
+     /tmp/ccFCITx6.s:5166   .bss.initialy:00000000 initialy
+     /tmp/ccFCITx6.s:5169   .bss.EdgeMaxY:00000000 $d
+     /tmp/ccFCITx6.s:5173   .bss.EdgeMaxY:00000000 EdgeMaxY
+     /tmp/ccFCITx6.s:5179   .bss.CTakeoffStatus:00000000 CTakeoffStatus
+     /tmp/ccFCITx6.s:5180   .bss.CTakeoffStatus:00000000 $d
+     /tmp/ccFCITx6.s:5182   .bss.TransCurrentY:00000000 $d
+     /tmp/ccFCITx6.s:5186   .bss.TransCurrentY:00000000 TransCurrentY
+     /tmp/ccFCITx6.s:5189   .bss.SmallestCorner:00000000 $d
+     /tmp/ccFCITx6.s:5193   .bss.SmallestCorner:00000000 SmallestCorner
+     /tmp/ccFCITx6.s:5199   .bss.CFlowerStatus:00000000 CFlowerStatus
+     /tmp/ccFCITx6.s:5200   .bss.CFlowerStatus:00000000 $d
+     /tmp/ccFCITx6.s:5202   .bss.SurveyFromWP:00000000 $d
+     /tmp/ccFCITx6.s:5206   .bss.SurveyFromWP:00000000 SurveyFromWP
+     /tmp/ccFCITx6.s:5209   .bss.SurveyToWP:00000000 $d
+     /tmp/ccFCITx6.s:5213   .bss.SurveyToWP:00000000 SurveyToWP
+     /tmp/ccFCITx6.s:5216   .bss.MaxY:00000000 $d
+     /tmp/ccFCITx6.s:5220   .bss.MaxY:00000000 MaxY
+     /tmp/ccFCITx6.s:5223   .bss.FLTOWP:00000000 $d
+     /tmp/ccFCITx6.s:5227   .bss.FLTOWP:00000000 FLTOWP
+     /tmp/ccFCITx6.s:5230   .bss.LandRadius:00000000 $d
+     /tmp/ccFCITx6.s:5234   .bss.LandRadius:00000000 LandRadius
+     /tmp/ccFCITx6.s:5240   .bss.Center:00000000 Center
+     /tmp/ccFCITx6.s:5241   .bss.Center:00000000 $d
+     /tmp/ccFCITx6.s:5243   .bss.FLQDR:00000000 $d
+     /tmp/ccFCITx6.s:5247   .bss.FLQDR:00000000 FLQDR
+     /tmp/ccFCITx6.s:5250   .bss.SurveyRadius:00000000 $d
+     /tmp/ccFCITx6.s:5254   .bss.SurveyRadius:00000000 SurveyRadius
+     /tmp/ccFCITx6.s:5260   .bss.AboveLine:00000000 AboveLine
+     /tmp/ccFCITx6.s:5261   .bss.AboveLine:00000000 $d
+     /tmp/ccFCITx6.s:5266   .bss.CSurveyStatus:00000000 CSurveyStatus
+     /tmp/ccFCITx6.s:5267   .bss.CSurveyStatus:00000000 $d
+     /tmp/ccFCITx6.s:5269   .bss.FLRadius:00000000 $d
+     /tmp/ccFCITx6.s:5273   .bss.FLRadius:00000000 FLRadius
+     /tmp/ccFCITx6.s:5276   .bss.ApproachQDR:00000000 $d
+     /tmp/ccFCITx6.s:5280   .bss.ApproachQDR:00000000 ApproachQDR
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

@@ -1224,19 +1224,19 @@
  1232              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 poly_survey_adv.c
-     /tmp/cc67UViB.s:20     .text.intercept_two_lines:00000000 $a
-     /tmp/cc67UViB.s:22     .text.intercept_two_lines:00000000 intercept_two_lines
-     /tmp/cc67UViB.s:134    .text.get_two_intersects.constprop.0:00000000 $a
-     /tmp/cc67UViB.s:136    .text.get_two_intersects.constprop.0:00000000 get_two_intersects.constprop.0
-     /tmp/cc67UViB.s:269    .text.get_two_intersects.constprop.0:000001d8 $d
+     /tmp/ccjThQy4.s:20     .text.intercept_two_lines:00000000 $a
+     /tmp/ccjThQy4.s:22     .text.intercept_two_lines:00000000 intercept_two_lines
+     /tmp/ccjThQy4.s:134    .text.get_two_intersects.constprop.0:00000000 $a
+     /tmp/ccjThQy4.s:136    .text.get_two_intersects.constprop.0:00000000 get_two_intersects.constprop.0
+     /tmp/ccjThQy4.s:269    .text.get_two_intersects.constprop.0:000001d8 $d
                             *COM*:00000001 poly_count
                             *COM*:00000001 poly_first
                             *COM*:00000008 seg_start
                             *COM*:00000008 seg_end
                             *COM*:00000008 dir_vec
-     /tmp/cc67UViB.s:285    .text.init_poly_survey_adv:00000000 $a
-     /tmp/cc67UViB.s:288    .text.init_poly_survey_adv:00000000 init_poly_survey_adv
-     /tmp/cc67UViB.s:668    .text.init_poly_survey_adv:000005a0 $d
+     /tmp/ccjThQy4.s:285    .text.init_poly_survey_adv:00000000 $a
+     /tmp/ccjThQy4.s:288    .text.init_poly_survey_adv:00000000 init_poly_survey_adv
+     /tmp/ccjThQy4.s:668    .text.init_poly_survey_adv:000005a0 $d
                             *COM*:00000004 psa_sweep_width
                             *COM*:00000004 psa_min_rad
                             *COM*:00000004 psa_shot_dist
@@ -1247,9 +1247,9 @@ DEFINED SYMBOLS
                             *COM*:00000008 sweep_vec
                             *COM*:00000001 psa_stage
                             *COM*:00000008 entry_center
-     /tmp/cc67UViB.s:704    .text.poly_survey_adv:00000000 $a
-     /tmp/cc67UViB.s:707    .text.poly_survey_adv:00000000 poly_survey_adv
-     /tmp/cc67UViB.s:1180   .text.poly_survey_adv:000006e0 $d
+     /tmp/ccjThQy4.s:704    .text.poly_survey_adv:00000000 $a
+     /tmp/ccjThQy4.s:707    .text.poly_survey_adv:00000000 poly_survey_adv
+     /tmp/ccjThQy4.s:1180   .text.poly_survey_adv:000006e0 $d
                             *COM*:00000008 seg_center1
                             *COM*:00000008 ret_start
                             *COM*:00000008 ret_end

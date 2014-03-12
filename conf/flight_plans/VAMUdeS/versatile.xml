@@ -20,7 +20,7 @@
   <exceptions/>
   <blocks>
     <block name="Wait GPS">
-      <set value="1" var="kill_throttle"/>
+      <set value="0" var="kill_throttle"/> <!-- value à 1-->
       <while cond="!GpsFixValid()"/>
     </block>
     

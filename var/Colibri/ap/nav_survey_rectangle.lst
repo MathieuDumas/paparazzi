@@ -962,18 +962,18 @@
  966              		.set	.LANCHOR0,. + 0
  969              	survey_orientation:
  970 0000 00       		.space	1
- 971              		.section	.bss.survey_to,"aw",%nobits
+ 971              		.section	.bss.survey_radius.2200,"aw",%nobits
  972              		.align	2
- 973              		.set	.LANCHOR1,. + 0
- 976              	survey_to:
- 977 0000 00000000 		.space	12
- 977      00000000 
- 977      00000000 
- 978              		.section	.bss.survey_radius.2203,"aw",%nobits
+ 973              		.set	.LANCHOR4,. + 0
+ 976              	survey_radius.2200:
+ 977 0000 00000000 		.space	4
+ 978              		.section	.bss.survey_to,"aw",%nobits
  979              		.align	2
- 980              		.set	.LANCHOR4,. + 0
- 983              	survey_radius.2203:
- 984 0000 00000000 		.space	4
+ 980              		.set	.LANCHOR1,. + 0
+ 983              	survey_to:
+ 984 0000 00000000 		.space	12
+ 984      00000000 
+ 984      00000000 
  985              		.section	.bss.survey_uturn,"aw",%nobits
  986              		.set	.LANCHOR3,. + 0
  989              	survey_uturn:
@@ -981,22 +981,22 @@
  991              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav_survey_rectangle.c
-     /tmp/cc47GYyi.s:22     .text.nav_survey_rectangle_init:00000000 $a
-     /tmp/cc47GYyi.s:25     .text.nav_survey_rectangle_init:00000000 nav_survey_rectangle_init
-     /tmp/cc47GYyi.s:280    .text.nav_survey_rectangle_init:000003a4 $d
-     /tmp/cc47GYyi.s:305    .text.nav_survey_rectangle:00000000 $a
-     /tmp/cc47GYyi.s:308    .text.nav_survey_rectangle:00000000 nav_survey_rectangle
-     /tmp/cc47GYyi.s:926    .text.nav_survey_rectangle:000008f0 $d
-     /tmp/cc47GYyi.s:959    .bss.survey_from:00000000 $d
-     /tmp/cc47GYyi.s:963    .bss.survey_from:00000000 survey_from
-     /tmp/cc47GYyi.s:969    .bss.survey_orientation:00000000 survey_orientation
-     /tmp/cc47GYyi.s:970    .bss.survey_orientation:00000000 $d
-     /tmp/cc47GYyi.s:972    .bss.survey_to:00000000 $d
-     /tmp/cc47GYyi.s:976    .bss.survey_to:00000000 survey_to
-     /tmp/cc47GYyi.s:979    .bss.survey_radius.2203:00000000 $d
-     /tmp/cc47GYyi.s:983    .bss.survey_radius.2203:00000000 survey_radius.2203
-     /tmp/cc47GYyi.s:989    .bss.survey_uturn:00000000 survey_uturn
-     /tmp/cc47GYyi.s:990    .bss.survey_uturn:00000000 $d
+     /tmp/ccr3SxvH.s:22     .text.nav_survey_rectangle_init:00000000 $a
+     /tmp/ccr3SxvH.s:25     .text.nav_survey_rectangle_init:00000000 nav_survey_rectangle_init
+     /tmp/ccr3SxvH.s:280    .text.nav_survey_rectangle_init:000003a4 $d
+     /tmp/ccr3SxvH.s:305    .text.nav_survey_rectangle:00000000 $a
+     /tmp/ccr3SxvH.s:308    .text.nav_survey_rectangle:00000000 nav_survey_rectangle
+     /tmp/ccr3SxvH.s:926    .text.nav_survey_rectangle:000008f0 $d
+     /tmp/ccr3SxvH.s:959    .bss.survey_from:00000000 $d
+     /tmp/ccr3SxvH.s:963    .bss.survey_from:00000000 survey_from
+     /tmp/ccr3SxvH.s:969    .bss.survey_orientation:00000000 survey_orientation
+     /tmp/ccr3SxvH.s:970    .bss.survey_orientation:00000000 $d
+     /tmp/ccr3SxvH.s:972    .bss.survey_radius.2200:00000000 $d
+     /tmp/ccr3SxvH.s:976    .bss.survey_radius.2200:00000000 survey_radius.2200
+     /tmp/ccr3SxvH.s:979    .bss.survey_to:00000000 $d
+     /tmp/ccr3SxvH.s:983    .bss.survey_to:00000000 survey_to
+     /tmp/ccr3SxvH.s:989    .bss.survey_uturn:00000000 survey_uturn
+     /tmp/ccr3SxvH.s:990    .bss.survey_uturn:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fcmplt
