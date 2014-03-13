@@ -981,22 +981,22 @@
  991              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav_survey_rectangle.c
-     /tmp/cc1YjInC.s:22     .text.nav_survey_rectangle_init:00000000 $a
-     /tmp/cc1YjInC.s:25     .text.nav_survey_rectangle_init:00000000 nav_survey_rectangle_init
-     /tmp/cc1YjInC.s:280    .text.nav_survey_rectangle_init:000003a4 $d
-     /tmp/cc1YjInC.s:305    .text.nav_survey_rectangle:00000000 $a
-     /tmp/cc1YjInC.s:308    .text.nav_survey_rectangle:00000000 nav_survey_rectangle
-     /tmp/cc1YjInC.s:926    .text.nav_survey_rectangle:000008f0 $d
-     /tmp/cc1YjInC.s:959    .bss.survey_from:00000000 $d
-     /tmp/cc1YjInC.s:963    .bss.survey_from:00000000 survey_from
-     /tmp/cc1YjInC.s:969    .bss.survey_orientation:00000000 survey_orientation
-     /tmp/cc1YjInC.s:970    .bss.survey_orientation:00000000 $d
-     /tmp/cc1YjInC.s:972    .bss.survey_radius.2200:00000000 $d
-     /tmp/cc1YjInC.s:976    .bss.survey_radius.2200:00000000 survey_radius.2200
-     /tmp/cc1YjInC.s:979    .bss.survey_to:00000000 $d
-     /tmp/cc1YjInC.s:983    .bss.survey_to:00000000 survey_to
-     /tmp/cc1YjInC.s:989    .bss.survey_uturn:00000000 survey_uturn
-     /tmp/cc1YjInC.s:990    .bss.survey_uturn:00000000 $d
+     /tmp/ccMLCLJV.s:22     .text.nav_survey_rectangle_init:00000000 $a
+     /tmp/ccMLCLJV.s:25     .text.nav_survey_rectangle_init:00000000 nav_survey_rectangle_init
+     /tmp/ccMLCLJV.s:280    .text.nav_survey_rectangle_init:000003a4 $d
+     /tmp/ccMLCLJV.s:305    .text.nav_survey_rectangle:00000000 $a
+     /tmp/ccMLCLJV.s:308    .text.nav_survey_rectangle:00000000 nav_survey_rectangle
+     /tmp/ccMLCLJV.s:926    .text.nav_survey_rectangle:000008f0 $d
+     /tmp/ccMLCLJV.s:959    .bss.survey_from:00000000 $d
+     /tmp/ccMLCLJV.s:963    .bss.survey_from:00000000 survey_from
+     /tmp/ccMLCLJV.s:969    .bss.survey_orientation:00000000 survey_orientation
+     /tmp/ccMLCLJV.s:970    .bss.survey_orientation:00000000 $d
+     /tmp/ccMLCLJV.s:972    .bss.survey_radius.2200:00000000 $d
+     /tmp/ccMLCLJV.s:976    .bss.survey_radius.2200:00000000 survey_radius.2200
+     /tmp/ccMLCLJV.s:979    .bss.survey_to:00000000 $d
+     /tmp/ccMLCLJV.s:983    .bss.survey_to:00000000 survey_to
+     /tmp/ccMLCLJV.s:989    .bss.survey_uturn:00000000 survey_uturn
+     /tmp/ccMLCLJV.s:990    .bss.survey_uturn:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fcmplt

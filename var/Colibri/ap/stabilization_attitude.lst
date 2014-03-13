@@ -729,9 +729,9 @@
  749              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 stabilization_attitude.c
-     /tmp/cc51QZen.s:13     .text.h_ctl_init:00000000 $a
-     /tmp/cc51QZen.s:16     .text.h_ctl_init:00000000 h_ctl_init
-     /tmp/cc51QZen.s:75     .text.h_ctl_init:000000cc $d
+     /tmp/ccxbgigk.s:13     .text.h_ctl_init:00000000 $a
+     /tmp/ccxbgigk.s:16     .text.h_ctl_init:00000000 h_ctl_init
+     /tmp/ccxbgigk.s:75     .text.h_ctl_init:000000cc $d
                             *COM*:00000004 h_ctl_course_setpoint
                             *COM*:00000004 h_ctl_course_pre_bank
                             *COM*:00000004 h_ctl_course_pre_bank_correction
@@ -751,28 +751,28 @@ DEFINED SYMBOLS
                             *COM*:00000004 h_ctl_roll_slew
                             *COM*:00000004 h_ctl_roll_attitude_gain
                             *COM*:00000004 h_ctl_roll_rate_gain
-     /tmp/cc51QZen.s:119    .text.h_ctl_course_loop:00000000 $a
-     /tmp/cc51QZen.s:122    .text.h_ctl_course_loop:00000000 h_ctl_course_loop
-     /tmp/cc51QZen.s:400    .text.h_ctl_course_loop:000003f4 $d
-     /tmp/cc51QZen.s:433    .text.h_ctl_attitude_loop:00000000 $a
-     /tmp/cc51QZen.s:436    .text.h_ctl_attitude_loop:00000000 h_ctl_attitude_loop
-     /tmp/cc51QZen.s:648    .text.h_ctl_attitude_loop:0000031c $d
-     /tmp/cc51QZen.s:714    .data.v_ctl_auto_throttle_dash_trim:00000000 v_ctl_auto_throttle_dash_trim
-     /tmp/cc51QZen.s:740    .data.v_ctl_auto_throttle_loiter_trim:00000000 v_ctl_auto_throttle_loiter_trim
+     /tmp/ccxbgigk.s:119    .text.h_ctl_course_loop:00000000 $a
+     /tmp/ccxbgigk.s:122    .text.h_ctl_course_loop:00000000 h_ctl_course_loop
+     /tmp/ccxbgigk.s:400    .text.h_ctl_course_loop:000003f4 $d
+     /tmp/ccxbgigk.s:433    .text.h_ctl_attitude_loop:00000000 $a
+     /tmp/ccxbgigk.s:436    .text.h_ctl_attitude_loop:00000000 h_ctl_attitude_loop
+     /tmp/ccxbgigk.s:648    .text.h_ctl_attitude_loop:0000031c $d
+     /tmp/ccxbgigk.s:714    .data.v_ctl_auto_throttle_dash_trim:00000000 v_ctl_auto_throttle_dash_trim
+     /tmp/ccxbgigk.s:740    .data.v_ctl_auto_throttle_loiter_trim:00000000 v_ctl_auto_throttle_loiter_trim
                             *COM*:00000004 h_ctl_roll_pgain
                             *COM*:00000001 h_ctl_auto1_rate
-     /tmp/cc51QZen.s:733    .bss.route_ap_time:00000000 route_ap_time
-     /tmp/cc51QZen.s:703    .bss.last_elevator_trim.3022:00000000 $d
-     /tmp/cc51QZen.s:707    .bss.last_elevator_trim.3022:00000000 last_elevator_trim.3022
-     /tmp/cc51QZen.s:710    .data.v_ctl_auto_throttle_dash_trim:00000000 $d
-     /tmp/cc51QZen.s:717    .bss.last_err.3031:00000000 $d
-     /tmp/cc51QZen.s:721    .bss.last_err.3031:00000000 last_err.3031
-     /tmp/cc51QZen.s:724    .bss.last_err.2990:00000000 $d
-     /tmp/cc51QZen.s:728    .bss.last_err.2990:00000000 last_err.2990
-     /tmp/cc51QZen.s:734    .bss.route_ap_time:00000000 $d
-     /tmp/cc51QZen.s:736    .data.v_ctl_auto_throttle_loiter_trim:00000000 $d
-     /tmp/cc51QZen.s:743    .bss.nav_ratio:00000000 $d
-     /tmp/cc51QZen.s:747    .bss.nav_ratio:00000000 nav_ratio
+     /tmp/ccxbgigk.s:733    .bss.route_ap_time:00000000 route_ap_time
+     /tmp/ccxbgigk.s:703    .bss.last_elevator_trim.3022:00000000 $d
+     /tmp/ccxbgigk.s:707    .bss.last_elevator_trim.3022:00000000 last_elevator_trim.3022
+     /tmp/ccxbgigk.s:710    .data.v_ctl_auto_throttle_dash_trim:00000000 $d
+     /tmp/ccxbgigk.s:717    .bss.last_err.3031:00000000 $d
+     /tmp/ccxbgigk.s:721    .bss.last_err.3031:00000000 last_err.3031
+     /tmp/ccxbgigk.s:724    .bss.last_err.2990:00000000 $d
+     /tmp/ccxbgigk.s:728    .bss.last_err.2990:00000000 last_err.2990
+     /tmp/ccxbgigk.s:734    .bss.route_ap_time:00000000 $d
+     /tmp/ccxbgigk.s:736    .data.v_ctl_auto_throttle_loiter_trim:00000000 $d
+     /tmp/ccxbgigk.s:743    .bss.nav_ratio:00000000 $d
+     /tmp/ccxbgigk.s:747    .bss.nav_ratio:00000000 nav_ratio
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

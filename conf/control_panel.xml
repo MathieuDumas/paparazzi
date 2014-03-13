@@ -64,7 +64,6 @@
         <arg flag="-s" constant="57600"/>
       </program>
       <program name="Server"/>
-      <program name="GCS"/>
     </session>
     <session name="Flight USB-XBee-API@57600">
       <program name="Data Link">
@@ -93,6 +92,11 @@
       </program>
       <program name="Server"/>
       <program name="GCS"/>
+      <program name="Joystick">
+        <arg flag="-ac" constant="Colibri"/>
+        <arg flag="-d" constant="/dev/input/js1"/>
+        <arg flag="arpvec.xml"/>
+      </program>
     </session>
   </section>
 </control_panel>

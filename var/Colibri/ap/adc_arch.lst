@@ -227,23 +227,23 @@
  237              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 adc_arch.c
-     /tmp/ccCkBVC4.s:13     .text.adcISR0:00000000 $a
-     /tmp/ccCkBVC4.s:16     .text.adcISR0:00000000 adcISR0
-     /tmp/ccCkBVC4.s:66     .text.adcISR0:00000094 $d
-     /tmp/ccCkBVC4.s:71     .text.adcISR1:00000000 $a
-     /tmp/ccCkBVC4.s:74     .text.adcISR1:00000000 adcISR1
-     /tmp/ccCkBVC4.s:125    .text.adcISR1:00000098 $d
-     /tmp/ccCkBVC4.s:130    .text.adc_buf_channel:00000000 $a
-     /tmp/ccCkBVC4.s:133    .text.adc_buf_channel:00000000 adc_buf_channel
-     /tmp/ccCkBVC4.s:145    .text.adc_buf_channel:00000010 $d
-     /tmp/ccCkBVC4.s:148    .text.adc_init:00000000 $a
-     /tmp/ccCkBVC4.s:151    .text.adc_init:00000000 adc_init
-     /tmp/ccCkBVC4.s:193    .text.adc_init:00000088 $d
-     /tmp/ccCkBVC4.s:228    .data.adc1_val:00000000 adc1_val
-     /tmp/ccCkBVC4.s:214    .data.adc0_val:00000000 adc0_val
-     /tmp/ccCkBVC4.s:203    .bss.buffers:00000000 $d
-     /tmp/ccCkBVC4.s:207    .bss.buffers:00000000 buffers
-     /tmp/ccCkBVC4.s:210    .data.adc0_val:00000000 $d
-     /tmp/ccCkBVC4.s:224    .data.adc1_val:00000000 $d
+     /tmp/cc034MY7.s:13     .text.adcISR0:00000000 $a
+     /tmp/cc034MY7.s:16     .text.adcISR0:00000000 adcISR0
+     /tmp/cc034MY7.s:66     .text.adcISR0:00000094 $d
+     /tmp/cc034MY7.s:71     .text.adcISR1:00000000 $a
+     /tmp/cc034MY7.s:74     .text.adcISR1:00000000 adcISR1
+     /tmp/cc034MY7.s:125    .text.adcISR1:00000098 $d
+     /tmp/cc034MY7.s:130    .text.adc_buf_channel:00000000 $a
+     /tmp/cc034MY7.s:133    .text.adc_buf_channel:00000000 adc_buf_channel
+     /tmp/cc034MY7.s:145    .text.adc_buf_channel:00000010 $d
+     /tmp/cc034MY7.s:148    .text.adc_init:00000000 $a
+     /tmp/cc034MY7.s:151    .text.adc_init:00000000 adc_init
+     /tmp/cc034MY7.s:193    .text.adc_init:00000088 $d
+     /tmp/cc034MY7.s:228    .data.adc1_val:00000000 adc1_val
+     /tmp/cc034MY7.s:214    .data.adc0_val:00000000 adc0_val
+     /tmp/cc034MY7.s:203    .bss.buffers:00000000 $d
+     /tmp/cc034MY7.s:207    .bss.buffers:00000000 buffers
+     /tmp/cc034MY7.s:210    .data.adc0_val:00000000 $d
+     /tmp/cc034MY7.s:224    .data.adc1_val:00000000 $d
 
 NO UNDEFINED SYMBOLS

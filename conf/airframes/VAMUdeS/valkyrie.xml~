@@ -85,8 +85,8 @@
 
     <servos>
       <servo name="THROTTLE" no="0" min="930" neutral="1000" max="2000"/> <!-- Min = low throttle, Max = High throttle -->
-      <servo name="AILERON_LEFT" no="1" min="2000" neutral="1500" max="1000"/> <!-- Min = , Max = -->
-      <servo name="AILERON_RIGHT" no="2" min="2000" neutral="1500" max="1000"/> <!-- Min = , Max = -->
+      <servo name="AILERON_LEFT" no="1" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
+      <servo name="AILERON_RIGHT" no="2" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
       <servo name="RUDDER" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
       <servo name="FLAPS" no="5" min="1230" neutral="1230" max="2000"/> <!-- Min = , Max = -->
       <servo name="GYRO_G" no="6" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
@@ -104,9 +104,9 @@
 
     <commands>
       <axis name="THROTTLE" failsafe_value="0"/>
-      <!--><axis name="FLAPS" failsafe_value="0"/><-->
+      <!--> <axis name="FLAPS" failsafe_value="0"/> <-->
       <axis name="PITCH" failsafe_value="0"/>
-      <axis name="YAW" failsafe_value="0"/>
+      <axis name="YAW" failsafe_value="0"/> <!-- Concerne le moteur sur la version Proto1 -->
       <axis name="ROLL" failsafe_value="0"/>
       <axis name="GYRO_GAIN" failsafe_value="0"/>
     </commands>
@@ -131,8 +131,8 @@
       <set servo="ELEVATOR" value="@PITCH"/>
       <set servo="RUDDER" value="@YAW"/>
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
-      <set servo="AILERON_LEFT" value="@ROLL"/>
-      <set servo="AILERON_RIGHT" value="@PITCH"/>
+      <!--> <set servo="AILERON_LEFT" value="@PITCH"/> <-->
+      <set servo="AILERON_RIGHT" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
       <set servo="THROTTLE" value="@THROTTLE"/>
     </command_laws>
 
@@ -175,7 +175,7 @@
   ##########################-->
 
     <section name="AUTO1" prefix="AUTO1_">
-      <define name="MAX_ROLL" value="0.785"/>
+      <define name="MAX_ROLL" value="0.8"/>
       <define name="MAX_PITCH" value="0.785"/>
     </section>
 

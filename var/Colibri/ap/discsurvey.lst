@@ -472,22 +472,22 @@
  480              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 discsurvey.c
-     /tmp/cctkbPIi.s:13     .text.disc_survey_init:00000000 $a
-     /tmp/cctkbPIi.s:16     .text.disc_survey_init:00000000 disc_survey_init
-     /tmp/cctkbPIi.s:41     .text.disc_survey_init:00000044 $d
-     /tmp/cctkbPIi.s:61     .text.disc_survey:00000000 $a
-     /tmp/cctkbPIi.s:64     .text.disc_survey:00000000 disc_survey
-     /tmp/cctkbPIi.s:419    .text.disc_survey:00000530 $d
-     /tmp/cctkbPIi.s:448    .bss.c1:00000000 $d
-     /tmp/cctkbPIi.s:452    .bss.c1:00000000 c1
-     /tmp/cctkbPIi.s:455    .bss.c2:00000000 $d
-     /tmp/cctkbPIi.s:459    .bss.c2:00000000 c2
-     /tmp/cctkbPIi.s:462    .bss.c:00000000 $d
-     /tmp/cctkbPIi.s:466    .bss.c:00000000 c
-     /tmp/cctkbPIi.s:472    .bss.sign:00000000 sign
-     /tmp/cctkbPIi.s:473    .bss.sign:00000000 $d
-     /tmp/cctkbPIi.s:478    .bss.status:00000000 status
-     /tmp/cctkbPIi.s:479    .bss.status:00000000 $d
+     /tmp/ccMUGB1b.s:13     .text.disc_survey_init:00000000 $a
+     /tmp/ccMUGB1b.s:16     .text.disc_survey_init:00000000 disc_survey_init
+     /tmp/ccMUGB1b.s:41     .text.disc_survey_init:00000044 $d
+     /tmp/ccMUGB1b.s:61     .text.disc_survey:00000000 $a
+     /tmp/ccMUGB1b.s:64     .text.disc_survey:00000000 disc_survey
+     /tmp/ccMUGB1b.s:419    .text.disc_survey:00000530 $d
+     /tmp/ccMUGB1b.s:448    .bss.c1:00000000 $d
+     /tmp/ccMUGB1b.s:452    .bss.c1:00000000 c1
+     /tmp/ccMUGB1b.s:455    .bss.c2:00000000 $d
+     /tmp/ccMUGB1b.s:459    .bss.c2:00000000 c2
+     /tmp/ccMUGB1b.s:462    .bss.c:00000000 $d
+     /tmp/ccMUGB1b.s:466    .bss.c:00000000 c
+     /tmp/ccMUGB1b.s:472    .bss.sign:00000000 sign
+     /tmp/ccMUGB1b.s:473    .bss.sign:00000000 $d
+     /tmp/ccMUGB1b.s:478    .bss.status:00000000 status
+     /tmp/ccMUGB1b.s:479    .bss.status:00000000 $d
 
 UNDEFINED SYMBOLS
 nav_survey_shift

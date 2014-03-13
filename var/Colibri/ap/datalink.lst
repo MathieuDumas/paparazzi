@@ -1375,16 +1375,16 @@
  1377              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 datalink.c
-     /tmp/ccl4DJv5.s:28     .text.dl_parse_msg:00000000 $a
-     /tmp/ccl4DJv5.s:31     .text.dl_parse_msg:00000000 dl_parse_msg
-     /tmp/ccl4DJv5.s:823    .text.dl_parse_msg:00000c28 $d
-     /tmp/ccl4DJv5.s:855    .text.dl_parse_msg:00000ca4 $a
-     /tmp/ccl4DJv5.s:1037   .text.dl_parse_msg:00000ed8 $d
-     /tmp/ccl4DJv5.s:1069   .text.dl_parse_msg:00000f54 $a
-     /tmp/ccl4DJv5.s:1134   .text.dl_parse_msg:00000ffc $d
+     /tmp/cc6FWtGA.s:28     .text.dl_parse_msg:00000000 $a
+     /tmp/cc6FWtGA.s:31     .text.dl_parse_msg:00000000 dl_parse_msg
+     /tmp/cc6FWtGA.s:823    .text.dl_parse_msg:00000c28 $d
+     /tmp/cc6FWtGA.s:855    .text.dl_parse_msg:00000ca4 $a
+     /tmp/cc6FWtGA.s:1037   .text.dl_parse_msg:00000ed8 $d
+     /tmp/cc6FWtGA.s:1069   .text.dl_parse_msg:00000f54 $a
+     /tmp/cc6FWtGA.s:1134   .text.dl_parse_msg:00000ffc $d
                             *COM*:00000080 dl_buffer
                             *COM*:00000002 datalink_time
-     /tmp/ccl4DJv5.s:1209   .text.dl_parse_msg:00001124 $a
+     /tmp/cc6FWtGA.s:1209   .text.dl_parse_msg:00001124 $a
                             *COM*:00000001 dl_msg_available
 
 UNDEFINED SYMBOLS

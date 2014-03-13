@@ -11825,8 +11825,8 @@
  11840 06a0 00000000 		.word	horizontal_mode
  11841 06a4 00000000 		.word	downlink_nb_ovrn
  11842 06a8 00001646 		.word	1175846912
- 11843 06ac CDCCCCCC 		.word	-858993459
- 11844 06b0 CCCCEC3F 		.word	1072483532
+ 11843 06ac 9A999999 		.word	-1717986918
+ 11844 06b0 9999E93F 		.word	1072273817
  11845 06b4 00000000 		.word	h_ctl_roll_setpoint
  11846 06b8 1F85EB51 		.word	1374389535
  11847 06bc B81EE93F 		.word	1072242360
@@ -12106,10 +12106,10 @@
  12238 0000 0000     		.space	2
  12239              		.section	.rodata.str1.1,"aMS",%progbits,1
  12240              	.LC0:
- 12241 0000 3734A911 		.ascii	"74\251\021\377nG\257\335\033\300\3450 ]Z\000"
- 12241      FF6E47AF 
- 12241      DD1BC0E5 
- 12241      30205D5A 
+ 12241 0000 F7DE5284 		.ascii	"\367\336R\204\331\015\213{7\375B\255\370\351L\223\000"
+ 12241      D90D8B7B 
+ 12241      37FD42AD 
+ 12241      F8E94C93 
  12241      00
  12242              		.section	.bss.i63.4183,"aw",%nobits
  12243              		.set	.LANCHOR25,. + 0
@@ -12123,9 +12123,9 @@
  12255              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 main_ap.c
-     /tmp/ccRG5Fmp.s:13     .text.init_ap:00000000 $a
-     /tmp/ccRG5Fmp.s:16     .text.init_ap:00000000 init_ap
-     /tmp/ccRG5Fmp.s:76     .text.init_ap:000000d4 $d
+     /tmp/ccI3mYnm.s:13     .text.init_ap:00000000 $a
+     /tmp/ccI3mYnm.s:16     .text.init_ap:00000000 init_ap
+     /tmp/ccI3mYnm.s:76     .text.init_ap:000000d4 $d
                             *COM*:00000001 combi_switch_status
                             *COM*:00000004 combi_switch_value
                             *COM*:00000001 sensors_tid
@@ -12135,161 +12135,161 @@ DEFINED SYMBOLS
                             *COM*:00000001 telemetry_tid
                             *COM*:00000001 monitor_tid
                             *COM*:00000001 power_switch
-     /tmp/ccRG5Fmp.s:101    .text.reporting_task:00000000 $a
-     /tmp/ccRG5Fmp.s:104    .text.reporting_task:00000000 reporting_task
-     /tmp/ccRG5Fmp.s:1114   .text.reporting_task:00000f80 $d
-     /tmp/ccRG5Fmp.s:1181   .text.reporting_task:00001088 $a
-     /tmp/ccRG5Fmp.s:2840   .text.reporting_task:00002a34 $d
-     /tmp/ccRG5Fmp.s:2872   .text.reporting_task:00002ab0 $a
-     /tmp/ccRG5Fmp.s:3248   .text.reporting_task:00002fe8 $d
+     /tmp/ccI3mYnm.s:101    .text.reporting_task:00000000 $a
+     /tmp/ccI3mYnm.s:104    .text.reporting_task:00000000 reporting_task
+     /tmp/ccI3mYnm.s:1114   .text.reporting_task:00000f80 $d
+     /tmp/ccI3mYnm.s:1181   .text.reporting_task:00001088 $a
+     /tmp/ccI3mYnm.s:2840   .text.reporting_task:00002a34 $d
+     /tmp/ccI3mYnm.s:2872   .text.reporting_task:00002ab0 $a
+     /tmp/ccI3mYnm.s:3248   .text.reporting_task:00002fe8 $d
                             *COM*:00000004 energy
                             *COM*:00000002 vsupply
-     /tmp/ccRG5Fmp.s:3336   .text.reporting_task:00003144 $a
-     /tmp/ccRG5Fmp.s:5302   .text.reporting_task:00004f90 $d
-     /tmp/ccRG5Fmp.s:5392   .text.reporting_task:000050f4 $a
-     /tmp/ccRG5Fmp.s:5780   .text.reporting_task:000056ec $d
-     /tmp/ccRG5Fmp.s:5812   .text.reporting_task:00005768 $a
-     /tmp/ccRG5Fmp.s:7483   .text.reporting_task:000070b4 $d
-     /tmp/ccRG5Fmp.s:7551   .text.reporting_task:000071c0 $a
-     /tmp/ccRG5Fmp.s:9576   .text.reporting_task:000090e8 $d
-     /tmp/ccRG5Fmp.s:9636   .text.reporting_task:000091d4 $a
-     /tmp/ccRG5Fmp.s:10608  .text.navigation_task:00000000 $a
-     /tmp/ccRG5Fmp.s:10611  .text.navigation_task:00000000 navigation_task
-     /tmp/ccRG5Fmp.s:10930  .text.navigation_task:000004c4 $d
-     /tmp/ccRG5Fmp.s:10956  .text.attitude_loop:00000000 $a
-     /tmp/ccRG5Fmp.s:10959  .text.attitude_loop:00000000 attitude_loop
-     /tmp/ccRG5Fmp.s:11070  .text.attitude_loop:00000180 $d
-     /tmp/ccRG5Fmp.s:11094  .text.sensors_task:00000000 $a
-     /tmp/ccRG5Fmp.s:11097  .text.sensors_task:00000000 sensors_task
-     /tmp/ccRG5Fmp.s:11106  .text.monitor_task:00000000 $a
-     /tmp/ccRG5Fmp.s:11109  .text.monitor_task:00000000 monitor_task
-     /tmp/ccRG5Fmp.s:11248  .text.monitor_task:00000204 $d
-     /tmp/ccRG5Fmp.s:11268  .text.handle_periodic_tasks_ap:00000000 $a
-     /tmp/ccRG5Fmp.s:11271  .text.handle_periodic_tasks_ap:00000000 handle_periodic_tasks_ap
-     /tmp/ccRG5Fmp.s:11360  .text.handle_periodic_tasks_ap:00000134 $d
-     /tmp/ccRG5Fmp.s:11372  .text.event_task_ap:00000000 $a
-     /tmp/ccRG5Fmp.s:11375  .text.event_task_ap:00000000 event_task_ap
-     /tmp/ccRG5Fmp.s:11456  .text.event_task_ap:00000114 $d
-     /tmp/ccRG5Fmp.s:11462  .text.event_task_ap:00000128 $a
-     /tmp/ccRG5Fmp.s:11820  .text.event_task_ap:00000650 $d
-     /tmp/ccRG5Fmp.s:12192  .bss.gps_lost:00000000 gps_lost
-     /tmp/ccRG5Fmp.s:11964  .bss.launch:00000000 launch
-     /tmp/ccRG5Fmp.s:12116  .bss.kill_throttle:00000000 kill_throttle
-     /tmp/ccRG5Fmp.s:11982  .bss.lateral_mode:00000000 lateral_mode
-     /tmp/ccRG5Fmp.s:11988  .data.pprz_mode:00000000 pprz_mode
-     /tmp/ccRG5Fmp.s:11875  .bss.mcu1_ppm_cpt:00000000 mcu1_ppm_cpt
-     /tmp/ccRG5Fmp.s:11876  .bss.mcu1_ppm_cpt:00000000 $d
-     /tmp/ccRG5Fmp.s:11881  .bss.i180.4189:00000000 i180.4189
-     /tmp/ccRG5Fmp.s:11882  .bss.i180.4189:00000000 $d
-     /tmp/ccRG5Fmp.s:11887  .bss.i66.3844:00000000 i66.3844
-     /tmp/ccRG5Fmp.s:11888  .bss.i66.3844:00000000 $d
-     /tmp/ccRG5Fmp.s:11890  .bss.i324.4513:00000000 $d
-     /tmp/ccRG5Fmp.s:11894  .bss.i324.4513:00000000 i324.4513
-     /tmp/ccRG5Fmp.s:11897  .bss.i342.4515:00000000 $d
-     /tmp/ccRG5Fmp.s:11901  .bss.i342.4515:00000000 i342.4515
-     /tmp/ccRG5Fmp.s:11907  .bss.t.4706:00000000 t.4706
-     /tmp/ccRG5Fmp.s:11908  .bss.t.4706:00000000 $d
-     /tmp/ccRG5Fmp.s:11913  .bss.i90.3846:00000000 i90.3846
-     /tmp/ccRG5Fmp.s:11914  .bss.i90.3846:00000000 $d
-     /tmp/ccRG5Fmp.s:11919  .bss.i63.3843:00000000 i63.3843
-     /tmp/ccRG5Fmp.s:11920  .bss.i63.3843:00000000 $d
-     /tmp/ccRG5Fmp.s:11922  .bss.last.4604:00000000 $d
-     /tmp/ccRG5Fmp.s:11926  .bss.last.4604:00000000 last.4604
-     /tmp/ccRG5Fmp.s:11932  .bss.i.4268:00000000 i.4268
-     /tmp/ccRG5Fmp.s:11933  .bss.i.4268:00000000 $d
-     /tmp/ccRG5Fmp.s:11938  .bss.i60.3842:00000000 i60.3842
-     /tmp/ccRG5Fmp.s:11939  .bss.i60.3842:00000000 $d
-     /tmp/ccRG5Fmp.s:11944  .bss.i.4286:00000000 i.4286
-     /tmp/ccRG5Fmp.s:11945  .bss.i.4286:00000000 $d
-     /tmp/ccRG5Fmp.s:11947  .bss.i312.4196:00000000 $d
-     /tmp/ccRG5Fmp.s:11951  .bss.i312.4196:00000000 i312.4196
-     /tmp/ccRG5Fmp.s:11954  .bss.i318.4512:00000000 $d
-     /tmp/ccRG5Fmp.s:11958  .bss.i318.4512:00000000 i318.4512
-     /tmp/ccRG5Fmp.s:11965  .bss.launch:00000000 $d
-     /tmp/ccRG5Fmp.s:11970  .bss.i192.4191:00000000 i192.4191
-     /tmp/ccRG5Fmp.s:11971  .bss.i192.4191:00000000 $d
-     /tmp/ccRG5Fmp.s:11976  .bss.i.4525:00000000 i.4525
-     /tmp/ccRG5Fmp.s:11977  .bss.i.4525:00000000 $d
-     /tmp/ccRG5Fmp.s:11983  .bss.lateral_mode:00000000 $d
-     /tmp/ccRG5Fmp.s:11994  .bss.i90.4187:00000000 i90.4187
-     /tmp/ccRG5Fmp.s:11995  .bss.i90.4187:00000000 $d
-     /tmp/ccRG5Fmp.s:12000  .bss.i.4199:00000000 i.4199
-     /tmp/ccRG5Fmp.s:12001  .bss.i.4199:00000000 $d
-     /tmp/ccRG5Fmp.s:12006  .bss.mcu1_status:00000000 mcu1_status
-     /tmp/ccRG5Fmp.s:12007  .bss.mcu1_status:00000000 $d
-     /tmp/ccRG5Fmp.s:12009  .bss.i300.4194:00000000 $d
-     /tmp/ccRG5Fmp.s:12013  .bss.i300.4194:00000000 i300.4194
-     /tmp/ccRG5Fmp.s:12019  .bss.i183.4190:00000000 i183.4190
-     /tmp/ccRG5Fmp.s:12020  .bss.i183.4190:00000000 $d
-     /tmp/ccRG5Fmp.s:12025  .bss.i.3853:00000000 i.3853
-     /tmp/ccRG5Fmp.s:12026  .bss.i.3853:00000000 $d
-     /tmp/ccRG5Fmp.s:12031  .bss.i126.4188:00000000 i126.4188
-     /tmp/ccRG5Fmp.s:12032  .bss.i126.4188:00000000 $d
-     /tmp/ccRG5Fmp.s:12034  .bss.i306.4511:00000000 $d
-     /tmp/ccRG5Fmp.s:12038  .bss.i306.4511:00000000 i306.4511
-     /tmp/ccRG5Fmp.s:12041  .bss.i540.4197:00000000 $d
-     /tmp/ccRG5Fmp.s:12045  .bss.i540.4197:00000000 i540.4197
-     /tmp/ccRG5Fmp.s:12048  .bss.i300.3850:00000000 $d
-     /tmp/ccRG5Fmp.s:12052  .bss.i300.3850:00000000 i300.3850
-     /tmp/ccRG5Fmp.s:12055  .bss.i306.3851:00000000 $d
-     /tmp/ccRG5Fmp.s:12059  .bss.i306.3851:00000000 i306.3851
-     /tmp/ccRG5Fmp.s:12065  .data.boot.3836:00000000 boot.3836
-     /tmp/ccRG5Fmp.s:12068  .bss.i540.3852:00000000 $d
-     /tmp/ccRG5Fmp.s:12072  .bss.i540.3852:00000000 i540.3852
-     /tmp/ccRG5Fmp.s:12075  .bss.last.4165:00000000 $d
-     /tmp/ccRG5Fmp.s:12079  .bss.last.4165:00000000 last.4165
-     /tmp/ccRG5Fmp.s:12085  .bss.i126.3848:00000000 i126.3848
-     /tmp/ccRG5Fmp.s:12086  .bss.i126.3848:00000000 $d
-     /tmp/ccRG5Fmp.s:12091  .bss.i84.4186:00000000 i84.4186
-     /tmp/ccRG5Fmp.s:12092  .bss.i84.4186:00000000 $d
-     /tmp/ccRG5Fmp.s:12094  .bss.last.4481:00000000 $d
-     /tmp/ccRG5Fmp.s:12098  .bss.last.4481:00000000 last.4481
-     /tmp/ccRG5Fmp.s:12104  .bss.i.4050:00000000 i.4050
-     /tmp/ccRG5Fmp.s:12105  .bss.i.4050:00000000 $d
-     /tmp/ccRG5Fmp.s:12110  .bss.i78.4185:00000000 i78.4185
-     /tmp/ccRG5Fmp.s:12111  .bss.i78.4185:00000000 $d
-     /tmp/ccRG5Fmp.s:12117  .bss.kill_throttle:00000000 $d
-     /tmp/ccRG5Fmp.s:12122  .bss.i1.3608:00000000 i1.3608
-     /tmp/ccRG5Fmp.s:12123  .bss.i1.3608:00000000 $d
-     /tmp/ccRG5Fmp.s:12128  .bss.i120.3847:00000000 i120.3847
-     /tmp/ccRG5Fmp.s:12129  .bss.i120.3847:00000000 $d
-     /tmp/ccRG5Fmp.s:12134  .bss.i.3915:00000000 i.3915
-     /tmp/ccRG5Fmp.s:12135  .bss.i.3915:00000000 $d
-     /tmp/ccRG5Fmp.s:12140  .bss.i30.3841:00000000 i30.3841
-     /tmp/ccRG5Fmp.s:12141  .bss.i30.3841:00000000 $d
-     /tmp/ccRG5Fmp.s:12143  .bss.i606.4517:00000000 $d
-     /tmp/ccRG5Fmp.s:12147  .bss.i606.4517:00000000 i606.4517
-     /tmp/ccRG5Fmp.s:12150  .bss.i612.4518:00000000 $d
-     /tmp/ccRG5Fmp.s:12154  .bss.i612.4518:00000000 i612.4518
-     /tmp/ccRG5Fmp.s:12157  .bss.i606.4198:00000000 $d
-     /tmp/ccRG5Fmp.s:12161  .bss.i606.4198:00000000 i606.4198
-     /tmp/ccRG5Fmp.s:12164  .bss.i300.4510:00000000 $d
-     /tmp/ccRG5Fmp.s:12168  .bss.i300.4510:00000000 i300.4510
-     /tmp/ccRG5Fmp.s:12174  .bss.i150.3849:00000000 i150.3849
-     /tmp/ccRG5Fmp.s:12175  .bss.i150.3849:00000000 $d
-     /tmp/ccRG5Fmp.s:12180  .bss.i72.3845:00000000 i72.3845
-     /tmp/ccRG5Fmp.s:12181  .bss.i72.3845:00000000 $d
-     /tmp/ccRG5Fmp.s:12183  .bss.current:00000000 $d
-     /tmp/ccRG5Fmp.s:12187  .bss.current:00000000 current
-     /tmp/ccRG5Fmp.s:12193  .bss.gps_lost:00000000 $d
-     /tmp/ccRG5Fmp.s:12198  .bss.i243.4193:00000000 i243.4193
-     /tmp/ccRG5Fmp.s:12199  .bss.i243.4193:00000000 $d
-     /tmp/ccRG5Fmp.s:12201  .bss.i420.4516:00000000 $d
-     /tmp/ccRG5Fmp.s:12205  .bss.i420.4516:00000000 i420.4516
-     /tmp/ccRG5Fmp.s:12211  .bss.i6.3840:00000000 i6.3840
-     /tmp/ccRG5Fmp.s:12212  .bss.i6.3840:00000000 $d
-     /tmp/ccRG5Fmp.s:12214  .rodata.version:00000000 $d
-     /tmp/ccRG5Fmp.s:12218  .rodata.version:00000000 version
-     /tmp/ccRG5Fmp.s:12224  .bss.i66.4184:00000000 i66.4184
-     /tmp/ccRG5Fmp.s:12225  .bss.i66.4184:00000000 $d
-     /tmp/ccRG5Fmp.s:12230  .bss.i240.4192:00000000 i240.4192
-     /tmp/ccRG5Fmp.s:12231  .bss.i240.4192:00000000 $d
-     /tmp/ccRG5Fmp.s:12233  .bss.i330.4514:00000000 $d
-     /tmp/ccRG5Fmp.s:12237  .bss.i330.4514:00000000 i330.4514
-     /tmp/ccRG5Fmp.s:12246  .bss.i63.4183:00000000 i63.4183
-     /tmp/ccRG5Fmp.s:12247  .bss.i63.4183:00000000 $d
-     /tmp/ccRG5Fmp.s:12249  .bss.i306.4195:00000000 $d
-     /tmp/ccRG5Fmp.s:12253  .bss.i306.4195:00000000 i306.4195
+     /tmp/ccI3mYnm.s:3336   .text.reporting_task:00003144 $a
+     /tmp/ccI3mYnm.s:5302   .text.reporting_task:00004f90 $d
+     /tmp/ccI3mYnm.s:5392   .text.reporting_task:000050f4 $a
+     /tmp/ccI3mYnm.s:5780   .text.reporting_task:000056ec $d
+     /tmp/ccI3mYnm.s:5812   .text.reporting_task:00005768 $a
+     /tmp/ccI3mYnm.s:7483   .text.reporting_task:000070b4 $d
+     /tmp/ccI3mYnm.s:7551   .text.reporting_task:000071c0 $a
+     /tmp/ccI3mYnm.s:9576   .text.reporting_task:000090e8 $d
+     /tmp/ccI3mYnm.s:9636   .text.reporting_task:000091d4 $a
+     /tmp/ccI3mYnm.s:10608  .text.navigation_task:00000000 $a
+     /tmp/ccI3mYnm.s:10611  .text.navigation_task:00000000 navigation_task
+     /tmp/ccI3mYnm.s:10930  .text.navigation_task:000004c4 $d
+     /tmp/ccI3mYnm.s:10956  .text.attitude_loop:00000000 $a
+     /tmp/ccI3mYnm.s:10959  .text.attitude_loop:00000000 attitude_loop
+     /tmp/ccI3mYnm.s:11070  .text.attitude_loop:00000180 $d
+     /tmp/ccI3mYnm.s:11094  .text.sensors_task:00000000 $a
+     /tmp/ccI3mYnm.s:11097  .text.sensors_task:00000000 sensors_task
+     /tmp/ccI3mYnm.s:11106  .text.monitor_task:00000000 $a
+     /tmp/ccI3mYnm.s:11109  .text.monitor_task:00000000 monitor_task
+     /tmp/ccI3mYnm.s:11248  .text.monitor_task:00000204 $d
+     /tmp/ccI3mYnm.s:11268  .text.handle_periodic_tasks_ap:00000000 $a
+     /tmp/ccI3mYnm.s:11271  .text.handle_periodic_tasks_ap:00000000 handle_periodic_tasks_ap
+     /tmp/ccI3mYnm.s:11360  .text.handle_periodic_tasks_ap:00000134 $d
+     /tmp/ccI3mYnm.s:11372  .text.event_task_ap:00000000 $a
+     /tmp/ccI3mYnm.s:11375  .text.event_task_ap:00000000 event_task_ap
+     /tmp/ccI3mYnm.s:11456  .text.event_task_ap:00000114 $d
+     /tmp/ccI3mYnm.s:11462  .text.event_task_ap:00000128 $a
+     /tmp/ccI3mYnm.s:11820  .text.event_task_ap:00000650 $d
+     /tmp/ccI3mYnm.s:12192  .bss.gps_lost:00000000 gps_lost
+     /tmp/ccI3mYnm.s:11964  .bss.launch:00000000 launch
+     /tmp/ccI3mYnm.s:12116  .bss.kill_throttle:00000000 kill_throttle
+     /tmp/ccI3mYnm.s:11982  .bss.lateral_mode:00000000 lateral_mode
+     /tmp/ccI3mYnm.s:11988  .data.pprz_mode:00000000 pprz_mode
+     /tmp/ccI3mYnm.s:11875  .bss.mcu1_ppm_cpt:00000000 mcu1_ppm_cpt
+     /tmp/ccI3mYnm.s:11876  .bss.mcu1_ppm_cpt:00000000 $d
+     /tmp/ccI3mYnm.s:11881  .bss.i180.4189:00000000 i180.4189
+     /tmp/ccI3mYnm.s:11882  .bss.i180.4189:00000000 $d
+     /tmp/ccI3mYnm.s:11887  .bss.i66.3844:00000000 i66.3844
+     /tmp/ccI3mYnm.s:11888  .bss.i66.3844:00000000 $d
+     /tmp/ccI3mYnm.s:11890  .bss.i324.4513:00000000 $d
+     /tmp/ccI3mYnm.s:11894  .bss.i324.4513:00000000 i324.4513
+     /tmp/ccI3mYnm.s:11897  .bss.i342.4515:00000000 $d
+     /tmp/ccI3mYnm.s:11901  .bss.i342.4515:00000000 i342.4515
+     /tmp/ccI3mYnm.s:11907  .bss.t.4706:00000000 t.4706
+     /tmp/ccI3mYnm.s:11908  .bss.t.4706:00000000 $d
+     /tmp/ccI3mYnm.s:11913  .bss.i90.3846:00000000 i90.3846
+     /tmp/ccI3mYnm.s:11914  .bss.i90.3846:00000000 $d
+     /tmp/ccI3mYnm.s:11919  .bss.i63.3843:00000000 i63.3843
+     /tmp/ccI3mYnm.s:11920  .bss.i63.3843:00000000 $d
+     /tmp/ccI3mYnm.s:11922  .bss.last.4604:00000000 $d
+     /tmp/ccI3mYnm.s:11926  .bss.last.4604:00000000 last.4604
+     /tmp/ccI3mYnm.s:11932  .bss.i.4268:00000000 i.4268
+     /tmp/ccI3mYnm.s:11933  .bss.i.4268:00000000 $d
+     /tmp/ccI3mYnm.s:11938  .bss.i60.3842:00000000 i60.3842
+     /tmp/ccI3mYnm.s:11939  .bss.i60.3842:00000000 $d
+     /tmp/ccI3mYnm.s:11944  .bss.i.4286:00000000 i.4286
+     /tmp/ccI3mYnm.s:11945  .bss.i.4286:00000000 $d
+     /tmp/ccI3mYnm.s:11947  .bss.i312.4196:00000000 $d
+     /tmp/ccI3mYnm.s:11951  .bss.i312.4196:00000000 i312.4196
+     /tmp/ccI3mYnm.s:11954  .bss.i318.4512:00000000 $d
+     /tmp/ccI3mYnm.s:11958  .bss.i318.4512:00000000 i318.4512
+     /tmp/ccI3mYnm.s:11965  .bss.launch:00000000 $d
+     /tmp/ccI3mYnm.s:11970  .bss.i192.4191:00000000 i192.4191
+     /tmp/ccI3mYnm.s:11971  .bss.i192.4191:00000000 $d
+     /tmp/ccI3mYnm.s:11976  .bss.i.4525:00000000 i.4525
+     /tmp/ccI3mYnm.s:11977  .bss.i.4525:00000000 $d
+     /tmp/ccI3mYnm.s:11983  .bss.lateral_mode:00000000 $d
+     /tmp/ccI3mYnm.s:11994  .bss.i90.4187:00000000 i90.4187
+     /tmp/ccI3mYnm.s:11995  .bss.i90.4187:00000000 $d
+     /tmp/ccI3mYnm.s:12000  .bss.i.4199:00000000 i.4199
+     /tmp/ccI3mYnm.s:12001  .bss.i.4199:00000000 $d
+     /tmp/ccI3mYnm.s:12006  .bss.mcu1_status:00000000 mcu1_status
+     /tmp/ccI3mYnm.s:12007  .bss.mcu1_status:00000000 $d
+     /tmp/ccI3mYnm.s:12009  .bss.i300.4194:00000000 $d
+     /tmp/ccI3mYnm.s:12013  .bss.i300.4194:00000000 i300.4194
+     /tmp/ccI3mYnm.s:12019  .bss.i183.4190:00000000 i183.4190
+     /tmp/ccI3mYnm.s:12020  .bss.i183.4190:00000000 $d
+     /tmp/ccI3mYnm.s:12025  .bss.i.3853:00000000 i.3853
+     /tmp/ccI3mYnm.s:12026  .bss.i.3853:00000000 $d
+     /tmp/ccI3mYnm.s:12031  .bss.i126.4188:00000000 i126.4188
+     /tmp/ccI3mYnm.s:12032  .bss.i126.4188:00000000 $d
+     /tmp/ccI3mYnm.s:12034  .bss.i306.4511:00000000 $d
+     /tmp/ccI3mYnm.s:12038  .bss.i306.4511:00000000 i306.4511
+     /tmp/ccI3mYnm.s:12041  .bss.i540.4197:00000000 $d
+     /tmp/ccI3mYnm.s:12045  .bss.i540.4197:00000000 i540.4197
+     /tmp/ccI3mYnm.s:12048  .bss.i300.3850:00000000 $d
+     /tmp/ccI3mYnm.s:12052  .bss.i300.3850:00000000 i300.3850
+     /tmp/ccI3mYnm.s:12055  .bss.i306.3851:00000000 $d
+     /tmp/ccI3mYnm.s:12059  .bss.i306.3851:00000000 i306.3851
+     /tmp/ccI3mYnm.s:12065  .data.boot.3836:00000000 boot.3836
+     /tmp/ccI3mYnm.s:12068  .bss.i540.3852:00000000 $d
+     /tmp/ccI3mYnm.s:12072  .bss.i540.3852:00000000 i540.3852
+     /tmp/ccI3mYnm.s:12075  .bss.last.4165:00000000 $d
+     /tmp/ccI3mYnm.s:12079  .bss.last.4165:00000000 last.4165
+     /tmp/ccI3mYnm.s:12085  .bss.i126.3848:00000000 i126.3848
+     /tmp/ccI3mYnm.s:12086  .bss.i126.3848:00000000 $d
+     /tmp/ccI3mYnm.s:12091  .bss.i84.4186:00000000 i84.4186
+     /tmp/ccI3mYnm.s:12092  .bss.i84.4186:00000000 $d
+     /tmp/ccI3mYnm.s:12094  .bss.last.4481:00000000 $d
+     /tmp/ccI3mYnm.s:12098  .bss.last.4481:00000000 last.4481
+     /tmp/ccI3mYnm.s:12104  .bss.i.4050:00000000 i.4050
+     /tmp/ccI3mYnm.s:12105  .bss.i.4050:00000000 $d
+     /tmp/ccI3mYnm.s:12110  .bss.i78.4185:00000000 i78.4185
+     /tmp/ccI3mYnm.s:12111  .bss.i78.4185:00000000 $d
+     /tmp/ccI3mYnm.s:12117  .bss.kill_throttle:00000000 $d
+     /tmp/ccI3mYnm.s:12122  .bss.i1.3608:00000000 i1.3608
+     /tmp/ccI3mYnm.s:12123  .bss.i1.3608:00000000 $d
+     /tmp/ccI3mYnm.s:12128  .bss.i120.3847:00000000 i120.3847
+     /tmp/ccI3mYnm.s:12129  .bss.i120.3847:00000000 $d
+     /tmp/ccI3mYnm.s:12134  .bss.i.3915:00000000 i.3915
+     /tmp/ccI3mYnm.s:12135  .bss.i.3915:00000000 $d
+     /tmp/ccI3mYnm.s:12140  .bss.i30.3841:00000000 i30.3841
+     /tmp/ccI3mYnm.s:12141  .bss.i30.3841:00000000 $d
+     /tmp/ccI3mYnm.s:12143  .bss.i606.4517:00000000 $d
+     /tmp/ccI3mYnm.s:12147  .bss.i606.4517:00000000 i606.4517
+     /tmp/ccI3mYnm.s:12150  .bss.i612.4518:00000000 $d
+     /tmp/ccI3mYnm.s:12154  .bss.i612.4518:00000000 i612.4518
+     /tmp/ccI3mYnm.s:12157  .bss.i606.4198:00000000 $d
+     /tmp/ccI3mYnm.s:12161  .bss.i606.4198:00000000 i606.4198
+     /tmp/ccI3mYnm.s:12164  .bss.i300.4510:00000000 $d
+     /tmp/ccI3mYnm.s:12168  .bss.i300.4510:00000000 i300.4510
+     /tmp/ccI3mYnm.s:12174  .bss.i150.3849:00000000 i150.3849
+     /tmp/ccI3mYnm.s:12175  .bss.i150.3849:00000000 $d
+     /tmp/ccI3mYnm.s:12180  .bss.i72.3845:00000000 i72.3845
+     /tmp/ccI3mYnm.s:12181  .bss.i72.3845:00000000 $d
+     /tmp/ccI3mYnm.s:12183  .bss.current:00000000 $d
+     /tmp/ccI3mYnm.s:12187  .bss.current:00000000 current
+     /tmp/ccI3mYnm.s:12193  .bss.gps_lost:00000000 $d
+     /tmp/ccI3mYnm.s:12198  .bss.i243.4193:00000000 i243.4193
+     /tmp/ccI3mYnm.s:12199  .bss.i243.4193:00000000 $d
+     /tmp/ccI3mYnm.s:12201  .bss.i420.4516:00000000 $d
+     /tmp/ccI3mYnm.s:12205  .bss.i420.4516:00000000 i420.4516
+     /tmp/ccI3mYnm.s:12211  .bss.i6.3840:00000000 i6.3840
+     /tmp/ccI3mYnm.s:12212  .bss.i6.3840:00000000 $d
+     /tmp/ccI3mYnm.s:12214  .rodata.version:00000000 $d
+     /tmp/ccI3mYnm.s:12218  .rodata.version:00000000 version
+     /tmp/ccI3mYnm.s:12224  .bss.i66.4184:00000000 i66.4184
+     /tmp/ccI3mYnm.s:12225  .bss.i66.4184:00000000 $d
+     /tmp/ccI3mYnm.s:12230  .bss.i240.4192:00000000 i240.4192
+     /tmp/ccI3mYnm.s:12231  .bss.i240.4192:00000000 $d
+     /tmp/ccI3mYnm.s:12233  .bss.i330.4514:00000000 $d
+     /tmp/ccI3mYnm.s:12237  .bss.i330.4514:00000000 i330.4514
+     /tmp/ccI3mYnm.s:12246  .bss.i63.4183:00000000 i63.4183
+     /tmp/ccI3mYnm.s:12247  .bss.i63.4183:00000000 $d
+     /tmp/ccI3mYnm.s:12249  .bss.i306.4195:00000000 $d
+     /tmp/ccI3mYnm.s:12253  .bss.i306.4195:00000000 i306.4195
 
 UNDEFINED SYMBOLS
 gps_init

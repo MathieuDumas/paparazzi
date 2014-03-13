@@ -16,7 +16,7 @@
   18              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 fbw_downlink.c
-     /tmp/ccyLWy5n.s:16     .bss.telemetry_mode_Fbw:00000000 telemetry_mode_Fbw
-     /tmp/ccyLWy5n.s:17     .bss.telemetry_mode_Fbw:00000000 $d
+     /tmp/ccVpJZ2j.s:16     .bss.telemetry_mode_Fbw:00000000 telemetry_mode_Fbw
+     /tmp/ccVpJZ2j.s:17     .bss.telemetry_mode_Fbw:00000000 $d
 
 NO UNDEFINED SYMBOLS
