@@ -131,7 +131,7 @@
       <set servo="ELEVATOR" value="@PITCH"/>
       <set servo="RUDDER" value="@YAW"/>
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
-      <!--> <set servo="AILERON_LEFT" value="@PITCH"/> <-->
+      <!--> <set servo="AILERON_LEFT" value="@ROLL"/> <-->
       <set servo="AILERON_RIGHT" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
       <set servo="THROTTLE" value="@THROTTLE"/>
     </command_laws>
@@ -333,4 +333,9 @@
       <define name="DEFAULT_CIRCLE_RADIUS" value="100" unit="m"/>
     </section>
 
+	  <load name="servo_switch.xml">
+	    <define name="SERVO_SWITCH_ON_VALUE"  value="1500"/>
+	    <define name="SERVO_SWITCH_OFF_VALUE" value="1500"/>
+	    <define name="SERVO_SWITCH_SERVO"     value="SERVO_SWITCH"/>
+	  </load>
 </airframe>

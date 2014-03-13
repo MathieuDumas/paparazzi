@@ -472,22 +472,22 @@
  480              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 discsurvey.c
-     /tmp/ccMUGB1b.s:13     .text.disc_survey_init:00000000 $a
-     /tmp/ccMUGB1b.s:16     .text.disc_survey_init:00000000 disc_survey_init
-     /tmp/ccMUGB1b.s:41     .text.disc_survey_init:00000044 $d
-     /tmp/ccMUGB1b.s:61     .text.disc_survey:00000000 $a
-     /tmp/ccMUGB1b.s:64     .text.disc_survey:00000000 disc_survey
-     /tmp/ccMUGB1b.s:419    .text.disc_survey:00000530 $d
-     /tmp/ccMUGB1b.s:448    .bss.c1:00000000 $d
-     /tmp/ccMUGB1b.s:452    .bss.c1:00000000 c1
-     /tmp/ccMUGB1b.s:455    .bss.c2:00000000 $d
-     /tmp/ccMUGB1b.s:459    .bss.c2:00000000 c2
-     /tmp/ccMUGB1b.s:462    .bss.c:00000000 $d
-     /tmp/ccMUGB1b.s:466    .bss.c:00000000 c
-     /tmp/ccMUGB1b.s:472    .bss.sign:00000000 sign
-     /tmp/ccMUGB1b.s:473    .bss.sign:00000000 $d
-     /tmp/ccMUGB1b.s:478    .bss.status:00000000 status
-     /tmp/ccMUGB1b.s:479    .bss.status:00000000 $d
+     /tmp/ccRvhUf3.s:13     .text.disc_survey_init:00000000 $a
+     /tmp/ccRvhUf3.s:16     .text.disc_survey_init:00000000 disc_survey_init
+     /tmp/ccRvhUf3.s:41     .text.disc_survey_init:00000044 $d
+     /tmp/ccRvhUf3.s:61     .text.disc_survey:00000000 $a
+     /tmp/ccRvhUf3.s:64     .text.disc_survey:00000000 disc_survey
+     /tmp/ccRvhUf3.s:419    .text.disc_survey:00000530 $d
+     /tmp/ccRvhUf3.s:448    .bss.c1:00000000 $d
+     /tmp/ccRvhUf3.s:452    .bss.c1:00000000 c1
+     /tmp/ccRvhUf3.s:455    .bss.c2:00000000 $d
+     /tmp/ccRvhUf3.s:459    .bss.c2:00000000 c2
+     /tmp/ccRvhUf3.s:462    .bss.c:00000000 $d
+     /tmp/ccRvhUf3.s:466    .bss.c:00000000 c
+     /tmp/ccRvhUf3.s:472    .bss.sign:00000000 sign
+     /tmp/ccRvhUf3.s:473    .bss.sign:00000000 $d
+     /tmp/ccRvhUf3.s:478    .bss.status:00000000 status
+     /tmp/ccRvhUf3.s:479    .bss.status:00000000 $d
 
 UNDEFINED SYMBOLS
 nav_survey_shift

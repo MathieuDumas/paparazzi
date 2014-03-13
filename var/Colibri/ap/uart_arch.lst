@@ -344,32 +344,32 @@
  362              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 uart_arch.c
-     /tmp/ccK7zCp2.s:13     .text.uart_disable_interrupts:00000000 $a
-     /tmp/ccK7zCp2.s:15     .text.uart_disable_interrupts:00000000 uart_disable_interrupts
-     /tmp/ccK7zCp2.s:30     .text.uart_set_baudrate:00000000 $a
-     /tmp/ccK7zCp2.s:32     .text.uart_set_baudrate:00000000 uart_set_baudrate
-     /tmp/ccK7zCp2.s:56     .text.uart_ISR:00000000 $a
-     /tmp/ccK7zCp2.s:58     .text.uart_ISR:00000000 uart_ISR
-     /tmp/ccK7zCp2.s:75     .text.uart_ISR:00000028 $d
-     /tmp/ccK7zCp2.s:87     .text.uart_ISR:00000054 $a
-     /tmp/ccK7zCp2.s:138    .text.uart_ISR:000000f8 $d
-     /tmp/ccK7zCp2.s:141    .text.uart0_ISR:00000000 $a
-     /tmp/ccK7zCp2.s:144    .text.uart0_ISR:00000000 uart0_ISR
-     /tmp/ccK7zCp2.s:168    .text.uart0_ISR:00000030 $d
-     /tmp/ccK7zCp2.s:171    .text.uart1_ISR:00000000 $a
-     /tmp/ccK7zCp2.s:174    .text.uart1_ISR:00000000 uart1_ISR
-     /tmp/ccK7zCp2.s:198    .text.uart1_ISR:00000030 $d
-     /tmp/ccK7zCp2.s:201    .text.uart_periph_set_baudrate:00000000 $a
-     /tmp/ccK7zCp2.s:204    .text.uart_periph_set_baudrate:00000000 uart_periph_set_baudrate
-     /tmp/ccK7zCp2.s:222    .text.uart_transmit:00000000 $a
-     /tmp/ccK7zCp2.s:225    .text.uart_transmit:00000000 uart_transmit
-     /tmp/ccK7zCp2.s:268    .text.uart_transmit:0000008c $d
-     /tmp/ccK7zCp2.s:271    .text.uart0_init:00000000 $a
-     /tmp/ccK7zCp2.s:274    .text.uart0_init:00000000 uart0_init
-     /tmp/ccK7zCp2.s:312    .text.uart0_init:0000007c $d
-     /tmp/ccK7zCp2.s:317    .text.uart1_init:00000000 $a
-     /tmp/ccK7zCp2.s:320    .text.uart1_init:00000000 uart1_init
-     /tmp/ccK7zCp2.s:358    .text.uart1_init:0000007c $d
+     /tmp/ccbcHBVR.s:13     .text.uart_disable_interrupts:00000000 $a
+     /tmp/ccbcHBVR.s:15     .text.uart_disable_interrupts:00000000 uart_disable_interrupts
+     /tmp/ccbcHBVR.s:30     .text.uart_set_baudrate:00000000 $a
+     /tmp/ccbcHBVR.s:32     .text.uart_set_baudrate:00000000 uart_set_baudrate
+     /tmp/ccbcHBVR.s:56     .text.uart_ISR:00000000 $a
+     /tmp/ccbcHBVR.s:58     .text.uart_ISR:00000000 uart_ISR
+     /tmp/ccbcHBVR.s:75     .text.uart_ISR:00000028 $d
+     /tmp/ccbcHBVR.s:87     .text.uart_ISR:00000054 $a
+     /tmp/ccbcHBVR.s:138    .text.uart_ISR:000000f8 $d
+     /tmp/ccbcHBVR.s:141    .text.uart0_ISR:00000000 $a
+     /tmp/ccbcHBVR.s:144    .text.uart0_ISR:00000000 uart0_ISR
+     /tmp/ccbcHBVR.s:168    .text.uart0_ISR:00000030 $d
+     /tmp/ccbcHBVR.s:171    .text.uart1_ISR:00000000 $a
+     /tmp/ccbcHBVR.s:174    .text.uart1_ISR:00000000 uart1_ISR
+     /tmp/ccbcHBVR.s:198    .text.uart1_ISR:00000030 $d
+     /tmp/ccbcHBVR.s:201    .text.uart_periph_set_baudrate:00000000 $a
+     /tmp/ccbcHBVR.s:204    .text.uart_periph_set_baudrate:00000000 uart_periph_set_baudrate
+     /tmp/ccbcHBVR.s:222    .text.uart_transmit:00000000 $a
+     /tmp/ccbcHBVR.s:225    .text.uart_transmit:00000000 uart_transmit
+     /tmp/ccbcHBVR.s:268    .text.uart_transmit:0000008c $d
+     /tmp/ccbcHBVR.s:271    .text.uart0_init:00000000 $a
+     /tmp/ccbcHBVR.s:274    .text.uart0_init:00000000 uart0_init
+     /tmp/ccbcHBVR.s:312    .text.uart0_init:0000007c $d
+     /tmp/ccbcHBVR.s:317    .text.uart1_init:00000000 $a
+     /tmp/ccbcHBVR.s:320    .text.uart1_init:00000000 uart1_init
+     /tmp/ccbcHBVR.s:358    .text.uart1_init:0000007c $d
 
 UNDEFINED SYMBOLS
 uart0

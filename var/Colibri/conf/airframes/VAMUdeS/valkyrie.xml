@@ -131,7 +131,7 @@
       <set servo="ELEVATOR" value="@PITCH"/>
       <set servo="RUDDER" value="@YAW"/>
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
-      <!--> <set servo="AILERON_LEFT" value="@PITCH"/> <-->
+      <!--> <set servo="AILERON_LEFT" value="@ROLL"/> <-->
       <set servo="AILERON_RIGHT" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
       <set servo="THROTTLE" value="@THROTTLE"/>
     </command_laws>

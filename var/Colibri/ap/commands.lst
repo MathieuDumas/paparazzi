@@ -30,12 +30,12 @@
   34              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 commands.c
-     /tmp/ccG7EPYg.s:26     .rodata.commands_failsafe:00000000 commands_failsafe
+     /tmp/cc7dUhG2.s:26     .rodata.commands_failsafe:00000000 commands_failsafe
                             *COM*:0000000a commands
-     /tmp/ccG7EPYg.s:32     .bss.command_pitch_trim:00000000 command_pitch_trim
-     /tmp/ccG7EPYg.s:20     .bss.command_roll_trim:00000000 command_roll_trim
-     /tmp/ccG7EPYg.s:17     .bss.command_roll_trim:00000000 $d
-     /tmp/ccG7EPYg.s:23     .rodata.commands_failsafe:00000000 $d
-     /tmp/ccG7EPYg.s:29     .bss.command_pitch_trim:00000000 $d
+     /tmp/cc7dUhG2.s:32     .bss.command_pitch_trim:00000000 command_pitch_trim
+     /tmp/cc7dUhG2.s:20     .bss.command_roll_trim:00000000 command_roll_trim
+     /tmp/cc7dUhG2.s:17     .bss.command_roll_trim:00000000 $d
+     /tmp/cc7dUhG2.s:23     .rodata.commands_failsafe:00000000 $d
+     /tmp/cc7dUhG2.s:29     .bss.command_pitch_trim:00000000 $d
 
 NO UNDEFINED SYMBOLS

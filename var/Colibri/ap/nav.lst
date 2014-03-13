@@ -3001,144 +3001,144 @@
  3073              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav.c
-     /tmp/ccRFQ5Bu.s:15     .text.nav_set_altitude:00000000 $a
-     /tmp/ccRFQ5Bu.s:17     .text.nav_set_altitude:00000000 nav_set_altitude
-     /tmp/ccRFQ5Bu.s:43     .text.nav_set_altitude:0000004c $d
+     /tmp/ccpj8usn.s:15     .text.nav_set_altitude:00000000 $a
+     /tmp/ccpj8usn.s:17     .text.nav_set_altitude:00000000 nav_set_altitude
+     /tmp/ccpj8usn.s:43     .text.nav_set_altitude:0000004c $d
                             *COM*:00000004 flight_altitude
-     /tmp/ccRFQ5Bu.s:49     .text.nav_init_stage:00000000 $a
-     /tmp/ccRFQ5Bu.s:52     .text.nav_init_stage:00000000 nav_init_stage
-     /tmp/ccRFQ5Bu.s:83     .text.nav_init_stage:0000005c $d
+     /tmp/ccpj8usn.s:49     .text.nav_init_stage:00000000 $a
+     /tmp/ccpj8usn.s:52     .text.nav_init_stage:00000000 nav_init_stage
+     /tmp/ccpj8usn.s:83     .text.nav_init_stage:0000005c $d
                             *COM*:00000004 last_x
                             *COM*:00000004 last_y
                             *COM*:00000004 nav_circle_radians
                             *COM*:00000004 nav_shift
                             *COM*:00000004 nav_pitch
-     /tmp/ccRFQ5Bu.s:98     .text.nav_approaching_xy:00000000 $a
-     /tmp/ccRFQ5Bu.s:101    .text.nav_approaching_xy:00000000 nav_approaching_xy
-     /tmp/ccRFQ5Bu.s:170    .text.nav_approaching_xy:000000f4 $d
+     /tmp/ccpj8usn.s:98     .text.nav_approaching_xy:00000000 $a
+     /tmp/ccpj8usn.s:101    .text.nav_approaching_xy:00000000 nav_approaching_xy
+     /tmp/ccpj8usn.s:170    .text.nav_approaching_xy:000000f4 $d
                             *COM*:00000004 dist2_to_wp
-     /tmp/ccRFQ5Bu.s:183    .text.fly_to_xy:00000000 $a
-     /tmp/ccRFQ5Bu.s:186    .text.fly_to_xy:00000000 fly_to_xy
-     /tmp/ccRFQ5Bu.s:363    .text.fly_to_xy:0000027c $d
+     /tmp/ccpj8usn.s:183    .text.fly_to_xy:00000000 $a
+     /tmp/ccpj8usn.s:186    .text.fly_to_xy:00000000 fly_to_xy
+     /tmp/ccpj8usn.s:363    .text.fly_to_xy:0000027c $d
                             *COM*:00000004 desired_x
                             *COM*:00000004 desired_y
                             *COM*:00000004 nav_mode
-     /tmp/ccRFQ5Bu.s:389    .text.nav_circle_XY:00000000 $a
-     /tmp/ccRFQ5Bu.s:392    .text.nav_circle_XY:00000000 nav_circle_XY
-     /tmp/ccRFQ5Bu.s:678    .text.nav_circle_XY:0000043c $d
+     /tmp/ccpj8usn.s:389    .text.nav_circle_XY:00000000 $a
+     /tmp/ccpj8usn.s:392    .text.nav_circle_XY:00000000 nav_circle_XY
+     /tmp/ccpj8usn.s:678    .text.nav_circle_XY:0000043c $d
                             *COM*:00000004 nav_circle_trigo_qdr
                             *COM*:00000001 horizontal_mode
                             *COM*:00000004 nav_circle_x
                             *COM*:00000004 nav_circle_y
                             *COM*:00000004 nav_circle_radius
-     /tmp/ccRFQ5Bu.s:705    .text.nav_route_xy:00000000 $a
-     /tmp/ccRFQ5Bu.s:708    .text.nav_route_xy:00000000 nav_route_xy
-     /tmp/ccRFQ5Bu.s:843    .text.nav_route_xy:000001fc $d
+     /tmp/ccpj8usn.s:705    .text.nav_route_xy:00000000 $a
+     /tmp/ccpj8usn.s:708    .text.nav_route_xy:00000000 nav_route_xy
+     /tmp/ccpj8usn.s:843    .text.nav_route_xy:000001fc $d
                             *COM*:00000004 nav_segment_x_1
                             *COM*:00000004 nav_segment_y_1
                             *COM*:00000004 nav_segment_x_2
                             *COM*:00000004 nav_segment_y_2
-     /tmp/ccRFQ5Bu.s:857    .text.compute_dist2_to_home:00000000 $a
-     /tmp/ccRFQ5Bu.s:860    .text.compute_dist2_to_home:00000000 compute_dist2_to_home
-     /tmp/ccRFQ5Bu.s:900    .text.compute_dist2_to_home:00000084 $d
+     /tmp/ccpj8usn.s:857    .text.compute_dist2_to_home:00000000 $a
+     /tmp/ccpj8usn.s:860    .text.compute_dist2_to_home:00000000 compute_dist2_to_home
+     /tmp/ccpj8usn.s:900    .text.compute_dist2_to_home:00000084 $d
                             *COM*:00000004 dist2_to_home
                             *COM*:00000001 too_far_from_home
-     /tmp/ccRFQ5Bu.s:911    .text.nav_reset_reference:00000000 $a
-     /tmp/ccRFQ5Bu.s:914    .text.nav_reset_reference:00000000 nav_reset_reference
-     /tmp/ccRFQ5Bu.s:985    .text.nav_reset_reference:00000100 $d
+     /tmp/ccpj8usn.s:911    .text.nav_reset_reference:00000000 $a
+     /tmp/ccpj8usn.s:914    .text.nav_reset_reference:00000000 nav_reset_reference
+     /tmp/ccpj8usn.s:985    .text.nav_reset_reference:00000100 $d
                             *COM*:00000004 ground_alt
-     /tmp/ccRFQ5Bu.s:1000   .text.nav_update_waypoints_alt:00000000 $a
-     /tmp/ccRFQ5Bu.s:1003   .text.nav_update_waypoints_alt:00000000 nav_update_waypoints_alt
-     /tmp/ccRFQ5Bu.s:1030   .text.nav_update_waypoints_alt:0000004c $d
-     /tmp/ccRFQ5Bu.s:1035   .text.common_nav_periodic_task_4Hz:00000000 $a
-     /tmp/ccRFQ5Bu.s:1038   .text.common_nav_periodic_task_4Hz:00000000 common_nav_periodic_task_4Hz
-     /tmp/ccRFQ5Bu.s:1065   .text.common_nav_periodic_task_4Hz:0000004c $d
-     /tmp/ccRFQ5Bu.s:1071   .text.nav_move_waypoint:00000000 $a
-     /tmp/ccRFQ5Bu.s:1074   .text.nav_move_waypoint:00000000 nav_move_waypoint
-     /tmp/ccRFQ5Bu.s:1151   .text.nav_move_waypoint:0000010c $d
-     /tmp/ccRFQ5Bu.s:1157   .text.nav_home:00000000 $a
-     /tmp/ccRFQ5Bu.s:1160   .text.nav_home:00000000 nav_home
-     /tmp/ccRFQ5Bu.s:1192   .text.nav_home:00000064 $d
-     /tmp/ccRFQ5Bu.s:1203   .text.nav_init:00000000 $a
-     /tmp/ccRFQ5Bu.s:1206   .text.nav_init:00000000 nav_init
-     /tmp/ccRFQ5Bu.s:1234   .text.nav_init:00000050 $d
+     /tmp/ccpj8usn.s:1000   .text.nav_update_waypoints_alt:00000000 $a
+     /tmp/ccpj8usn.s:1003   .text.nav_update_waypoints_alt:00000000 nav_update_waypoints_alt
+     /tmp/ccpj8usn.s:1030   .text.nav_update_waypoints_alt:0000004c $d
+     /tmp/ccpj8usn.s:1035   .text.common_nav_periodic_task_4Hz:00000000 $a
+     /tmp/ccpj8usn.s:1038   .text.common_nav_periodic_task_4Hz:00000000 common_nav_periodic_task_4Hz
+     /tmp/ccpj8usn.s:1065   .text.common_nav_periodic_task_4Hz:0000004c $d
+     /tmp/ccpj8usn.s:1071   .text.nav_move_waypoint:00000000 $a
+     /tmp/ccpj8usn.s:1074   .text.nav_move_waypoint:00000000 nav_move_waypoint
+     /tmp/ccpj8usn.s:1151   .text.nav_move_waypoint:0000010c $d
+     /tmp/ccpj8usn.s:1157   .text.nav_home:00000000 $a
+     /tmp/ccpj8usn.s:1160   .text.nav_home:00000000 nav_home
+     /tmp/ccpj8usn.s:1192   .text.nav_home:00000064 $d
+     /tmp/ccpj8usn.s:1203   .text.nav_init:00000000 $a
+     /tmp/ccpj8usn.s:1206   .text.nav_init:00000000 nav_init
+     /tmp/ccpj8usn.s:1234   .text.nav_init:00000050 $d
                             *COM*:00000004 nav_glide_pitch_trim
                             *COM*:00000004 nav_radius
                             *COM*:00000004 nav_survey_shift
-     /tmp/ccRFQ5Bu.s:1245   .text.nav_without_gps:00000000 $a
-     /tmp/ccRFQ5Bu.s:1248   .text.nav_without_gps:00000000 nav_without_gps
-     /tmp/ccRFQ5Bu.s:1271   .text.nav_without_gps:0000003c $d
+     /tmp/ccpj8usn.s:1245   .text.nav_without_gps:00000000 $a
+     /tmp/ccpj8usn.s:1248   .text.nav_without_gps:00000000 nav_without_gps
+     /tmp/ccpj8usn.s:1271   .text.nav_without_gps:0000003c $d
                             *COM*:00000002 nav_throttle_setpoint
-     /tmp/ccRFQ5Bu.s:1278   .text.nav_eight_init:00000000 $a
-     /tmp/ccRFQ5Bu.s:1281   .text.nav_eight_init:00000000 nav_eight_init
-     /tmp/ccRFQ5Bu.s:1293   .text.nav_eight_init:00000010 $d
-     /tmp/ccRFQ5Bu.s:1297   .text.nav_eight:00000000 $a
-     /tmp/ccRFQ5Bu.s:1300   .text.nav_eight:00000000 nav_eight
-     /tmp/ccRFQ5Bu.s:1494   .text.nav_eight:000002ec $d
-     /tmp/ccRFQ5Bu.s:1501   .text.nav_eight:00000304 $a
-     /tmp/ccRFQ5Bu.s:1829   .text.nav_eight:000007a0 $d
-     /tmp/ccRFQ5Bu.s:1844   .text.nav_oval_init:00000000 $a
-     /tmp/ccRFQ5Bu.s:1847   .text.nav_oval_init:00000000 nav_oval_init
-     /tmp/ccRFQ5Bu.s:1862   .text.nav_oval_init:0000001c $d
+     /tmp/ccpj8usn.s:1278   .text.nav_eight_init:00000000 $a
+     /tmp/ccpj8usn.s:1281   .text.nav_eight_init:00000000 nav_eight_init
+     /tmp/ccpj8usn.s:1293   .text.nav_eight_init:00000010 $d
+     /tmp/ccpj8usn.s:1297   .text.nav_eight:00000000 $a
+     /tmp/ccpj8usn.s:1300   .text.nav_eight:00000000 nav_eight
+     /tmp/ccpj8usn.s:1494   .text.nav_eight:000002ec $d
+     /tmp/ccpj8usn.s:1501   .text.nav_eight:00000304 $a
+     /tmp/ccpj8usn.s:1829   .text.nav_eight:000007a0 $d
+     /tmp/ccpj8usn.s:1844   .text.nav_oval_init:00000000 $a
+     /tmp/ccpj8usn.s:1847   .text.nav_oval_init:00000000 nav_oval_init
+     /tmp/ccpj8usn.s:1862   .text.nav_oval_init:0000001c $d
                             *COM*:00000001 oval_status
                             *COM*:00000001 nav_oval_count
-     /tmp/ccRFQ5Bu.s:1866   .text.nav_oval:00000000 $a
-     /tmp/ccRFQ5Bu.s:1869   .text.nav_oval:00000000 nav_oval
-     /tmp/ccRFQ5Bu.s:1988   .text.nav_oval:000001c4 $d
-     /tmp/ccRFQ5Bu.s:1993   .text.nav_oval:000001d4 $a
-     /tmp/ccRFQ5Bu.s:2337   .text.nav_oval:000006b8 $d
-     /tmp/ccRFQ5Bu.s:2355   .text.nav_periodic_task:00000000 $a
-     /tmp/ccRFQ5Bu.s:2358   .text.nav_periodic_task:00000000 nav_periodic_task
-     /tmp/ccRFQ5Bu.s:2376   .text.nav_periodic_task:00000034 $d
-     /tmp/ccRFQ5Bu.s:2386   .text.nav_periodic_task:00000058 $a
-     /tmp/ccRFQ5Bu.s:2618   .text.nav_periodic_task:000003a8 $d
-     /tmp/ccRFQ5Bu.s:2627   .text.nav_periodic_task:000003c8 $a
-     /tmp/ccRFQ5Bu.s:2848   .text.nav_periodic_task:000006e4 $d
+     /tmp/ccpj8usn.s:1866   .text.nav_oval:00000000 $a
+     /tmp/ccpj8usn.s:1869   .text.nav_oval:00000000 nav_oval
+     /tmp/ccpj8usn.s:1988   .text.nav_oval:000001c4 $d
+     /tmp/ccpj8usn.s:1993   .text.nav_oval:000001d4 $a
+     /tmp/ccpj8usn.s:2337   .text.nav_oval:000006b8 $d
+     /tmp/ccpj8usn.s:2355   .text.nav_periodic_task:00000000 $a
+     /tmp/ccpj8usn.s:2358   .text.nav_periodic_task:00000000 nav_periodic_task
+     /tmp/ccpj8usn.s:2376   .text.nav_periodic_task:00000034 $d
+     /tmp/ccpj8usn.s:2386   .text.nav_periodic_task:00000058 $a
+     /tmp/ccpj8usn.s:2618   .text.nav_periodic_task:000003a8 $d
+     /tmp/ccpj8usn.s:2627   .text.nav_periodic_task:000003c8 $a
+     /tmp/ccpj8usn.s:2848   .text.nav_periodic_task:000006e4 $d
                             *COM*:00000001 nav_survey_active
-     /tmp/ccRFQ5Bu.s:2944   .data.max_dist_from_home:00000000 max_dist_from_home
-     /tmp/ccRFQ5Bu.s:2955   .data.nav_utm_zone0:00000000 nav_utm_zone0
-     /tmp/ccRFQ5Bu.s:2962   .data.nav_utm_north0:00000000 nav_utm_north0
-     /tmp/ccRFQ5Bu.s:3051   .data.nav_utm_east0:00000000 nav_utm_east0
-     /tmp/ccRFQ5Bu.s:2982   .data.waypoints:00000000 waypoints
-     /tmp/ccRFQ5Bu.s:2949   .rodata.nb_waypoint:00000000 nb_waypoint
+     /tmp/ccpj8usn.s:2944   .data.max_dist_from_home:00000000 max_dist_from_home
+     /tmp/ccpj8usn.s:2955   .data.nav_utm_zone0:00000000 nav_utm_zone0
+     /tmp/ccpj8usn.s:2962   .data.nav_utm_north0:00000000 nav_utm_north0
+     /tmp/ccpj8usn.s:3051   .data.nav_utm_east0:00000000 nav_utm_east0
+     /tmp/ccpj8usn.s:2982   .data.waypoints:00000000 waypoints
+     /tmp/ccpj8usn.s:2949   .rodata.nb_waypoint:00000000 nb_waypoint
                             *COM*:00000004 fp_pitch
-     /tmp/ccRFQ5Bu.s:2969   .data.nav_altitude:00000000 nav_altitude
+     /tmp/ccpj8usn.s:2969   .data.nav_altitude:00000000 nav_altitude
                             *COM*:00000004 nav_survey_south
                             *COM*:00000004 nav_survey_north
                             *COM*:00000004 nav_survey_east
                             *COM*:00000004 nav_survey_west
                             *COM*:00000004 nav_ground_speed_pgain
                             *COM*:00000004 nav_ground_speed_setpoint
-     /tmp/ccRFQ5Bu.s:3064   .bss.circle_bank:00000000 circle_bank
-     /tmp/ccRFQ5Bu.s:2975   .bss.nav_in_segment:00000000 nav_in_segment
-     /tmp/ccRFQ5Bu.s:3023   .bss.nav_in_circle:00000000 nav_in_circle
+     /tmp/ccpj8usn.s:3064   .bss.circle_bank:00000000 circle_bank
+     /tmp/ccpj8usn.s:2975   .bss.nav_in_segment:00000000 nav_in_segment
+     /tmp/ccpj8usn.s:3023   .bss.nav_in_circle:00000000 nav_in_circle
                             *COM*:00000004 nav_climb
                             *COM*:00000004 nav_course
                             *COM*:00000004 carrot_y
                             *COM*:00000004 carrot_x
                             *COM*:00000004 rc_pitch
-     /tmp/ccRFQ5Bu.s:2933   .bss.previous_ground_alt:00000000 $d
-     /tmp/ccRFQ5Bu.s:2937   .bss.previous_ground_alt:00000000 previous_ground_alt
-     /tmp/ccRFQ5Bu.s:2940   .data.max_dist_from_home:00000000 $d
-     /tmp/ccRFQ5Bu.s:2958   .data.nav_utm_north0:00000000 $d
-     /tmp/ccRFQ5Bu.s:2965   .data.nav_altitude:00000000 $d
-     /tmp/ccRFQ5Bu.s:2976   .bss.nav_in_segment:00000000 $d
-     /tmp/ccRFQ5Bu.s:2978   .data.waypoints:00000000 $d
-     /tmp/ccRFQ5Bu.s:3017   .bss.last_wp:00000000 last_wp
-     /tmp/ccRFQ5Bu.s:3018   .bss.last_wp:00000000 $d
-     /tmp/ccRFQ5Bu.s:3024   .bss.nav_in_circle:00000000 $d
-     /tmp/ccRFQ5Bu.s:3026   .bss.nav_leg_length:00000000 $d
-     /tmp/ccRFQ5Bu.s:3030   .bss.nav_leg_length:00000000 nav_leg_length
-     /tmp/ccRFQ5Bu.s:3033   .bss.prescaler.3866:00000000 $d
-     /tmp/ccRFQ5Bu.s:3037   .bss.prescaler.3866:00000000 prescaler.3866
-     /tmp/ccRFQ5Bu.s:3040   .bss.last_nav_altitude.3878:00000000 $d
-     /tmp/ccRFQ5Bu.s:3044   .bss.last_nav_altitude.3878:00000000 last_nav_altitude.3878
-     /tmp/ccRFQ5Bu.s:3047   .data.nav_utm_east0:00000000 $d
-     /tmp/ccRFQ5Bu.s:3057   .bss.eight_status:00000000 eight_status
-     /tmp/ccRFQ5Bu.s:3058   .bss.eight_status:00000000 $d
-     /tmp/ccRFQ5Bu.s:3060   .bss.circle_bank:00000000 $d
-     /tmp/ccRFQ5Bu.s:3067   .bss.nav_leg_progress:00000000 $d
-     /tmp/ccRFQ5Bu.s:3071   .bss.nav_leg_progress:00000000 nav_leg_progress
+     /tmp/ccpj8usn.s:2933   .bss.previous_ground_alt:00000000 $d
+     /tmp/ccpj8usn.s:2937   .bss.previous_ground_alt:00000000 previous_ground_alt
+     /tmp/ccpj8usn.s:2940   .data.max_dist_from_home:00000000 $d
+     /tmp/ccpj8usn.s:2958   .data.nav_utm_north0:00000000 $d
+     /tmp/ccpj8usn.s:2965   .data.nav_altitude:00000000 $d
+     /tmp/ccpj8usn.s:2976   .bss.nav_in_segment:00000000 $d
+     /tmp/ccpj8usn.s:2978   .data.waypoints:00000000 $d
+     /tmp/ccpj8usn.s:3017   .bss.last_wp:00000000 last_wp
+     /tmp/ccpj8usn.s:3018   .bss.last_wp:00000000 $d
+     /tmp/ccpj8usn.s:3024   .bss.nav_in_circle:00000000 $d
+     /tmp/ccpj8usn.s:3026   .bss.nav_leg_length:00000000 $d
+     /tmp/ccpj8usn.s:3030   .bss.nav_leg_length:00000000 nav_leg_length
+     /tmp/ccpj8usn.s:3033   .bss.prescaler.3866:00000000 $d
+     /tmp/ccpj8usn.s:3037   .bss.prescaler.3866:00000000 prescaler.3866
+     /tmp/ccpj8usn.s:3040   .bss.last_nav_altitude.3878:00000000 $d
+     /tmp/ccpj8usn.s:3044   .bss.last_nav_altitude.3878:00000000 last_nav_altitude.3878
+     /tmp/ccpj8usn.s:3047   .data.nav_utm_east0:00000000 $d
+     /tmp/ccpj8usn.s:3057   .bss.eight_status:00000000 eight_status
+     /tmp/ccpj8usn.s:3058   .bss.eight_status:00000000 $d
+     /tmp/ccpj8usn.s:3060   .bss.circle_bank:00000000 $d
+     /tmp/ccpj8usn.s:3067   .bss.nav_leg_progress:00000000 $d
+     /tmp/ccpj8usn.s:3071   .bss.nav_leg_progress:00000000 nav_leg_progress
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

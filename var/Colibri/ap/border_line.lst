@@ -840,16 +840,16 @@
  846              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 border_line.c
-     /tmp/ccNoeBso.s:13     .text.border_line_init:00000000 $a
-     /tmp/ccNoeBso.s:16     .text.border_line_init:00000000 border_line_init
-     /tmp/ccNoeBso.s:28     .text.border_line_init:00000010 $d
-     /tmp/ccNoeBso.s:43     .text.border_line:00000000 $a
-     /tmp/ccNoeBso.s:46     .text.border_line:00000000 border_line
-     /tmp/ccNoeBso.s:239    .text.border_line:000002f0 $d
-     /tmp/ccNoeBso.s:248    .text.border_line:00000310 $a
-     /tmp/ccNoeBso.s:818    .text.border_line:00000b14 $d
-     /tmp/ccNoeBso.s:844    .bss.border_line_status:00000000 border_line_status
-     /tmp/ccNoeBso.s:845    .bss.border_line_status:00000000 $d
+     /tmp/ccV9szmi.s:13     .text.border_line_init:00000000 $a
+     /tmp/ccV9szmi.s:16     .text.border_line_init:00000000 border_line_init
+     /tmp/ccV9szmi.s:28     .text.border_line_init:00000010 $d
+     /tmp/ccV9szmi.s:43     .text.border_line:00000000 $a
+     /tmp/ccV9szmi.s:46     .text.border_line:00000000 border_line
+     /tmp/ccV9szmi.s:239    .text.border_line:000002f0 $d
+     /tmp/ccV9szmi.s:248    .text.border_line:00000310 $a
+     /tmp/ccV9szmi.s:818    .text.border_line:00000b14 $d
+     /tmp/ccV9szmi.s:844    .bss.border_line_status:00000000 border_line_status
+     /tmp/ccV9szmi.s:845    .bss.border_line_status:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

@@ -499,9 +499,9 @@
  509              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav_cube.c
-     /tmp/ccxMJKjf.s:27     .text.nav_cube_init:00000000 $a
-     /tmp/ccxMJKjf.s:30     .text.nav_cube_init:00000000 nav_cube_init
-     /tmp/ccxMJKjf.s:355    .text.nav_cube_init:000004dc $d
+     /tmp/ccfTriW6.s:27     .text.nav_cube_init:00000000 $a
+     /tmp/ccfTriW6.s:30     .text.nav_cube_init:00000000 nav_cube_init
+     /tmp/ccfTriW6.s:355    .text.nav_cube_init:000004dc $d
                             *COM*:00000004 cube_grid_x
                             *COM*:00000004 cube_size_x
                             *COM*:00000004 cube_grid_z
@@ -513,15 +513,15 @@ DEFINED SYMBOLS
                             *COM*:00000004 cube_size_y
                             *COM*:00000004 cube_offs_z
                             *COM*:00000004 cube_nline_z
-     /tmp/ccxMJKjf.s:377    .text.nav_cube:00000000 $a
-     /tmp/ccxMJKjf.s:380    .text.nav_cube:00000000 nav_cube
-     /tmp/ccxMJKjf.s:466    .text.nav_cube:00000134 $d
-     /tmp/ccxMJKjf.s:507    .data.cube_nsect_z:00000000 cube_nsect_z
-     /tmp/ccxMJKjf.s:500    .data.cube_nsect_x:00000000 cube_nsect_x
-     /tmp/ccxMJKjf.s:493    .data.cube_sect:00000000 cube_sect
-     /tmp/ccxMJKjf.s:489    .data.cube_sect:00000000 $d
-     /tmp/ccxMJKjf.s:496    .data.cube_nsect_x:00000000 $d
-     /tmp/ccxMJKjf.s:503    .data.cube_nsect_z:00000000 $d
+     /tmp/ccfTriW6.s:377    .text.nav_cube:00000000 $a
+     /tmp/ccfTriW6.s:380    .text.nav_cube:00000000 nav_cube
+     /tmp/ccfTriW6.s:466    .text.nav_cube:00000134 $d
+     /tmp/ccfTriW6.s:507    .data.cube_nsect_z:00000000 cube_nsect_z
+     /tmp/ccfTriW6.s:500    .data.cube_nsect_x:00000000 cube_nsect_x
+     /tmp/ccfTriW6.s:493    .data.cube_sect:00000000 cube_sect
+     /tmp/ccfTriW6.s:489    .data.cube_sect:00000000 $d
+     /tmp/ccfTriW6.s:496    .data.cube_nsect_x:00000000 $d
+     /tmp/ccfTriW6.s:503    .data.cube_nsect_z:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_idiv

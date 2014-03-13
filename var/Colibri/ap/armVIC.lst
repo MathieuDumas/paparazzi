@@ -114,17 +114,17 @@
  126              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 armVIC.c
-     /tmp/ccFltmUV.s:13     .text.disableIRQ:00000000 $a
-     /tmp/ccFltmUV.s:16     .text.disableIRQ:00000000 disableIRQ
-     /tmp/ccFltmUV.s:31     .text.restoreIRQ:00000000 $a
-     /tmp/ccFltmUV.s:34     .text.restoreIRQ:00000000 restoreIRQ
-     /tmp/ccFltmUV.s:52     .text.enableIRQ:00000000 $a
-     /tmp/ccFltmUV.s:55     .text.enableIRQ:00000000 enableIRQ
-     /tmp/ccFltmUV.s:70     .text.disableFIQ:00000000 $a
-     /tmp/ccFltmUV.s:73     .text.disableFIQ:00000000 disableFIQ
-     /tmp/ccFltmUV.s:88     .text.restoreFIQ:00000000 $a
-     /tmp/ccFltmUV.s:91     .text.restoreFIQ:00000000 restoreFIQ
-     /tmp/ccFltmUV.s:109    .text.enableFIQ:00000000 $a
-     /tmp/ccFltmUV.s:112    .text.enableFIQ:00000000 enableFIQ
+     /tmp/cchKkrjL.s:13     .text.disableIRQ:00000000 $a
+     /tmp/cchKkrjL.s:16     .text.disableIRQ:00000000 disableIRQ
+     /tmp/cchKkrjL.s:31     .text.restoreIRQ:00000000 $a
+     /tmp/cchKkrjL.s:34     .text.restoreIRQ:00000000 restoreIRQ
+     /tmp/cchKkrjL.s:52     .text.enableIRQ:00000000 $a
+     /tmp/cchKkrjL.s:55     .text.enableIRQ:00000000 enableIRQ
+     /tmp/cchKkrjL.s:70     .text.disableFIQ:00000000 $a
+     /tmp/cchKkrjL.s:73     .text.disableFIQ:00000000 disableFIQ
+     /tmp/cchKkrjL.s:88     .text.restoreFIQ:00000000 $a
+     /tmp/cchKkrjL.s:91     .text.restoreFIQ:00000000 restoreFIQ
+     /tmp/cchKkrjL.s:109    .text.enableFIQ:00000000 $a
+     /tmp/cchKkrjL.s:112    .text.enableFIQ:00000000 enableFIQ
 
 NO UNDEFINED SYMBOLS
