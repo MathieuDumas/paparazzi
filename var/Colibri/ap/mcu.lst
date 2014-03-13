@@ -62,9 +62,9 @@
   64              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 mcu.c
-     /tmp/ccOhIEle.s:13     .text.mcu_init:00000000 $a
-     /tmp/ccOhIEle.s:16     .text.mcu_init:00000000 mcu_init
-     /tmp/ccOhIEle.s:62     .text.mcu_init:0000009c $d
+     /tmp/ccLlMUlZ.s:13     .text.mcu_init:00000000 $a
+     /tmp/ccLlMUlZ.s:16     .text.mcu_init:00000000 mcu_init
+     /tmp/ccLlMUlZ.s:62     .text.mcu_init:0000009c $d
 
 UNDEFINED SYMBOLS
 mcu_arch_init

@@ -110,16 +110,16 @@
           <axis name="GYRO_GAIN" failsafe_value="0"/>
         </commands>
         <section name="MIXER">
-          <define name="AILERON_DIFF" value="1"/>
-          <define name="COMBI_SWITCH" value="-0.4"/>
+          <define name="AILERON_DIFF" value="0"/>
+          <define name="COMBI_SWITCH" value="0"/>
         </section>
         <command_laws>
           <let var="roll" value="@ROLL"/>
           <set servo="GYRO_G" value="@GYRO_GAIN"/>
           <set servo="ELEVATOR" value="@PITCH"/>
           <set servo="RUDDER" value="@YAW"/>
-          <set servo="AILERON_LEFT" value="($roll > 0 ? 1 : AILERON_DIFF) * $roll"/>
-          <set servo="AILERON_RIGHT" value="($roll > 0 ? AILERON_DIFF : 1) * $roll"/>
+          <set servo="AILERON_LEFT" value="@ROLL"/>
+          <set servo="AILERON_RIGHT" value="@ROLL"/>
           <set servo="THROTTLE" value="@THROTTLE"/>
         </command_laws>
         <rc_commands>
@@ -130,7 +130,7 @@
         </rc_commands>
         <ap_only_commands/>
         <section name="AUTO1" prefix="AUTO1_">
-          <define name="MAX_ROLL" value="0.785"/>
+          <define name="MAX_ROLL" value="0.9"/>
           <define name="MAX_PITCH" value="0.785"/>
         </section>
         <section name="INFRARED" prefix="IR_">

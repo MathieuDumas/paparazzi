@@ -6,7 +6,7 @@
 
 #define AIRFRAME_NAME "Colibri"
 #define AC_ID 2
-#define MD5SUM ((uint8_t*)"\374\264\317\041\154\212\056\154\341\145\211\317\350\043\124\041")
+#define MD5SUM ((uint8_t*)"\067\064\251\021\377\156\107\257\335\033\300\345\060\040\135\132")
 
 #define SERVOS_NB 8
 
@@ -70,8 +70,8 @@
 
 
 #define SECTION_MIXER 1
-#define AILERON_DIFF 1
-#define COMBI_SWITCH -0.4
+#define AILERON_DIFF 0
+#define COMBI_SWITCH 0
 
 #define SetActuatorsFromCommands(values) { \
   uint32_t servo_value;\
@@ -98,14 +98,14 @@
 \
   Actuator(SERVO_RUDDER) = SERVOS_TICS_OF_USEC(actuators[SERVO_RUDDER]);\
 \
-  command_value = (_var_roll > 0 ? 1 : AILERON_DIFF) * _var_roll;\
+  command_value = values[COMMAND_ROLL];\
   command_value *= command_value>0 ? SERVO_AILERON_LEFT_TRAVEL_UP : SERVO_AILERON_LEFT_TRAVEL_DOWN;\
   servo_value = SERVO_AILERON_LEFT_NEUTRAL + (int32_t)(command_value);\
   actuators[SERVO_AILERON_LEFT] = ChopServo(servo_value, SERVO_AILERON_LEFT_MIN, SERVO_AILERON_LEFT_MAX);\
 \
   Actuator(SERVO_AILERON_LEFT) = SERVOS_TICS_OF_USEC(actuators[SERVO_AILERON_LEFT]);\
 \
-  command_value = (_var_roll > 0 ? AILERON_DIFF : 1) * _var_roll;\
+  command_value = values[COMMAND_ROLL];\
   command_value *= command_value>0 ? SERVO_AILERON_RIGHT_TRAVEL_UP : SERVO_AILERON_RIGHT_TRAVEL_DOWN;\
   servo_value = SERVO_AILERON_RIGHT_NEUTRAL + (int32_t)(command_value);\
   actuators[SERVO_AILERON_RIGHT] = ChopServo(servo_value, SERVO_AILERON_RIGHT_MIN, SERVO_AILERON_RIGHT_MAX);\
@@ -137,7 +137,7 @@
 }
 
 #define SECTION_AUTO1 1
-#define AUTO1_MAX_ROLL 0.785
+#define AUTO1_MAX_ROLL 0.9
 #define AUTO1_MAX_PITCH 0.785
 
 #define SECTION_INFRARED 1

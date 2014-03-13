@@ -170,25 +170,25 @@
  174              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 infrared_adc.c
-     /tmp/ccw4nIq7.s:13     .text.infrared_event:00000000 $a
-     /tmp/ccw4nIq7.s:16     .text.infrared_event:00000000 infrared_event
-     /tmp/ccw4nIq7.s:24     .text.infrared_adc_init:00000000 $a
-     /tmp/ccw4nIq7.s:27     .text.infrared_adc_init:00000000 infrared_adc_init
-     /tmp/ccw4nIq7.s:50     .text.infrared_adc_init:00000040 $d
-     /tmp/ccw4nIq7.s:55     .text.infrared_init:00000000 $a
-     /tmp/ccw4nIq7.s:58     .text.infrared_init:00000000 infrared_init
-     /tmp/ccw4nIq7.s:70     .text.infrared_adc_update:00000000 $a
-     /tmp/ccw4nIq7.s:73     .text.infrared_adc_update:00000000 infrared_adc_update
-     /tmp/ccw4nIq7.s:135    .text.infrared_adc_update:000000dc $d
+     /tmp/ccB9y3d6.s:13     .text.infrared_event:00000000 $a
+     /tmp/ccB9y3d6.s:16     .text.infrared_event:00000000 infrared_event
+     /tmp/ccB9y3d6.s:24     .text.infrared_adc_init:00000000 $a
+     /tmp/ccB9y3d6.s:27     .text.infrared_adc_init:00000000 infrared_adc_init
+     /tmp/ccB9y3d6.s:50     .text.infrared_adc_init:00000040 $d
+     /tmp/ccB9y3d6.s:55     .text.infrared_init:00000000 $a
+     /tmp/ccB9y3d6.s:58     .text.infrared_init:00000000 infrared_init
+     /tmp/ccB9y3d6.s:70     .text.infrared_adc_update:00000000 $a
+     /tmp/ccB9y3d6.s:73     .text.infrared_adc_update:00000000 infrared_adc_update
+     /tmp/ccB9y3d6.s:135    .text.infrared_adc_update:000000dc $d
                             *COM*:00000006 ir_adc
-     /tmp/ccw4nIq7.s:142    .text.infrared_update:00000000 $a
-     /tmp/ccw4nIq7.s:145    .text.infrared_update:00000000 infrared_update
-     /tmp/ccw4nIq7.s:154    .bss.buf_ir1:00000000 $d
-     /tmp/ccw4nIq7.s:158    .bss.buf_ir1:00000000 buf_ir1
-     /tmp/ccw4nIq7.s:161    .bss.buf_ir2:00000000 $d
-     /tmp/ccw4nIq7.s:165    .bss.buf_ir2:00000000 buf_ir2
-     /tmp/ccw4nIq7.s:168    .bss.buf_ir3:00000000 $d
-     /tmp/ccw4nIq7.s:172    .bss.buf_ir3:00000000 buf_ir3
+     /tmp/ccB9y3d6.s:142    .text.infrared_update:00000000 $a
+     /tmp/ccB9y3d6.s:145    .text.infrared_update:00000000 infrared_update
+     /tmp/ccB9y3d6.s:154    .bss.buf_ir1:00000000 $d
+     /tmp/ccB9y3d6.s:158    .bss.buf_ir1:00000000 buf_ir1
+     /tmp/ccB9y3d6.s:161    .bss.buf_ir2:00000000 $d
+     /tmp/ccB9y3d6.s:165    .bss.buf_ir2:00000000 buf_ir2
+     /tmp/ccB9y3d6.s:168    .bss.buf_ir3:00000000 $d
+     /tmp/ccB9y3d6.s:172    .bss.buf_ir3:00000000 buf_ir3
 
 UNDEFINED SYMBOLS
 adc_buf_channel

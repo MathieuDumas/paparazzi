@@ -4,6 +4,7 @@
 		<axis index="1" name="pitch"/>
 		<axis index="2" name="throttle"/>
 		<axis index="3" name="yaw"/>
+		<!--> <axis index="4" name="roll"/> <--> <!-- DEFINE ANOTHER WAY TO CONTROL ROLL-->
 		<button	index="1"	name="b2"/>
 		<button	index="2"	name="b3"/>
 	</input>
@@ -13,7 +14,7 @@
 			<field name="throttle" value="Fit(throttle,44,-109,0,127)"/>
 			<field name="roll" value="Fit(roll,-55,54,-127,127)"/>
 			<field name="pitch" value="Fit(pitch,-38,74,-127,127)"/>
-			<field name="yaw" value="Fit(yaw,-80,108,127,-127)"/>
+			<field name="yaw" value="Fit(yaw,-80,108,-127,127)"/>
 		</message>
 	</messages>
 </joystick>

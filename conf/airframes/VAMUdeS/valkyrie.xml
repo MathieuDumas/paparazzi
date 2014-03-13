@@ -121,8 +121,8 @@
   ##########################################################-->
 
     <section name="MIXER">
-      <define name="AILERON_DIFF" value="1"/> <!-- 0.66 -->
-      <define name="COMBI_SWITCH" value="-0.4"/> <!-- -0.4 -->
+      <define name="AILERON_DIFF" value="0"/> <!-- 0.66 -->
+      <define name="COMBI_SWITCH" value="0"/> <!-- -0.4 -->
     </section>
 
     <command_laws>
@@ -131,8 +131,8 @@
       <set servo="ELEVATOR" value="@PITCH"/>
       <set servo="RUDDER" value="@YAW"/>
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
-      <set servo="AILERON_LEFT" value="($roll > 0 ? 1 : AILERON_DIFF) * $roll"/>
-      <set servo="AILERON_RIGHT" value="($roll > 0 ? AILERON_DIFF : 1) * $roll"/>
+      <set servo="AILERON_LEFT" value="@ROLL"/>
+      <set servo="AILERON_RIGHT" value="@ROLL"/>
       <set servo="THROTTLE" value="@THROTTLE"/>
     </command_laws>
 
@@ -175,7 +175,7 @@
   ##########################-->
 
     <section name="AUTO1" prefix="AUTO1_">
-      <define name="MAX_ROLL" value="0.785"/>
+      <define name="MAX_ROLL" value="0.9"/>
       <define name="MAX_PITCH" value="0.785"/>
     </section>
 
