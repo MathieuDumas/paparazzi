@@ -87,7 +87,7 @@
       <servo name="THROTTLE" no="0" min="930" neutral="1000" max="2000"/> <!-- Min = low throttle, Max = High throttle -->
       <servo name="AILERON_LEFT" no="1" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
       <servo name="AILERON_RIGHT" no="2" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
-      <servo name="RUDDER" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
+      <servo name="ESC" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
       <servo name="FLAPS" no="5" min="1230" neutral="1230" max="2000"/> <!-- Min = , Max = -->
       <servo name="GYRO_G" no="6" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
       <servo name="ELEVATOR" no="7" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
@@ -127,13 +127,14 @@
 
     <command_laws>
       <let var="roll" value="@ROLL"/>
+      <set servo="ESC" value="@THROTTLE"/>
       <set servo="GYRO_G" value="@GYRO_GAIN"/>
       <set servo="ELEVATOR" value="@PITCH"/>
-      <set servo="RUDDER" value="@YAW"/>
+      
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
       <!--> <set servo="AILERON_LEFT" value="@ROLL"/> <-->
       <set servo="AILERON_RIGHT" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
-      <set servo="THROTTLE" value="@THROTTLE"/>
+      <!--> <set servo="THROTTLE" value="@THROTTLE"/> <-->
     </command_laws>
 
 
@@ -213,7 +214,7 @@
 
 
   <!--#####################################################
-   _  _         _            _        _    ___ _       _
+   _  _         _            _        _    ___ _       _09
   | || |___ _ _(_)______ _ _| |_ __ _| |  / __| |_ _ _| |
   | __ / _ \ '_| |_ / _ \ ' \  _/ _` | | | (__|  _| '_| |
   |_||_\___/_| |_/__\___/_||_\__\__,_|_|  \___|\__|_| |_|
