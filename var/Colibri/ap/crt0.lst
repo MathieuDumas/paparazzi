@@ -1,7 +1,6 @@
    1              	# 1 "arch/lpc21/crt0.S"
    1              	/* 
    0              	
-   0              	
    2              	 crt0.S for LPC2xxx
    3              	 - based on examples from R O Software
    4              	 - based on examples from newlib-lpc

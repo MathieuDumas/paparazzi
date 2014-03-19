@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/VAMUdeS/colibri.xml */
+/* This file has been generated from /home/colibri/paparazziProto1/conf/flight_plans/VAMUdeS/colibri.xml */
 /* Please DO NOT EDIT */
 
 #ifndef FLIGHT_PLAN_H

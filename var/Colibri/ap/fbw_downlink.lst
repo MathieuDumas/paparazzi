@@ -7,16 +7,17 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"fbw_downlink.c"
-  12              		.global	telemetry_mode_Fbw
-  13              		.section	.bss.telemetry_mode_Fbw,"aw",%nobits
-  16              	telemetry_mode_Fbw:
-  17 0000 00       		.space	1
-  18              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"fbw_downlink.c"
+  13              		.global	telemetry_mode_Fbw
+  14              		.section	.bss.telemetry_mode_Fbw,"aw",%nobits
+  17              	telemetry_mode_Fbw:
+  18 0000 00       		.space	1
+  19              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 fbw_downlink.c
-     /tmp/ccCBFV66.s:16     .bss.telemetry_mode_Fbw:00000000 telemetry_mode_Fbw
-     /tmp/ccCBFV66.s:17     .bss.telemetry_mode_Fbw:00000000 $d
+     /tmp/cc9dY4Ar.s:17     .bss.telemetry_mode_Fbw:00000000 telemetry_mode_Fbw
+     /tmp/cc9dY4Ar.s:18     .bss.telemetry_mode_Fbw:00000000 $d
 
 NO UNDEFINED SYMBOLS

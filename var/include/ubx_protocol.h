@@ -1,4 +1,4 @@
-/* Generated from /home/lionel/paparazziProto1/conf/ubx.xml */
+/* Generated from /home/colibri/paparazziProto1/conf/ubx.xml */
 /* Please DO NOT EDIT */
 
 #define UBX_SYNC1 0xB5

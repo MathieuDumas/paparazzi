@@ -7,10 +7,11 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"actuators.c"
-  12              		.comm	actuators,16,2
-  13              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"actuators.c"
+  13              		.comm	actuators,16,2
+  14              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 actuators.c
                             *COM*:00000010 actuators

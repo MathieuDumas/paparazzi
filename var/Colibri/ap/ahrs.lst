@@ -7,12 +7,13 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"ahrs.c"
-  12              		.comm	ahrs_mag_offset,4,4
-  13              		.comm	ahrs_float,188,4
-  14              		.comm	ahrs,156,4
-  15              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"ahrs.c"
+  13              		.comm	ahrs_mag_offset,4,4
+  14              		.comm	ahrs_float,188,4
+  15              		.comm	ahrs,156,4
+  16              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 ahrs.c
                             *COM*:00000004 ahrs_mag_offset

@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/settings/fixedwing_basic.xml /home/lionel/paparazziProto1/conf/settings/control/ctl_basic.xml */
+/* This file has been generated from /home/colibri/paparazziProto1/conf/settings/fixedwing_basic.xml /home/colibri/paparazziProto1/conf/settings/control/ctl_basic.xml */
 /* Please DO NOT EDIT */
 
 #ifndef TUNING_H

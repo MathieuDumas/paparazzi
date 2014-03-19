@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/airframes/VAMUdeS/valkyrie.xml */
+/* This file has been generated from /home/colibri/paparazziProto1/conf/airframes/colibri.xml */
 /* Please DO NOT EDIT */
 
 #ifndef AIRFRAME_H
@@ -6,7 +6,7 @@
 
 #define AIRFRAME_NAME "Colibri"
 #define AC_ID 2
-#define MD5SUM ((uint8_t*)"\367\336\122\204\331\015\213\173\067\375\102\255\370\351\114\223")
+#define MD5SUM ((uint8_t*)"\343\236\020\146\116\230\165\270\367\052\102\262\261\146\237\023")
 
 #define SERVOS_NB 8
 
@@ -31,12 +31,12 @@
 #define SERVO_AILERON_RIGHT_MAX 1900
 #define SERVO_AILERON_RIGHT_MIN 1100
 
-#define SERVO_RUDDER 4
-#define SERVO_RUDDER_NEUTRAL 1500
-#define SERVO_RUDDER_TRAVEL_UP 0.0520833333333
-#define SERVO_RUDDER_TRAVEL_DOWN 0.0520833333333
-#define SERVO_RUDDER_MAX 2000
-#define SERVO_RUDDER_MIN 1000
+#define SERVO_ESC 4
+#define SERVO_ESC_NEUTRAL 1500
+#define SERVO_ESC_TRAVEL_UP 0.0520833333333
+#define SERVO_ESC_TRAVEL_DOWN 0.0520833333333
+#define SERVO_ESC_MAX 2000
+#define SERVO_ESC_MIN 1000
 
 #define SERVO_FLAPS 5
 #define SERVO_FLAPS_NEUTRAL 1230
@@ -77,6 +77,13 @@
   uint32_t servo_value;\
   float command_value;\
   int16_t _var_roll = values[COMMAND_ROLL];\
+  command_value = values[COMMAND_THROTTLE];\
+  command_value *= command_value>0 ? SERVO_ESC_TRAVEL_UP : SERVO_ESC_TRAVEL_DOWN;\
+  servo_value = SERVO_ESC_NEUTRAL + (int32_t)(command_value);\
+  actuators[SERVO_ESC] = ChopServo(servo_value, SERVO_ESC_MIN, SERVO_ESC_MAX);\
+\
+  Actuator(SERVO_ESC) = SERVOS_TICS_OF_USEC(actuators[SERVO_ESC]);\
+\
   command_value = values[COMMAND_GYRO_GAIN];\
   command_value *= command_value>0 ? SERVO_GYRO_G_TRAVEL_UP : SERVO_GYRO_G_TRAVEL_DOWN;\
   servo_value = SERVO_GYRO_G_NEUTRAL + (int32_t)(command_value);\
@@ -91,26 +98,12 @@
 \
   Actuator(SERVO_ELEVATOR) = SERVOS_TICS_OF_USEC(actuators[SERVO_ELEVATOR]);\
 \
-  command_value = values[COMMAND_YAW];\
-  command_value *= command_value>0 ? SERVO_RUDDER_TRAVEL_UP : SERVO_RUDDER_TRAVEL_DOWN;\
-  servo_value = SERVO_RUDDER_NEUTRAL + (int32_t)(command_value);\
-  actuators[SERVO_RUDDER] = ChopServo(servo_value, SERVO_RUDDER_MIN, SERVO_RUDDER_MAX);\
-\
-  Actuator(SERVO_RUDDER) = SERVOS_TICS_OF_USEC(actuators[SERVO_RUDDER]);\
-\
   command_value = values[COMMAND_ROLL];\
   command_value *= command_value>0 ? SERVO_AILERON_RIGHT_TRAVEL_UP : SERVO_AILERON_RIGHT_TRAVEL_DOWN;\
   servo_value = SERVO_AILERON_RIGHT_NEUTRAL + (int32_t)(command_value);\
   actuators[SERVO_AILERON_RIGHT] = ChopServo(servo_value, SERVO_AILERON_RIGHT_MIN, SERVO_AILERON_RIGHT_MAX);\
 \
   Actuator(SERVO_AILERON_RIGHT) = SERVOS_TICS_OF_USEC(actuators[SERVO_AILERON_RIGHT]);\
-\
-  command_value = values[COMMAND_THROTTLE];\
-  command_value *= command_value>0 ? SERVO_THROTTLE_TRAVEL_UP : SERVO_THROTTLE_TRAVEL_DOWN;\
-  servo_value = SERVO_THROTTLE_NEUTRAL + (int32_t)(command_value);\
-  actuators[SERVO_THROTTLE] = ChopServo(servo_value, SERVO_THROTTLE_MIN, SERVO_THROTTLE_MAX);\
-\
-  Actuator(SERVO_THROTTLE) = SERVOS_TICS_OF_USEC(actuators[SERVO_THROTTLE]);\
 \
   ActuatorsCommit();\
 }

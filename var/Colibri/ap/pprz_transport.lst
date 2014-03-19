@@ -7,12 +7,13 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"pprz_transport.c"
-  12              		.comm	pprz_tp,264,1
-  13              		.comm	ck_b,1,1
-  14              		.comm	ck_a,1,1
-  15              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"pprz_transport.c"
+  13              		.comm	pprz_tp,264,1
+  14              		.comm	ck_b,1,1
+  15              		.comm	ck_a,1,1
+  16              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 pprz_transport.c
                             *COM*:00000108 pprz_tp

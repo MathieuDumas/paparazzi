@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/messages.xml and /home/lionel/paparazziProto1/conf/telemetry/default_fixedwing.xml */
+/* This file has been generated from /home/colibri/paparazziProto1/conf/messages.xml and /home/colibri/paparazziProto1/conf/telemetry/default_fixedwing.xml */
 /* Please DO NOT EDIT */
 
 #ifndef _VAR_PERIODIC_H_

@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/airframes/VAMUdeS/valkyrie.xml */
+/* This file has been generated from /home/colibri/paparazziProto1/conf/airframes/colibri.xml */
 /* Please DO NOT EDIT */
 
 #ifndef MODULES_H

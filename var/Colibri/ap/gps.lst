@@ -7,38 +7,39 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"gps.c"
-  12              		.section	.text.gps_init,"ax",%progbits
-  13              		.align	2
-  14              		.global	gps_init
-  16              	gps_init:
-  17              		@ Function supports interworking.
-  18              		@ args = 0, pretend = 0, frame = 0
-  19              		@ frame_needed = 0, uses_anonymous_args = 0
-  20 0000 08402DE9 		stmfd	sp!, {r3, lr}
-  21 0004 20309FE5 		ldr	r3, .L2
-  22 0008 0020A0E3 		mov	r2, #0
-  23 000c 5B20C3E5 		strb	r2, [r3, #91]
-  24 0010 542083E5 		str	r2, [r3, #84]
-  25 0014 14309FE5 		ldr	r3, .L2+4
-  26 0018 0128A0E3 		mov	r2, #65536
-  27 001c 142083E5 		str	r2, [r3, #20]
-  28 0020 FEFFFFEB 		bl	gps_impl_init
-  29 0024 0840BDE8 		ldmfd	sp!, {r3, lr}
-  30 0028 1EFF2FE1 		bx	lr
-  31              	.L3:
-  32              		.align	2
-  33              	.L2:
-  34 002c 00000000 		.word	gps
-  35 0030 008002E0 		.word	-536707072
-  37              		.comm	gps,244,4
-  38              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"gps.c"
+  13              		.section	.text.gps_init,"ax",%progbits
+  14              		.align	2
+  15              		.global	gps_init
+  17              	gps_init:
+  18              		@ Function supports interworking.
+  19              		@ args = 0, pretend = 0, frame = 0
+  20              		@ frame_needed = 0, uses_anonymous_args = 0
+  21 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  22 0004 20309FE5 		ldr	r3, .L2
+  23 0008 0020A0E3 		mov	r2, #0
+  24 000c 5B20C3E5 		strb	r2, [r3, #91]
+  25 0010 542083E5 		str	r2, [r3, #84]
+  26 0014 14309FE5 		ldr	r3, .L2+4
+  27 0018 0128A0E3 		mov	r2, #65536
+  28 001c 142083E5 		str	r2, [r3, #20]
+  29 0020 FEFFFFEB 		bl	gps_impl_init
+  30 0024 0840BDE8 		ldmfd	sp!, {r3, lr}
+  31 0028 1EFF2FE1 		bx	lr
+  32              	.L3:
+  33              		.align	2
+  34              	.L2:
+  35 002c 00000000 		.word	gps
+  36 0030 008002E0 		.word	-536707072
+  38              		.comm	gps,244,4
+  39              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 gps.c
-     /tmp/ccwLsMIY.s:13     .text.gps_init:00000000 $a
-     /tmp/ccwLsMIY.s:16     .text.gps_init:00000000 gps_init
-     /tmp/ccwLsMIY.s:34     .text.gps_init:0000002c $d
+     /tmp/cc69vUso.s:14     .text.gps_init:00000000 $a
+     /tmp/cc69vUso.s:17     .text.gps_init:00000000 gps_init
+     /tmp/cc69vUso.s:35     .text.gps_init:0000002c $d
                             *COM*:000000f4 gps
 
 UNDEFINED SYMBOLS

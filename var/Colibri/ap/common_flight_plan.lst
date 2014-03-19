@@ -7,81 +7,82 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"common_flight_plan.c"
-  12              		.section	.text.nav_init_block,"ax",%progbits
-  13              		.align	2
-  14              		.global	nav_init_block
-  16              	nav_init_block:
-  17              		@ Function supports interworking.
-  18              		@ args = 0, pretend = 0, frame = 0
-  19              		@ frame_needed = 0, uses_anonymous_args = 0
-  20 0000 08402DE9 		stmfd	sp!, {r3, lr}
-  21 0004 2C309FE5 		ldr	r3, .L3
-  22 0008 0020D3E5 		ldrb	r2, [r3, #0]	@ zero_extendqisi2
-  23 000c 080052E3 		cmp	r2, #8
-  24 0010 0820A083 		movhi	r2, #8
-  25 0014 0020C385 		strhib	r2, [r3, #0]
-  26 0018 1C209FE5 		ldr	r2, .L3+4
-  27 001c 0030A0E3 		mov	r3, #0
-  28 0020 0030C2E5 		strb	r3, [r2, #0]
-  29 0024 14209FE5 		ldr	r2, .L3+8
-  30 0028 B030C2E1 		strh	r3, [r2, #0]	@ movhi
-  31 002c FEFFFFEB 		bl	nav_init_stage
-  32 0030 0840BDE8 		ldmfd	sp!, {r3, lr}
-  33 0034 1EFF2FE1 		bx	lr
-  34              	.L4:
-  35              		.align	2
-  36              	.L3:
-  37 0038 00000000 		.word	nav_block
-  38 003c 00000000 		.word	nav_stage
-  39 0040 00000000 		.word	block_time
-  41              		.section	.text.nav_goto_block,"ax",%progbits
-  42              		.align	2
-  43              		.global	nav_goto_block
-  45              	nav_goto_block:
-  46              		@ Function supports interworking.
-  47              		@ args = 0, pretend = 0, frame = 0
-  48              		@ frame_needed = 0, uses_anonymous_args = 0
-  49              		@ link register save eliminated.
-  50 0000 28209FE5 		ldr	r2, .L7
-  51 0004 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
-  52 0008 030050E1 		cmp	r0, r3
-  53 000c 0500000A 		beq	.L6
-  54 0010 1C109FE5 		ldr	r1, .L7+4
-  55 0014 0030C1E5 		strb	r3, [r1, #0]
-  56 0018 18309FE5 		ldr	r3, .L7+8
-  57 001c 0010D3E5 		ldrb	r1, [r3, #0]	@ zero_extendqisi2
-  58 0020 14309FE5 		ldr	r3, .L7+12
-  59 0024 0010C3E5 		strb	r1, [r3, #0]
-  60              	.L6:
-  61 0028 0000C2E5 		strb	r0, [r2, #0]
-  62 002c FEFFFFEA 		b	nav_init_block
-  63              	.L8:
-  64              		.align	2
-  65              	.L7:
-  66 0030 00000000 		.word	nav_block
-  67 0034 00000000 		.word	last_block
-  68 0038 00000000 		.word	nav_stage
-  69 003c 00000000 		.word	last_stage
-  71              		.comm	last_stage,1,1
-  72              		.comm	last_block,1,1
-  73              		.comm	nav_block,1,1
-  74              		.comm	nav_stage,1,1
-  75              		.comm	block_time,2,2
-  76              		.comm	stage_time,2,2
-  77              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"common_flight_plan.c"
+  13              		.section	.text.nav_init_block,"ax",%progbits
+  14              		.align	2
+  15              		.global	nav_init_block
+  17              	nav_init_block:
+  18              		@ Function supports interworking.
+  19              		@ args = 0, pretend = 0, frame = 0
+  20              		@ frame_needed = 0, uses_anonymous_args = 0
+  21 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  22 0004 2C309FE5 		ldr	r3, .L3
+  23 0008 0020D3E5 		ldrb	r2, [r3]	@ zero_extendqisi2
+  24 000c 080052E3 		cmp	r2, #8
+  25 0010 0820A083 		movhi	r2, #8
+  26 0014 0020C385 		strhib	r2, [r3]
+  27 0018 1C209FE5 		ldr	r2, .L3+4
+  28 001c 0030A0E3 		mov	r3, #0
+  29 0020 0030C2E5 		strb	r3, [r2]
+  30 0024 14209FE5 		ldr	r2, .L3+8
+  31 0028 B030C2E1 		strh	r3, [r2]	@ movhi
+  32 002c FEFFFFEB 		bl	nav_init_stage
+  33 0030 0840BDE8 		ldmfd	sp!, {r3, lr}
+  34 0034 1EFF2FE1 		bx	lr
+  35              	.L4:
+  36              		.align	2
+  37              	.L3:
+  38 0038 00000000 		.word	nav_block
+  39 003c 00000000 		.word	nav_stage
+  40 0040 00000000 		.word	block_time
+  42              		.section	.text.nav_goto_block,"ax",%progbits
+  43              		.align	2
+  44              		.global	nav_goto_block
+  46              	nav_goto_block:
+  47              		@ Function supports interworking.
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50              		@ link register save eliminated.
+  51 0000 28209FE5 		ldr	r2, .L8
+  52 0004 0030D2E5 		ldrb	r3, [r2]	@ zero_extendqisi2
+  53 0008 030050E1 		cmp	r0, r3
+  54 000c 0500000A 		beq	.L6
+  55 0010 1C109FE5 		ldr	r1, .L8+4
+  56 0014 0030C1E5 		strb	r3, [r1]
+  57 0018 18309FE5 		ldr	r3, .L8+8
+  58 001c 0010D3E5 		ldrb	r1, [r3]	@ zero_extendqisi2
+  59 0020 14309FE5 		ldr	r3, .L8+12
+  60 0024 0010C3E5 		strb	r1, [r3]
+  61              	.L6:
+  62 0028 0000C2E5 		strb	r0, [r2]
+  63 002c FEFFFFEA 		b	nav_init_block
+  64              	.L9:
+  65              		.align	2
+  66              	.L8:
+  67 0030 00000000 		.word	nav_block
+  68 0034 00000000 		.word	last_block
+  69 0038 00000000 		.word	nav_stage
+  70 003c 00000000 		.word	last_stage
+  72              		.comm	last_stage,1,1
+  73              		.comm	last_block,1,1
+  74              		.comm	nav_block,1,1
+  75              		.comm	nav_stage,1,1
+  76              		.comm	block_time,2,2
+  77              		.comm	stage_time,2,2
+  78              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 common_flight_plan.c
-     /tmp/ccbZB6qI.s:13     .text.nav_init_block:00000000 $a
-     /tmp/ccbZB6qI.s:16     .text.nav_init_block:00000000 nav_init_block
-     /tmp/ccbZB6qI.s:37     .text.nav_init_block:00000038 $d
+     /tmp/ccUMRSDm.s:14     .text.nav_init_block:00000000 $a
+     /tmp/ccUMRSDm.s:17     .text.nav_init_block:00000000 nav_init_block
+     /tmp/ccUMRSDm.s:38     .text.nav_init_block:00000038 $d
                             *COM*:00000001 nav_block
                             *COM*:00000001 nav_stage
                             *COM*:00000002 block_time
-     /tmp/ccbZB6qI.s:42     .text.nav_goto_block:00000000 $a
-     /tmp/ccbZB6qI.s:45     .text.nav_goto_block:00000000 nav_goto_block
-     /tmp/ccbZB6qI.s:66     .text.nav_goto_block:00000030 $d
+     /tmp/ccUMRSDm.s:43     .text.nav_goto_block:00000000 $a
+     /tmp/ccUMRSDm.s:46     .text.nav_goto_block:00000000 nav_goto_block
+     /tmp/ccUMRSDm.s:67     .text.nav_goto_block:00000030 $d
                             *COM*:00000001 last_block
                             *COM*:00000001 last_stage
                             *COM*:00000002 stage_time

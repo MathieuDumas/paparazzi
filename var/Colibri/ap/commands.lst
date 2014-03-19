@@ -7,35 +7,36 @@
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
    9              		.eabi_attribute 30, 4
-  10              		.eabi_attribute 18, 4
-  11              		.file	"commands.c"
-  12              		.global	commands_failsafe
-  13              		.comm	commands,10,2
-  14              		.global	command_pitch_trim
-  15              		.global	command_roll_trim
-  16              		.section	.bss.command_roll_trim,"aw",%nobits
-  17              		.align	1
-  20              	command_roll_trim:
-  21 0000 0000     		.space	2
-  22              		.section	.rodata.commands_failsafe,"a",%progbits
-  23              		.align	1
-  26              	commands_failsafe:
-  27 0000 00000000 		.space	10
-  27      00000000 
-  27      0000
-  28              		.section	.bss.command_pitch_trim,"aw",%nobits
-  29              		.align	1
-  32              	command_pitch_trim:
-  33 0000 0000     		.space	2
-  34              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"commands.c"
+  13              		.global	commands_failsafe
+  14              		.comm	commands,10,2
+  15              		.global	command_pitch_trim
+  16              		.global	command_roll_trim
+  17              		.section	.bss.command_roll_trim,"aw",%nobits
+  18              		.align	1
+  21              	command_roll_trim:
+  22 0000 0000     		.space	2
+  23              		.section	.rodata.commands_failsafe,"a",%progbits
+  24              		.align	1
+  27              	commands_failsafe:
+  28 0000 00000000 		.space	10
+  28      00000000 
+  28      0000
+  29              		.section	.bss.command_pitch_trim,"aw",%nobits
+  30              		.align	1
+  33              	command_pitch_trim:
+  34 0000 0000     		.space	2
+  35              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
 DEFINED SYMBOLS
                             *ABS*:00000000 commands.c
-     /tmp/cc7dUhG2.s:26     .rodata.commands_failsafe:00000000 commands_failsafe
+     /tmp/ccvE3okq.s:27     .rodata.commands_failsafe:00000000 commands_failsafe
                             *COM*:0000000a commands
-     /tmp/cc7dUhG2.s:32     .bss.command_pitch_trim:00000000 command_pitch_trim
-     /tmp/cc7dUhG2.s:20     .bss.command_roll_trim:00000000 command_roll_trim
-     /tmp/cc7dUhG2.s:17     .bss.command_roll_trim:00000000 $d
-     /tmp/cc7dUhG2.s:23     .rodata.commands_failsafe:00000000 $d
-     /tmp/cc7dUhG2.s:29     .bss.command_pitch_trim:00000000 $d
+     /tmp/ccvE3okq.s:33     .bss.command_pitch_trim:00000000 command_pitch_trim
+     /tmp/ccvE3okq.s:21     .bss.command_roll_trim:00000000 command_roll_trim
+     /tmp/ccvE3okq.s:18     .bss.command_roll_trim:00000000 $d
+     /tmp/ccvE3okq.s:24     .rodata.commands_failsafe:00000000 $d
+     /tmp/ccvE3okq.s:30     .bss.command_pitch_trim:00000000 $d
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-/* Automatically generated from /home/lionel/paparazziProto1/conf/messages.xml */
+/* Automatically generated from /home/colibri/paparazziProto1/conf/messages.xml */
 /* Please DO NOT EDIT */
 /* Macros to send and receive messages of class telemetry */
 #ifndef _VAR_MESSAGES2_telemetry_H_
