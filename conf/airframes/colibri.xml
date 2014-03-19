@@ -84,14 +84,18 @@
   #######################-->
 
     <servos>
-      <servo name="THROTTLE" no="0" min="930" neutral="1000" max="2000"/> <!-- Min = low throttle, Max = High throttle -->
-      <servo name="AILERON_LEFT" no="1" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
-      <servo name="AILERON_RIGHT" no="2" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
+      <!-- Used for colibri-->
       <servo name="ESC" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
+      <servo name="SERVO_LEFT" no="1" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
+      <servo name="SERVO_HOR" no="2" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
+      <servo name="SERVO_RIGHT" no="7" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
+      
+      <!-- Not used-->
+      <servo name="THROTTLE" no="0" min="930" neutral="1000" max="2000"/> <!-- Min = low throttle, Max = High throttle --> 
       <servo name="FLAPS" no="5" min="1230" neutral="1230" max="2000"/> <!-- Min = , Max = -->
       <servo name="GYRO_G" no="6" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
-      <servo name="ELEVATOR" no="7" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
-    </servos>
+    
+      </servos>
 
 
   <!--#######################################
@@ -103,12 +107,15 @@
   ########################################-->
 
     <commands>
+      <!-- Used for colibri-->
       <axis name="THROTTLE" failsafe_value="0"/>
-      <!--> <axis name="FLAPS" failsafe_value="0"/> <-->
       <axis name="PITCH" failsafe_value="0"/>
-      <axis name="YAW" failsafe_value="0"/> <!-- Concerne le moteur sur la version Proto1 -->
+      <axis name="YAW" failsafe_value="0"/> 
       <axis name="ROLL" failsafe_value="0"/>
+      
+      <!-- Not used-->
       <axis name="GYRO_GAIN" failsafe_value="0"/>
+      <!--> <axis name="FLAPS" failsafe_value="0"/> <-->
     </commands>
 
 
@@ -127,13 +134,15 @@
 
     <command_laws>
       <let var="roll" value="@ROLL"/>
+      
       <set servo="ESC" value="@THROTTLE"/>
-      <set servo="GYRO_G" value="@GYRO_GAIN"/>
-      <set servo="ELEVATOR" value="@PITCH"/>
+      <set servo="SERVO_HOR" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
+      <set servo="SERVO_LEFT" value="@YAW"/>
+      <set servo="SERVO_RIGHT" value="@PITCH"/>
       
       <!--><set servo="FLAPS" value="@FLAPS"/><-->
       <!--> <set servo="AILERON_LEFT" value="@ROLL"/> <-->
-      <set servo="AILERON_RIGHT" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
+      
       <!--> <set servo="THROTTLE" value="@THROTTLE"/> <-->
     </command_laws>
 
@@ -148,10 +157,11 @@
 
     <rc_commands>
       <set command="THROTTLE" value="@THROTTLE"/>
-      <!--><set command="GYRO_GAIN" value="@FLAPS"/><-->
       <set command="ROLL" value="@ROLL"/>
       <set command="PITCH" value="@PITCH"/>
       <set command="YAW" value="@YAW"/>
+      
+      <!--><set command="GYRO_GAIN" value="@FLAPS"/><-->
     </rc_commands>
 
 
@@ -227,9 +237,9 @@
 
        <!-- Inner Pitch loop -->
 
-      <define name="PITCH_PGAIN" value="10172"/>
+      <define name="PITCH_PGAIN" value="4486"/>
       <define name="PITCH_DGAIN" value="0."/>
-      <define name="ELEVATOR_OF_ROLL" value="824"/>
+      <define name="ELEVATOR_OF_ROLL" value="0"/>
 
       <!-- Inner Roll loop -->
 
