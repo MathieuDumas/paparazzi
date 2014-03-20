@@ -86,16 +86,10 @@
     <servos>
       <!-- Used for colibri-->
       <servo name="ESC" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
-      <servo name="SERVO_LEFT" no="1" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
-      <servo name="SERVO_HOR" no="2" min="1900" neutral="1500" max="1100"/> <!-- Min = , Max = -->
-      <servo name="SERVO_RIGHT" no="7" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
-      
-      <!-- Not used-->
-      <servo name="THROTTLE" no="0" min="930" neutral="1000" max="2000"/> <!-- Min = low throttle, Max = High throttle --> 
-      <servo name="FLAPS" no="5" min="1230" neutral="1230" max="2000"/> <!-- Min = , Max = -->
-      <servo name="GYRO_G" no="6" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
-    
-      </servos>
+      <servo name="SERVO_LEFT" no="1" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+      <servo name="SERVO_HOR" no="2" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+      <servo name="SERVO_RIGHT" no="7" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+    </servos>
 
 
   <!--#######################################
@@ -112,10 +106,6 @@
       <axis name="PITCH" failsafe_value="0"/>
       <axis name="YAW" failsafe_value="0"/> 
       <axis name="ROLL" failsafe_value="0"/>
-      
-      <!-- Not used-->
-      <axis name="GYRO_GAIN" failsafe_value="0"/>
-      <!--> <axis name="FLAPS" failsafe_value="0"/> <-->
     </commands>
 
 
