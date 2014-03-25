@@ -33,7 +33,7 @@
       <define name="BATTERY_CELL" value="6"/>
       <!--><define name="FLAPS"/><-->
       <!--><define name="TAKEOFF_GYRO"/><-->
-      <define name="RC_LOST_MODE" value="PPRZ_MODE_AUTO2"/>
+      <define name="RC_LOST_MODE" value="PPRZ_MODE_MANUAL"/>
 
       <define name="LOITER_TRIM"/>
       <define name="ALT_KALMAN"/>
@@ -123,17 +123,10 @@
     </section>
 
     <command_laws>
-      <let var="roll" value="@ROLL"/>
-      
       <set servo="ESC" value="@THROTTLE"/>
       <set servo="SERVO_HOR" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
       <set servo="SERVO_LEFT" value="@YAW"/>
       <set servo="SERVO_RIGHT" value="@PITCH"/>
-      
-      <!--><set servo="FLAPS" value="@FLAPS"/><-->
-      <!--> <set servo="AILERON_LEFT" value="@ROLL"/> <-->
-      
-      <!--> <set servo="THROTTLE" value="@THROTTLE"/> <-->
     </command_laws>
 
 
@@ -145,15 +138,14 @@
 
   #################################################-->
 
-    <rc_commands>
+  <rc_commands>
       <set command="THROTTLE" value="@THROTTLE"/>
       <set command="ROLL" value="@ROLL"/>
       <set command="PITCH" value="@PITCH"/>
       <set command="YAW" value="@YAW"/>
       
       <!--><set command="GYRO_GAIN" value="@FLAPS"/><-->
-    </rc_commands>
-
+   </rc_commands>
 
   <!--################################################
      _   ___    ___                              _

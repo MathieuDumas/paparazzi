@@ -141,7 +141,7 @@ void event_task_fbw( void) {
     command_pitch_trim = ap_state->command_pitch_trim;
 #ifndef OUTBACK_CHALLENGE_DANGEROUS_RULE_RC_LOST_NO_AP
     if (ap_ok && fbw_mode == FBW_MODE_FAILSAFE) {
-      fbw_mode = FBW_MODE_AUTO;
+      fbw_mode = FBW_MODE_MANUAL;                                                    /** Auto to manual */
     }
 #endif
     if (fbw_mode == FBW_MODE_AUTO) {
@@ -220,7 +220,7 @@ void periodic_task_fbw( void ) {
 #warning WARNING DANGER: OUTBACK_CHALLENGE RULE RC_LOST_NO_AP defined. If you loose RC you will NOT go to automatically go to AUTO2 Anymore!!
 set_failsafe_mode();
 #else
-    fbw_mode = FBW_MODE_AUTO;
+    fbw_mode = FBW_MODE_MANUAL;                                                         /** CHANGE FROM AUTO TO MANUAL ****/
 #endif
   }
 #endif

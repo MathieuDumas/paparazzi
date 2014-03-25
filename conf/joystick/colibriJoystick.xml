@@ -1,13 +1,30 @@
 <joystick>
 	<input>
+		<axis index="0" name="axis0"/>
+		<axis index="1" name="axis1"/>
 		<axis index="2" name="roll"/> <!--> Used to control horizontal servo <--> 
-		<axis index="3" name="throttle"/> <!--> Used to control ESC <--> 
+		<axis index="3" name="throttle"/> <!--> Used to control ESC <-->
+		<axis index="4" name="yaw"/> <!--> Used to control right servo <-->   
 		<axis index="5" name="pitch"/> <!--> Used to control left servo <--> 
-		<axis index="4" name="yaw"/> <!--> Used to control right servo <--> 
-		<button	index="1"	name="b2"/>
-		<button	index="2"	name="b3"/>
+		<button	index="0"	name="b0"/>
+		<button	index="1"	name="b1"/>
+		<button	index="2"	name="b2"/>
+		<button	index="3"	name="b3"/>
+		<button	index="4"	name="b4"/>
+		<button	index="5"	name="b5"/>
+		<button	index="3"	name="b6"/>
 	</input>
 
+	<variables>
+	    <var name="mode_ap" default="0"/>
+	    <set var="mode_ap" value="0" on_event="b1"/>
+	    <set var="mode_ap" value="1" on_event="b2"/>
+	    
+	    <var name="kill" default="0"/>
+	    <set var="kill" value="0" on_event="b3"/>
+	    <set var="kill" value="1" on_event="b4"/>
+	</variables>
+	
 	<messages period="0.02">
 		<message class="datalink" name="RC_4CH" send_always="true">
 			<field name="throttle" value="Fit(throttle,44,-109,0,127)"/>
@@ -15,5 +32,15 @@
 			<field name="pitch" value="Fit(pitch,-55,55,-127,127)"/>
 			<field name="yaw" value="Fit(yaw,-55,55,-127,127)"/>
 		</message>
+		
+		<message class="datalink" name="RC_4CH" on_event="b1 || b2">
+			<field name="mode" value="mode_ap"/>
+		</message>
+		
+		<message class="ground" name="DL_SETTING" on_event="b3 || b4">
+		  <field name="index" value="IndexOfSetting(kill_throttle)"/>
+		  <field name="value" value="kill"/>
+		</message>
 	</messages>
+	
 </joystick>

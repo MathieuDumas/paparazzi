@@ -14,11 +14,11 @@ gps.cmi:
 hitl.cmo: stdlib.cmi gps.cmi flightModel.cmi data.cmi hitl.cmi
 hitl.cmx: stdlib.cmx gps.cmx flightModel.cmx data.cmx hitl.cmi
 hitl.cmi: sim.cmi
+simhitl.cmo: stdlib.cmi sim.cmi hitl.cmi
+simhitl.cmx: stdlib.cmx sim.cmx hitl.cmx
 sim.cmo: stdlib.cmi gps.cmi flightModel.cmi data.cmi sim.cmi
 sim.cmx: stdlib.cmx gps.cmx flightModel.cmx data.cmx sim.cmi
 sim.cmi: stdlib.cmi gps.cmi flightModel.cmi data.cmi
-simhitl.cmo: stdlib.cmi sim.cmi hitl.cmi
-simhitl.cmx: stdlib.cmx sim.cmx hitl.cmx
 simsitl.cmo: sitl.cmi sim.cmi
 simsitl.cmx: sitl.cmx sim.cmx
 sitl.cmo: stdlib.cmi gps.cmi flightModel.cmi data.cmi sitl.cmi

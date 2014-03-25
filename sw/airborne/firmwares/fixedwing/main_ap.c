@@ -117,7 +117,7 @@ bool_t power_switch;
 // what version is this ????
 static const uint16_t version = 1;
 
-uint8_t pprz_mode = PPRZ_MODE_AUTO2;
+uint8_t pprz_mode = PPRZ_MODE_MANUAL;                                           /** Changed from auto2 to manual */
 uint8_t lateral_mode = LATERAL_MODE_MANUAL;
 
 static uint8_t  mcu1_status;
@@ -296,7 +296,7 @@ void handle_periodic_tasks_ap(void) {
 static inline uint8_t pprz_mode_update( void ) {
   if ((pprz_mode != PPRZ_MODE_HOME &&
        pprz_mode != PPRZ_MODE_GPS_OUT_OF_ORDER)
-#ifdef UNLOCKED_HOME_MODE
+#ifdef UNLOCKED_HOME_MODEPERIODIC_SEND_ACTUATORS
       || TRUE
 #endif
       ) {
@@ -351,7 +351,7 @@ static inline void copy_from_to_fbw ( void ) {
 
 /** mode to enter when RC is lost in PPRZ_MODE_MANUAL or PPRZ_MODE_AUTO1 */
 #ifndef RC_LOST_MODE
-#define RC_LOST_MODE PPRZ_MODE_HOME
+#define RC_LOST_MODE PPRZ_MODE_MANUAL                                                      /** Changed from HOME to manual */
 #endif
 
 /**
@@ -389,12 +389,15 @@ static inline void telecommand_task( void ) {
   /** In AUTO1 mode, compute roll setpoint and pitch setpoint from
    * \a RADIO_ROLL and \a RADIO_PITCH \n
    */
+  // Major Kludge to reomove AUTO1
   if (pprz_mode == PPRZ_MODE_AUTO1) {
+    
+    
     /** Roll is bounded between [-AUTO1_MAX_ROLL;AUTO1_MAX_ROLL] */
-    h_ctl_roll_setpoint = FLOAT_OF_PPRZ(fbw_state->channels[RADIO_ROLL], 0., AUTO1_MAX_ROLL);
+//     h_ctl_roll_setpoint = FLOAT_OF_PPRZ(fbw_state->channels[RADIO_ROLL], 0., AUTO1_MAX_ROLL);
 
     /** Pitch is bounded between [-AUTO1_MAX_PITCH;AUTO1_MAX_PITCH] */
-    h_ctl_pitch_setpoint = FLOAT_OF_PPRZ(fbw_state->channels[RADIO_PITCH], 0., AUTO1_MAX_PITCH);
+//     h_ctl_pitch_setpoint = FLOAT_OF_PPRZ(fbw_state->channels[RADIO_PITCH], 0., AUTO1_MAX_PITCH);
   } /** Else asynchronously set by \a h_ctl_course_loop() */
 
   /** In AUTO1, throttle comes from RADIO_THROTTLE
@@ -405,7 +408,7 @@ static inline void telecommand_task( void ) {
       takeoff_gyro_value = fbw_state->channels[RADIO_FLAPS];
     #endif
   }
-  /** else asynchronously set by v_ctl_climb_loop(); */
+  /** else asynchronously set by \a v_ctl_climb_loop(); */
 
   mcu1_ppm_cpt = fbw_state->ppm_cpt;
 #endif // RADIO_CONTROL
@@ -469,7 +472,7 @@ void navigation_task( void ) {
       }
     } else if (gps_lost) { /* GPS is ok */
       /** If aircraft was in failsafe mode, come back in previous mode */
-      pprz_mode = last_pprz_mode;
+      pprz_mode = PPRZ_MODE_MANUAL;
       gps_lost = FALSE;
 
       PERIODIC_SEND_PPRZ_MODE(DefaultChannel, DefaultDevice);
