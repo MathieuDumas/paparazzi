@@ -18,14 +18,34 @@
   <exceptions/>
 
 <blocks>
-    <block name="Standby" strip_button="Standby" strip_icon="home.png">
-      <circle radius="nav_radius" wp="STDBY"/>
+
+    <block name="block 1">
+        <attitude alt="1410" roll="10.0" throttle="0" until="stage_time > 5" vmode="alt"/>
+    </block>
+
+    <block name="block 2">
+        <attitude alt="1410" roll="12.0" throttle="25" until="stage_time > 5"  vmode="alt"/>
+    </block>
+
+    <block name="Block 3">
+        <attitude alt="1410" roll="-14.0" throttle="50" until="stage_time > 5" vmode="alt"/>
+    </block>
+
+    <block name="Block 4">
+        <attitude alt="1410" roll="14.0" throttle="75" until="stage_time > 5" vmode="alt"/>
+    </block>
+
+    <block name="Fin de test" strip_button="Standby" strip_icon="home.png">
+      	<while cond="TRUE">
+		<attitude roll="0" throttle="0" vmode="throttle"/>
+	</while>
     </block>
     
     <block name="Joystick" strip_button="J" pre_call="{}">
       <set var="lateral_mode" value="LATERAL_MODE_ROLL"/>
       <set var="v_ctl_mode" value="V_CTL_MODE_MANUAL"/>
       <set var="pprz_mode" value="PPRZ_MODE_MANUAL"/>
+      <attitude roll="0" throttle="0.5" vmode="throttle"/>
       <call fun="TRUE"/>
     </block>
     

@@ -1,0 +1,68 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="75" ground_alt="0" lat0="38.146724" lon0="-76.427811" max_dist_from_home="1500" name="Versatile" qfu="270" security_height="-25" home_mode_height="50">
+  <header>
+#include "subsystems/datalink/datalink.h"
+#include "generated/airframe.h"
+</header>
+  <waypoints>
+    <waypoint name="HOME" x="0" y="0"/>
+  </waypoints>
+  <exceptions/>
+
+<blocks>
+    <block name="initialisation">
+	<set value="1" var="launch"/>
+	<set value="PPRZ_MODE_MANUAL" var="pprz_mode"/>
+	<set value="1500" var="radio_control.values[0]"/>
+	<set value="1500" var="radio_control.values[1]"/>
+	<set value="1500" var="radio_control.values[2]"/>
+	<set value="1500" var="radio_control.values[3]"/>
+        <while cond="LessThan(NavBlockTime(), 10)"/>
+    </block>
+
+    <block name="bloc 1">
+	<set value="1600" var="radio_control.values[0]"/>
+	<set value="1800" var="radio_control.values[1]"/>
+	<set value="1500" var="radio_control.values[2]"/>
+	<set value="1500" var="radio_control.values[3]"/>
+        <while cond="LessThan(NavBlockTime(), 10)"/>
+    </block>
+
+    <block name="bloc 2">
+	<set value="1600" var="radio_control.values[0]"/>
+	<set value="1200" var="radio_control.values[1]"/>
+	<set value="1500" var="radio_control.values[2]"/>
+	<set value="1500" var="radio_control.values[3]"/>
+        <while cond="LessThan(NavBlockTime(), 10)"/>
+    </block>
+
+    <block name="bloc 3">
+	<set value="1700" var="radio_control.values[0]"/>
+	<set value="1500" var="radio_control.values[1]"/>
+	<set value="1700" var="radio_control.values[2]"/>
+	<set value="1300" var="radio_control.values[3]"/>
+        <while cond="LessThan(NavBlockTime(), 10)"/>
+    </block>
+
+    <block name="Fin de test" strip_button="Standby" strip_icon="home.png">
+      	<set value="1500" var="radio_control.values[0]"/>
+	<set value="1500" var="radio_control.values[1]"/>
+	<set value="1500" var="radio_control.values[2]"/>
+	<set value="1500" var="radio_control.values[3]"/>
+	<while cond="TRUE"/>
+    </block>
+
+
+
+    <block name="Block 4">
+        <attitude alt="1410" roll="-14.0" throttle="0.50" until="stage_time > 15" vmode="throttle"/>
+    </block>
+
+    <block name="Block 5">
+        <attitude alt="1410" roll="14.0" throttle="0.75" until="stage_time > 15" vmode="throttle"/>
+    </block>
+
+  </blocks>
+
+</flight_plan>

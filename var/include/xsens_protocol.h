@@ -1,4 +1,4 @@
-/* Generated from /home/colibri/paparazziProto1/conf/xsens_MTi-G.xml */
+/* Generated from /home/lionel/paparazziProto1/conf/xsens_MTi-G.xml */
 /* Please DO NOT EDIT */
 
 #define XSENS_START 0xFA

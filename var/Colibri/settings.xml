@@ -1,0 +1,63 @@
+<settings>
+  <rc_settings/>
+  <dl_settings>
+    <dl_settings name="Telemetry">
+      <dl_setting min="0" step="1" max="2" var="telemetry_mode_Ap" shortname="Ap" values="default|minimal|extremal"/>
+      <dl_setting min="0" step="1" max="1" var="telemetry_mode_Fbw" shortname="Fbw" values="default|debug"/>
+    </dl_settings>
+    <dl_settings name="Control">
+      <dl_settings name="Pitch">
+        <dl_setting var="h_ctl_pitch_pgain" step="10" shortname="P" param="H_CTL_PITCH_PGAIN" module="stabilization/stabilization_attitude" min="0" max="50000"/>
+        <dl_setting var="h_ctl_pitch_dgain" step="10" shortname="D" param="H_CTL_PITCH_DGAIN" min="0" max="10000"/>
+        <dl_setting var="h_ctl_elevator_of_roll" step="10" shortname="Elevator of roll" param="H_CTL_ELEVATOR_OF_ROLL" min="0" max="25000"/>
+      </dl_settings>
+      <dl_settings name="Roll">
+        <dl_setting var="h_ctl_roll_attitude_gain" step="10" shortname="P" param="H_CTL_ROLL_ATTITUDE_GAIN" module="stabilization/stabilization_attitude" min="0" max="50000"/>
+        <dl_setting var="h_ctl_roll_rate_gain" step="10" shortname="D" param="H_CTL_ROLL_RATE_GAIN" min="0" max="10000"/>
+        <dl_setting var="h_ctl_aileron_of_throttle" step="10" shortname="Aileron of Throttle" param="H_CTL_AILERON_OF_THROTTLE" min="0" max="25000"/>
+        <dl_setting var="h_ctl_roll_slew" step="0.1" shortname="Slew" param="H_CTL_ROLL_SLEW" min="0.1" max="9600"/>
+      </dl_settings>
+      <dl_settings name="Nav">
+        <dl_setting var="h_ctl_course_pgain" step="0.05" shortname="course pgain" param="H_CTL_COURSE_PGAIN" min="0.1" max="3"/>
+        <dl_setting var="h_ctl_course_dgain" step="0.05" shortname="course dgain" param="H_CTL_COURSE_DGAIN" min="0" max="2"/>
+        <dl_setting var="h_ctl_course_pre_bank_correction" step="0.05" shortname="pre bank cor" param="H_CTL_COURSE_PRE_BANK_CORRECTION" min="0.1" max="2"/>
+        <dl_setting var="h_ctl_roll_max_setpoint" step="0.1" shortname="Roll max" param="H_CTL_ROLL_MAX_SETPOINT" min="0" max="2"/>
+      </dl_settings>
+      <dl_settings name="alt">
+        <dl_setting var="v_ctl_altitude_pgain" step="0.01" shortname="alt_pgain" param="V_CTL_ALTITUDE_PGAIN" min="0" max="1"/>
+      </dl_settings>
+      <dl_settings name="auto_throttle">
+        <dl_setting var="v_ctl_auto_throttle_cruise_throttle" step="0.05" shortname="cruise throttle" param="V_CTL_AUTO_THROTTLE_NOMINAL_CRUISE_THROTTLE" module="guidance/guidance_v" min="0.0" max="1" handler="SetCruiseThrottle">
+          <strip_button value="0.1" name="Loiter" group="dash_loiter"/>
+          <strip_button value="0" name="Cruise" group="dash_loiter"/>
+          <strip_button value="1" name="Dash" group="dash_loiter"/>
+        </dl_setting>
+        <dl_setting var="v_ctl_auto_throttle_pgain" step="0.005" shortname="throttle_pgain" param="V_CTL_AUTO_THROTTLE_PGAIN" min="0.00" max="0.05"/>
+        <dl_setting var="v_ctl_auto_throttle_igain" step="0.05" shortname="throttle_igain" param="V_CTL_AUTO_THROTTLE_IGAIN" min="0.0" max="1"/>
+        <dl_setting var="v_ctl_auto_throttle_dgain" step="0.1" shortname="throttle_dgain" min="0.0" max="2"/>
+        <dl_setting var="v_ctl_auto_throttle_climb_throttle_increment" step="0.01" shortname="throttle_incr" param="V_CTL_AUTO_THROTTLE_CLIMB_THROTTLE_INCREMENT" min="0" max="1"/>
+        <dl_setting var="v_ctl_auto_throttle_pitch_of_vz_pgain" step="0.01" shortname="pitch_of_vz" param="V_CTL_AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" min="0" max="1"/>
+        <dl_setting var="v_ctl_auto_throttle_pitch_of_vz_dgain" step="0.1" shortname="pitch_of_vz (d)" min="-10" max="10"/>
+      </dl_settings>
+    </dl_settings>
+    <dl_settings name="flight params">
+      <dl_setting var="flight_altitude" step="10" shortname="altitude" min="0" max="1000"/>
+      <dl_setting var="nav_course" step="1" min="0" max="360"/>
+      <dl_setting var="nav_shift" step="5" shortname="inc. shift" module="subsystems/nav" min="-10" max="10" handler="IncreaseShift"/>
+      <dl_setting var="estimator_flight_time" step="1" shortname="flight time" module="autopilot" min="0" max="0" handler="ResetFlightTimeAndLaunch"/>
+      <dl_setting var="nav_radius" step="10" module="subsystems/nav" min="-200" max="200" handler="SetNavRadius">
+        <strip_button value="1" name="Circle right" icon="circle-right.png" group="circle"/>
+        <strip_button value="-1" name="Circle left" icon="circle-left.png" group="circle"/>
+        <key_press value="1" key="greater"/>
+        <key_press value="-1" key="less"/>
+      </dl_setting>
+      <dl_setting var="route_ap_time" step="0" shortname="Route pre turn" min="0" max="15"/>
+    </dl_settings>
+    <dl_settings name="mode">
+      <dl_setting var="pprz_mode" values="MANUAL|AUTO1|AUTO2|HOME|NOGPS|FAILSAFE" step="1" module="autopilot" min="0" max="2"/>
+      <dl_setting var="launch" step="1" min="0" max="1"/>
+      <dl_setting var="kill_throttle" step="1" min="0" max="1"/>
+      <dl_setting var="gps.reset" step="1" shortname="GPS reset" module="subsystems/gps" min="0" max="2" handler="Reset"/>
+    </dl_settings>
+  </dl_settings>
+</settings>

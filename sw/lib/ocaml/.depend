@@ -42,21 +42,21 @@ gtk_3d.cmi: geometry_3d.cmi geometry_2d.cmi
 gtk_draw.cmo: gtk_tools.cmi gtk_draw.cmi
 gtk_draw.cmx: gtk_tools.cmx gtk_draw.cmi
 gtk_draw.cmi:
-gtkgl_Hack.cmo: gtkgl_Hack.cmi
-gtkgl_Hack.cmx: gtkgl_Hack.cmi
-gtkgl_Hack.cmi:
 gtk_image.cmo: platform.cmi gtk_image.cmi
 gtk_image.cmx: platform.cmx gtk_image.cmi
 gtk_image.cmi:
+gtk_tools.cmo: gtk_tools.cmi
+gtk_tools.cmx: gtk_tools.cmi
+gtk_tools.cmi:
 gtk_tools_GL.cmo: gtk_tools.cmi gtk_tools_GL.cmi
 gtk_tools_GL.cmx: gtk_tools.cmx gtk_tools_GL.cmi
 gtk_tools_GL.cmi:
 gtk_tools_icons.cmo: gtk_tools_icons.cmi
 gtk_tools_icons.cmx: gtk_tools_icons.cmi
 gtk_tools_icons.cmi:
-gtk_tools.cmo: gtk_tools.cmi
-gtk_tools.cmx: gtk_tools.cmi
-gtk_tools.cmi:
+gtkgl_Hack.cmo: gtkgl_Hack.cmi
+gtkgl_Hack.cmx: gtkgl_Hack.cmi
+gtkgl_Hack.cmi:
 http.cmo: http.cmi
 http.cmx: http.cmi
 http.cmi:
@@ -85,15 +85,15 @@ mapGoogle.cmi: mapCanvas.cmi latlong.cmi
 mapIGN.cmo: mapCanvas.cmi latlong.cmi iGN.cmi mapIGN.cmi
 mapIGN.cmx: mapCanvas.cmx latlong.cmx iGN.cmx mapIGN.cmi
 mapIGN.cmi: mapCanvas.cmi latlong.cmi
-maps_support.cmo: extXml.cmi env.cmi maps_support.cmi
-maps_support.cmx: extXml.cmx env.cmx maps_support.cmi
-maps_support.cmi:
 mapTrack.cmo: srtm.cmi mapCanvas.cmi latlong.cmi geometry_2d.cmi mapTrack.cmi
 mapTrack.cmx: srtm.cmx mapCanvas.cmx latlong.cmx geometry_2d.cmx mapTrack.cmi
 mapTrack.cmi: mapCanvas.cmi latlong.cmi
 mapWaypoints.cmo: srtm.cmi mapCanvas.cmi latlong.cmi mapWaypoints.cmi
 mapWaypoints.cmx: srtm.cmx mapCanvas.cmx latlong.cmx mapWaypoints.cmi
 mapWaypoints.cmi: mapCanvas.cmi latlong.cmi
+maps_support.cmo: extXml.cmi env.cmi maps_support.cmi
+maps_support.cmx: extXml.cmx env.cmx maps_support.cmi
+maps_support.cmi:
 myGtkInit.cmo:
 myGtkInit.cmx:
 ocaml_tools.cmo: ocaml_tools.cmi
@@ -102,14 +102,14 @@ ocaml_tools.cmi:
 os_calls.cmo: os_calls.cmi
 os_calls.cmx: os_calls.cmi
 os_calls.cmi:
-papget_common.cmo: extXml.cmi papget_common.cmi
-papget_common.cmx: extXml.cmx papget_common.cmi
-papget_common.cmi:
 papget.cmo: pprz.cmi papget_renderer.cmi papget_common.cmi ocaml_tools.cmi \
     expr_syntax.cmi env.cmi papget.cmi
 papget.cmx: pprz.cmx papget_renderer.cmx papget_common.cmx ocaml_tools.cmx \
     expr_syntax.cmx env.cmx papget.cmi
 papget.cmi: papget_renderer.cmi expr_syntax.cmi
+papget_common.cmo: extXml.cmi papget_common.cmi
+papget_common.cmx: extXml.cmx papget_common.cmi
+papget_common.cmi:
 papget_renderer.cmo: papget_common.cmi latlong.cmi env.cmi \
     papget_renderer.cmi
 papget_renderer.cmx: papget_common.cmx latlong.cmx env.cmx \

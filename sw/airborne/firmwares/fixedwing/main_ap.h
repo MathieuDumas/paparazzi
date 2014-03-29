@@ -40,4 +40,6 @@ extern void monitor_task( void );
 extern void reporting_task( void );
 extern void attitude_loop( void );
 
+extern void fptransition_task( void );
+
 #endif

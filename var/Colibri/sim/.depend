@@ -1,0 +1,815 @@
+/home/lionel/paparazziProto1/var/Colibri/sim/mcu.o: mcu.c mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_arch.h \
+ mcu_periph/sys_time.h /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ led.h /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/lionel/paparazziProto1/var/Colibri/sim/mcu_arch.o: arch/sim/mcu_arch.c
+/home/lionel/paparazziProto1/var/Colibri/sim/led_hw.o: arch/sim/led_hw.c arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sys_time.o: mcu_periph/sys_time.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sys_time_arch.o: arch/sim/mcu_periph/sys_time_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/inter_mcu.o: inter_mcu.c inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/include/std.h paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ subsystems/radio_control/rc_datalink.h subsystems/electrical.h \
+ firmwares/fixedwing/main_fbw.h
+/home/lionel/paparazziProto1/var/Colibri/sim/pprz_geodetic_int.o: math/pprz_geodetic_int.c math/pprz_geodetic_int.h \
+ math/pprz_geodetic.h /home/lionel/paparazziProto1/sw/include/std.h \
+ math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ math/pprz_geodetic_float.h math/pprz_algebra_float.h math/pprz_algebra.h \
+ math/pprz_geodetic_double.h math/pprz_algebra_double.h
+/home/lionel/paparazziProto1/var/Colibri/sim/pprz_geodetic_float.o: math/pprz_geodetic_float.c \
+ math/pprz_geodetic_float.h math/pprz_geodetic.h \
+ math/pprz_algebra_float.h math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ math/pprz_geodetic_double.h math/pprz_algebra_double.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_utm.h
+/home/lionel/paparazziProto1/var/Colibri/sim/pprz_geodetic_double.o: math/pprz_geodetic_double.c \
+ math/pprz_geodetic_double.h math/pprz_geodetic.h \
+ math/pprz_algebra_double.h math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/include/std.h math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_utm.h
+/home/lionel/paparazziProto1/var/Colibri/sim/pprz_trig_int.o: math/pprz_trig_int.c math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h
+/home/lionel/paparazziProto1/var/Colibri/sim/i2c.o: mcu_periph/i2c.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/i2c_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/i2c_arch.o: arch/sim/mcu_periph/i2c_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/i2c_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/main_fbw.o: firmwares/fixedwing/main_fbw.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/commands.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ firmwares/fixedwing/fbw_downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ firmwares/fixedwing/actuators.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/i2c.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/i2c_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/electrical.o: subsystems/electrical.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/commands.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h
+/home/lionel/paparazziProto1/var/Colibri/sim/commands.o: commands.c commands.h paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/fbw_downlink.o: firmwares/fixedwing/fbw_downlink.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/main_ap.o: firmwares/fixedwing/main_ap.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_ap.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/link_mcu_spi.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ firmwares/fixedwing/combi_switch.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/xbee24.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ /home/lionel/paparazziProto1/sw/airborne/rc_settings.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/gpio.h
+/home/lionel/paparazziProto1/var/Colibri/sim/estimator.o: estimator.c estimator.h \
+ /home/lionel/paparazziProto1/sw/include/std.h mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h
+/home/lionel/paparazziProto1/var/Colibri/sim/ap_downlink.o: firmwares/fixedwing/ap_downlink.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sim_ap.o: arch/sim/sim_ap.c /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/settings.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/commands.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_ap.h \
+ firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ arch/sim/sim_uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h
+/home/lionel/paparazziProto1/var/Colibri/sim/downlink.o: subsystems/datalink/downlink.c \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/datalink.o: firmwares/fixedwing/datalink.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/uart.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sim_gps.o: arch/sim/sim_gps.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h
+/home/lionel/paparazziProto1/var/Colibri/sim/ivy_transport.o: arch/sim/ivy_transport.c
+/home/lionel/paparazziProto1/var/Colibri/sim/sim_adc_generic.o: arch/sim/sim_adc_generic.c \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h
+/home/lionel/paparazziProto1/var/Colibri/sim/settings.o: subsystems/settings.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h
+/home/lionel/paparazziProto1/var/Colibri/sim/settings_arch.o: arch/sim/subsystems/settings_arch.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/settings.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sim_ahrs.o: arch/sim/sim_ahrs.c /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/compatibility.h /usr/lib/ocaml/caml/config.h \
+ /usr/lib/ocaml/caml/misc.h /home/lionel/paparazziProto1/sw/include/std.h
+/home/lionel/paparazziProto1/var/Colibri/sim/sim_ir.o: arch/sim/sim_ir.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h
+/home/lionel/paparazziProto1/var/Colibri/sim/radio_control.o: subsystems/radio_control.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/include/std.h
+/home/lionel/paparazziProto1/var/Colibri/sim/rc_datalink.o: subsystems/radio_control/rc_datalink.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h
+/home/lionel/paparazziProto1/var/Colibri/sim/rc_datalink.o: arch/sim/subsystems/radio_control/rc_datalink.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/include/std.h
+/home/lionel/paparazziProto1/var/Colibri/sim/stabilization_attitude.o: \
+ firmwares/fixedwing/stabilization/stabilization_attitude.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/guidance_v.o: firmwares/fixedwing/guidance/guidance_v.c \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h
+/home/lionel/paparazziProto1/var/Colibri/sim/nav.o: subsystems/nav.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/inter_mcu.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/radio_control/rc_datalink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/electrical.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.c \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h
+/home/lionel/paparazziProto1/var/Colibri/sim/common_flight_plan.o: subsystems/navigation/common_flight_plan.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/traffic_info.o: subsystems/navigation/traffic_info.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/nav_survey_rectangle.o: subsystems/navigation/nav_survey_rectangle.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/nav_line.o: subsystems/navigation/nav_line.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h
+/home/lionel/paparazziProto1/var/Colibri/sim/nav_cube.o: subsystems/navigation/nav_cube.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_cube.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/discsurvey.o: subsystems/navigation/discsurvey.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/discsurvey.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h \
+ firmwares/fixedwing/ap_downlink.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/downlink.h \
+ /home/lionel/paparazziProto1/var/include/messages.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/ivy_transport.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/periodic_telemetry.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h
+/home/lionel/paparazziProto1/var/Colibri/sim/OSAMNav.o: subsystems/navigation/OSAMNav.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/OSAMNav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/snav.o: subsystems/navigation/snav.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/snav.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h
+/home/lionel/paparazziProto1/var/Colibri/sim/spiral.o: subsystems/navigation/spiral.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/spiral.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/poly_survey_adv.o: subsystems/navigation/poly_survey_adv.c \
+ subsystems/navigation/poly_survey_adv.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/sys_time.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/sys_time_arch.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/gls.o: subsystems/navigation/gls.c \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/gls.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/flight_plan.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/modules.h \
+ modules/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/datalink/datalink.h \
+ /home/lionel/paparazziProto1/var/include/dl_protocol.h
+/home/lionel/paparazziProto1/var/Colibri/sim/border_line.o: subsystems/navigation/border_line.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/border_line.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/nav.h \
+ /home/lionel/paparazziProto1/sw/airborne/paparazzi.h \
+ /home/lionel/paparazziProto1/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_flight_plan.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/navigation/common_nav.h
+/home/lionel/paparazziProto1/var/Colibri/sim/ahrs.o: subsystems/ahrs.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h
+/home/lionel/paparazziProto1/var/Colibri/sim/ahrs_infrared.o: subsystems/ahrs/ahrs_infrared.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs/ahrs_infrared.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/ahrs.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_float.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/imu.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/estimator.h
+/home/lionel/paparazziProto1/var/Colibri/sim/gps.o: subsystems/gps.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h \
+ /home/lionel/paparazziProto1/sw/airborne/led.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/lionel/paparazziProto1/var/Colibri/sim/gps_sim.o: subsystems/gps/gps_sim.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_geodetic.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_trig_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/math/pprz_algebra_int.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/gps/gps_sim.h
+/home/lionel/paparazziProto1/var/Colibri/sim/infrared.o: subsystems/sensors/infrared.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h
+/home/lionel/paparazziProto1/var/Colibri/sim/infrared_adc.o: subsystems/sensors/infrared_adc.c \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared_adc.h \
+ /home/lionel/paparazziProto1/sw/include/std.h \
+ /home/lionel/paparazziProto1/sw/airborne/subsystems/sensors/infrared.h \
+ /home/lionel/paparazziProto1/var/Colibri/generated/airframe.h \
+ /home/lionel/paparazziProto1/sw/airborne/mcu_periph/adc.h \
+ /home/lionel/paparazziProto1/sw/airborne/arch/sim/mcu_periph/adc_arch.h \
+ /home/lionel/paparazziProto1/sw/airborne/boards/tiny_sim.h

@@ -72,6 +72,7 @@ float   combi_switch_value;
 #include CTRL_TYPE_H
 #include "subsystems/nav.h"
 #include "generated/flight_plan.h"
+#include "subsystems/navigation/common_flight_plan.h"     /**  ADDED ****/
 #ifdef TRAFFIC_INFO
 #include "subsystems/navigation/traffic_info.h"
 #endif
@@ -156,6 +157,9 @@ tid_t attitude_tid;    ///< id for attitude_loop() timer
 tid_t navigation_tid;  ///< id for navigation_task() timer
 tid_t monitor_tid;     ///< id for monitor_task() timer
 
+/** For automatic flightplan block transition ***/
+tid_t fptransition_tid;     ///< id for fptransition timer
+
 #ifndef CONTROL_FREQUENCY
 #ifdef  CONTROL_RATE
 #define CONTROL_FREQUENCY CONTROL_RATE
@@ -171,6 +175,10 @@ tid_t monitor_tid;     ///< id for monitor_task() timer
 
 #ifndef MODULES_FREQUENCY
 #define MODULES_FREQUENCY 60
+#endif
+
+#ifndef FPTRANSITION_FREQUENCY
+#define FPTRANSITION_FREQUENCY 1
 #endif
 
 void init_ap( void ) {
@@ -237,6 +245,9 @@ void init_ap( void ) {
   telemetry_tid = sys_time_register_timer(1./60, NULL);
   monitor_tid = sys_time_register_timer(1.0, NULL);
 
+  fptransition_tid = sys_time_register_timer(1./FPTRANSITION_FREQUENCY, NULL);    /**** Added ***/
+
+
   /** - start interrupt task */
   mcu_int_enable();
 
@@ -284,6 +295,9 @@ void handle_periodic_tasks_ap(void) {
     reporting_task();
     LED_PERIODIC();
   }
+
+  if (sys_time_check_and_ack_timer(fptransition_tid))      /*** Added ***/
+  fptransition_task();
 
 }
 
@@ -649,6 +663,10 @@ void monitor_task( void ) {
 #ifdef USE_GPIO
    GpioUpdate1();
 #endif
+}
+
+void fptransition_task ( void ){
+	NextBlock();
 }
 
 

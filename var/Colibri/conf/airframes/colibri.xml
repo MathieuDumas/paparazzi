@@ -1,0 +1,329 @@
+<!--
+################################################################################
+# ____    ____  ___      .___  ___.  __    __   _______   _______     _______. #
+# \   \  /   / /   \     |   \/   | |  |  |  | |       \ |   ____|   /       | #
+#  \   \/   / /  ^  \    |  \  /  | |  |  |  | |  ....  ||  |__     |   (....` #
+#   \      / /  /_\  \   |  |\/|  | |  |  |  | |  |  |  ||   __|     \   \     #
+#    \    / /  _____  \  |  |  |  | |  `..'  | |  '..'  ||  |____.....)   |    #
+#     \__/ /__/     \__\ |__|  |__|  \______/  |_______/ |_______|_______/     #
+#                                                                              #
+################################################################################
+#  This file has been created by the VAMUdeS team from Universite de           #
+#  Sherbrooke.                                                                 #
+################################################################################
+-->
+
+<airframe name="Valkyrie">
+
+  <!--###################################
+   ___ _
+  | __(_)_ _ _ ____ __ ____ _ _ _ ___
+  | _|| | '_| '  \ V  V / _` | '_/ -_)
+  |_| |_|_| |_|_|_\_/\_/\__,_|_| \___|
+
+  ####################################-->
+
+    <firmware name="fixedwing">
+
+      <configure name="SYS_TIME_LED" value="1"/>
+      <target name="sim" board="pc"/>
+      <target name="ap" board="tiny_2.1"/>
+      <define name="JOHN_AP_2012"/>
+      <define name="JOHN_AP_2012_V1"/>
+      <define name="BATTERY_CELL" value="6"/>
+      <!--><define name="FLAPS"/><-->
+      <!--><define name="TAKEOFF_GYRO"/><-->
+      <define name="RC_LOST_MODE" value="PPRZ_MODE_MANUAL"/>
+
+      <define name="LOITER_TRIM"/>
+      <define name="ALT_KALMAN"/>
+      <define name="AGR_CLIMB"/>
+
+      <subsystem name="radio_control" type="datalink"/>
+      <subsystem name="control"/>
+      <subsystem name="navigation" type="extra"/>
+
+      <!-- Communication -->
+      <subsystem name="telemetry" type="transparent">
+        <configure name="MODEM_BAUD" value="B57600"/>
+      </subsystem>
+
+      <!-- Infrared -->
+      <subsystem name="ahrs" type="infrared">
+        <configure name="ADC_IR1" value="ADC_1"/>
+        <configure name="ADC_IR2" value="ADC_2"/>
+        <configure name="ADC_IR_TOP" value="ADC_0"/>
+        <configure name="ADC_IR_NB_SAMPLES" value="16"/>
+      </subsystem>
+
+      <!-- GPS -->
+      <subsystem name="gps" type="ublox"/>
+
+    </firmware>
+
+
+  <!--###############################
+   __  __         _      _
+  |  \/  |___  __| |_  _| |___ ___
+  | |\/| / _ \/ _` | || | / -_|_-<
+  |_|  |_\___/\__,_|\_,_|_\___/__/
+
+  ################################-->
+
+    <modules main_freq="60">
+      <load name="infrared_adc.xml"/>
+    </modules>
+
+
+  <!--######################
+
+  / __| ___ _ ___ _____ ___
+  \__ \/ -_) '_\ V / _ (_-<
+  |___/\___|_|  \_/\___/__/
+
+  #######################-->
+
+    <servos>
+      <!-- Used for colibri-->
+      <servo name="ESC" no="4" min="1000" neutral="1500" max="2000"/> <!-- Min = , Max = -->
+      <servo name="SERVO_LEFT" no="1" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+      <servo name="SERVO_HOR" no="2" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+      <servo name="SERVO_RIGHT" no="7" min="1100" neutral="1500" max="1900"/> <!-- Min = , Max = -->
+    </servos>
+
+
+  <!--#######################################
+    ___                              _
+   / __|___ _ __  _ __  __ _ _ _  __| |___
+  | (__/ _ \ '  \| '  \/ _` | ' \/ _` (_-<
+   \___\___/_|_|_|_|_|_\__,_|_||_\__,_/__/
+
+  ########################################-->
+
+    <commands>
+      <!-- Used for colibri-->
+      <axis name="THROTTLE" failsafe_value="0"/>
+      <axis name="PITCH" failsafe_value="0"/>
+      <axis name="YAW" failsafe_value="0"/> 
+      <axis name="ROLL" failsafe_value="0"/>
+    </commands>
+
+
+  <!--#########################################################
+    ___                              _      _
+   / __|___ _ __  _ __  __ _ _ _  __| |___ | |   __ ___ __ __
+  | (__/ _ \ '  \| '  \/ _` | ' \/ _` (_-< | |__/ _` \ V  V /
+   \___\___/_|_|_|_|_|_\__,_|_||_\__,_/__/ |____\__,_|\_/\_/
+
+  ##########################################################-->
+
+    <section name="MIXER">
+      <define name="AILERON_DIFF" value="0"/> <!-- 0.66 -->
+      <define name="COMBI_SWITCH" value="0"/> <!-- -0.4 -->
+    </section>
+
+    <command_laws>
+      <set servo="ESC" value="@THROTTLE"/>
+      <set servo="SERVO_HOR" value="@ROLL"/> <!-- Servo utilisé pour le ROLL -->
+      <set servo="SERVO_LEFT" value="@YAW"/>
+      <set servo="SERVO_RIGHT" value="@PITCH"/>
+    </command_laws>
+
+
+  <!--################################################
+   ___  ___    ___                              _
+  | _ \/ __|  / __|___ _ __  _ __  __ _ _ _  __| |___
+  |   / (__  | (__/ _ \ '  \| '  \/ _` | ' \/ _` (_-<
+  |_|_\\___|  \___\___/_|_|_|_|_|_\__,_|_||_\__,_/__/
+
+  #################################################-->
+
+  <rc_commands>
+      <set command="THROTTLE" value="@THROTTLE"/>
+      <set command="ROLL" value="@ROLL"/>
+      <set command="PITCH" value="@PITCH"/>
+      <set command="YAW" value="@YAW"/>
+      
+      <!--><set command="GYRO_GAIN" value="@FLAPS"/><-->
+   </rc_commands>
+
+  <!--################################################
+     _   ___    ___                              _
+    /_\ | _ \  / __|___ _ __  _ __  __ _ _ _  __| |___
+   / _ \|  _/ | (__/ _ \ '  \| '  \/ _` | ' \/ _` (_-<
+  /_/ \_\_|    \___\___/_|_|_|_|_|_\__,_|_||_\__,_/__/
+
+  #################################################-->
+
+    <ap_only_commands>
+    </ap_only_commands>
+
+
+  <!--#########################
+     _  _   _ _____ ___    _
+    /_\| | | |_   _/ _ \  / |
+   / _ \ |_| | | || (_) | | |
+  /_/ \_\___/  |_| \___/  |_|
+
+  ##########################-->
+
+    <section name="AUTO1" prefix="AUTO1_">
+      <define name="MAX_ROLL" value="0.8"/>
+      <define name="MAX_PITCH" value="0.785"/>
+    </section>
+
+
+  <!--##################################
+   ___       __                     _
+  |_ _|_ _  / _|_ _ __ _ _ _ ___ __| |
+   | || ' \|  _| '_/ _` | '_/ -_) _` |
+  |___|_||_|_| |_| \__,_|_| \___\__,_|
+
+  ###################################-->
+
+    <section name="INFRARED" prefix="IR_">
+      <define name="ADC_IR1_NEUTRAL" value="512"/>
+      <define name="ADC_IR2_NEUTRAL" value="512"/>
+      <define name="ADC_TOP_NEUTRAL" value="512"/>
+
+      <define name="IR_LATERAL_CORRECTION" value="1"/>
+      <define name="IR_LONGITUDINAL_CORRECTION" value="1"/>
+      <define name="IR_VERTICAL_CORRECTION" value="1."/>
+
+      <define name="HORIZ_SENSOR_TILTED" value="1"/>
+      <define name="IR1_SIGN" value="1"/>
+      <define name="IR2_SIGN" value="1"/>
+      <define name="TOP_SIGN" value="1"/>
+
+      <define name="ROLL_NEUTRAL_DEFAULT" value="0" unit="deg"/>
+      <define name="PITCH_NEUTRAL_DEFAULT" value="13.52" unit="deg"/>
+
+      <define name="CORRECTION_UP" value="1"/>
+      <define name="CORRECTION_DOWN" value="1"/>
+      <define name="CORRECTION_LEFT" value="1"/>
+      <define name="CORRECTION_RIGHT" value="0.795"/>
+    </section>
+
+
+  <!--#####################################################
+   _  _         _            _        _    ___ _       _09
+  | || |___ _ _(_)______ _ _| |_ __ _| |  / __| |_ _ _| |
+  | __ / _ \ '_| |_ / _ \ ' \  _/ _` | | | (__|  _| '_| |
+  |_||_\___/_| |_/__\___/_||_\__\__,_|_|  \___|\__|_| |_|
+
+  ######################################################-->
+
+    <!-- update with new code -->
+
+    <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
+
+       <!-- Inner Pitch loop -->
+
+      <define name="PITCH_PGAIN" value="4486"/>
+      <define name="PITCH_DGAIN" value="0."/>
+      <define name="ELEVATOR_OF_ROLL" value="0"/>
+
+      <!-- Inner Roll loop -->
+
+      <define name="ROLL_ATTITUDE_GAIN" value="8000"/>
+      <define name="ROLL_RATE_GAIN" value="0."/>
+      <define name="ROLL_SLEW" value="250."/>
+      <define name="AILERON_OF_THROTTLE" value="0"/>
+
+      <!-- Outer loop (navigation) -->
+
+      <define name="COURSE_DGAIN" value="1.2"/>
+      <define name="COURSE_PGAIN" value="1.144"/>
+      <define name="COURSE_PRE_BANK_CORRECTION" value="1.31"/>
+      <define name="ROLL_MAX_SETPOINT" value="0.785" unit="radians"/>
+      <define name="PITCH_MIN_SETPOINT" value="-RadOfDeg(45)" unit="radians"/>
+      <define name="PITCH_MAX_SETPOINT" value="RadOfDeg(45)" unit="radians"/>
+
+    </section>
+
+
+  <!--#############################################
+  __   __       _   _         _    ___ _       _
+  \ \ / /__ _ _| |_(_)__ __ _| |  / __| |_ _ _| |
+   \ V / -_) '_|  _| / _/ _` | | | (__|  _| '_| |
+    \_/\___|_|  \__|_\__\__,_|_|  \___|\__|_| |_|
+
+  ##############################################-->
+
+    <section name="VERTICAL CONTROL" prefix="V_CTL_">
+
+      <!-- Outer loop -->
+
+      <define name="ALTITUDE_PGAIN" value="0.142"/>
+      <define name="ALTITUDE_MAX_CLIMB" value="0.5"/>
+
+      <!-- auto throttle inner loop -->
+
+      <define name="AUTO_THROTTLE_PGAIN" value="0.008"/>
+      <define name="AUTO_THROTTLE_IGAIN" value="0.25"/>
+      <define name="AUTO_THROTTLE_DGAIN" value="0"/>
+      <define name="AUTO_THROTTLE_CLIMB_THROTTLE_INCREMENT" value="0.15" unit="%/(m/s)"/>
+      <define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.14"/>
+      <define name="AUTO_THROTTLE_PITCH_OF_VZ_DGAIN" value="0"/>
+      <define name="AUTO_THROTTLE_DASH_TRIM" value="-1000"/>
+      <define name="AUTO_THROTTLE_LOITER_TRIM" value="1500"/>
+      <define name="AUTO_THROTTLE_NOMINAL_CRUISE_THROTTLE" value="0.4"/>
+      <define name="AUTO_THROTTLE_MIN_CRUISE_THROTTLE" value="0"/>
+      <define name="AUTO_THROTTLE_MAX_CRUISE_THROTTLE" value="1"/>
+      <define name="THROTTLE_SLEW_LIMITER" value="0.5" unit="s"/>
+
+    </section>
+
+
+  <!--########################################
+     _                           _
+    /_\  __ _ __ _ _ _ ___ _____(_)_ _____
+   / _ \/ _` / _` | '_/ -_|_-<_-< \ V / -_)
+  /_/ \_\__, \__, |_| \___/__/__/_|\_/\___|
+        |___/|___/
+
+  #########################################-->
+
+    <section name="AGGRESSIVE">
+      <define name="AGR_BLEND_START" value="18"/>
+      <define name="AGR_BLEND_END" value="8"/>
+
+      <define name="AGR_CLIMB_THROTTLE" value="1"/>
+      <define name="AGR_CLIMB_PITCH" value="0.52"/>
+      <define name="AGR_CLIMB_NAV_RATIO" value="0.8"/>
+
+      <define name="AGR_DESCENT_THROTTLE" value="0"/>
+      <define name="AGR_DESCENT_PITCH" value="-0.5"/>
+      <define name="AGR_DESCENT_NAV_RATIO" value="1"/>
+    </section>
+
+  <!--#####################################
+   ___ _           _      _   _
+  / __(_)_ __ _  _| |__ _| |_(_)___ _ _
+  \__ \ | '  \ || | / _` |  _| / _ \ ' \
+  |___/_|_|_|_\_,_|_\__,_|\__|_\___/_||_|
+
+  ######################################-->
+
+    <section name="SIMU">
+      <define name="WEIGHT" value="1."/>
+      <define name="YAW_RESPONSE_FACTOR" value="1."/>
+      <define name="ROLL_RESPONSE_FACTOR" value="1."/>
+    </section>
+
+  <!--###################
+   __  __ ___ ___  ___
+  |  \/  |_ _/ __|/ __|
+  | |\/| || |\__ \ (__
+  |_|  |_|___|___/\___|
+
+  ####################-->
+
+    <section name="MISC">
+      <define name="NOMINAL_AIRSPEED" value="18" unit="m/s"/>
+      <define name="CARROT" value="5." unit="s"/>
+      <define name="CONTROL_RATE" value="60" unit="Hz"/>
+      <define name="DEFAULT_CIRCLE_RADIUS" value="100" unit="m"/>
+    </section>
+
+</airframe>

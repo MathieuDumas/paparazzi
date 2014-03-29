@@ -1,4 +1,4 @@
-/* Generated from /home/colibri/paparazziProto1/conf/mtk.xml */
+/* Generated from /home/lionel/paparazziProto1/conf/mtk.xml */
 /* Please DO NOT EDIT */
 
 #define MTK_DIY14_SYNC1 0xB5

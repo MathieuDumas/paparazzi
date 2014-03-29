@@ -5,16 +5,16 @@ export.cmx: ../lib/ocaml/pprz.cmx ../lib/ocaml/latlong.cmx \
 export.cmi: ../lib/ocaml/pprz.cmi
 log_file.cmo: ../lib/ocaml/ocaml_tools.cmi ../lib/ocaml/env.cmi
 log_file.cmx: ../lib/ocaml/ocaml_tools.cmx ../lib/ocaml/env.cmx
+play-nox.cmo: play_core.cmo
+play-nox.cmx: play_core.cmx
+play.cmo: play_core.cmo log_file.cmo ../lib/ocaml/env.cmi
+play.cmx: play_core.cmx log_file.cmx ../lib/ocaml/env.cmx
 play_core.cmo: ../lib/ocaml/serial.cmi ../lib/ocaml/pprz.cmi \
     ../lib/ocaml/ocaml_tools.cmi ../lib/ocaml/extXml.cmi ../lib/ocaml/env.cmi \
     ../lib/ocaml/defivybus.cmi ../lib/ocaml/debug.cmi
 play_core.cmx: ../lib/ocaml/serial.cmx ../lib/ocaml/pprz.cmx \
     ../lib/ocaml/ocaml_tools.cmx ../lib/ocaml/extXml.cmx ../lib/ocaml/env.cmx \
     ../lib/ocaml/defivybus.cmx ../lib/ocaml/debug.cmx
-play.cmo: play_core.cmo log_file.cmo ../lib/ocaml/env.cmi
-play.cmx: play_core.cmx log_file.cmx ../lib/ocaml/env.cmx
-play-nox.cmo: play_core.cmo
-play-nox.cmx: play_core.cmx
 plot.cmo: ../lib/ocaml/pprz.cmi ../lib/ocaml/ocaml_tools.cmi log_file.cmo \
     ../lib/ocaml/latlong.cmi ../lib/ocaml/gtk_tools.cmi ../lib/ocaml/fig.cmi \
     ../lib/ocaml/extXml.cmi export.cmi ../lib/ocaml/env.cmi \
