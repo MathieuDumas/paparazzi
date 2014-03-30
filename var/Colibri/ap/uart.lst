@@ -1,0 +1,73 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"uart.c"
+  12              		.section	.text.uart_periph_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	uart_periph_init
+  16              	uart_periph_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 0030A0E3 		mov	r3, #0
+  22 0004 411FA0E3 		mov	r1, #260
+  23 0008 B13080E1 		strh	r3, [r0, r1]	@ movhi
+  24 000c 021081E2 		add	r1, r1, #2
+  25 0010 B038C0E1 		strh	r3, [r0, #128]	@ movhi
+  26 0014 B238C0E1 		strh	r3, [r0, #130]	@ movhi
+  27 0018 B13080E1 		strh	r3, [r0, r1]	@ movhi
+  28 001c 0831C0E5 		strb	r3, [r0, #264]
+  29 0020 1EFF2FE1 		bx	lr
+  31              		.section	.text.uart_check_free_space,"ax",%progbits
+  32              		.align	2
+  33              		.global	uart_check_free_space
+  35              	uart_check_free_space:
+  36              		@ Function supports interworking.
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		@ link register save eliminated.
+  40 0000 44309FE5 		ldr	r3, .L4
+  41 0004 B32090E1 		ldrh	r2, [r0, r3]
+  42 0008 413FA0E3 		mov	r3, #260
+  43 000c B33090E1 		ldrh	r3, [r0, r3]
+  44 0010 022063E0 		rsb	r2, r3, r2
+  45 0014 0228A0E1 		mov	r2, r2, asl #16
+  46 0018 2228A0E1 		mov	r2, r2, lsr #16
+  47 001c 0208A0E1 		mov	r0, r2, asl #16
+  48 0020 000050E3 		cmp	r0, #0
+  49 0024 0230A0E1 		mov	r3, r2
+  50 0028 803082D2 		addle	r3, r2, #128
+  51 002c 0338A0D1 		movle	r3, r3, asl #16
+  52 0030 2338A0D1 		movle	r3, r3, lsr #16
+  53 0034 013043E2 		sub	r3, r3, #1
+  54 0038 0338A0E1 		mov	r3, r3, asl #16
+  55 003c 230851E1 		cmp	r1, r3, lsr #16
+  56 0040 0000A083 		movhi	r0, #0
+  57 0044 0100A093 		movls	r0, #1
+  58 0048 1EFF2FE1 		bx	lr
+  59              	.L5:
+  60              		.align	2
+  61              	.L4:
+  62 004c 06010000 		.word	262
+  64              		.comm	uart1,288,4
+  65              		.comm	uart0,288,4
+  66              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 uart.c
+     /tmp/ccq3wjKD.s:13     .text.uart_periph_init:00000000 $a
+     /tmp/ccq3wjKD.s:16     .text.uart_periph_init:00000000 uart_periph_init
+     /tmp/ccq3wjKD.s:32     .text.uart_check_free_space:00000000 $a
+     /tmp/ccq3wjKD.s:35     .text.uart_check_free_space:00000000 uart_check_free_space
+     /tmp/ccq3wjKD.s:62     .text.uart_check_free_space:0000004c $d
+                            *COM*:00000120 uart1
+                            *COM*:00000120 uart0
+
+NO UNDEFINED SYMBOLS

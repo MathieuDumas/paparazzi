@@ -8,6 +8,8 @@
 #include "generated/modules.h"
 #include "subsystems/datalink/datalink.h"
 #include "generated/airframe.h"
+#include "commands.h"
+#include "actuators.h"
 #define FLIGHT_PLAN_NAME "Versatile"
 #define NAV_UTM_EAST0 374889
 #define NAV_UTM_NORTH0 4223058
@@ -47,23 +49,23 @@ static inline void auto_nav(void) {
         NextStageAndBreak();
         break;
       Stage(1)
-        pprz_mode = PPRZ_MODE_MANUAL;
+        fbw_mode = FBW_MODE_MANUAL;
         NextStageAndBreak();
         break;
       Stage(2)
-        radio_control.values[0] = 1500;
+        radio_control.values[0] = 9600;
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[1] = 1500;
+        radio_control.values[1] = 9600;
         NextStageAndBreak();
         break;
       Stage(4)
-        radio_control.values[2] = 1500;
+        radio_control.values[2] = 9600;
         NextStageAndBreak();
         break;
       Stage(5)
-        radio_control.values[3] = 1500;
+        radio_control.values[3] = 9600;
         NextStageAndBreak();
         break;
       Label(while_1)
@@ -84,33 +86,29 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        pprz_mode = PPRZ_MODE_MANUAL;
+        radio_control.values[0] = -(9600);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[0] = 1600;
+        radio_control.values[1] = -(9600);
         NextStageAndBreak();
         break;
       Stage(2)
-        radio_control.values[1] = 1800;
+        radio_control.values[2] = -(9600);
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[2] = 1500;
-        NextStageAndBreak();
-        break;
-      Stage(4)
-        radio_control.values[3] = 1500;
+        radio_control.values[3] = -(9600);
         NextStageAndBreak();
         break;
       Label(while_3)
-      Stage(5)
+      Stage(4)
         if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_4) else NextStageAndBreak();
-        Stage(6)
+        Stage(5)
           Goto(while_3)
         Label(endwhile_4)
       default:
-      Stage(7)
+      Stage(6)
         NextBlock();
         break;
     }
@@ -121,33 +119,29 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        pprz_mode = PPRZ_MODE_MANUAL;
+        radio_control.values[0] = 9600;
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[0] = 1600;
+        radio_control.values[1] = 9600;
         NextStageAndBreak();
         break;
       Stage(2)
-        radio_control.values[1] = 1200;
+        radio_control.values[2] = 9600;
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[2] = 1500;
-        NextStageAndBreak();
-        break;
-      Stage(4)
-        radio_control.values[3] = 1500;
+        radio_control.values[3] = 9600;
         NextStageAndBreak();
         break;
       Label(while_5)
-      Stage(5)
+      Stage(4)
         if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_6) else NextStageAndBreak();
-        Stage(6)
+        Stage(5)
           Goto(while_5)
         Label(endwhile_6)
       default:
-      Stage(7)
+      Stage(6)
         NextBlock();
         break;
     }
@@ -158,40 +152,69 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        pprz_mode = PPRZ_MODE_MANUAL;
+        radio_control.values[0] = -(9600);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[0] = 1700;
+        radio_control.values[1] = -(9600);
         NextStageAndBreak();
         break;
       Stage(2)
-        radio_control.values[1] = 1500;
+        radio_control.values[2] = -(9600);
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[2] = 1700;
-        NextStageAndBreak();
-        break;
-      Stage(4)
-        radio_control.values[3] = 1300;
+        radio_control.values[3] = -(9600);
         NextStageAndBreak();
         break;
       Label(while_7)
-      Stage(5)
+      Stage(4)
         if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_8) else NextStageAndBreak();
-        Stage(6)
+        Stage(5)
           Goto(while_7)
         Label(endwhile_8)
       default:
-      Stage(7)
+      Stage(6)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(4) // Block 4
+    Block(4) // Fin de test
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = 0;
+        NextStageAndBreak();
+        break;
+      Stage(1)
+        radio_control.values[1] = 0;
+        NextStageAndBreak();
+        break;
+      Stage(2)
+        radio_control.values[2] = 0;
+        NextStageAndBreak();
+        break;
+      Stage(3)
+        radio_control.values[3] = 0;
+        NextStageAndBreak();
+        break;
+      Label(while_9)
+      Stage(4)
+        if (! (TRUE)) Goto(endwhile_10) else NextStageAndBreak();
+        Stage(5)
+          Goto(while_9)
+        Label(endwhile_10)
+      default:
+      Stage(6)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(5) // Block 4
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
@@ -209,7 +232,7 @@ static inline void auto_nav(void) {
     ; // post_call
     break;
 
-    Block(5) // Block 5
+    Block(6) // Block 5
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
@@ -221,30 +244,6 @@ static inline void auto_nav(void) {
         break;
       default:
       Stage(1)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(6) // Fin de test
-    ; // pre_call
-    switch(nav_stage) {
-      Label(while_9)
-      Stage(0)
-        if (! (TRUE)) Goto(endwhile_10) else NextStageAndBreak();
-        Stage(1)
-          {
-            NavAttitude(RadOfDeg(0));
-            NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-            NavVerticalThrottleMode(9600*(0));
-          }
-          break;
-        Stage(2)
-          Goto(while_9)
-        Label(endwhile_10)
-      default:
-      Stage(3)
         NextBlock();
         break;
     }

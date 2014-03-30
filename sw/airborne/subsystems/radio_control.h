@@ -40,7 +40,7 @@ extern void radio_control_impl_init(void);
 /* timeouts - for now assumes 60Hz periodic */
 #define RC_AVG_PERIOD 8  /* TODO remove if IIR filter is used */
 #define RC_LOST_TIME 30  /* 500ms with a 60Hz timer */
-#define RC_REALLY_LOST_TIME 60 /* ~1s */
+#define RC_OK_TIME 60 /* ~1s */
 /* Number of valid frames before going back to RC OK */
 #define RC_OK_CPT 15
 
@@ -65,8 +65,8 @@ static inline void radio_control_init ( void ) {
   uint8_t i;
   for (i=0; i<RADIO_CONTROL_NB_CHANNEL; i++)
     radio_control.values[i] = 0;
-  radio_control.status = RC_REALLY_LOST;
-  radio_control.time_since_last_frame = RC_REALLY_LOST_TIME;
+  radio_control.status = RC_OK;
+  radio_control.time_since_last_frame = RC_OK_TIME;
   radio_control.radio_ok_cpt = 0;
   radio_control.frame_rate = 0;
   radio_control.frame_cpt = 0;
@@ -84,8 +84,8 @@ static inline void radio_control_periodic_task ( void ) {
     radio_control.frame_cpt = 0;
   }
 
-  if (radio_control.time_since_last_frame >= RC_REALLY_LOST_TIME) {
-    radio_control.status = RC_REALLY_LOST;
+  if (radio_control.time_since_last_frame >= RC_OK_TIME) {
+    radio_control.status = RC_OK;
   } else {
     if (radio_control.time_since_last_frame >= RC_LOST_TIME) {
       radio_control.status = RC_LOST;

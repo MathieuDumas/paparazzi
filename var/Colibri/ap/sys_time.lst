@@ -1,0 +1,184 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"sys_time.c"
+  12              		.global	__aeabi_f2d
+  13              		.global	__aeabi_ddiv
+  14              		.global	__aeabi_dadd
+  15              		.global	__aeabi_d2uiz
+  16              		.section	.text.sys_time_register_timer,"ax",%progbits
+  17              		.align	2
+  18              		.global	sys_time_register_timer
+  20              	sys_time_register_timer:
+  21              		@ Function supports interworking.
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24 0000 80309FE5 		ldr	r3, .L6
+  25 0004 70402DE9 		stmfd	sp!, {r4, r5, r6, lr}
+  26 0008 086093E5 		ldr	r6, [r3, #8]
+  27 000c 0040A0E3 		mov	r4, #0
+  28 0010 03C0A0E1 		mov	ip, r3
+  29              	.L4:
+  30 0014 0C20D3E5 		ldrb	r2, [r3, #12]	@ zero_extendqisi2
+  31 0018 000052E3 		cmp	r2, #0
+  32 001c 1100001A 		bne	.L2
+  33 0020 1450A0E3 		mov	r5, #20
+  34 0024 94C525E0 		mla	r5, r4, r5, ip
+  35 0028 1420C5E5 		strb	r2, [r5, #20]
+  36 002c 101085E5 		str	r1, [r5, #16]
+  37 0030 FEFFFFEB 		bl	__aeabi_f2d
+  38 0034 50209FE5 		ldr	r2, .L6+4
+  39 0038 50309FE5 		ldr	r3, .L6+8
+  40 003c FEFFFFEB 		bl	__aeabi_ddiv
+  41 0040 4C309FE5 		ldr	r3, .L6+12
+  42 0044 0020A0E3 		mov	r2, #0
+  43 0048 FEFFFFEB 		bl	__aeabi_dadd
+  44 004c FEFFFFEB 		bl	__aeabi_d2uiz
+  45 0050 0130A0E3 		mov	r3, #1
+  46 0054 066080E0 		add	r6, r0, r6
+  47 0058 186085E5 		str	r6, [r5, #24]
+  48 005c 1C0085E5 		str	r0, [r5, #28]
+  49 0060 0C30C5E5 		strb	r3, [r5, #12]
+  50 0064 040000EA 		b	.L3
+  51              	.L2:
+  52 0068 014084E2 		add	r4, r4, #1
+  53 006c 080054E3 		cmp	r4, #8
+  54 0070 143083E2 		add	r3, r3, #20
+  55 0074 E6FFFF1A 		bne	.L4
+  56 0078 0040E0E3 		mvn	r4, #0
+  57              	.L3:
+  58 007c 0400A0E1 		mov	r0, r4
+  59 0080 7040BDE8 		ldmfd	sp!, {r4, r5, r6, lr}
+  60 0084 1EFF2FE1 		bx	lr
+  61              	.L7:
+  62              		.align	2
+  63              	.L6:
+  64 0088 00000000 		.word	sys_time
+  65 008c 11111111 		.word	286331153
+  66 0090 1111913F 		.word	1066471697
+  67 0094 0000E03F 		.word	1071644672
+  69              		.section	.text.sys_time_cancel_timer,"ax",%progbits
+  70              		.align	2
+  71              		.global	sys_time_cancel_timer
+  73              	sys_time_cancel_timer:
+  74              		@ Function supports interworking.
+  75              		@ args = 0, pretend = 0, frame = 0
+  76              		@ frame_needed = 0, uses_anonymous_args = 0
+  77              		@ link register save eliminated.
+  78 0000 10309FE5 		ldr	r3, .L9
+  79 0004 1420A0E3 		mov	r2, #20
+  80 0008 923023E0 		mla	r3, r2, r0, r3
+  81 000c 0020A0E3 		mov	r2, #0
+  82 0010 0C20C3E5 		strb	r2, [r3, #12]
+  83 0014 1EFF2FE1 		bx	lr
+  84              	.L10:
+  85              		.align	2
+  86              	.L9:
+  87 0018 00000000 		.word	sys_time
+  89              		.section	.text.sys_time_update_timer,"ax",%progbits
+  90              		.align	2
+  91              		.global	sys_time_update_timer
+  93              	sys_time_update_timer:
+  94              		@ Function supports interworking.
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97 0000 38402DE9 		stmfd	sp!, {r3, r4, r5, lr}
+  98 0004 0150A0E1 		mov	r5, r1
+  99 0008 0040A0E1 		mov	r4, r0
+ 100 000c FEFFFFEB 		bl	disableIRQ
+ 101 0010 0500A0E1 		mov	r0, r5
+ 102 0014 FEFFFFEB 		bl	__aeabi_f2d
+ 103 0018 44209FE5 		ldr	r2, .L12
+ 104 001c 44309FE5 		ldr	r3, .L12+4
+ 105 0020 FEFFFFEB 		bl	__aeabi_ddiv
+ 106 0024 0020A0E3 		mov	r2, #0
+ 107 0028 3C309FE5 		ldr	r3, .L12+8
+ 108 002c FEFFFFEB 		bl	__aeabi_dadd
+ 109 0030 FEFFFFEB 		bl	__aeabi_d2uiz
+ 110 0034 34309FE5 		ldr	r3, .L12+12
+ 111 0038 1420A0E3 		mov	r2, #20
+ 112 003c 923424E0 		mla	r4, r2, r4, r3
+ 113 0040 182084E2 		add	r2, r4, #24
+ 114 0044 0C0092E8 		ldmia	r2, {r2, r3}
+ 115 0048 033042E0 		sub	r3, r2, r3
+ 116 004c 003083E0 		add	r3, r3, r0
+ 117 0050 183084E5 		str	r3, [r4, #24]
+ 118 0054 1C0084E5 		str	r0, [r4, #28]
+ 119 0058 FEFFFFEB 		bl	enableIRQ
+ 120 005c 3840BDE8 		ldmfd	sp!, {r3, r4, r5, lr}
+ 121 0060 1EFF2FE1 		bx	lr
+ 122              	.L13:
+ 123              		.align	2
+ 124              	.L12:
+ 125 0064 11111111 		.word	286331153
+ 126 0068 1111913F 		.word	1066471697
+ 127 006c 0000E03F 		.word	1071644672
+ 128 0070 00000000 		.word	sys_time
+ 130              		.section	.text.sys_time_init,"ax",%progbits
+ 131              		.align	2
+ 132              		.global	sys_time_init
+ 134              	sys_time_init:
+ 135              		@ Function supports interworking.
+ 136              		@ args = 0, pretend = 0, frame = 0
+ 137              		@ frame_needed = 0, uses_anonymous_args = 0
+ 138 0000 10402DE9 		stmfd	sp!, {r4, lr}
+ 139 0004 FEFFFFEB 		bl	sys_time_arch_init
+ 140 0008 4C309FE5 		ldr	r3, .L17
+ 141 000c 0010A0E3 		mov	r1, #0
+ 142 0010 001083E5 		str	r1, [r3, #0]
+ 143 0014 041083E5 		str	r1, [r3, #4]
+ 144 0018 081083E5 		str	r1, [r3, #8]
+ 145 001c 0120A0E1 		mov	r2, r1
+ 146 0020 03C0A0E1 		mov	ip, r3
+ 147 0024 1400A0E3 		mov	r0, #20
+ 148              	.L15:
+ 149 0028 90C124E0 		mla	r4, r0, r1, ip
+ 150 002c 011081E2 		add	r1, r1, #1
+ 151 0030 080051E3 		cmp	r1, #8
+ 152 0034 0C20C3E5 		strb	r2, [r3, #12]
+ 153 0038 102083E5 		str	r2, [r3, #16]
+ 154 003c 1420C4E5 		strb	r2, [r4, #20]
+ 155 0040 182083E5 		str	r2, [r3, #24]
+ 156 0044 1C2083E5 		str	r2, [r3, #28]
+ 157 0048 104084E2 		add	r4, r4, #16
+ 158 004c 143083E2 		add	r3, r3, #20
+ 159 0050 F4FFFF1A 		bne	.L15
+ 160 0054 1040BDE8 		ldmfd	sp!, {r4, lr}
+ 161 0058 1EFF2FE1 		bx	lr
+ 162              	.L18:
+ 163              		.align	2
+ 164              	.L17:
+ 165 005c 00000000 		.word	sys_time
+ 167              		.comm	sys_time,172,4
+ 168              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 sys_time.c
+     /tmp/cct7Ah8b.s:17     .text.sys_time_register_timer:00000000 $a
+     /tmp/cct7Ah8b.s:20     .text.sys_time_register_timer:00000000 sys_time_register_timer
+     /tmp/cct7Ah8b.s:64     .text.sys_time_register_timer:00000088 $d
+                            *COM*:000000ac sys_time
+     /tmp/cct7Ah8b.s:70     .text.sys_time_cancel_timer:00000000 $a
+     /tmp/cct7Ah8b.s:73     .text.sys_time_cancel_timer:00000000 sys_time_cancel_timer
+     /tmp/cct7Ah8b.s:87     .text.sys_time_cancel_timer:00000018 $d
+     /tmp/cct7Ah8b.s:90     .text.sys_time_update_timer:00000000 $a
+     /tmp/cct7Ah8b.s:93     .text.sys_time_update_timer:00000000 sys_time_update_timer
+     /tmp/cct7Ah8b.s:125    .text.sys_time_update_timer:00000064 $d
+     /tmp/cct7Ah8b.s:131    .text.sys_time_init:00000000 $a
+     /tmp/cct7Ah8b.s:134    .text.sys_time_init:00000000 sys_time_init
+     /tmp/cct7Ah8b.s:165    .text.sys_time_init:0000005c $d
+
+UNDEFINED SYMBOLS
+__aeabi_f2d
+__aeabi_ddiv
+__aeabi_dadd
+__aeabi_d2uiz
+disableIRQ
+enableIRQ
+sys_time_arch_init

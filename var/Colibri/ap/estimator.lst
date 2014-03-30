@@ -1,0 +1,448 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"estimator.c"
+  12              		.section	.text.alt_kalman_reset,"ax",%progbits
+  13              		.align	2
+  14              		.global	alt_kalman_reset
+  16              	alt_kalman_reset:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 18309FE5 		ldr	r3, .L2
+  22 0004 FE25A0E3 		mov	r2, #1065353216
+  23 0008 0010A0E3 		mov	r1, #0
+  24 000c 002083E5 		str	r2, [r3, #0]	@ float
+  25 0010 041083E5 		str	r1, [r3, #4]	@ float
+  26 0014 081083E5 		str	r1, [r3, #8]	@ float
+  27 0018 0C2083E5 		str	r2, [r3, #12]	@ float
+  28 001c 1EFF2FE1 		bx	lr
+  29              	.L3:
+  30              		.align	2
+  31              	.L2:
+  32 0020 00000000 		.word	.LANCHOR0
+  34              		.section	.text.alt_kalman_init,"ax",%progbits
+  35              		.align	2
+  36              		.global	alt_kalman_init
+  38              	alt_kalman_init:
+  39              		@ Function supports interworking.
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42              		@ link register save eliminated.
+  43 0000 08309FE5 		ldr	r3, .L5
+  44 0004 0020A0E3 		mov	r2, #0
+  45 0008 0020C3E5 		strb	r2, [r3, #0]
+  46 000c FEFFFFEA 		b	alt_kalman_reset
+  47              	.L6:
+  48              		.align	2
+  49              	.L5:
+  50 0010 00000000 		.word	alt_kalman_enabled
+  52              		.global	__aeabi_fmul
+  53              		.global	__aeabi_fadd
+  54              		.global	__aeabi_f2d
+  55              		.global	__aeabi_dcmpgt
+  56              		.global	__aeabi_fdiv
+  57              		.global	__aeabi_fsub
+  58              		.section	.text.alt_kalman,"ax",%progbits
+  59              		.align	2
+  60              		.global	alt_kalman
+  62              	alt_kalman:
+  63              		@ Function supports interworking.
+  64              		@ args = 0, pretend = 0, frame = 16
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66 0000 F04F2DE9 		stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  67 0004 DC319FE5 		ldr	r3, .L11
+  68 0008 003093E5 		ldr	r3, [r3, #0]	@ float
+  69 000c 14D04DE2 		sub	sp, sp, #20
+  70 0010 D4819FE5 		ldr	r8, .L11+4
+  71 0014 0C008DE5 		str	r0, [sp, #12]	@ float
+  72 0018 FA15A0E3 		mov	r1, #1048576000
+  73 001c 0300A0E1 		mov	r0, r3
+  74 0020 00308DE5 		str	r3, [sp, #0]	@ float
+  75 0024 FEFFFFEB 		bl	__aeabi_fmul
+  76 0028 001098E5 		ldr	r1, [r8, #0]	@ float
+  77 002c FEFFFFEB 		bl	__aeabi_fadd
+  78 0030 B8419FE5 		ldr	r4, .L11+8
+  79 0034 0C7094E5 		ldr	r7, [r4, #12]	@ float
+  80 0038 000088E5 		str	r0, [r8, #0]	@ float
+  81 003c FA15A0E3 		mov	r1, #1048576000
+  82 0040 0060A0E1 		mov	r6, r0
+  83 0044 0700A0E1 		mov	r0, r7
+  84 0048 FEFFFFEB 		bl	__aeabi_fmul
+  85 004c 041094E5 		ldr	r1, [r4, #4]	@ float
+  86 0050 00B0A0E1 		mov	fp, r0
+  87 0054 FEFFFFEB 		bl	__aeabi_fadd
+  88 0058 08A094E5 		ldr	sl, [r4, #8]	@ float
+  89 005c 0090A0E1 		mov	r9, r0
+  90 0060 FA15A0E3 		mov	r1, #1048576000
+  91 0064 0A00A0E1 		mov	r0, sl
+  92 0068 FEFFFFEB 		bl	__aeabi_fmul
+  93 006c 001094E5 		ldr	r1, [r4, #0]	@ float
+  94 0070 FEFFFFEB 		bl	__aeabi_fadd
+  95 0074 FA15A0E3 		mov	r1, #1048576000
+  96 0078 0050A0E1 		mov	r5, r0
+  97 007c 0900A0E1 		mov	r0, r9
+  98 0080 FEFFFFEB 		bl	__aeabi_fmul
+  99 0084 0010A0E1 		mov	r1, r0
+ 100 0088 0500A0E1 		mov	r0, r5
+ 101 008c FEFFFFEB 		bl	__aeabi_fadd
+ 102 0090 EA15A0E3 		mov	r1, #981467136
+ 103 0094 FEFFFFEB 		bl	__aeabi_fadd
+ 104 0098 0F13A0E3 		mov	r1, #1006632960
+ 105 009c 0050A0E1 		mov	r5, r0
+ 106 00a0 000084E5 		str	r0, [r4, #0]	@ float
+ 107 00a4 0900A0E1 		mov	r0, r9
+ 108 00a8 FEFFFFEB 		bl	__aeabi_fadd
+ 109 00ac 0B10A0E1 		mov	r1, fp
+ 110 00b0 040084E5 		str	r0, [r4, #4]	@ float
+ 111 00b4 0090A0E1 		mov	r9, r0
+ 112 00b8 0A00A0E1 		mov	r0, sl
+ 113 00bc FEFFFFEB 		bl	__aeabi_fadd
+ 114 00c0 0F13A0E3 		mov	r1, #1006632960
+ 115 00c4 FEFFFFEB 		bl	__aeabi_fadd
+ 116 00c8 F615A0E3 		mov	r1, #1031798784
+ 117 00cc 080084E5 		str	r0, [r4, #8]	@ float
+ 118 00d0 00A0A0E1 		mov	sl, r0
+ 119 00d4 0700A0E1 		mov	r0, r7
+ 120 00d8 FEFFFFEB 		bl	__aeabi_fadd
+ 121 00dc 0111A0E3 		mov	r1, #1073741824
+ 122 00e0 04008DE5 		str	r0, [sp, #4]	@ float
+ 123 00e4 0C0084E5 		str	r0, [r4, #12]	@ float
+ 124 00e8 0500A0E1 		mov	r0, r5
+ 125 00ec FEFFFFEB 		bl	__aeabi_fadd
+ 126 00f0 0070A0E1 		mov	r7, r0
+ 127 00f4 0201C0E3 		bic	r0, r0, #-2147483648
+ 128 00f8 FEFFFFEB 		bl	__aeabi_f2d
+ 129 00fc F0209FE5 		ldr	r2, .L11+12
+ 130 0100 F0309FE5 		ldr	r3, .L11+16
+ 131 0104 FEFFFFEB 		bl	__aeabi_dcmpgt
+ 132 0108 000050E3 		cmp	r0, #0
+ 133 010c 3200000A 		beq	.L7
+ 134 0110 0710A0E1 		mov	r1, r7
+ 135 0114 0500A0E1 		mov	r0, r5
+ 136 0118 FEFFFFEB 		bl	__aeabi_fdiv
+ 137 011c 0710A0E1 		mov	r1, r7
+ 138 0120 08008DE5 		str	r0, [sp, #8]	@ float
+ 139 0124 0A00A0E1 		mov	r0, sl
+ 140 0128 FEFFFFEB 		bl	__aeabi_fdiv
+ 141 012c 0610A0E1 		mov	r1, r6
+ 142 0130 0070A0E1 		mov	r7, r0
+ 143 0134 0C009DE5 		ldr	r0, [sp, #12]	@ float
+ 144 0138 FEFFFFEB 		bl	__aeabi_fsub
+ 145 013c 00B0A0E1 		mov	fp, r0
+ 146 0140 0B10A0E1 		mov	r1, fp
+ 147 0144 08009DE5 		ldr	r0, [sp, #8]	@ float
+ 148 0148 FEFFFFEB 		bl	__aeabi_fmul
+ 149 014c 0010A0E1 		mov	r1, r0
+ 150 0150 0600A0E1 		mov	r0, r6
+ 151 0154 FEFFFFEB 		bl	__aeabi_fadd
+ 152 0158 0B10A0E1 		mov	r1, fp
+ 153 015c 000088E5 		str	r0, [r8, #0]	@ float
+ 154 0160 0700A0E1 		mov	r0, r7
+ 155 0164 FEFFFFEB 		bl	__aeabi_fmul
+ 156 0168 0010A0E1 		mov	r1, r0
+ 157 016c 00009DE5 		ldr	r0, [sp, #0]	@ float
+ 158 0170 FEFFFFEB 		bl	__aeabi_fadd
+ 159 0174 6C309FE5 		ldr	r3, .L11
+ 160 0178 0710A0E1 		mov	r1, r7
+ 161 017c 000083E5 		str	r0, [r3, #0]	@ float
+ 162 0180 020185E2 		add	r0, r5, #-2147483648
+ 163 0184 FEFFFFEB 		bl	__aeabi_fmul
+ 164 0188 0A10A0E1 		mov	r1, sl
+ 165 018c FEFFFFEB 		bl	__aeabi_fadd
+ 166 0190 0710A0E1 		mov	r1, r7
+ 167 0194 080084E5 		str	r0, [r4, #8]	@ float
+ 168 0198 020189E2 		add	r0, r9, #-2147483648
+ 169 019c FEFFFFEB 		bl	__aeabi_fmul
+ 170 01a0 04109DE5 		ldr	r1, [sp, #4]	@ float
+ 171 01a4 FEFFFFEB 		bl	__aeabi_fadd
+ 172 01a8 08109DE5 		ldr	r1, [sp, #8]	@ float
+ 173 01ac 0C0084E5 		str	r0, [r4, #12]	@ float
+ 174 01b0 FE05A0E3 		mov	r0, #1065353216
+ 175 01b4 FEFFFFEB 		bl	__aeabi_fsub
+ 176 01b8 0060A0E1 		mov	r6, r0
+ 177 01bc 0610A0E1 		mov	r1, r6
+ 178 01c0 0500A0E1 		mov	r0, r5
+ 179 01c4 FEFFFFEB 		bl	__aeabi_fmul
+ 180 01c8 0610A0E1 		mov	r1, r6
+ 181 01cc 000084E5 		str	r0, [r4, #0]	@ float
+ 182 01d0 0900A0E1 		mov	r0, r9
+ 183 01d4 FEFFFFEB 		bl	__aeabi_fmul
+ 184 01d8 040084E5 		str	r0, [r4, #4]	@ float
+ 185              	.L7:
+ 186 01dc 14D08DE2 		add	sp, sp, #20
+ 187 01e0 F04FBDE8 		ldmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 188 01e4 1EFF2FE1 		bx	lr
+ 189              	.L12:
+ 190              		.align	2
+ 191              	.L11:
+ 192 01e8 00000000 		.word	estimator_z_dot
+ 193 01ec 00000000 		.word	estimator_z
+ 194 01f0 00000000 		.word	.LANCHOR0
+ 195 01f4 F168E388 		.word	-1998362383
+ 196 01f8 B5F8E43E 		.word	1055193269
+ 198              		.section	.text.estimator_init,"ax",%progbits
+ 199              		.align	2
+ 200              		.global	estimator_init
+ 202              	estimator_init:
+ 203              		@ Function supports interworking.
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206 0000 A4309FE5 		ldr	r3, .L17
+ 207 0004 10402DE9 		stmfd	sp!, {r4, lr}
+ 208 0008 0040A0E3 		mov	r4, #0
+ 209 000c 004083E5 		str	r4, [r3, #0]	@ float
+ 210 0010 98309FE5 		ldr	r3, .L17+4
+ 211 0014 004083E5 		str	r4, [r3, #0]	@ float
+ 212 0018 94309FE5 		ldr	r3, .L17+8
+ 213 001c 0030D3E5 		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 214 0020 000053E3 		cmp	r3, #0
+ 215 0024 8C309F05 		ldreq	r3, .L17+12
+ 216 0028 00408305 		streq	r4, [r3, #0]	@ float
+ 217 002c 0400A011 		movne	r0, r4
+ 218 0030 FEFFFF1B 		blne	alt_kalman
+ 219              	.L15:
+ 220 0034 80309FE5 		ldr	r3, .L17+16
+ 221 0038 004083E5 		str	r4, [r3, #0]	@ float
+ 222 003c 7C309FE5 		ldr	r3, .L17+20
+ 223 0040 004083E5 		str	r4, [r3, #0]	@ float
+ 224 0044 78309FE5 		ldr	r3, .L17+24
+ 225 0048 004083E5 		str	r4, [r3, #0]	@ float
+ 226 004c 74309FE5 		ldr	r3, .L17+28
+ 227 0050 004083E5 		str	r4, [r3, #0]	@ float
+ 228 0054 70309FE5 		ldr	r3, .L17+32
+ 229 0058 004083E5 		str	r4, [r3, #0]	@ float
+ 230 005c 50309FE5 		ldr	r3, .L17+8
+ 231 0060 0030D3E5 		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 232 0064 000053E3 		cmp	r3, #0
+ 233 0068 60309F05 		ldreq	r3, .L17+36
+ 234 006c 0020A003 		moveq	r2, #0
+ 235 0070 00208305 		streq	r2, [r3, #0]	@ float
+ 236 0074 58309FE5 		ldr	r3, .L17+40
+ 237 0078 004083E5 		str	r4, [r3, #0]	@ float
+ 238 007c 54309FE5 		ldr	r3, .L17+44
+ 239 0080 004083E5 		str	r4, [r3, #0]	@ float
+ 240 0084 50309FE5 		ldr	r3, .L17+48
+ 241 0088 004083E5 		str	r4, [r3, #0]	@ float
+ 242 008c 4C309FE5 		ldr	r3, .L17+52
+ 243 0090 0020A0E3 		mov	r2, #0
+ 244 0094 B020C3E1 		strh	r2, [r3, #0]	@ movhi
+ 245 0098 44209FE5 		ldr	r2, .L17+56
+ 246 009c 44309FE5 		ldr	r3, .L17+60
+ 247 00a0 002083E5 		str	r2, [r3, #0]	@ float
+ 248 00a4 1040BDE8 		ldmfd	sp!, {r4, lr}
+ 249 00a8 1EFF2FE1 		bx	lr
+ 250              	.L18:
+ 251              		.align	2
+ 252              	.L17:
+ 253 00ac 00000000 		.word	estimator_x
+ 254 00b0 00000000 		.word	estimator_y
+ 255 00b4 00000000 		.word	alt_kalman_enabled
+ 256 00b8 00000000 		.word	estimator_z
+ 257 00bc 00000000 		.word	estimator_phi
+ 258 00c0 00000000 		.word	estimator_psi
+ 259 00c4 00000000 		.word	estimator_theta
+ 260 00c8 00000000 		.word	estimator_hspeed_mod
+ 261 00cc 00000000 		.word	estimator_hspeed_dir
+ 262 00d0 00000000 		.word	estimator_z_dot
+ 263 00d4 00000000 		.word	estimator_p
+ 264 00d8 00000000 		.word	estimator_q
+ 265 00dc 00000000 		.word	estimator_r
+ 266 00e0 00000000 		.word	estimator_flight_time
+ 267 00e4 00009041 		.word	1099956224
+ 268 00e8 00000000 		.word	estimator_airspeed
+ 270              		.global	__aeabi_i2d
+ 271              		.global	__aeabi_ddiv
+ 272              		.global	__aeabi_d2f
+ 273              		.global	__aeabi_i2f
+ 274              		.section	.text.estimator_update_state_gps,"ax",%progbits
+ 275              		.align	2
+ 276              		.global	estimator_update_state_gps
+ 278              	estimator_update_state_gps:
+ 279              		@ Function supports interworking.
+ 280              		@ args = 0, pretend = 0, frame = 0
+ 281              		@ frame_needed = 0, uses_anonymous_args = 0
+ 282 0000 70402DE9 		stmfd	sp!, {r4, r5, r6, lr}
+ 283 0004 28419FE5 		ldr	r4, .L23
+ 284 0008 1C0094E5 		ldr	r0, [r4, #28]
+ 285 000c FEFFFFEB 		bl	__aeabi_i2d
+ 286 0010 0020A0E3 		mov	r2, #0
+ 287 0014 1C319FE5 		ldr	r3, .L23+4
+ 288 0018 FEFFFFEB 		bl	__aeabi_ddiv
+ 289 001c FEFFFFEB 		bl	__aeabi_d2f
+ 290 0020 0050A0E1 		mov	r5, r0
+ 291 0024 180094E5 		ldr	r0, [r4, #24]
+ 292 0028 FEFFFFEB 		bl	__aeabi_i2d
+ 293 002c 0020A0E3 		mov	r2, #0
+ 294 0030 00319FE5 		ldr	r3, .L23+4
+ 295 0034 FEFFFFEB 		bl	__aeabi_ddiv
+ 296 0038 FEFFFFEB 		bl	__aeabi_d2f
+ 297 003c F8309FE5 		ldr	r3, .L23+8
+ 298 0040 0060A0E1 		mov	r6, r0
+ 299 0044 000093E5 		ldr	r0, [r3, #0]
+ 300 0048 FEFFFFEB 		bl	__aeabi_i2f
+ 301 004c 0010A0E1 		mov	r1, r0
+ 302 0050 0600A0E1 		mov	r0, r6
+ 303 0054 FEFFFFEB 		bl	__aeabi_fsub
+ 304 0058 E0309FE5 		ldr	r3, .L23+12
+ 305 005c 0060A0E1 		mov	r6, r0
+ 306 0060 000093E5 		ldr	r0, [r3, #0]
+ 307 0064 FEFFFFEB 		bl	__aeabi_i2f
+ 308 0068 0010A0E1 		mov	r1, r0
+ 309 006c 0500A0E1 		mov	r0, r5
+ 310 0070 FEFFFFEB 		bl	__aeabi_fsub
+ 311 0074 C8309FE5 		ldr	r3, .L23+16
+ 312 0078 000083E5 		str	r0, [r3, #0]	@ float
+ 313 007c C4309FE5 		ldr	r3, .L23+20
+ 314 0080 280094E5 		ldr	r0, [r4, #40]
+ 315 0084 006083E5 		str	r6, [r3, #0]	@ float
+ 316 0088 FEFFFFEB 		bl	__aeabi_i2d
+ 317 008c 0020A0E3 		mov	r2, #0
+ 318 0090 B4309FE5 		ldr	r3, .L23+24
+ 319 0094 FEFFFFEB 		bl	__aeabi_ddiv
+ 320 0098 FEFFFFEB 		bl	__aeabi_d2f
+ 321 009c AC209FE5 		ldr	r2, .L23+28
+ 322 00a0 0020D2E5 		ldrb	r2, [r2, #0]	@ zero_extendqisi2
+ 323 00a4 000052E3 		cmp	r2, #0
+ 324 00a8 A4209F05 		ldreq	r2, .L23+32
+ 325 00ac 00008205 		streq	r0, [r2, #0]	@ float
+ 326 00b0 FEFFFF1B 		blne	alt_kalman
+ 327              	.L21:
+ 328 00b4 480094E5 		ldr	r0, [r4, #72]
+ 329 00b8 FEFFFFEB 		bl	__aeabi_i2d
+ 330 00bc 0020A0E3 		mov	r2, #0
+ 331 00c0 90309FE5 		ldr	r3, .L23+36
+ 332 00c4 FEFFFFEB 		bl	__aeabi_ddiv
+ 333 00c8 FEFFFFEB 		bl	__aeabi_d2f
+ 334 00cc 0060A0E1 		mov	r6, r0
+ 335 00d0 F404D4E1 		ldrsh	r0, [r4, #68]
+ 336 00d4 FEFFFFEB 		bl	__aeabi_i2d
+ 337 00d8 58309FE5 		ldr	r3, .L23+4
+ 338 00dc 0020A0E3 		mov	r2, #0
+ 339 00e0 FEFFFFEB 		bl	__aeabi_ddiv
+ 340 00e4 FEFFFFEB 		bl	__aeabi_d2f
+ 341 00e8 6C309FE5 		ldr	r3, .L23+40
+ 342 00ec 000083E5 		str	r0, [r3, #0]	@ float
+ 343 00f0 68309FE5 		ldr	r3, .L23+44
+ 344 00f4 006083E5 		str	r6, [r3, #0]	@ float
+ 345 00f8 50309FE5 		ldr	r3, .L23+28
+ 346 00fc 0030D3E5 		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 347 0100 000053E3 		cmp	r3, #0
+ 348 0104 405094E5 		ldr	r5, [r4, #64]
+ 349 0108 0700001A 		bne	.L19
+ 350 010c 000065E2 		rsb	r0, r5, #0
+ 351 0110 FEFFFFEB 		bl	__aeabi_i2d
+ 352 0114 1C309FE5 		ldr	r3, .L23+4
+ 353 0118 0020A0E3 		mov	r2, #0
+ 354 011c FEFFFFEB 		bl	__aeabi_ddiv
+ 355 0120 FEFFFFEB 		bl	__aeabi_d2f
+ 356 0124 38309FE5 		ldr	r3, .L23+48
+ 357 0128 000083E5 		str	r0, [r3, #0]	@ float
+ 358              	.L19:
+ 359 012c 7040BDE8 		ldmfd	sp!, {r4, r5, r6, lr}
+ 360 0130 1EFF2FE1 		bx	lr
+ 361              	.L24:
+ 362              		.align	2
+ 363              	.L23:
+ 364 0134 00000000 		.word	gps
+ 365 0138 00005940 		.word	1079574528
+ 366 013c 00000000 		.word	nav_utm_north0
+ 367 0140 00000000 		.word	nav_utm_east0
+ 368 0144 00000000 		.word	estimator_x
+ 369 0148 00000000 		.word	estimator_y
+ 370 014c 00408F40 		.word	1083129856
+ 371 0150 00000000 		.word	alt_kalman_enabled
+ 372 0154 00000000 		.word	estimator_z
+ 373 0158 D0126341 		.word	1097011920
+ 374 015c 00000000 		.word	estimator_hspeed_mod
+ 375 0160 00000000 		.word	estimator_hspeed_dir
+ 376 0164 00000000 		.word	estimator_z_dot
+ 378              		.comm	alt_kalman_enabled,1,1
+ 379              		.comm	estimator_AOA,4,4
+ 380              		.comm	estimator_airspeed,4,4
+ 381              		.comm	wind_north,4,4
+ 382              		.comm	wind_east,4,4
+ 383              		.comm	estimator_hspeed_dir,4,4
+ 384              		.comm	estimator_hspeed_mod,4,4
+ 385              		.comm	estimator_t,4,4
+ 386              		.comm	estimator_flight_time,2,2
+ 387              		.comm	estimator_r,4,4
+ 388              		.comm	estimator_q,4,4
+ 389              		.comm	estimator_p,4,4
+ 390              		.comm	estimator_theta,4,4
+ 391              		.comm	estimator_psi,4,4
+ 392              		.comm	estimator_phi,4,4
+ 393              		.comm	estimator_z_dot,4,4
+ 394              		.comm	estimator_z,4,4
+ 395              		.comm	estimator_y,4,4
+ 396              		.comm	estimator_x,4,4
+ 397              		.section	.bss.p,"aw",%nobits
+ 398              		.align	2
+ 399              		.set	.LANCHOR0,. + 0
+ 402              	p:
+ 403 0000 00000000 		.space	16
+ 403      00000000 
+ 403      00000000 
+ 403      00000000 
+ 404              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 estimator.c
+     /tmp/ccuyp4dq.s:13     .text.alt_kalman_reset:00000000 $a
+     /tmp/ccuyp4dq.s:16     .text.alt_kalman_reset:00000000 alt_kalman_reset
+     /tmp/ccuyp4dq.s:32     .text.alt_kalman_reset:00000020 $d
+     /tmp/ccuyp4dq.s:35     .text.alt_kalman_init:00000000 $a
+     /tmp/ccuyp4dq.s:38     .text.alt_kalman_init:00000000 alt_kalman_init
+     /tmp/ccuyp4dq.s:50     .text.alt_kalman_init:00000010 $d
+                            *COM*:00000001 alt_kalman_enabled
+     /tmp/ccuyp4dq.s:59     .text.alt_kalman:00000000 $a
+     /tmp/ccuyp4dq.s:62     .text.alt_kalman:00000000 alt_kalman
+     /tmp/ccuyp4dq.s:192    .text.alt_kalman:000001e8 $d
+                            *COM*:00000004 estimator_z_dot
+                            *COM*:00000004 estimator_z
+     /tmp/ccuyp4dq.s:199    .text.estimator_init:00000000 $a
+     /tmp/ccuyp4dq.s:202    .text.estimator_init:00000000 estimator_init
+     /tmp/ccuyp4dq.s:253    .text.estimator_init:000000ac $d
+                            *COM*:00000004 estimator_x
+                            *COM*:00000004 estimator_y
+                            *COM*:00000004 estimator_phi
+                            *COM*:00000004 estimator_psi
+                            *COM*:00000004 estimator_theta
+                            *COM*:00000004 estimator_hspeed_mod
+                            *COM*:00000004 estimator_hspeed_dir
+                            *COM*:00000004 estimator_p
+                            *COM*:00000004 estimator_q
+                            *COM*:00000004 estimator_r
+                            *COM*:00000002 estimator_flight_time
+                            *COM*:00000004 estimator_airspeed
+     /tmp/ccuyp4dq.s:275    .text.estimator_update_state_gps:00000000 $a
+     /tmp/ccuyp4dq.s:278    .text.estimator_update_state_gps:00000000 estimator_update_state_gps
+     /tmp/ccuyp4dq.s:364    .text.estimator_update_state_gps:00000134 $d
+                            *COM*:00000004 estimator_AOA
+                            *COM*:00000004 wind_north
+                            *COM*:00000004 wind_east
+                            *COM*:00000004 estimator_t
+     /tmp/ccuyp4dq.s:398    .bss.p:00000000 $d
+     /tmp/ccuyp4dq.s:402    .bss.p:00000000 p
+
+UNDEFINED SYMBOLS
+__aeabi_fmul
+__aeabi_fadd
+__aeabi_f2d
+__aeabi_dcmpgt
+__aeabi_fdiv
+__aeabi_fsub
+__aeabi_i2d
+__aeabi_ddiv
+__aeabi_d2f
+__aeabi_i2f
+gps
+nav_utm_north0
+nav_utm_east0

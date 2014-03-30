@@ -111,7 +111,7 @@ static inline void set_failsafe_mode( void ) {
 static inline void handle_rc_frame( void ) {
   fbw_mode = FBW_MODE_OF_PPRZ(radio_control.values[RADIO_MODE]);
   if (fbw_mode == FBW_MODE_MANUAL)
-  {
+  { 
     SetCommandsFromRC(commands, radio_control.values);
     fbw_new_actuators = 1;
   }
@@ -145,12 +145,13 @@ void event_task_fbw( void) {
     }
 #endif
     if (fbw_mode == FBW_MODE_AUTO) {
-      SetCommands(ap_state->commands);
+      SetCommands(radio_control.values);
     }
 #ifdef SetApOnlyCommands
     else
     {
-      SetApOnlyCommands(ap_state->commands);
+	SetCommands(radio_control.values);
+      /*SetCommandsFromRC(commands, radio_control.values);*/
     }
 #endif
     fbw_new_actuators = 1;

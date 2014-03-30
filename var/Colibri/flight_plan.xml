@@ -1,7 +1,9 @@
 <dump>
   <flight_plan security_height="-25" qfu="270" name="Versatile" max_dist_from_home="1500" lon0="-76.427811" lat0="38.146724" home_mode_height="50" ground_alt="0" alt="75">
     <header>#include "subsystems/datalink/datalink.h"
-#include "generated/airframe.h"</header>
+#include "generated/airframe.h"
+#include "commands.h"
+#include "actuators.h"</header>
     <waypoints>
       <waypoint y="0" x="0" name="HOME"/>
     </waypoints>
@@ -9,47 +11,46 @@
     <blocks>
       <block name="initialisation" no="0">
         <set var="launch" value="1" no="0"/>
-        <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="1"/>
-        <set var="radio_control.values[0]" value="1500" no="2"/>
-        <set var="radio_control.values[1]" value="1500" no="3"/>
-        <set var="radio_control.values[2]" value="1500" no="4"/>
-        <set var="radio_control.values[3]" value="1500" no="5"/>
+        <set var="fbw_mode" value="FBW_MODE_MANUAL" no="1"/>
+        <set var="radio_control.values[0]" value="9600" no="2"/>
+        <set var="radio_control.values[1]" value="9600" no="3"/>
+        <set var="radio_control.values[2]" value="9600" no="4"/>
+        <set var="radio_control.values[3]" value="9600" no="5"/>
         <while cond="LessThan(NavBlockTime(), 10)" no="6"/>
       </block>
       <block name="bloc 1" no="1">
-        <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
-        <set var="radio_control.values[0]" value="1600" no="1"/>
-        <set var="radio_control.values[1]" value="1800" no="2"/>
-        <set var="radio_control.values[2]" value="1500" no="3"/>
-        <set var="radio_control.values[3]" value="1500" no="4"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+        <set var="radio_control.values[0]" value="-9600" no="0"/>
+        <set var="radio_control.values[1]" value="-9600" no="1"/>
+        <set var="radio_control.values[2]" value="-9600" no="2"/>
+        <set var="radio_control.values[3]" value="-9600" no="3"/>
+        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
       </block>
       <block name="bloc 2" no="2">
-        <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
-        <set var="radio_control.values[0]" value="1600" no="1"/>
-        <set var="radio_control.values[1]" value="1200" no="2"/>
-        <set var="radio_control.values[2]" value="1500" no="3"/>
-        <set var="radio_control.values[3]" value="1500" no="4"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+        <set var="radio_control.values[0]" value="9600" no="0"/>
+        <set var="radio_control.values[1]" value="9600" no="1"/>
+        <set var="radio_control.values[2]" value="9600" no="2"/>
+        <set var="radio_control.values[3]" value="9600" no="3"/>
+        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
       </block>
       <block name="bloc 3" no="3">
-        <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
-        <set var="radio_control.values[0]" value="1700" no="1"/>
-        <set var="radio_control.values[1]" value="1500" no="2"/>
-        <set var="radio_control.values[2]" value="1700" no="3"/>
-        <set var="radio_control.values[3]" value="1300" no="4"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+        <set var="radio_control.values[0]" value="-9600" no="0"/>
+        <set var="radio_control.values[1]" value="-9600" no="1"/>
+        <set var="radio_control.values[2]" value="-9600" no="2"/>
+        <set var="radio_control.values[3]" value="-9600" no="3"/>
+        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
       </block>
-      <block name="Block 4" no="4">
+      <block strip_icon="home.png" strip_button="Standby" name="Fin de test" no="4">
+        <set var="radio_control.values[0]" value="0" no="0"/>
+        <set var="radio_control.values[1]" value="0" no="1"/>
+        <set var="radio_control.values[2]" value="0" no="2"/>
+        <set var="radio_control.values[3]" value="0" no="3"/>
+        <while cond="TRUE" no="4"/>
+      </block>
+      <block name="Block 4" no="5">
         <attitude vmode="throttle" until="stage_time > 15" throttle="0.50" roll="-14.0" alt="1410" no="0"/>
       </block>
-      <block name="Block 5" no="5">
+      <block name="Block 5" no="6">
         <attitude vmode="throttle" until="stage_time > 15" throttle="0.75" roll="14.0" alt="1410" no="0"/>
-      </block>
-      <block strip_icon="home.png" strip_button="Standby" name="Fin de test" no="6">
-        <while cond="TRUE" no="0">
-          <attitude vmode="throttle" throttle="0" roll="0" no="1"/>
-        </while>
       </block>
       <block name="HOME" no="7">
         <home no="0"/>
@@ -60,91 +61,89 @@
     <stage block="7" block_name="HOME" stage="0">
       <home no="0"/>
     </stage>
-    <stage block="6" block_name="Fin de test" stage="1">
-      <attitude vmode="throttle" throttle="0" roll="0" no="1"/>
-    </stage>
-    <stage block="6" block_name="Fin de test" stage="0">
-      <while cond="TRUE" no="0">
-        <attitude vmode="throttle" throttle="0" roll="0" no="1"/>
-      </while>
-    </stage>
-    <stage block="5" block_name="Block 5" stage="0">
+    <stage block="6" block_name="Block 5" stage="0">
       <attitude vmode="throttle" until="stage_time > 15" throttle="0.75" roll="14.0" alt="1410" no="0"/>
     </stage>
-    <stage block="4" block_name="Block 4" stage="0">
+    <stage block="5" block_name="Block 4" stage="0">
       <attitude vmode="throttle" until="stage_time > 15" throttle="0.50" roll="-14.0" alt="1410" no="0"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="5">
-      <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+    <stage block="4" block_name="Fin de test" stage="4">
+      <while cond="TRUE" no="4"/>
+    </stage>
+    <stage block="4" block_name="Fin de test" stage="3">
+      <set var="radio_control.values[3]" value="0" no="3"/>
+    </stage>
+    <stage block="4" block_name="Fin de test" stage="2">
+      <set var="radio_control.values[2]" value="0" no="2"/>
+    </stage>
+    <stage block="4" block_name="Fin de test" stage="1">
+      <set var="radio_control.values[1]" value="0" no="1"/>
+    </stage>
+    <stage block="4" block_name="Fin de test" stage="0">
+      <set var="radio_control.values[0]" value="0" no="0"/>
     </stage>
     <stage block="3" block_name="bloc 3" stage="4">
-      <set var="radio_control.values[3]" value="1300" no="4"/>
+      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
     </stage>
     <stage block="3" block_name="bloc 3" stage="3">
-      <set var="radio_control.values[2]" value="1700" no="3"/>
+      <set var="radio_control.values[3]" value="-9600" no="3"/>
     </stage>
     <stage block="3" block_name="bloc 3" stage="2">
-      <set var="radio_control.values[1]" value="1500" no="2"/>
+      <set var="radio_control.values[2]" value="-9600" no="2"/>
     </stage>
     <stage block="3" block_name="bloc 3" stage="1">
-      <set var="radio_control.values[0]" value="1700" no="1"/>
+      <set var="radio_control.values[1]" value="-9600" no="1"/>
     </stage>
     <stage block="3" block_name="bloc 3" stage="0">
-      <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
-    </stage>
-    <stage block="2" block_name="bloc 2" stage="5">
-      <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+      <set var="radio_control.values[0]" value="-9600" no="0"/>
     </stage>
     <stage block="2" block_name="bloc 2" stage="4">
-      <set var="radio_control.values[3]" value="1500" no="4"/>
+      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
     </stage>
     <stage block="2" block_name="bloc 2" stage="3">
-      <set var="radio_control.values[2]" value="1500" no="3"/>
+      <set var="radio_control.values[3]" value="9600" no="3"/>
     </stage>
     <stage block="2" block_name="bloc 2" stage="2">
-      <set var="radio_control.values[1]" value="1200" no="2"/>
+      <set var="radio_control.values[2]" value="9600" no="2"/>
     </stage>
     <stage block="2" block_name="bloc 2" stage="1">
-      <set var="radio_control.values[0]" value="1600" no="1"/>
+      <set var="radio_control.values[1]" value="9600" no="1"/>
     </stage>
     <stage block="2" block_name="bloc 2" stage="0">
-      <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
-    </stage>
-    <stage block="1" block_name="bloc 1" stage="5">
-      <while cond="LessThan(NavBlockTime(), 10)" no="5"/>
+      <set var="radio_control.values[0]" value="9600" no="0"/>
     </stage>
     <stage block="1" block_name="bloc 1" stage="4">
-      <set var="radio_control.values[3]" value="1500" no="4"/>
+      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
     </stage>
     <stage block="1" block_name="bloc 1" stage="3">
-      <set var="radio_control.values[2]" value="1500" no="3"/>
+      <set var="radio_control.values[3]" value="-9600" no="3"/>
     </stage>
     <stage block="1" block_name="bloc 1" stage="2">
-      <set var="radio_control.values[1]" value="1800" no="2"/>
+      <set var="radio_control.values[2]" value="-9600" no="2"/>
     </stage>
     <stage block="1" block_name="bloc 1" stage="1">
-      <set var="radio_control.values[0]" value="1600" no="1"/>
+      <set var="radio_control.values[1]" value="-9600" no="1"/>
     </stage>
     <stage block="1" block_name="bloc 1" stage="0">
-      <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="0"/>
+      <set var="radio_control.values[0]" value="-9600" no="0"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="6">
       <while cond="LessThan(NavBlockTime(), 10)" no="6"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="5">
-      <set var="radio_control.values[3]" value="1500" no="5"/>
+      <set var="radio_control.values[3]" value="9600" no="5"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="4">
-      <set var="radio_control.values[2]" value="1500" no="4"/>
+      <set var="radio_control.values[2]" value="9600" no="4"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="3">
-      <set var="radio_control.values[1]" value="1500" no="3"/>
+      <set var="radio_control.values[1]" value="9600" no="3"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="2">
-      <set var="radio_control.values[0]" value="1500" no="2"/>
+      <set var="radio_control.values[0]" value="9600" no="2"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="1">
-      <set var="pprz_mode" value="PPRZ_MODE_MANUAL" no="1"/>
+      <set var="fbw_mode" value="FBW_MODE_MANUAL" no="1"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="0">
       <set var="launch" value="1" no="0"/>

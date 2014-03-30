@@ -1,0 +1,45 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gps.c"
+  12              		.section	.text.gps_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	gps_init
+  16              	gps_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20 0000 08402DE9 		stmfd	sp!, {r3, lr}
+  21 0004 20309FE5 		ldr	r3, .L2
+  22 0008 0020A0E3 		mov	r2, #0
+  23 000c 5B20C3E5 		strb	r2, [r3, #91]
+  24 0010 542083E5 		str	r2, [r3, #84]
+  25 0014 14309FE5 		ldr	r3, .L2+4
+  26 0018 0128A0E3 		mov	r2, #65536
+  27 001c 142083E5 		str	r2, [r3, #20]
+  28 0020 FEFFFFEB 		bl	gps_impl_init
+  29 0024 0840BDE8 		ldmfd	sp!, {r3, lr}
+  30 0028 1EFF2FE1 		bx	lr
+  31              	.L3:
+  32              		.align	2
+  33              	.L2:
+  34 002c 00000000 		.word	gps
+  35 0030 008002E0 		.word	-536707072
+  37              		.comm	gps,244,4
+  38              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gps.c
+     /tmp/ccKG6eFA.s:13     .text.gps_init:00000000 $a
+     /tmp/ccKG6eFA.s:16     .text.gps_init:00000000 gps_init
+     /tmp/ccKG6eFA.s:34     .text.gps_init:0000002c $d
+                            *COM*:000000f4 gps
+
+UNDEFINED SYMBOLS
+gps_impl_init

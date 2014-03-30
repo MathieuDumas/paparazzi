@@ -1,0 +1,71 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 18, 4
+  11              		.file	"traffic_info.c"
+  12              		.section	.text.traffic_info_init,"ax",%progbits
+  13              		.align	2
+  14              		.global	traffic_info_init
+  16              	traffic_info_init:
+  17              		@ Function supports interworking.
+  18              		@ args = 0, pretend = 0, frame = 0
+  19              		@ frame_needed = 0, uses_anonymous_args = 0
+  20              		@ link register save eliminated.
+  21 0000 24309FE5 		ldr	r3, .L2
+  22 0004 0020A0E3 		mov	r2, #0
+  23 0008 0020C3E5 		strb	r2, [r3, #0]
+  24 000c 0120A0E3 		mov	r2, #1
+  25 0010 0220C3E5 		strb	r2, [r3, #2]
+  26 0014 14209FE5 		ldr	r2, .L2+4
+  27 0018 0230A0E3 		mov	r3, #2
+  28 001c 2030C2E5 		strb	r3, [r2, #32]
+  29 0020 0C209FE5 		ldr	r2, .L2+8
+  30 0024 0030C2E5 		strb	r3, [r2, #0]
+  31 0028 1EFF2FE1 		bx	lr
+  32              	.L3:
+  33              		.align	2
+  34              	.L2:
+  35 002c 00000000 		.word	the_acs_id
+  36 0030 00000000 		.word	the_acs
+  37 0034 00000000 		.word	acs_idx
+  39              		.section	.text.get_ac_info,"ax",%progbits
+  40              		.align	2
+  41              		.global	get_ac_info
+  43              	get_ac_info:
+  44              		@ Function supports interworking.
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 0, uses_anonymous_args = 0
+  47              		@ link register save eliminated.
+  48 0000 0C309FE5 		ldr	r3, .L5
+  49 0004 0000D3E7 		ldrb	r0, [r3, r0]	@ zero_extendqisi2
+  50 0008 08309FE5 		ldr	r3, .L5+4
+  51 000c 800283E0 		add	r0, r3, r0, asl #5
+  52 0010 1EFF2FE1 		bx	lr
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0014 00000000 		.word	the_acs_id
+  57 0018 00000000 		.word	the_acs
+  59              		.comm	the_acs,768,4
+  60              		.comm	the_acs_id,256,1
+  61              		.comm	acs_idx,1,1
+  62              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+DEFINED SYMBOLS
+                            *ABS*:00000000 traffic_info.c
+     /tmp/ccozi18t.s:13     .text.traffic_info_init:00000000 $a
+     /tmp/ccozi18t.s:16     .text.traffic_info_init:00000000 traffic_info_init
+     /tmp/ccozi18t.s:35     .text.traffic_info_init:0000002c $d
+                            *COM*:00000100 the_acs_id
+                            *COM*:00000300 the_acs
+                            *COM*:00000001 acs_idx
+     /tmp/ccozi18t.s:40     .text.get_ac_info:00000000 $a
+     /tmp/ccozi18t.s:43     .text.get_ac_info:00000000 get_ac_info
+     /tmp/ccozi18t.s:56     .text.get_ac_info:00000014 $d
+
+NO UNDEFINED SYMBOLS
