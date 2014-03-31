@@ -1,4 +1,4 @@
-/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/testAuto1.xml */
+/* This file has been generated from /home/lionel/paparazziProto1/conf/flight_plans/bancTest/testmotorisation.xml */
 /* Please DO NOT EDIT */
 
 #ifndef FLIGHT_PLAN_H
@@ -30,7 +30,7 @@
  {381467239, -764278109, 7500}, /* 1e7deg, 1e7deg, cm (hmsl=-37.21m) */ \
 };
 #define NB_WAYPOINT 2
-#define NB_BLOCK 8
+#define NB_BLOCK 20
 #define GROUND_ALT 0.
 #define GROUND_ALT_CM 0
 #define SECURITY_HEIGHT -25.
@@ -53,24 +53,24 @@ static inline void auto_nav(void) {
         NextStageAndBreak();
         break;
       Stage(2)
-        radio_control.values[0] = 9600;
+        radio_control.values[0] = (9600*0.000000);
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[1] = 9600;
+        radio_control.values[1] = (9600*0.000000);
         NextStageAndBreak();
         break;
       Stage(4)
-        radio_control.values[2] = 9600;
+        radio_control.values[2] = (9600*0.000000);
         NextStageAndBreak();
         break;
       Stage(5)
-        radio_control.values[3] = 9600;
+        radio_control.values[3] = (9600*0.000000);
         NextStageAndBreak();
         break;
       Label(while_1)
       Stage(6)
-        if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_2) else NextStageAndBreak();
+        if (! (TRUE)) Goto(endwhile_2) else NextStageAndBreak();
         Stage(7)
           Goto(while_1)
         Label(endwhile_2)
@@ -82,106 +82,364 @@ static inline void auto_nav(void) {
     ; // post_call
     break;
 
-    Block(1) // bloc 1
+    Block(1) // 100%
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[0] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(1)
-        radio_control.values[1] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(2)
-        radio_control.values[2] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(3)
-        radio_control.values[3] = -(9600);
+        radio_control.values[0] = (9600*1);
         NextStageAndBreak();
         break;
       Label(while_3)
-      Stage(4)
-        if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_4) else NextStageAndBreak();
-        Stage(5)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_4) else NextStageAndBreak();
+        Stage(2)
           Goto(while_3)
         Label(endwhile_4)
       default:
-      Stage(6)
+      Stage(3)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(2) // bloc 2
+    Block(2) // 0.05%
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[0] = 9600;
-        NextStageAndBreak();
-        break;
-      Stage(1)
-        radio_control.values[1] = 9600;
-        NextStageAndBreak();
-        break;
-      Stage(2)
-        radio_control.values[2] = 9600;
-        NextStageAndBreak();
-        break;
-      Stage(3)
-        radio_control.values[3] = 9600;
+        radio_control.values[0] = (9600*0.050000);
         NextStageAndBreak();
         break;
       Label(while_5)
-      Stage(4)
-        if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_6) else NextStageAndBreak();
-        Stage(5)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_6) else NextStageAndBreak();
+        Stage(2)
           Goto(while_5)
         Label(endwhile_6)
       default:
-      Stage(6)
+      Stage(3)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(3) // bloc 3
+    Block(3) // 0.1%
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[0] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(1)
-        radio_control.values[1] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(2)
-        radio_control.values[2] = -(9600);
-        NextStageAndBreak();
-        break;
-      Stage(3)
-        radio_control.values[3] = -(9600);
+        radio_control.values[0] = (9600*0.100000);
         NextStageAndBreak();
         break;
       Label(while_7)
-      Stage(4)
-        if (! (LessThan(NavBlockTime(),10))) Goto(endwhile_8) else NextStageAndBreak();
-        Stage(5)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_8) else NextStageAndBreak();
+        Stage(2)
           Goto(while_7)
         Label(endwhile_8)
       default:
-      Stage(6)
+      Stage(3)
         NextBlock();
         break;
     }
     ; // post_call
     break;
 
-    Block(4) // Fin de test
+    Block(4) // 0.15%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.150000);
+        NextStageAndBreak();
+        break;
+      Label(while_9)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_10) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_9)
+        Label(endwhile_10)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(5) // 0.2%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.200000);
+        NextStageAndBreak();
+        break;
+      Label(while_11)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_12) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_11)
+        Label(endwhile_12)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(6) // 0.25%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.250000);
+        NextStageAndBreak();
+        break;
+      Label(while_13)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_14) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_13)
+        Label(endwhile_14)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(7) // 0.3%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.300000);
+        NextStageAndBreak();
+        break;
+      Label(while_15)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_16) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_15)
+        Label(endwhile_16)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(8) // 0.35%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.350000);
+        NextStageAndBreak();
+        break;
+      Label(while_17)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_18) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_17)
+        Label(endwhile_18)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(9) // 0.4%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.400000);
+        NextStageAndBreak();
+        break;
+      Label(while_19)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_20) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_19)
+        Label(endwhile_20)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(10) // 0.45%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.450000);
+        NextStageAndBreak();
+        break;
+      Label(while_21)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_22) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_21)
+        Label(endwhile_22)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(11) // 0.50%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.500000);
+        NextStageAndBreak();
+        break;
+      Label(while_23)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_24) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_23)
+        Label(endwhile_24)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(12) // 0.55%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.550000);
+        NextStageAndBreak();
+        break;
+      Label(while_25)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_26) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_25)
+        Label(endwhile_26)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(13) // 0.6%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.600000);
+        NextStageAndBreak();
+        break;
+      Label(while_27)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_28) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_27)
+        Label(endwhile_28)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(14) // 0.65%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.650000);
+        NextStageAndBreak();
+        break;
+      Label(while_29)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_30) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_29)
+        Label(endwhile_30)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(15) // 0.70%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.700000);
+        NextStageAndBreak();
+        break;
+      Label(while_31)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_32) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_31)
+        Label(endwhile_32)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(16) // 0.75%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.750000);
+        NextStageAndBreak();
+        break;
+      Label(while_33)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_34) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_33)
+        Label(endwhile_34)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(17) // 0.8%
+    ; // pre_call
+    switch(nav_stage) {
+      Stage(0)
+        radio_control.values[0] = (9600*0.800000);
+        NextStageAndBreak();
+        break;
+      Label(while_35)
+      Stage(1)
+        if (! (TRUE)) Goto(endwhile_36) else NextStageAndBreak();
+        Stage(2)
+          Goto(while_35)
+        Label(endwhile_36)
+      default:
+      Stage(3)
+        NextBlock();
+        break;
+    }
+    ; // post_call
+    break;
+
+    Block(18) // Fin de test
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
@@ -197,15 +455,15 @@ static inline void auto_nav(void) {
         NextStageAndBreak();
         break;
       Stage(3)
-        radio_control.values[3] = 0;
+        radio_control.values[0] = 0;
         NextStageAndBreak();
         break;
-      Label(while_9)
+      Label(while_37)
       Stage(4)
-        if (! (TRUE)) Goto(endwhile_10) else NextStageAndBreak();
+        if (! (TRUE)) Goto(endwhile_38) else NextStageAndBreak();
         Stage(5)
-          Goto(while_9)
-        Label(endwhile_10)
+          Goto(while_37)
+        Label(endwhile_38)
       default:
       Stage(6)
         NextBlock();
@@ -214,43 +472,7 @@ static inline void auto_nav(void) {
     ; // post_call
     break;
 
-    Block(5) // Block 4
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if ((stage_time>15)) NextStageAndBreak() else {
-          NavAttitude(RadOfDeg(-(14.000000)));
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalThrottleMode(9600*(0.500000));
-        }
-        break;
-      default:
-      Stage(1)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(6) // Block 5
-    ; // pre_call
-    switch(nav_stage) {
-      Stage(0)
-        if ((stage_time>15)) NextStageAndBreak() else {
-          NavAttitude(RadOfDeg(14.000000));
-          NavVerticalAutoThrottleMode(RadOfDeg(0.000000));
-          NavVerticalThrottleMode(9600*(0.750000));
-        }
-        break;
-      default:
-      Stage(1)
-        NextBlock();
-        break;
-    }
-    ; // post_call
-    break;
-
-    Block(7) // HOME
+    Block(19) // HOME
     ; // pre_call
     switch(nav_stage) {
       Stage(0)

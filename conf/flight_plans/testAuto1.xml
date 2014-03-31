@@ -17,34 +17,34 @@
     <block name="initialisation">
 	<set value="1" var="launch"/>
 	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
-	<set value="9600" var="radio_control.values[0]"/>
-	<set value="9600" var="radio_control.values[1]"/>
-	<set value="9600" var="radio_control.values[2]"/>
-	<set value="9600" var="radio_control.values[3]"/>
-        <while cond="LessThan(NavBlockTime(), 10)"/>
+	<set value="9600*(0.2)" var="radio_control.values[0]"/>
+	<set value="9600*(0.4)" var="radio_control.values[1]"/>
+	<set value="9600*(0.6)" var="radio_control.values[2]"/>
+	<set value="9600*(0.8)" var="radio_control.values[3]"/>    /** Control du moteur **/
+        <while cond="TRUE"/>
     </block>
 
     <block name="bloc 1">
-	<set value="-9600" var="radio_control.values[0]"/>
-	<set value="-9600" var="radio_control.values[1]"/>
-	<set value="-9600" var="radio_control.values[2]"/>
-	<set value="-9600" var="radio_control.values[3]"/>
+	<set value="9600*(0.5)" var="radio_control.values[0]"/>
+	<set value="9600*(0.5)" var="radio_control.values[1]"/>
+	<set value="9600*(0.5)" var="radio_control.values[2]"/>
+	<set value="9600*(0.5)" var="radio_control.values[3]"/>
         <while cond="LessThan(NavBlockTime(), 10)"/>
     </block>
 
     <block name="bloc 2">
-	<set value="9600" var="radio_control.values[0]"/>
-	<set value="9600" var="radio_control.values[1]"/>
-	<set value="9600" var="radio_control.values[2]"/>
-	<set value="9600" var="radio_control.values[3]"/>
+	<set value="9600*(0.8)" var="radio_control.values[0]"/>
+	<set value="9600*(-0.8)" var="radio_control.values[1]"/>
+	<set value="9600*(-0.8)" var="radio_control.values[2]"/>
+	<set value="9600*(-0.8)" var="radio_control.values[3]"/>
         <while cond="LessThan(NavBlockTime(), 10)"/>
     </block>
 
     <block name="bloc 3">
-	<set value="-9600" var="radio_control.values[0]"/>
-	<set value="-9600" var="radio_control.values[1]"/>
-	<set value="-9600" var="radio_control.values[2]"/>
-	<set value="-9600" var="radio_control.values[3]"/>
+	<set value="9600*(1.)" var="radio_control.values[0]"/>
+	<set value="9600*(1.)" var="radio_control.values[1]"/>
+	<set value="9600*(1.)" var="radio_control.values[2]"/>
+	<set value="9600*(1.)" var="radio_control.values[3]"/>
         <while cond="LessThan(NavBlockTime(), 10)"/>
     </block>
 

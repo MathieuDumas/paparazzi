@@ -377,15 +377,15 @@
  383              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 gls.c
-     /tmp/ccP18GzY.s:22     .text.gls_init:00000000 $a
-     /tmp/ccP18GzY.s:25     .text.gls_init:00000000 gls_init
-     /tmp/ccP18GzY.s:169    .text.gls_init:0000021c $d
+     /tmp/ccggzqSy.s:22     .text.gls_init:00000000 $a
+     /tmp/ccggzqSy.s:25     .text.gls_init:00000000 gls_init
+     /tmp/ccggzqSy.s:169    .text.gls_init:0000021c $d
                             *COM*:00000004 app_angle
                             *COM*:00000004 app_intercept_af_tod
-     /tmp/ccP18GzY.s:178    .text.gls:00000000 $a
-     /tmp/ccP18GzY.s:181    .text.gls:00000000 gls
-     /tmp/ccP18GzY.s:359    .text.gls:000002a0 $d
-     /tmp/ccP18GzY.s:381    .data.init:00000000 init
+     /tmp/ccggzqSy.s:178    .text.gls:00000000 $a
+     /tmp/ccggzqSy.s:181    .text.gls:00000000 gls
+     /tmp/ccggzqSy.s:359    .text.gls:000002a0 $d
+     /tmp/ccggzqSy.s:381    .data.init:00000000 init
                             *COM*:00000004 target_speed
 
 UNDEFINED SYMBOLS

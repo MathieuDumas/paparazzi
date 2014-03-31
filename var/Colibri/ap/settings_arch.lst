@@ -318,18 +318,18 @@
  328              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 settings_arch.c
-     /tmp/ccmAjuGM.s:13     .text.flash_detect:00000000 $a
-     /tmp/ccmAjuGM.s:15     .text.flash_detect:00000000 flash_detect
-     /tmp/ccmAjuGM.s:52     .text.flash_detect:00000074 $d
-     /tmp/ccmAjuGM.s:55     .text.pflash_program_array:00000000 $a
-     /tmp/ccmAjuGM.s:57     .text.pflash_program_array:00000000 pflash_program_array
-     /tmp/ccmAjuGM.s:100    .text.pflash_program_array:0000008c $d
-     /tmp/ccmAjuGM.s:103    .text.pflash_program_bytes:00000000 $a
-     /tmp/ccmAjuGM.s:105    .text.pflash_program_bytes:00000000 pflash_program_bytes
-     /tmp/ccmAjuGM.s:229    .text.persistent_write:00000000 $a
-     /tmp/ccmAjuGM.s:232    .text.persistent_write:00000000 persistent_write
-     /tmp/ccmAjuGM.s:272    .text.persistent_read:00000000 $a
-     /tmp/ccmAjuGM.s:275    .text.persistent_read:00000000 persistent_read
+     /tmp/ccH6rWsf.s:13     .text.flash_detect:00000000 $a
+     /tmp/ccH6rWsf.s:15     .text.flash_detect:00000000 flash_detect
+     /tmp/ccH6rWsf.s:52     .text.flash_detect:00000074 $d
+     /tmp/ccH6rWsf.s:55     .text.pflash_program_array:00000000 $a
+     /tmp/ccH6rWsf.s:57     .text.pflash_program_array:00000000 pflash_program_array
+     /tmp/ccH6rWsf.s:100    .text.pflash_program_array:0000008c $d
+     /tmp/ccH6rWsf.s:103    .text.pflash_program_bytes:00000000 $a
+     /tmp/ccH6rWsf.s:105    .text.pflash_program_bytes:00000000 pflash_program_bytes
+     /tmp/ccH6rWsf.s:229    .text.persistent_write:00000000 $a
+     /tmp/ccH6rWsf.s:232    .text.persistent_write:00000000 persistent_write
+     /tmp/ccH6rWsf.s:272    .text.persistent_read:00000000 $a
+     /tmp/ccH6rWsf.s:275    .text.persistent_read:00000000 persistent_read
 
 UNDEFINED SYMBOLS
 disableIRQ

@@ -350,27 +350,27 @@
  366              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 ahrs_infrared.c
-     /tmp/ccTHrW7w.s:13     .text.ahrs_init:00000000 $a
-     /tmp/ccTHrW7w.s:16     .text.ahrs_init:00000000 ahrs_init
-     /tmp/ccTHrW7w.s:69     .text.ahrs_init:000000b4 $d
-     /tmp/ccTHrW7w.s:73     .text.ahrs_align:00000000 $a
-     /tmp/ccTHrW7w.s:76     .text.ahrs_align:00000000 ahrs_align
-     /tmp/ccTHrW7w.s:88     .text.ahrs_align:00000010 $d
-     /tmp/ccTHrW7w.s:91     .text.ahrs_propagate:00000000 $a
-     /tmp/ccTHrW7w.s:94     .text.ahrs_propagate:00000000 ahrs_propagate
-     /tmp/ccTHrW7w.s:102    .text.ahrs_update_accel:00000000 $a
-     /tmp/ccTHrW7w.s:105    .text.ahrs_update_accel:00000000 ahrs_update_accel
-     /tmp/ccTHrW7w.s:113    .text.ahrs_update_mag:00000000 $a
-     /tmp/ccTHrW7w.s:116    .text.ahrs_update_mag:00000000 ahrs_update_mag
-     /tmp/ccTHrW7w.s:124    .text.ahrs_update_fw_estimator:00000000 $a
-     /tmp/ccTHrW7w.s:127    .text.ahrs_update_fw_estimator:00000000 ahrs_update_fw_estimator
-     /tmp/ccTHrW7w.s:155    .text.ahrs_update_fw_estimator:00000050 $d
-     /tmp/ccTHrW7w.s:173    .text.ahrs_update_infrared:00000000 $a
-     /tmp/ccTHrW7w.s:176    .text.ahrs_update_infrared:00000000 ahrs_update_infrared
-     /tmp/ccTHrW7w.s:284    .text.ahrs_update_infrared:00000188 $d
-     /tmp/ccTHrW7w.s:295    .text.ahrs_update_gps:00000000 $a
-     /tmp/ccTHrW7w.s:298    .text.ahrs_update_gps:00000000 ahrs_update_gps
-     /tmp/ccTHrW7w.s:357    .text.ahrs_update_gps:000000cc $d
+     /tmp/ccRyjT68.s:13     .text.ahrs_init:00000000 $a
+     /tmp/ccRyjT68.s:16     .text.ahrs_init:00000000 ahrs_init
+     /tmp/ccRyjT68.s:69     .text.ahrs_init:000000b4 $d
+     /tmp/ccRyjT68.s:73     .text.ahrs_align:00000000 $a
+     /tmp/ccRyjT68.s:76     .text.ahrs_align:00000000 ahrs_align
+     /tmp/ccRyjT68.s:88     .text.ahrs_align:00000010 $d
+     /tmp/ccRyjT68.s:91     .text.ahrs_propagate:00000000 $a
+     /tmp/ccRyjT68.s:94     .text.ahrs_propagate:00000000 ahrs_propagate
+     /tmp/ccRyjT68.s:102    .text.ahrs_update_accel:00000000 $a
+     /tmp/ccRyjT68.s:105    .text.ahrs_update_accel:00000000 ahrs_update_accel
+     /tmp/ccRyjT68.s:113    .text.ahrs_update_mag:00000000 $a
+     /tmp/ccRyjT68.s:116    .text.ahrs_update_mag:00000000 ahrs_update_mag
+     /tmp/ccRyjT68.s:124    .text.ahrs_update_fw_estimator:00000000 $a
+     /tmp/ccRyjT68.s:127    .text.ahrs_update_fw_estimator:00000000 ahrs_update_fw_estimator
+     /tmp/ccRyjT68.s:155    .text.ahrs_update_fw_estimator:00000050 $d
+     /tmp/ccRyjT68.s:173    .text.ahrs_update_infrared:00000000 $a
+     /tmp/ccRyjT68.s:176    .text.ahrs_update_infrared:00000000 ahrs_update_infrared
+     /tmp/ccRyjT68.s:284    .text.ahrs_update_infrared:00000188 $d
+     /tmp/ccRyjT68.s:295    .text.ahrs_update_gps:00000000 $a
+     /tmp/ccRyjT68.s:298    .text.ahrs_update_gps:00000000 ahrs_update_gps
+     /tmp/ccRyjT68.s:357    .text.ahrs_update_gps:000000cc $d
 
 UNDEFINED SYMBOLS
 ahrs

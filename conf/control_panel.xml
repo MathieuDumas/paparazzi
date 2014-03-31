@@ -80,6 +80,7 @@
         <arg flag="-ac" constant="Colibri"/>
       </program>
       <program name="Messages"/>
+      <program name="GCS"/>
     </session>
     <session name="Flight USB-XBee-API@57600">
       <program name="Data Link">

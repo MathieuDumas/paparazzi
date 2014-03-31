@@ -62,11 +62,11 @@
   66              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 uart.c
-     /tmp/ccq3wjKD.s:13     .text.uart_periph_init:00000000 $a
-     /tmp/ccq3wjKD.s:16     .text.uart_periph_init:00000000 uart_periph_init
-     /tmp/ccq3wjKD.s:32     .text.uart_check_free_space:00000000 $a
-     /tmp/ccq3wjKD.s:35     .text.uart_check_free_space:00000000 uart_check_free_space
-     /tmp/ccq3wjKD.s:62     .text.uart_check_free_space:0000004c $d
+     /tmp/cc7KQiqh.s:13     .text.uart_periph_init:00000000 $a
+     /tmp/cc7KQiqh.s:16     .text.uart_periph_init:00000000 uart_periph_init
+     /tmp/cc7KQiqh.s:32     .text.uart_check_free_space:00000000 $a
+     /tmp/cc7KQiqh.s:35     .text.uart_check_free_space:00000000 uart_check_free_space
+     /tmp/cc7KQiqh.s:62     .text.uart_check_free_space:0000004c $d
                             *COM*:00000120 uart1
                             *COM*:00000120 uart0
 

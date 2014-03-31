@@ -12,135 +12,227 @@
       <block name="initialisation" no="0">
         <set var="launch" value="1" no="0"/>
         <set var="fbw_mode" value="FBW_MODE_MANUAL" no="1"/>
-        <set var="radio_control.values[0]" value="9600" no="2"/>
-        <set var="radio_control.values[1]" value="9600" no="3"/>
-        <set var="radio_control.values[2]" value="9600" no="4"/>
-        <set var="radio_control.values[3]" value="9600" no="5"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="6"/>
+        <set var="radio_control.values[0]" value="9600*(0.)" no="2"/>
+        <set var="radio_control.values[1]" value="9600*(0.)" no="3"/>
+        <set var="radio_control.values[2]" value="9600*(0.)" no="4"/>
+        <set var="radio_control.values[3]" value="9600*(0.)" no="5"/>
+        <while cond="TRUE" no="6"/>
       </block>
-      <block name="bloc 1" no="1">
-        <set var="radio_control.values[0]" value="-9600" no="0"/>
-        <set var="radio_control.values[1]" value="-9600" no="1"/>
-        <set var="radio_control.values[2]" value="-9600" no="2"/>
-        <set var="radio_control.values[3]" value="-9600" no="3"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+      <block name="100%" no="1">
+        <set var="radio_control.values[0]" value="9600*(1)" no="0"/>
+        <while cond="TRUE" no="1"/>
       </block>
-      <block name="bloc 2" no="2">
-        <set var="radio_control.values[0]" value="9600" no="0"/>
-        <set var="radio_control.values[1]" value="9600" no="1"/>
-        <set var="radio_control.values[2]" value="9600" no="2"/>
-        <set var="radio_control.values[3]" value="9600" no="3"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+      <block name="0.05%" no="2">
+        <set var="radio_control.values[0]" value="9600*(0.05)" no="0"/>
+        <while cond="TRUE" no="1"/>
       </block>
-      <block name="bloc 3" no="3">
-        <set var="radio_control.values[0]" value="-9600" no="0"/>
-        <set var="radio_control.values[1]" value="-9600" no="1"/>
-        <set var="radio_control.values[2]" value="-9600" no="2"/>
-        <set var="radio_control.values[3]" value="-9600" no="3"/>
-        <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+      <block name="0.1%" no="3">
+        <set var="radio_control.values[0]" value="9600*(0.1)" no="0"/>
+        <while cond="TRUE" no="1"/>
       </block>
-      <block strip_icon="home.png" strip_button="Standby" name="Fin de test" no="4">
+      <block name="0.15%" no="4">
+        <set var="radio_control.values[0]" value="9600*(0.15)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.2%" no="5">
+        <set var="radio_control.values[0]" value="9600*(0.20)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.25%" no="6">
+        <set var="radio_control.values[0]" value="9600*(0.25)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.3%" no="7">
+        <set var="radio_control.values[0]" value="9600*(0.3)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.35%" no="8">
+        <set var="radio_control.values[0]" value="9600*(0.35)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.4%" no="9">
+        <set var="radio_control.values[0]" value="9600*(0.4)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.45%" no="10">
+        <set var="radio_control.values[0]" value="9600*(0.45)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.50%" no="11">
+        <set var="radio_control.values[0]" value="9600*(0.50)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.55%" no="12">
+        <set var="radio_control.values[0]" value="9600*(0.55)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.6%" no="13">
+        <set var="radio_control.values[0]" value="9600*(0.6)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.65%" no="14">
+        <set var="radio_control.values[0]" value="9600*(0.65)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.70%" no="15">
+        <set var="radio_control.values[0]" value="9600*(0.70)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.75%" no="16">
+        <set var="radio_control.values[0]" value="9600*(0.75)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block name="0.8%" no="17">
+        <set var="radio_control.values[0]" value="9600*(0.8)" no="0"/>
+        <while cond="TRUE" no="1"/>
+      </block>
+      <block strip_icon="home.png" strip_button="Standby" name="Fin de test" no="18">
         <set var="radio_control.values[0]" value="0" no="0"/>
         <set var="radio_control.values[1]" value="0" no="1"/>
         <set var="radio_control.values[2]" value="0" no="2"/>
-        <set var="radio_control.values[3]" value="0" no="3"/>
+        <set var="radio_control.values[0]" value="0" no="3"/>
         <while cond="TRUE" no="4"/>
       </block>
-      <block name="Block 4" no="5">
-        <attitude vmode="throttle" until="stage_time > 15" throttle="0.50" roll="-14.0" alt="1410" no="0"/>
-      </block>
-      <block name="Block 5" no="6">
-        <attitude vmode="throttle" until="stage_time > 15" throttle="0.75" roll="14.0" alt="1410" no="0"/>
-      </block>
-      <block name="HOME" no="7">
+      <block name="HOME" no="19">
         <home no="0"/>
       </block>
     </blocks>
   </flight_plan>
   <stages>
-    <stage block="7" block_name="HOME" stage="0">
+    <stage block="19" block_name="HOME" stage="0">
       <home no="0"/>
     </stage>
-    <stage block="6" block_name="Block 5" stage="0">
-      <attitude vmode="throttle" until="stage_time > 15" throttle="0.75" roll="14.0" alt="1410" no="0"/>
-    </stage>
-    <stage block="5" block_name="Block 4" stage="0">
-      <attitude vmode="throttle" until="stage_time > 15" throttle="0.50" roll="-14.0" alt="1410" no="0"/>
-    </stage>
-    <stage block="4" block_name="Fin de test" stage="4">
+    <stage block="18" block_name="Fin de test" stage="4">
       <while cond="TRUE" no="4"/>
     </stage>
-    <stage block="4" block_name="Fin de test" stage="3">
-      <set var="radio_control.values[3]" value="0" no="3"/>
+    <stage block="18" block_name="Fin de test" stage="3">
+      <set var="radio_control.values[0]" value="0" no="3"/>
     </stage>
-    <stage block="4" block_name="Fin de test" stage="2">
+    <stage block="18" block_name="Fin de test" stage="2">
       <set var="radio_control.values[2]" value="0" no="2"/>
     </stage>
-    <stage block="4" block_name="Fin de test" stage="1">
+    <stage block="18" block_name="Fin de test" stage="1">
       <set var="radio_control.values[1]" value="0" no="1"/>
     </stage>
-    <stage block="4" block_name="Fin de test" stage="0">
+    <stage block="18" block_name="Fin de test" stage="0">
       <set var="radio_control.values[0]" value="0" no="0"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="4">
-      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+    <stage block="17" block_name="0.8%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="3">
-      <set var="radio_control.values[3]" value="-9600" no="3"/>
+    <stage block="17" block_name="0.8%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.8)" no="0"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="2">
-      <set var="radio_control.values[2]" value="-9600" no="2"/>
+    <stage block="16" block_name="0.75%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="1">
-      <set var="radio_control.values[1]" value="-9600" no="1"/>
+    <stage block="16" block_name="0.75%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.75)" no="0"/>
     </stage>
-    <stage block="3" block_name="bloc 3" stage="0">
-      <set var="radio_control.values[0]" value="-9600" no="0"/>
+    <stage block="15" block_name="0.70%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="2" block_name="bloc 2" stage="4">
-      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+    <stage block="15" block_name="0.70%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.70)" no="0"/>
     </stage>
-    <stage block="2" block_name="bloc 2" stage="3">
-      <set var="radio_control.values[3]" value="9600" no="3"/>
+    <stage block="14" block_name="0.65%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="2" block_name="bloc 2" stage="2">
-      <set var="radio_control.values[2]" value="9600" no="2"/>
+    <stage block="14" block_name="0.65%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.65)" no="0"/>
     </stage>
-    <stage block="2" block_name="bloc 2" stage="1">
-      <set var="radio_control.values[1]" value="9600" no="1"/>
+    <stage block="13" block_name="0.6%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="2" block_name="bloc 2" stage="0">
-      <set var="radio_control.values[0]" value="9600" no="0"/>
+    <stage block="13" block_name="0.6%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.6)" no="0"/>
     </stage>
-    <stage block="1" block_name="bloc 1" stage="4">
-      <while cond="LessThan(NavBlockTime(), 10)" no="4"/>
+    <stage block="12" block_name="0.55%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="1" block_name="bloc 1" stage="3">
-      <set var="radio_control.values[3]" value="-9600" no="3"/>
+    <stage block="12" block_name="0.55%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.55)" no="0"/>
     </stage>
-    <stage block="1" block_name="bloc 1" stage="2">
-      <set var="radio_control.values[2]" value="-9600" no="2"/>
+    <stage block="11" block_name="0.50%" stage="1">
+      <while cond="TRUE" no="1"/>
     </stage>
-    <stage block="1" block_name="bloc 1" stage="1">
-      <set var="radio_control.values[1]" value="-9600" no="1"/>
+    <stage block="11" block_name="0.50%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.50)" no="0"/>
     </stage>
-    <stage block="1" block_name="bloc 1" stage="0">
-      <set var="radio_control.values[0]" value="-9600" no="0"/>
+    <stage block="10" block_name="0.45%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="10" block_name="0.45%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.45)" no="0"/>
+    </stage>
+    <stage block="9" block_name="0.4%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="9" block_name="0.4%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.4)" no="0"/>
+    </stage>
+    <stage block="8" block_name="0.35%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="8" block_name="0.35%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.35)" no="0"/>
+    </stage>
+    <stage block="7" block_name="0.3%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="7" block_name="0.3%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.3)" no="0"/>
+    </stage>
+    <stage block="6" block_name="0.25%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="6" block_name="0.25%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.25)" no="0"/>
+    </stage>
+    <stage block="5" block_name="0.2%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="5" block_name="0.2%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.20)" no="0"/>
+    </stage>
+    <stage block="4" block_name="0.15%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="4" block_name="0.15%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.15)" no="0"/>
+    </stage>
+    <stage block="3" block_name="0.1%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="3" block_name="0.1%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.1)" no="0"/>
+    </stage>
+    <stage block="2" block_name="0.05%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="2" block_name="0.05%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(0.05)" no="0"/>
+    </stage>
+    <stage block="1" block_name="100%" stage="1">
+      <while cond="TRUE" no="1"/>
+    </stage>
+    <stage block="1" block_name="100%" stage="0">
+      <set var="radio_control.values[0]" value="9600*(1)" no="0"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="6">
-      <while cond="LessThan(NavBlockTime(), 10)" no="6"/>
+      <while cond="TRUE" no="6"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="5">
-      <set var="radio_control.values[3]" value="9600" no="5"/>
+      <set var="radio_control.values[3]" value="9600*(0.)" no="5"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="4">
-      <set var="radio_control.values[2]" value="9600" no="4"/>
+      <set var="radio_control.values[2]" value="9600*(0.)" no="4"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="3">
-      <set var="radio_control.values[1]" value="9600" no="3"/>
+      <set var="radio_control.values[1]" value="9600*(0.)" no="3"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="2">
-      <set var="radio_control.values[0]" value="9600" no="2"/>
+      <set var="radio_control.values[0]" value="9600*(0.)" no="2"/>
     </stage>
     <stage block="0" block_name="initialisation" stage="1">
       <set var="fbw_mode" value="FBW_MODE_MANUAL" no="1"/>

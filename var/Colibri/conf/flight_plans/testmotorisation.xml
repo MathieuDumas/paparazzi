@@ -1,0 +1,129 @@
+<!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
+
+<flight_plan alt="75" ground_alt="0" lat0="38.146724" lon0="-76.427811" max_dist_from_home="1500" name="Versatile" qfu="270" security_height="-25" home_mode_height="50">
+  <header>
+#include "subsystems/datalink/datalink.h"
+#include "generated/airframe.h"
+#include "commands.h"
+#include "actuators.h"
+
+</header>
+  <waypoints>
+    <waypoint name="HOME" x="0" y="0"/>
+  </waypoints>
+  <exceptions/>
+
+<blocks>
+    <block name="initialisation">
+	<set value="1" var="launch"/>
+	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
+	<set value="9600*(0.)" var="radio_control.values[0]"/> <!--Controle moteur-->
+	<set value="9600*(0.)" var="radio_control.values[1]"/>
+	<set value="9600*(0.)" var="radio_control.values[2]"/>
+	<set value="9600*(0.)" var="radio_control.values[3]"/>    
+        <while cond="TRUE"/>
+    </block>
+
+<!--  ************************************************************************************************-->
+
+    <block name="100%">
+	<set value="9600*(1)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block> 
+
+    <block name="0.05%">
+	<set value="9600*(0.05)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.1%">
+	<set value="9600*(0.1)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.15%">
+	<set value="9600*(0.15)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+    
+    <block name="0.2%">
+	<set value="9600*(0.20)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+
+    <block name="0.25%">
+	<set value="9600*(0.25)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+
+    <block name="0.3%">
+	<set value="9600*(0.3)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+
+   <block name="0.35%">
+	<set value="9600*(0.35)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+	
+    <block name="0.4%">
+	<set value="9600*(0.4)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.45%">
+	<set value="9600*(0.45)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.50%">
+	<set value="9600*(0.50)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.55%">
+	<set value="9600*(0.55)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.6%">
+	<set value="9600*(0.6)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.65%">
+	<set value="9600*(0.65)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.70%">
+	<set value="9600*(0.70)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.75%">
+	<set value="9600*(0.75)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="0.8%">
+	<set value="9600*(0.8)" var="radio_control.values[0]"/>  <!--Controle moteur-->
+	<while cond="TRUE"/>
+    </block>
+
+<!--  ************************************************************************************************-->
+
+    <block name="Fin de test" strip_button="Standby" strip_icon="home.png">
+      	<set value="0" var="radio_control.values[0]"/>
+	<set value="0" var="radio_control.values[1]"/>
+	<set value="0" var="radio_control.values[2]"/>
+	<set value="0" var="radio_control.values[0]"/>
+	<while cond="TRUE"/>
+    </block>
+
+  </blocks>
+
+</flight_plan>

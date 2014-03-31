@@ -1260,7 +1260,7 @@ LOAD /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-non
 END GROUP
                 0x00001000                STACK_SIZE = 0x1000
 
-.text           0x00004000    0x18011
+.text           0x00004000    0x180b9
  *(.init)
  .init          0x00004000      0x13c /home/lionel/paparazziProto1/var/Colibri/ap/crt0.o
                 0x00004000                _boot
@@ -1465,257 +1465,258 @@ END GROUP
                 0x000138e0       0x88 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x000138e0                nav_home
  .text.nav_periodic_task
-                0x00013968      0x4e0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x00013968      0x584 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x00013968                nav_periodic_task
  .text.nav_init
-                0x00013e48       0x74 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x00013e48                nav_init
+                0x00013eec       0x74 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x00013eec                nav_init
  .text.nav_without_gps
-                0x00013ebc       0x50 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x00013ebc                nav_without_gps
+                0x00013f60       0x50 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x00013f60                nav_without_gps
  .text.nav_init_block
-                0x00013f0c       0x44 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
-                0x00013f0c                nav_init_block
+                0x00013fb0       0x44 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
+                0x00013fb0                nav_init_block
  .text.nav_goto_block
-                0x00013f50       0x40 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
-                0x00013f50                nav_goto_block
+                0x00013ff4       0x40 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
+                0x00013ff4                nav_goto_block
  .text.traffic_info_init
-                0x00013f90       0x38 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
-                0x00013f90                traffic_info_init
+                0x00014034       0x38 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
+                0x00014034                traffic_info_init
  .text.dl_parse_msg
-                0x00013fc8     0x1368 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
-                0x00013fc8                dl_parse_msg
+                0x0001406c     0x1368 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
+                0x0001406c                dl_parse_msg
  .text.ahrs_init
-                0x00015330       0xbc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x00015330                ahrs_init
+                0x000153d4       0xbc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x000153d4                ahrs_init
  .text.ahrs_update_fw_estimator
-                0x000153ec       0x6c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x000153ec                ahrs_update_fw_estimator
+                0x00015490       0x6c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x00015490                ahrs_update_fw_estimator
  .text.ahrs_update_infrared
-                0x00015458      0x1a0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x00015458                ahrs_update_infrared
+                0x000154fc      0x1a0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x000154fc                ahrs_update_infrared
  .text.ahrs_update_gps
-                0x000155f8       0xec /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x000155f8                ahrs_update_gps
+                0x0001569c       0xec /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x0001569c                ahrs_update_gps
  .text.gps_impl_init
-                0x000156e4       0x24 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x000156e4                gps_impl_init
+                0x00015788       0x24 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x00015788                gps_impl_init
  .text.gps_ubx_read_message
-                0x00015708      0x534 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x00015708                gps_ubx_read_message
+                0x000157ac      0x534 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x000157ac                gps_ubx_read_message
  .text.gps_ubx_parse
-                0x00015c3c      0x1a4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x00015c3c                gps_ubx_parse
+                0x00015ce0      0x1a4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x00015ce0                gps_ubx_parse
  .text.gps_init
-                0x00015de0       0x34 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps.o
-                0x00015de0                gps_init
+                0x00015e84       0x34 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps.o
+                0x00015e84                gps_init
  .text.infrared_struct_init
-                0x00015e14       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared.o
-                0x00015e14                infrared_struct_init
+                0x00015eb8       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared.o
+                0x00015eb8                infrared_struct_init
  .text.infrared_adc_init
-                0x00015e5c       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
-                0x00015e5c                infrared_adc_init
+                0x00015f00       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+                0x00015f00                infrared_adc_init
  .text.infrared_adc_update
-                0x00015ea8       0xf0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
-                0x00015ea8                infrared_adc_update
- .text          0x00015f98      0x348 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
-                0x00015f98                atan
- .text          0x000162e0       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_cos.o)
-                0x000162e0                cos
- .text          0x00016368        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fabs.o)
-                0x00016368                fabs
- *fill*         0x0001636e        0x2 00
- .text          0x00016370       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_sin.o)
-                0x00016370                sin
- .text          0x000163f8       0x60 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_tan.o)
-                0x000163f8                tan
- .text          0x00016458      0x244 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
-                0x00016458                atanf
- .text          0x0001669c       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_cos.o)
-                0x0001669c                cosf
- .text          0x00016704        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_fabs.o)
-                0x00016704                fabsf
- *fill*         0x0001670a        0x2 00
- .text          0x0001670c       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_sin.o)
-                0x0001670c                sinf
- *fill*         0x00016774        0x4 00
- .text          0x00016778       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
-                0x00016778                asin
- .text          0x00016828        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_atan2.o)
-                0x00016828                atan2
- *fill*         0x00016834        0x4 00
- .text          0x00016838       0xc0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
-                0x00016838                cosh
- .text          0x000168f8      0x100 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
-                0x000168f8                exp
- .text          0x000169f8       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
-                0x000169f8                log
- .text          0x00016af0       0xe8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
-                0x00016af0                sinh
- .text          0x00016bd8        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-wf_atan2.o)
-                0x00016bd8                atan2f
- *fill*         0x00016be4        0x4 00
- .text          0x00016be8      0x428 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_asin.o)
-                0x00016be8                __ieee754_asin
- .text          0x00017010      0x1e0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_atan2.o)
-                0x00017010                __ieee754_atan2
- .text          0x000171f0      0x140 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_cosh.o)
-                0x000171f0                __ieee754_cosh
- .text          0x00017330      0x2e8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
-                0x00017330                __ieee754_exp
- .text          0x00017618      0x410 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_log.o)
-                0x00017618                __ieee754_log
- .text          0x00017a28      0x3d0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
-                0x00017a28                __ieee754_rem_pio2
- .text          0x00017df8      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sinh.o)
-                0x00017df8                __ieee754_sinh
- .text          0x00017f80      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sqrt.o)
-                0x00017f80                __ieee754_sqrt
- .text          0x00018108      0x12c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_atan2.o)
-                0x00018108                __ieee754_atan2f
- .text          0x00018234      0x2bc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
-                0x00018234                __ieee754_rem_pio2f
- .text          0x000184f0      0x1d8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_cos.o)
-                0x000184f0                __kernel_cos
- .text          0x000186c8      0x738 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
-                0x000186c8                __kernel_rem_pio2
- .text          0x00018e00      0x178 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_sin.o)
-                0x00018e00                __kernel_sin
- .text          0x00018f78      0x3c8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_tan.o)
-                0x00018f78                __kernel_tan
- .text          0x00019340      0x13c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_cos.o)
-                0x00019340                __kernel_cosf
- .text          0x0001947c      0x5c4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
-                0x0001947c                __kernel_rem_pio2f
- .text          0x00019a40       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_sin.o)
-                0x00019a40                __kernel_sinf
- .text          0x00019b38      0x470 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_expm1.o)
-                0x00019b38                expm1
- .text          0x00019fa8       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_finite.o)
-                0x00019fa8                finite
- .text          0x00019fb8      0x128 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_floor.o)
-                0x00019fb8                floor
- .text          0x0001a0e0       0x90 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fpclassify.o)
-                0x0001a0e0                __fpclassifyd
- .text          0x0001a170        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_matherr.o)
-                0x0001a170                matherr
- *fill*         0x0001a174        0x4 00
- .text          0x0001a178       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_nan.o)
-                0x0001a178                nan
- .text          0x0001a188       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_scalbn.o)
-                0x0001a188                scalbn
- .text          0x0001a280       0x84 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_floor.o)
-                0x0001a280                floorf
- .text          0x0001a304       0xb4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_scalbn.o)
-                0x0001a304                scalbnf
- .text          0x0001a3b8       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_copysign.o)
-                0x0001a3b8                copysign
- .text          0x0001a3cc        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_copysign.o)
-                0x0001a3cc                copysignf
- .text          0x0001a3d8        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-errno.o)
-                0x0001a3d8                __errno
- .text          0x0001a3e4       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_thumb1_case_uqi.o)
-                0x0001a3e4                __gnu_thumb1_case_uqi
- .text          0x0001a3f8       0x94 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
-                0x0001a3f8                __udivsi3
-                0x0001a3f8                __aeabi_uidiv
-                0x0001a478                __aeabi_uidivmod
- .text          0x0001a48c       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
-                0x0001a48c                __aeabi_idiv
-                0x0001a48c                __divsi3
-                0x0001a528                __aeabi_idivmod
- .text          0x0001a53c        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
-                0x0001a53c                __aeabi_ldiv0
-                0x0001a53c                __aeabi_idiv0
- .text          0x0001a540      0x41c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
-                0x0001a540                __aeabi_drsub
-                0x0001a548                __aeabi_dsub
-                0x0001a548                __subdf3
-                0x0001a54c                __adddf3
-                0x0001a54c                __aeabi_dadd
-                0x0001a85c                __aeabi_ui2d
-                0x0001a85c                __floatunsidf
-                0x0001a880                __floatsidf
-                0x0001a880                __aeabi_i2d
-                0x0001a8a8                __extendsfdf2
-                0x0001a8a8                __aeabi_f2d
-                0x0001a8e8                __aeabi_ul2d
-                0x0001a8e8                __floatundidf
-                0x0001a8fc                __floatdidf
-                0x0001a8fc                __aeabi_l2d
- .text          0x0001a95c      0x49c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
-                0x0001a95c                __aeabi_dmul
-                0x0001a95c                __muldf3
-                0x0001abec                __aeabi_ddiv
-                0x0001abec                __divdf3
- .text          0x0001adf8      0x144 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
-                0x0001adf8                __gtdf2
-                0x0001adf8                __gedf2
-                0x0001ae00                __ltdf2
-                0x0001ae00                __ledf2
-                0x0001ae08                __cmpdf2
-                0x0001ae08                __eqdf2
-                0x0001ae08                __nedf2
-                0x0001ae90                __aeabi_cdrcmple
-                0x0001aeac                __aeabi_cdcmple
-                0x0001aeac                __aeabi_cdcmpeq
-                0x0001aec4                __aeabi_dcmpeq
-                0x0001aedc                __aeabi_dcmplt
-                0x0001aef4                __aeabi_dcmple
-                0x0001af0c                __aeabi_dcmpge
-                0x0001af24                __aeabi_dcmpgt
- .text          0x0001af3c       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
-                0x0001af3c                __fixdfsi
-                0x0001af3c                __aeabi_d2iz
- .text          0x0001af98       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunsdfsi.o)
-                0x0001af98                __fixunsdfsi
-                0x0001af98                __aeabi_d2uiz
- .text          0x0001afec       0xa0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_truncdfsf2.o)
-                0x0001afec                __aeabi_d2f
-                0x0001afec                __truncdfsf2
- .text          0x0001b08c      0x2ac /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubsf3.o)
-                0x0001b08c                __aeabi_frsub
-                0x0001b094                __subsf3
-                0x0001b094                __aeabi_fsub
-                0x0001b098                __aeabi_fadd
-                0x0001b098                __addsf3
-                0x0001b254                __aeabi_ui2f
-                0x0001b254                __floatunsisf
-                0x0001b25c                __aeabi_i2f
-                0x0001b25c                __floatsisf
-                0x0001b27c                __floatundisf
-                0x0001b27c                __aeabi_ul2f
-                0x0001b28c                __floatdisf
-                0x0001b28c                __aeabi_l2f
- .text          0x0001b338      0x2f8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivsf3.o)
-                0x0001b338                __mulsf3
-                0x0001b338                __aeabi_fmul
-                0x0001b4d0                __divsf3
-                0x0001b4d0                __aeabi_fdiv
- .text          0x0001b630      0x114 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpsf2.o)
-                0x0001b630                __gtsf2
-                0x0001b630                __gesf2
-                0x0001b638                __lesf2
-                0x0001b638                __ltsf2
-                0x0001b640                __nesf2
-                0x0001b640                __eqsf2
-                0x0001b640                __cmpsf2
-                0x0001b6a4                __aeabi_cfrcmple
-                0x0001b6b4                __aeabi_cfcmple
-                0x0001b6b4                __aeabi_cfcmpeq
-                0x0001b6cc                __aeabi_fcmpeq
-                0x0001b6e4                __aeabi_fcmplt
-                0x0001b6fc                __aeabi_fcmple
-                0x0001b714                __aeabi_fcmpge
-                0x0001b72c                __aeabi_fcmpgt
- .text          0x0001b744       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixsfsi.o)
-                0x0001b744                __fixsfsi
-                0x0001b744                __aeabi_f2iz
- .text          0x0001b7a0       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunssfsi.o)
-                0x0001b7a0                __aeabi_f2uiz
-                0x0001b7a0                __fixunssfsi
- *fill*         0x0001b7f4        0x4 00
- .text.stub     0x0001b7f8      0x158 linker stubs
+                0x00015f4c       0xf0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+                0x00015f4c                infrared_adc_update
+ *fill*         0x0001603c        0x4 00
+ .text          0x00016040      0x348 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
+                0x00016040                atan
+ .text          0x00016388       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_cos.o)
+                0x00016388                cos
+ .text          0x00016410        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fabs.o)
+                0x00016410                fabs
+ *fill*         0x00016416        0x2 00
+ .text          0x00016418       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_sin.o)
+                0x00016418                sin
+ .text          0x000164a0       0x60 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_tan.o)
+                0x000164a0                tan
+ .text          0x00016500      0x244 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
+                0x00016500                atanf
+ .text          0x00016744       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_cos.o)
+                0x00016744                cosf
+ .text          0x000167ac        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_fabs.o)
+                0x000167ac                fabsf
+ *fill*         0x000167b2        0x2 00
+ .text          0x000167b4       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_sin.o)
+                0x000167b4                sinf
+ *fill*         0x0001681c        0x4 00
+ .text          0x00016820       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
+                0x00016820                asin
+ .text          0x000168d0        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_atan2.o)
+                0x000168d0                atan2
+ *fill*         0x000168dc        0x4 00
+ .text          0x000168e0       0xc0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
+                0x000168e0                cosh
+ .text          0x000169a0      0x100 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
+                0x000169a0                exp
+ .text          0x00016aa0       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
+                0x00016aa0                log
+ .text          0x00016b98       0xe8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
+                0x00016b98                sinh
+ .text          0x00016c80        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-wf_atan2.o)
+                0x00016c80                atan2f
+ *fill*         0x00016c8c        0x4 00
+ .text          0x00016c90      0x428 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_asin.o)
+                0x00016c90                __ieee754_asin
+ .text          0x000170b8      0x1e0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_atan2.o)
+                0x000170b8                __ieee754_atan2
+ .text          0x00017298      0x140 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_cosh.o)
+                0x00017298                __ieee754_cosh
+ .text          0x000173d8      0x2e8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
+                0x000173d8                __ieee754_exp
+ .text          0x000176c0      0x410 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_log.o)
+                0x000176c0                __ieee754_log
+ .text          0x00017ad0      0x3d0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
+                0x00017ad0                __ieee754_rem_pio2
+ .text          0x00017ea0      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sinh.o)
+                0x00017ea0                __ieee754_sinh
+ .text          0x00018028      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sqrt.o)
+                0x00018028                __ieee754_sqrt
+ .text          0x000181b0      0x12c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_atan2.o)
+                0x000181b0                __ieee754_atan2f
+ .text          0x000182dc      0x2bc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
+                0x000182dc                __ieee754_rem_pio2f
+ .text          0x00018598      0x1d8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_cos.o)
+                0x00018598                __kernel_cos
+ .text          0x00018770      0x738 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
+                0x00018770                __kernel_rem_pio2
+ .text          0x00018ea8      0x178 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_sin.o)
+                0x00018ea8                __kernel_sin
+ .text          0x00019020      0x3c8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_tan.o)
+                0x00019020                __kernel_tan
+ .text          0x000193e8      0x13c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_cos.o)
+                0x000193e8                __kernel_cosf
+ .text          0x00019524      0x5c4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
+                0x00019524                __kernel_rem_pio2f
+ .text          0x00019ae8       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_sin.o)
+                0x00019ae8                __kernel_sinf
+ .text          0x00019be0      0x470 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_expm1.o)
+                0x00019be0                expm1
+ .text          0x0001a050       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_finite.o)
+                0x0001a050                finite
+ .text          0x0001a060      0x128 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_floor.o)
+                0x0001a060                floor
+ .text          0x0001a188       0x90 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fpclassify.o)
+                0x0001a188                __fpclassifyd
+ .text          0x0001a218        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_matherr.o)
+                0x0001a218                matherr
+ *fill*         0x0001a21c        0x4 00
+ .text          0x0001a220       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_nan.o)
+                0x0001a220                nan
+ .text          0x0001a230       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_scalbn.o)
+                0x0001a230                scalbn
+ .text          0x0001a328       0x84 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_floor.o)
+                0x0001a328                floorf
+ .text          0x0001a3ac       0xb4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_scalbn.o)
+                0x0001a3ac                scalbnf
+ .text          0x0001a460       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_copysign.o)
+                0x0001a460                copysign
+ .text          0x0001a474        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_copysign.o)
+                0x0001a474                copysignf
+ .text          0x0001a480        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-errno.o)
+                0x0001a480                __errno
+ .text          0x0001a48c       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_thumb1_case_uqi.o)
+                0x0001a48c                __gnu_thumb1_case_uqi
+ .text          0x0001a4a0       0x94 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
+                0x0001a4a0                __udivsi3
+                0x0001a4a0                __aeabi_uidiv
+                0x0001a520                __aeabi_uidivmod
+ .text          0x0001a534       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
+                0x0001a534                __aeabi_idiv
+                0x0001a534                __divsi3
+                0x0001a5d0                __aeabi_idivmod
+ .text          0x0001a5e4        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
+                0x0001a5e4                __aeabi_ldiv0
+                0x0001a5e4                __aeabi_idiv0
+ .text          0x0001a5e8      0x41c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
+                0x0001a5e8                __aeabi_drsub
+                0x0001a5f0                __aeabi_dsub
+                0x0001a5f0                __subdf3
+                0x0001a5f4                __adddf3
+                0x0001a5f4                __aeabi_dadd
+                0x0001a904                __aeabi_ui2d
+                0x0001a904                __floatunsidf
+                0x0001a928                __floatsidf
+                0x0001a928                __aeabi_i2d
+                0x0001a950                __extendsfdf2
+                0x0001a950                __aeabi_f2d
+                0x0001a990                __aeabi_ul2d
+                0x0001a990                __floatundidf
+                0x0001a9a4                __floatdidf
+                0x0001a9a4                __aeabi_l2d
+ .text          0x0001aa04      0x49c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
+                0x0001aa04                __aeabi_dmul
+                0x0001aa04                __muldf3
+                0x0001ac94                __aeabi_ddiv
+                0x0001ac94                __divdf3
+ .text          0x0001aea0      0x144 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
+                0x0001aea0                __gtdf2
+                0x0001aea0                __gedf2
+                0x0001aea8                __ltdf2
+                0x0001aea8                __ledf2
+                0x0001aeb0                __cmpdf2
+                0x0001aeb0                __eqdf2
+                0x0001aeb0                __nedf2
+                0x0001af38                __aeabi_cdrcmple
+                0x0001af54                __aeabi_cdcmple
+                0x0001af54                __aeabi_cdcmpeq
+                0x0001af6c                __aeabi_dcmpeq
+                0x0001af84                __aeabi_dcmplt
+                0x0001af9c                __aeabi_dcmple
+                0x0001afb4                __aeabi_dcmpge
+                0x0001afcc                __aeabi_dcmpgt
+ .text          0x0001afe4       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
+                0x0001afe4                __fixdfsi
+                0x0001afe4                __aeabi_d2iz
+ .text          0x0001b040       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunsdfsi.o)
+                0x0001b040                __fixunsdfsi
+                0x0001b040                __aeabi_d2uiz
+ .text          0x0001b094       0xa0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_truncdfsf2.o)
+                0x0001b094                __aeabi_d2f
+                0x0001b094                __truncdfsf2
+ .text          0x0001b134      0x2ac /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubsf3.o)
+                0x0001b134                __aeabi_frsub
+                0x0001b13c                __subsf3
+                0x0001b13c                __aeabi_fsub
+                0x0001b140                __aeabi_fadd
+                0x0001b140                __addsf3
+                0x0001b2fc                __aeabi_ui2f
+                0x0001b2fc                __floatunsisf
+                0x0001b304                __aeabi_i2f
+                0x0001b304                __floatsisf
+                0x0001b324                __floatundisf
+                0x0001b324                __aeabi_ul2f
+                0x0001b334                __floatdisf
+                0x0001b334                __aeabi_l2f
+ .text          0x0001b3e0      0x2f8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivsf3.o)
+                0x0001b3e0                __mulsf3
+                0x0001b3e0                __aeabi_fmul
+                0x0001b578                __divsf3
+                0x0001b578                __aeabi_fdiv
+ .text          0x0001b6d8      0x114 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpsf2.o)
+                0x0001b6d8                __gtsf2
+                0x0001b6d8                __gesf2
+                0x0001b6e0                __lesf2
+                0x0001b6e0                __ltsf2
+                0x0001b6e8                __nesf2
+                0x0001b6e8                __eqsf2
+                0x0001b6e8                __cmpsf2
+                0x0001b74c                __aeabi_cfrcmple
+                0x0001b75c                __aeabi_cfcmple
+                0x0001b75c                __aeabi_cfcmpeq
+                0x0001b774                __aeabi_fcmpeq
+                0x0001b78c                __aeabi_fcmplt
+                0x0001b7a4                __aeabi_fcmple
+                0x0001b7bc                __aeabi_fcmpge
+                0x0001b7d4                __aeabi_fcmpgt
+ .text          0x0001b7ec       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixsfsi.o)
+                0x0001b7ec                __fixsfsi
+                0x0001b7ec                __aeabi_f2iz
+ .text          0x0001b848       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunssfsi.o)
+                0x0001b848                __aeabi_f2uiz
+                0x0001b848                __fixunssfsi
+ *fill*         0x0001b89c        0x4 00
+ .text.stub     0x0001b8a0      0x158 linker stubs
  *(.gnu.linkonce.t.*)
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
@@ -1723,72 +1724,72 @@ END GROUP
  .glue_7t       0x00000000        0x0 linker stubs
  *(.gcc_except_table)
  *(.rodata)
- *fill*         0x0001b990        0x0 00
- .rodata        0x0001b990       0x40 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
- .rodata        0x0001b9d0       0x20 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
- .rodata        0x0001b9f0       0x30 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
- .rodata        0x0001ba20      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
- .rodata        0x0001bba8      0x398 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
- .rodata        0x0001bf40       0x50 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
- .rodata        0x0001bf90       0x38 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
+ *fill*         0x0001ba38        0x0 00
+ .rodata        0x0001ba38       0x40 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
+ .rodata        0x0001ba78       0x20 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
+ .rodata        0x0001ba98       0x30 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
+ .rodata        0x0001bac8      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
+ .rodata        0x0001bc50      0x398 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
+ .rodata        0x0001bfe8       0x50 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
+ .rodata        0x0001c038       0x38 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
  *(.rodata*)
  .rodata.serie_coeff_proj_mercator
-                0x0001bfc8       0x14 /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_geodetic_float.o
+                0x0001c070       0x14 /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_geodetic_float.o
  .rodata.commands_failsafe
-                0x0001bfdc        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
-                0x0001bfdc                commands_failsafe
+                0x0001c084        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
+                0x0001c084                commands_failsafe
  .rodata.version
-                0x0001bfe4        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
+                0x0001c08c        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
  .rodata.str1.1
-                0x0001bfe6       0x11 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
+                0x0001c08e       0x11 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
  .rodata.nb_waypoint
-                0x0001bff7        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x0001bff7                nb_waypoint
+                0x0001c09f        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x0001c09f                nb_waypoint
  .rodata.str1.1
-                0x0001bff8        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
+                0x0001c0a0        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
                                   0x6 (size before relaxing)
  .rodata.str1.1
-                0x0001bffd        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
+                0x0001c0a5        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
  .rodata.str1.1
-                0x0001c002        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
+                0x0001c0aa        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
  .rodata.str1.1
-                0x0001c006        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
+                0x0001c0ae        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
                                   0x5 (size before relaxing)
  .rodata.str1.1
-                0x0001c00a        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
+                0x0001c0b2        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
  .rodata.str1.1
-                0x0001c00f        0x2 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-impure.o)
+                0x0001c0b7        0x2 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-impure.o)
  *(.gnu.linkonce.r.*)
 
-.vfp11_veneer   0x0001c014        0x0
+.vfp11_veneer   0x0001c0bc        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0001c014        0x0
+.v4_bx          0x0001c0bc        0x0
  .v4_bx         0x00000000        0x0 linker stubs
-                0x0001c014                . = ALIGN (0x4)
+                0x0001c0bc                . = ALIGN (0x4)
 
-.ARM.exidx      0x0001c011        0x0
-                0x0001c011                __exidx_start = .
+.ARM.exidx      0x0001c0b9        0x0
+                0x0001c0b9                __exidx_start = .
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0001c011                __exidx_end = .
-                0x0001c014                . = ALIGN (0x4)
+                0x0001c0b9                __exidx_end = .
+                0x0001c0bc                . = ALIGN (0x4)
 
-.ctors          0x0001c011        0x0
-                0x0001c011                PROVIDE (__ctors_start__, .)
+.ctors          0x0001c0b9        0x0
+                0x0001c0b9                PROVIDE (__ctors_start__, .)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0001c011                PROVIDE (__ctors_end__, .)
+                0x0001c0b9                PROVIDE (__ctors_end__, .)
 
-.dtors          0x0001c011        0x0
-                0x0001c011                PROVIDE (__dtors_start__, .)
+.dtors          0x0001c0b9        0x0
+                0x0001c0b9                PROVIDE (__dtors_start__, .)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0001c011                PROVIDE (__dtors_end__, .)
-                0x0001c014                . = ALIGN (0x4)
-                0x0001c014                _etext = .
-                0x0001c014                PROVIDE (etext, .)
+                0x0001c0b9                PROVIDE (__dtors_end__, .)
+                0x0001c0bc                . = ALIGN (0x4)
+                0x0001c0bc                _etext = .
+                0x0001c0bc                PROVIDE (etext, .)
 
-.data           0x40000000      0x498 load address 0x0001c014
+.data           0x40000000      0x498 load address 0x0001c0bc
                 0x40000000                _data = .
  *(.data)
  .data          0x40000000        0x1 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_lib_ver.o)
@@ -1819,22 +1820,22 @@ END GROUP
  .data.v_ctl_auto_throttle_loiter_trim
                 0x40000468        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/stabilization/stabilization_attitude.o
                 0x40000468                v_ctl_auto_throttle_loiter_trim
- .data.nav_utm_zone0
-                0x4000046c        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x4000046c                nav_utm_zone0
- *fill*         0x4000046d        0x3 00
- .data.nav_utm_north0
-                0x40000470        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x40000470                nav_utm_north0
- .data.nav_altitude
-                0x40000474        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x40000474                nav_altitude
- .data.waypoints
-                0x40000478       0x18 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x40000478                waypoints
  .data.max_dist_from_home
-                0x40000490        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x40000490                max_dist_from_home
+                0x4000046c        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x4000046c                max_dist_from_home
+ .data.nav_utm_zone0
+                0x40000470        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x40000470                nav_utm_zone0
+ *fill*         0x40000471        0x3 00
+ .data.nav_utm_north0
+                0x40000474        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x40000474                nav_utm_north0
+ .data.nav_altitude
+                0x40000478        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x40000478                nav_altitude
+ .data.waypoints
+                0x4000047c       0x18 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x4000047c                waypoints
  .data.nav_utm_east0
                 0x40000494        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x40000494                nav_utm_east0
@@ -1845,7 +1846,7 @@ END GROUP
                 0x40000498                _edata = .
                 0x40000498                PROVIDE (edata, .)
 
-.bss            0x40000498     0x1084 load address 0x0001c4b0
+.bss            0x40000498     0x1084 load address 0x0001c558
                 0x40000498                __bss_start = .
                 0x40000498                __bss_start__ = .
  *(.bss)
@@ -2012,197 +2013,199 @@ END GROUP
                 0x400005d4        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/stabilization/stabilization_attitude.o
  .bss.last_err.2969
                 0x400005d8        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
- .bss.last_nav_altitude.3897
+ .bss.last_nav_altitude.4004
                 0x400005dc        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
  .bss.nav_in_segment
                 0x400005e0        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x400005e0                nav_in_segment
- .bss.nav_in_circle
-                0x400005e1        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x400005e1                nav_in_circle
- .bss.prescaler.3885
+ *fill*         0x400005e1        0x1 00
+ .bss.prescaler.3992
                 0x400005e2        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+ .bss.nav_in_circle
+                0x400005e4        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x400005e4                nav_in_circle
+ *fill*         0x400005e5        0x3 00
  .bss.circle_bank
-                0x400005e4        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x400005e4                circle_bank
- .bss.buf_ir1   0x400005e8       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
- .bss.buf_ir2   0x40000630       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
- .bss.buf_ir3   0x40000678       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+                0x400005e8        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x400005e8                circle_bank
+ .bss.buf_ir1   0x400005ec       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+ .bss.buf_ir2   0x40000634       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+ .bss.buf_ir3   0x4000067c       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
  *(.gnu.linkonce.b*)
  *(COMMON)
- COMMON         0x400006c0       0xac /home/lionel/paparazziProto1/var/Colibri/ap/mcu_periph/sys_time.o
-                0x400006c0                sys_time
- COMMON         0x4000076c        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/./inter_mcu.o
-                0x4000076c                ap_ok
-                0x4000076d                time_since_last_ap
- COMMON         0x4000076e        0x3 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_fbw.o
-                0x4000076e                fbw_periodic_tid
-                0x4000076f                fbw_mode
-                0x40000770                electrical_tid
- *fill*         0x40000771        0x3 00
- COMMON         0x40000774        0xc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/electrical.o
-                0x40000774                electrical
- COMMON         0x40000780        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
-                0x40000780                commands
- COMMON         0x40000788       0x18 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
-                0x40000788                combi_switch_status
-                0x40000789                navigation_tid
-                0x4000078a                monitor_tid
-                0x4000078b                fptransition_tid
-                0x4000078c                sensors_tid
-                0x4000078d                attitude_tid
-                0x40000790                energy
-                0x40000794                telemetry_tid
-                0x40000795                power_switch
-                0x40000798                combi_switch_value
-                0x4000079c                modules_tid
-                0x4000079e                vsupply
- COMMON         0x400007a0       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/./estimator.o
-                0x400007a0                estimator_z_dot
-                0x400007a4                estimator_flight_time
-                0x400007a8                estimator_psi
-                0x400007ac                estimator_z
-                0x400007b0                estimator_t
-                0x400007b4                wind_east
-                0x400007b8                estimator_airspeed
-                0x400007bc                estimator_p
-                0x400007c0                estimator_theta
-                0x400007c4                estimator_hspeed_mod
-                0x400007c8                estimator_phi
-                0x400007cc                estimator_r
-                0x400007d0                estimator_x
-                0x400007d4                estimator_AOA
-                0x400007d8                estimator_q
-                0x400007dc                estimator_hspeed_dir
-                0x400007e0                wind_north
-                0x400007e4                alt_kalman_enabled
-                0x400007e8                estimator_y
- COMMON         0x400007ec      0x240 /home/lionel/paparazziProto1/var/Colibri/ap/mcu_periph/uart.o
-                0x400007ec                uart0
-                0x4000090c                uart1
- COMMON         0x40000a2c       0x16 /home/lionel/paparazziProto1/var/Colibri/ap/arch/lpc21/servos_4017_hw.o
-                0x40000a2c                servos_4017_idx
-                0x40000a2e                servos_values
- COMMON         0x40000a42       0x10 /home/lionel/paparazziProto1/var/Colibri/ap/actuators.o
-                0x40000a42                actuators
- COMMON         0x40000a52       0x12 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/radio_control.o
-                0x40000a52                radio_control
- COMMON         0x40000a64        0x6 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/radio_control/rc_datalink.o
-                0x40000a64                rc_dl_frame_available
-                0x40000a65                rc_dl_values
- *fill*         0x40000a6a        0x2 00
- COMMON         0x40000a6c       0x54 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/stabilization/stabilization_attitude.o
-                0x40000a6c                h_ctl_auto1_rate
-                0x40000a70                h_ctl_course_setpoint
-                0x40000a74                h_ctl_roll_max_setpoint
-                0x40000a78                h_ctl_course_pre_bank_correction
-                0x40000a7c                h_ctl_elevator_setpoint
-                0x40000a80                h_ctl_aileron_of_throttle
-                0x40000a84                h_ctl_aileron_setpoint
-                0x40000a88                h_ctl_pitch_setpoint
-                0x40000a8c                h_ctl_roll_slew
-                0x40000a90                h_ctl_course_pgain
-                0x40000a94                h_ctl_pitch_pgain
-                0x40000a98                h_ctl_pitch_loop_setpoint
-                0x40000a9c                h_ctl_course_pre_bank
-                0x40000aa0                h_ctl_pitch_dgain
-                0x40000aa4                h_ctl_course_dgain
-                0x40000aa8                h_ctl_roll_attitude_gain
-                0x40000aac                h_ctl_roll_rate_gain
-                0x40000ab0                h_ctl_disabled
-                0x40000ab4                h_ctl_roll_pgain
-                0x40000ab8                h_ctl_roll_setpoint
-                0x40000abc                h_ctl_elevator_of_roll
- COMMON         0x40000ac0       0x68 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
-                0x40000ac0                v_ctl_auto_throttle_nominal_cruise_throttle
-                0x40000ac4                v_ctl_altitude_error
-                0x40000ac8                v_ctl_climb_mode
-                0x40000acc                v_ctl_auto_throttle_pitch_of_vz_dgain
-                0x40000ad0                v_ctl_altitude_pre_climb_correction
-                0x40000ad4                v_ctl_auto_throttle_sum_err
-                0x40000ad8                v_ctl_auto_throttle_submode
-                0x40000adc                v_ctl_auto_throttle_pitch_of_vz_pgain
-                0x40000ae0                v_ctl_altitude_max_climb
-                0x40000ae4                v_ctl_altitude_setpoint
-                0x40000ae8                v_ctl_mode
-                0x40000aec                v_ctl_auto_throttle_cruise_throttle
-                0x40000af0                v_ctl_altitude_pgain
-                0x40000af4                v_ctl_auto_pitch_pgain
-                0x40000af8                v_ctl_auto_throttle_climb_throttle_increment
-                0x40000afc                v_ctl_auto_throttle_igain
-                0x40000b00                v_ctl_auto_throttle_min_cruise_throttle
-                0x40000b04                v_ctl_throttle_setpoint
-                0x40000b08                v_ctl_climb_setpoint
-                0x40000b0c                v_ctl_auto_throttle_dgain
-                0x40000b10                v_ctl_auto_pitch_igain
-                0x40000b14                v_ctl_altitude_pre_climb
-                0x40000b18                v_ctl_auto_throttle_max_cruise_throttle
-                0x40000b1c                v_ctl_throttle_slewed
-                0x40000b20                v_ctl_auto_throttle_pgain
-                0x40000b24                v_ctl_auto_pitch_sum_err
- COMMON         0x40000b28       0xa0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x40000b28                nav_glide_pitch_trim
-                0x40000b2c                dist2_to_wp
-                0x40000b30                nav_segment_x_1
-                0x40000b34                desired_x
-                0x40000b38                nav_survey_east
-                0x40000b3c                nav_segment_x_2
-                0x40000b40                nav_circle_radius
-                0x40000b44                nav_ground_speed_setpoint
-                0x40000b48                nav_circle_radians
-                0x40000b4c                nav_throttle_setpoint
-                0x40000b50                desired_y
-                0x40000b54                nav_shift
-                0x40000b58                carrot_x
-                0x40000b5c                last_y
-                0x40000b60                horizontal_mode
-                0x40000b64                nav_circle_y
-                0x40000b68                too_far_from_home
-                0x40000b6c                nav_pitch
-                0x40000b70                rc_pitch
-                0x40000b74                nav_oval_count
-                0x40000b78                nav_mode
-                0x40000b7c                dist2_to_home
-                0x40000b80                nav_climb
-                0x40000b84                last_x
-                0x40000b88                nav_survey_active
-                0x40000b89                oval_status
-                0x40000b8c                nav_ground_speed_pgain
-                0x40000b90                nav_circle_x
-                0x40000b94                nav_segment_y_2
-                0x40000b98                nav_segment_y_1
-                0x40000b9c                ground_alt
-                0x40000ba0                nav_survey_west
-                0x40000ba4                nav_radius
-                0x40000ba8                nav_course
-                0x40000bac                nav_survey_shift
-                0x40000bb0                carrot_y
-                0x40000bb4                nav_survey_south
-                0x40000bb8                nav_circle_trigo_qdr
-                0x40000bbc                fp_pitch
-                0x40000bc0                flight_altitude
-                0x40000bc4                nav_survey_north
- COMMON         0x40000bc8        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
-                0x40000bc8                nav_block
-                0x40000bc9                last_block
-                0x40000bca                nav_stage
-                0x40000bcb                last_stage
-                0x40000bcc                stage_time
-                0x40000bce                block_time
- COMMON         0x40000bd0      0x401 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
-                0x40000bd0                the_acs_id
-                0x40000cd0                the_acs
-                0x40000fd0                acs_idx
- *fill*         0x40000fd1        0x1 00
- COMMON         0x40000fd2        0x6 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/datalink/downlink.o
-                0x40000fd2                downlink_nb_ovrn
-                0x40000fd4                downlink_nb_msgs
-                0x40000fd6                downlink_nb_bytes
- COMMON         0x40000fd8      0x10a /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/datalink/pprz_transport.o
-                0x40000fd8                ck_b
-                0x40000fd9                pprz_tp
-                0x400010e1                ck_a
- *fill*         0x400010e2        0x6 00
+ COMMON         0x400006c4       0xac /home/lionel/paparazziProto1/var/Colibri/ap/mcu_periph/sys_time.o
+                0x400006c4                sys_time
+ COMMON         0x40000770        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/./inter_mcu.o
+                0x40000770                ap_ok
+                0x40000771                time_since_last_ap
+ COMMON         0x40000772        0x3 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_fbw.o
+                0x40000772                fbw_periodic_tid
+                0x40000773                fbw_mode
+                0x40000774                electrical_tid
+ *fill*         0x40000775        0x3 00
+ COMMON         0x40000778        0xc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/electrical.o
+                0x40000778                electrical
+ COMMON         0x40000784        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
+                0x40000784                commands
+ COMMON         0x4000078c       0x18 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
+                0x4000078c                combi_switch_status
+                0x4000078d                navigation_tid
+                0x4000078e                monitor_tid
+                0x4000078f                fptransition_tid
+                0x40000790                sensors_tid
+                0x40000791                attitude_tid
+                0x40000794                energy
+                0x40000798                telemetry_tid
+                0x40000799                power_switch
+                0x4000079c                combi_switch_value
+                0x400007a0                modules_tid
+                0x400007a2                vsupply
+ COMMON         0x400007a4       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/./estimator.o
+                0x400007a4                estimator_z_dot
+                0x400007a8                estimator_flight_time
+                0x400007ac                estimator_psi
+                0x400007b0                estimator_z
+                0x400007b4                estimator_t
+                0x400007b8                wind_east
+                0x400007bc                estimator_airspeed
+                0x400007c0                estimator_p
+                0x400007c4                estimator_theta
+                0x400007c8                estimator_hspeed_mod
+                0x400007cc                estimator_phi
+                0x400007d0                estimator_r
+                0x400007d4                estimator_x
+                0x400007d8                estimator_AOA
+                0x400007dc                estimator_q
+                0x400007e0                estimator_hspeed_dir
+                0x400007e4                wind_north
+                0x400007e8                alt_kalman_enabled
+                0x400007ec                estimator_y
+ COMMON         0x400007f0      0x240 /home/lionel/paparazziProto1/var/Colibri/ap/mcu_periph/uart.o
+                0x400007f0                uart0
+                0x40000910                uart1
+ COMMON         0x40000a30       0x16 /home/lionel/paparazziProto1/var/Colibri/ap/arch/lpc21/servos_4017_hw.o
+                0x40000a30                servos_4017_idx
+                0x40000a32                servos_values
+ COMMON         0x40000a46       0x10 /home/lionel/paparazziProto1/var/Colibri/ap/actuators.o
+                0x40000a46                actuators
+ COMMON         0x40000a56       0x12 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/radio_control.o
+                0x40000a56                radio_control
+ COMMON         0x40000a68        0x6 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/radio_control/rc_datalink.o
+                0x40000a68                rc_dl_frame_available
+                0x40000a69                rc_dl_values
+ *fill*         0x40000a6e        0x2 00
+ COMMON         0x40000a70       0x54 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/stabilization/stabilization_attitude.o
+                0x40000a70                h_ctl_auto1_rate
+                0x40000a74                h_ctl_course_setpoint
+                0x40000a78                h_ctl_roll_max_setpoint
+                0x40000a7c                h_ctl_course_pre_bank_correction
+                0x40000a80                h_ctl_elevator_setpoint
+                0x40000a84                h_ctl_aileron_of_throttle
+                0x40000a88                h_ctl_aileron_setpoint
+                0x40000a8c                h_ctl_pitch_setpoint
+                0x40000a90                h_ctl_roll_slew
+                0x40000a94                h_ctl_course_pgain
+                0x40000a98                h_ctl_pitch_pgain
+                0x40000a9c                h_ctl_pitch_loop_setpoint
+                0x40000aa0                h_ctl_course_pre_bank
+                0x40000aa4                h_ctl_pitch_dgain
+                0x40000aa8                h_ctl_course_dgain
+                0x40000aac                h_ctl_roll_attitude_gain
+                0x40000ab0                h_ctl_roll_rate_gain
+                0x40000ab4                h_ctl_disabled
+                0x40000ab8                h_ctl_roll_pgain
+                0x40000abc                h_ctl_roll_setpoint
+                0x40000ac0                h_ctl_elevator_of_roll
+ COMMON         0x40000ac4       0x68 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
+                0x40000ac4                v_ctl_auto_throttle_nominal_cruise_throttle
+                0x40000ac8                v_ctl_altitude_error
+                0x40000acc                v_ctl_climb_mode
+                0x40000ad0                v_ctl_auto_throttle_pitch_of_vz_dgain
+                0x40000ad4                v_ctl_altitude_pre_climb_correction
+                0x40000ad8                v_ctl_auto_throttle_sum_err
+                0x40000adc                v_ctl_auto_throttle_submode
+                0x40000ae0                v_ctl_auto_throttle_pitch_of_vz_pgain
+                0x40000ae4                v_ctl_altitude_max_climb
+                0x40000ae8                v_ctl_altitude_setpoint
+                0x40000aec                v_ctl_mode
+                0x40000af0                v_ctl_auto_throttle_cruise_throttle
+                0x40000af4                v_ctl_altitude_pgain
+                0x40000af8                v_ctl_auto_pitch_pgain
+                0x40000afc                v_ctl_auto_throttle_climb_throttle_increment
+                0x40000b00                v_ctl_auto_throttle_igain
+                0x40000b04                v_ctl_auto_throttle_min_cruise_throttle
+                0x40000b08                v_ctl_throttle_setpoint
+                0x40000b0c                v_ctl_climb_setpoint
+                0x40000b10                v_ctl_auto_throttle_dgain
+                0x40000b14                v_ctl_auto_pitch_igain
+                0x40000b18                v_ctl_altitude_pre_climb
+                0x40000b1c                v_ctl_auto_throttle_max_cruise_throttle
+                0x40000b20                v_ctl_throttle_slewed
+                0x40000b24                v_ctl_auto_throttle_pgain
+                0x40000b28                v_ctl_auto_pitch_sum_err
+ COMMON         0x40000b2c       0xa0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x40000b2c                nav_glide_pitch_trim
+                0x40000b30                dist2_to_wp
+                0x40000b34                nav_segment_x_1
+                0x40000b38                desired_x
+                0x40000b3c                nav_survey_east
+                0x40000b40                nav_segment_x_2
+                0x40000b44                nav_circle_radius
+                0x40000b48                nav_ground_speed_setpoint
+                0x40000b4c                nav_circle_radians
+                0x40000b50                nav_throttle_setpoint
+                0x40000b54                desired_y
+                0x40000b58                nav_shift
+                0x40000b5c                carrot_x
+                0x40000b60                last_y
+                0x40000b64                horizontal_mode
+                0x40000b68                nav_circle_y
+                0x40000b6c                too_far_from_home
+                0x40000b70                nav_pitch
+                0x40000b74                rc_pitch
+                0x40000b78                nav_oval_count
+                0x40000b7c                nav_mode
+                0x40000b80                dist2_to_home
+                0x40000b84                nav_climb
+                0x40000b88                last_x
+                0x40000b8c                nav_survey_active
+                0x40000b8d                oval_status
+                0x40000b90                nav_ground_speed_pgain
+                0x40000b94                nav_circle_x
+                0x40000b98                nav_segment_y_2
+                0x40000b9c                nav_segment_y_1
+                0x40000ba0                ground_alt
+                0x40000ba4                nav_survey_west
+                0x40000ba8                nav_radius
+                0x40000bac                nav_course
+                0x40000bb0                nav_survey_shift
+                0x40000bb4                carrot_y
+                0x40000bb8                nav_survey_south
+                0x40000bbc                nav_circle_trigo_qdr
+                0x40000bc0                fp_pitch
+                0x40000bc4                flight_altitude
+                0x40000bc8                nav_survey_north
+ COMMON         0x40000bcc        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
+                0x40000bcc                nav_block
+                0x40000bcd                last_block
+                0x40000bce                nav_stage
+                0x40000bcf                last_stage
+                0x40000bd0                stage_time
+                0x40000bd2                block_time
+ COMMON         0x40000bd4      0x401 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
+                0x40000bd4                the_acs_id
+                0x40000cd4                the_acs
+                0x40000fd4                acs_idx
+ *fill*         0x40000fd5        0x1 00
+ COMMON         0x40000fd6        0x6 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/datalink/downlink.o
+                0x40000fd6                downlink_nb_ovrn
+                0x40000fd8                downlink_nb_msgs
+                0x40000fda                downlink_nb_bytes
+ COMMON         0x40000fdc      0x10a /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/datalink/pprz_transport.o
+                0x40000fdc                ck_b
+                0x40000fdd                pprz_tp
+                0x400010e5                ck_a
+ *fill*         0x400010e6        0x2 00
  COMMON         0x400010e8       0x8a /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
                 0x400010e8                dl_msg_available
                 0x400010f0                dl_buffer
@@ -2226,7 +2229,7 @@ END GROUP
                 0x4000151c                __bss_end__ = .
                 0x4000151c                PROVIDE (__bss_end, .)
 
-.stack          0x40001600     0x1000 load address 0x0001d618
+.stack          0x40001600     0x1000 load address 0x0001d6c0
                 0x40002600                . = (. + STACK_SIZE)
  *fill*         0x40001600     0x1000 00
                 0x40002600                PROVIDE (_stack, .)
@@ -4748,7 +4751,6 @@ powf                                              /opt/paparazzi/arm-multilib/li
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_geodetic_float.o
 pprz_mode                                         /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
-                                                  /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
 pprz_tp                                           /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/datalink/pprz_transport.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
 pprz_trig_int                                     /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_trig_int.o
@@ -4991,7 +4993,6 @@ v_ctl_climb_mode                                  /home/lionel/paparazziProto1/v
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/discsurvey.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/nav_line.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/nav_survey_rectangle.o
-                                                  /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
 v_ctl_climb_setpoint                              /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
                                                   /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o

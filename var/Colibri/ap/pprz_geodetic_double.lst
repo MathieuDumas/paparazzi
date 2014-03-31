@@ -1498,36 +1498,36 @@
  1524              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 pprz_geodetic_double.c
-     /tmp/ccP94sqt.s:17     .text.lla_of_ecef_d:00000000 $a
-     /tmp/ccP94sqt.s:20     .text.lla_of_ecef_d:00000000 lla_of_ecef_d
-     /tmp/ccP94sqt.s:336    .text.lla_of_ecef_d:000004d4 $d
-     /tmp/ccP94sqt.s:361    .text.ltp_def_from_ecef_d:00000000 $a
-     /tmp/ccP94sqt.s:364    .text.ltp_def_from_ecef_d:00000000 ltp_def_from_ecef_d
-     /tmp/ccP94sqt.s:456    .text.ecef_of_lla_d:00000000 $a
-     /tmp/ccP94sqt.s:459    .text.ecef_of_lla_d:00000000 ecef_of_lla_d
-     /tmp/ccP94sqt.s:551    .text.ecef_of_lla_d:00000154 $d
-     /tmp/ccP94sqt.s:559    .text.enu_of_ecef_point_d:00000000 $a
-     /tmp/ccP94sqt.s:562    .text.enu_of_ecef_point_d:00000000 enu_of_ecef_point_d
-     /tmp/ccP94sqt.s:681    .text.ned_of_ecef_point_d:00000000 $a
-     /tmp/ccP94sqt.s:684    .text.ned_of_ecef_point_d:00000000 ned_of_ecef_point_d
-     /tmp/ccP94sqt.s:709    .text.enu_of_ecef_vect_d:00000000 $a
-     /tmp/ccP94sqt.s:712    .text.enu_of_ecef_vect_d:00000000 enu_of_ecef_vect_d
-     /tmp/ccP94sqt.s:818    .text.ned_of_ecef_vect_d:00000000 $a
-     /tmp/ccP94sqt.s:821    .text.ned_of_ecef_vect_d:00000000 ned_of_ecef_vect_d
-     /tmp/ccP94sqt.s:846    .text.ecef_of_enu_point_d:00000000 $a
-     /tmp/ccP94sqt.s:849    .text.ecef_of_enu_point_d:00000000 ecef_of_enu_point_d
-     /tmp/ccP94sqt.s:984    .text.ecef_of_ned_point_d:00000000 $a
-     /tmp/ccP94sqt.s:987    .text.ecef_of_ned_point_d:00000000 ecef_of_ned_point_d
-     /tmp/ccP94sqt.s:1011   .text.ecef_of_enu_vect_d:00000000 $a
-     /tmp/ccP94sqt.s:1014   .text.ecef_of_enu_vect_d:00000000 ecef_of_enu_vect_d
-     /tmp/ccP94sqt.s:1120   .text.ecef_of_ned_vect_d:00000000 $a
-     /tmp/ccP94sqt.s:1123   .text.ecef_of_ned_vect_d:00000000 ecef_of_ned_vect_d
-     /tmp/ccP94sqt.s:1147   .text.gc_of_gd_lat_d:00000000 $a
-     /tmp/ccP94sqt.s:1150   .text.gc_of_gd_lat_d:00000000 gc_of_gd_lat_d
-     /tmp/ccP94sqt.s:1232   .text.gc_of_gd_lat_d:0000012c $d
-     /tmp/ccP94sqt.s:1239   .text.lla_of_utm_d:00000000 $a
-     /tmp/ccP94sqt.s:1242   .text.lla_of_utm_d:00000000 lla_of_utm_d
-     /tmp/ccP94sqt.s:1506   .text.lla_of_utm_d:000003f8 $d
+     /tmp/cczlyPu4.s:17     .text.lla_of_ecef_d:00000000 $a
+     /tmp/cczlyPu4.s:20     .text.lla_of_ecef_d:00000000 lla_of_ecef_d
+     /tmp/cczlyPu4.s:336    .text.lla_of_ecef_d:000004d4 $d
+     /tmp/cczlyPu4.s:361    .text.ltp_def_from_ecef_d:00000000 $a
+     /tmp/cczlyPu4.s:364    .text.ltp_def_from_ecef_d:00000000 ltp_def_from_ecef_d
+     /tmp/cczlyPu4.s:456    .text.ecef_of_lla_d:00000000 $a
+     /tmp/cczlyPu4.s:459    .text.ecef_of_lla_d:00000000 ecef_of_lla_d
+     /tmp/cczlyPu4.s:551    .text.ecef_of_lla_d:00000154 $d
+     /tmp/cczlyPu4.s:559    .text.enu_of_ecef_point_d:00000000 $a
+     /tmp/cczlyPu4.s:562    .text.enu_of_ecef_point_d:00000000 enu_of_ecef_point_d
+     /tmp/cczlyPu4.s:681    .text.ned_of_ecef_point_d:00000000 $a
+     /tmp/cczlyPu4.s:684    .text.ned_of_ecef_point_d:00000000 ned_of_ecef_point_d
+     /tmp/cczlyPu4.s:709    .text.enu_of_ecef_vect_d:00000000 $a
+     /tmp/cczlyPu4.s:712    .text.enu_of_ecef_vect_d:00000000 enu_of_ecef_vect_d
+     /tmp/cczlyPu4.s:818    .text.ned_of_ecef_vect_d:00000000 $a
+     /tmp/cczlyPu4.s:821    .text.ned_of_ecef_vect_d:00000000 ned_of_ecef_vect_d
+     /tmp/cczlyPu4.s:846    .text.ecef_of_enu_point_d:00000000 $a
+     /tmp/cczlyPu4.s:849    .text.ecef_of_enu_point_d:00000000 ecef_of_enu_point_d
+     /tmp/cczlyPu4.s:984    .text.ecef_of_ned_point_d:00000000 $a
+     /tmp/cczlyPu4.s:987    .text.ecef_of_ned_point_d:00000000 ecef_of_ned_point_d
+     /tmp/cczlyPu4.s:1011   .text.ecef_of_enu_vect_d:00000000 $a
+     /tmp/cczlyPu4.s:1014   .text.ecef_of_enu_vect_d:00000000 ecef_of_enu_vect_d
+     /tmp/cczlyPu4.s:1120   .text.ecef_of_ned_vect_d:00000000 $a
+     /tmp/cczlyPu4.s:1123   .text.ecef_of_ned_vect_d:00000000 ecef_of_ned_vect_d
+     /tmp/cczlyPu4.s:1147   .text.gc_of_gd_lat_d:00000000 $a
+     /tmp/cczlyPu4.s:1150   .text.gc_of_gd_lat_d:00000000 gc_of_gd_lat_d
+     /tmp/cczlyPu4.s:1232   .text.gc_of_gd_lat_d:0000012c $d
+     /tmp/cczlyPu4.s:1239   .text.lla_of_utm_d:00000000 $a
+     /tmp/cczlyPu4.s:1242   .text.lla_of_utm_d:00000000 lla_of_utm_d
+     /tmp/cczlyPu4.s:1506   .text.lla_of_utm_d:000003f8 $d
 
 UNDEFINED SYMBOLS
 __aeabi_dmul
