@@ -49,7 +49,6 @@
 	<set value="9600" var="radio_control.values[2]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block> 
-
    <block name="Servo2 centre">
 	<set value="0" var="radio_control.values[2]"/>  <!--Controle servo centre-->
 	<while cond="TRUE"/>

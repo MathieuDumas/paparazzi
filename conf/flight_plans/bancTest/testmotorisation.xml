@@ -14,17 +14,7 @@
   <exceptions/>
 
 <blocks>
-    <block name="initialisation">
-	<set value="1" var="launch"/>
-	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
-	<set value="9600*(0.)" var="radio_control.values[0]"/> <!--Controle moteur-->
-	<set value="9600*(0.)" var="radio_control.values[1]"/>
-	<set value="9600*(0.)" var="radio_control.values[2]"/>
-	<set value="9600*(0.)" var="radio_control.values[3]"/>    
-        <while cond="TRUE"/>
-    </block>
 
-<!--  ************************************************************************************************-->
     <block name="Servo1 avant">
 	<set value="9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
@@ -64,11 +54,47 @@
 	<while cond="TRUE"/>
     </block>
 
-
     <block name="Servo3 gauche">
 	<set value="-9600" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
+
+    <block name="Pitch avant">
+	<set value="-9600" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Pitch arriere">
+	<set value="9600" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Yaw droite">
+	<set value="9600" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Yaw gauche">
+	<set value="-9600" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+<!--  ************************************************************************************************-->
+
+    <block name="initialisation">
+	<set value="1" var="launch"/>
+	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
+	<set value="9600*(0.)" var="radio_control.values[0]"/> <!--Controle moteur-->
+	<set value="9600*(0.)" var="radio_control.values[1]"/>
+	<set value="9600*(0.)" var="radio_control.values[2]"/>
+	<set value="9600*(0.)" var="radio_control.values[3]"/>    
+        <while cond="TRUE"/>
+    </block>
+
 
 
     <block name="100%">
