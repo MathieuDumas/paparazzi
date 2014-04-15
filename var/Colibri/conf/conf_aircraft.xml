@@ -30,16 +30,48 @@
             <set var="radio_control.values[3]" value="9600*(0.)"/>
             <while cond="TRUE"/>
           </block>
+          <block name="Servo1 avant">
+            <set var="radio_control.values[1]" value="9600"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo1 arriere">
+            <set var="radio_control.values[1]" value="-9600"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo1 centre">
+            <set var="radio_control.values[1]" value="0"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo2 avant">
+            <set var="radio_control.values[2]" value="-9600"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo2 arriere">
+            <set var="radio_control.values[2]" value="9600"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo2 centre">
+            <set var="radio_control.values[2]" value="0"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo3 droit">
+            <set var="radio_control.values[3]" value="0"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo3 centre">
+            <set var="radio_control.values[3]" value="9600"/>
+            <while cond="TRUE"/>
+          </block>
+          <block name="Servo3 gauche">
+            <set var="radio_control.values[3]" value="-9600"/>
+            <while cond="TRUE"/>
+          </block>
           <block name="100%">
             <set var="radio_control.values[0]" value="9600*(1)"/>
             <while cond="TRUE"/>
           </block>
           <block name="0.05%">
             <set var="radio_control.values[0]" value="9600*(0.05)"/>
-            <while cond="TRUE"/>
-          </block>
-          <block name="0.1%">
-            <set var="radio_control.values[0]" value="9600*(0.1)"/>
             <while cond="TRUE"/>
           </block>
           <block name="0.15%">

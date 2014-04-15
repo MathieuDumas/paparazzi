@@ -1094,16 +1094,16 @@
  1100              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav_line.c
-     /tmp/ccOde9vi.s:13     .text.nav_line_init:00000000 $a
-     /tmp/ccOde9vi.s:16     .text.nav_line_init:00000000 nav_line_init
-     /tmp/ccOde9vi.s:28     .text.nav_line_init:00000010 $d
-     /tmp/ccOde9vi.s:43     .text.nav_line:00000000 $a
-     /tmp/ccOde9vi.s:46     .text.nav_line:00000000 nav_line
-     /tmp/ccOde9vi.s:195    .text.nav_line:00000240 $d
-     /tmp/ccOde9vi.s:204    .text.nav_line:00000260 $a
-     /tmp/ccOde9vi.s:1070   .text.nav_line:00000ea4 $d
-     /tmp/ccOde9vi.s:1098   .bss.line_status:00000000 line_status
-     /tmp/ccOde9vi.s:1099   .bss.line_status:00000000 $d
+     /tmp/cclYdU6U.s:13     .text.nav_line_init:00000000 $a
+     /tmp/cclYdU6U.s:16     .text.nav_line_init:00000000 nav_line_init
+     /tmp/cclYdU6U.s:28     .text.nav_line_init:00000010 $d
+     /tmp/cclYdU6U.s:43     .text.nav_line:00000000 $a
+     /tmp/cclYdU6U.s:46     .text.nav_line:00000000 nav_line
+     /tmp/cclYdU6U.s:195    .text.nav_line:00000240 $d
+     /tmp/cclYdU6U.s:204    .text.nav_line:00000260 $a
+     /tmp/cclYdU6U.s:1070   .text.nav_line:00000ea4 $d
+     /tmp/cclYdU6U.s:1098   .bss.line_status:00000000 line_status
+     /tmp/cclYdU6U.s:1099   .bss.line_status:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

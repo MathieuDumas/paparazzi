@@ -727,9 +727,9 @@
  747              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 stabilization_attitude.c
-     /tmp/ccrZZBAw.s:13     .text.h_ctl_init:00000000 $a
-     /tmp/ccrZZBAw.s:16     .text.h_ctl_init:00000000 h_ctl_init
-     /tmp/ccrZZBAw.s:74     .text.h_ctl_init:000000c8 $d
+     /tmp/ccPWGSaC.s:13     .text.h_ctl_init:00000000 $a
+     /tmp/ccPWGSaC.s:16     .text.h_ctl_init:00000000 h_ctl_init
+     /tmp/ccPWGSaC.s:74     .text.h_ctl_init:000000c8 $d
                             *COM*:00000004 h_ctl_course_setpoint
                             *COM*:00000004 h_ctl_course_pre_bank
                             *COM*:00000004 h_ctl_course_pre_bank_correction
@@ -749,28 +749,28 @@ DEFINED SYMBOLS
                             *COM*:00000004 h_ctl_roll_slew
                             *COM*:00000004 h_ctl_roll_attitude_gain
                             *COM*:00000004 h_ctl_roll_rate_gain
-     /tmp/ccrZZBAw.s:117    .text.h_ctl_course_loop:00000000 $a
-     /tmp/ccrZZBAw.s:120    .text.h_ctl_course_loop:00000000 h_ctl_course_loop
-     /tmp/ccrZZBAw.s:398    .text.h_ctl_course_loop:000003f4 $d
-     /tmp/ccrZZBAw.s:431    .text.h_ctl_attitude_loop:00000000 $a
-     /tmp/ccrZZBAw.s:434    .text.h_ctl_attitude_loop:00000000 h_ctl_attitude_loop
-     /tmp/ccrZZBAw.s:646    .text.h_ctl_attitude_loop:0000031c $d
-     /tmp/ccrZZBAw.s:712    .data.v_ctl_auto_throttle_dash_trim:00000000 v_ctl_auto_throttle_dash_trim
-     /tmp/ccrZZBAw.s:738    .data.v_ctl_auto_throttle_loiter_trim:00000000 v_ctl_auto_throttle_loiter_trim
+     /tmp/ccPWGSaC.s:117    .text.h_ctl_course_loop:00000000 $a
+     /tmp/ccPWGSaC.s:120    .text.h_ctl_course_loop:00000000 h_ctl_course_loop
+     /tmp/ccPWGSaC.s:398    .text.h_ctl_course_loop:000003f4 $d
+     /tmp/ccPWGSaC.s:431    .text.h_ctl_attitude_loop:00000000 $a
+     /tmp/ccPWGSaC.s:434    .text.h_ctl_attitude_loop:00000000 h_ctl_attitude_loop
+     /tmp/ccPWGSaC.s:646    .text.h_ctl_attitude_loop:0000031c $d
+     /tmp/ccPWGSaC.s:712    .data.v_ctl_auto_throttle_dash_trim:00000000 v_ctl_auto_throttle_dash_trim
+     /tmp/ccPWGSaC.s:738    .data.v_ctl_auto_throttle_loiter_trim:00000000 v_ctl_auto_throttle_loiter_trim
                             *COM*:00000004 h_ctl_roll_pgain
                             *COM*:00000001 h_ctl_auto1_rate
-     /tmp/ccrZZBAw.s:731    .bss.route_ap_time:00000000 route_ap_time
-     /tmp/ccrZZBAw.s:701    .bss.last_elevator_trim.3022:00000000 $d
-     /tmp/ccrZZBAw.s:705    .bss.last_elevator_trim.3022:00000000 last_elevator_trim.3022
-     /tmp/ccrZZBAw.s:708    .data.v_ctl_auto_throttle_dash_trim:00000000 $d
-     /tmp/ccrZZBAw.s:715    .bss.last_err.3031:00000000 $d
-     /tmp/ccrZZBAw.s:719    .bss.last_err.3031:00000000 last_err.3031
-     /tmp/ccrZZBAw.s:722    .bss.last_err.2990:00000000 $d
-     /tmp/ccrZZBAw.s:726    .bss.last_err.2990:00000000 last_err.2990
-     /tmp/ccrZZBAw.s:732    .bss.route_ap_time:00000000 $d
-     /tmp/ccrZZBAw.s:734    .data.v_ctl_auto_throttle_loiter_trim:00000000 $d
-     /tmp/ccrZZBAw.s:741    .bss.nav_ratio:00000000 $d
-     /tmp/ccrZZBAw.s:745    .bss.nav_ratio:00000000 nav_ratio
+     /tmp/ccPWGSaC.s:731    .bss.route_ap_time:00000000 route_ap_time
+     /tmp/ccPWGSaC.s:701    .bss.last_elevator_trim.3022:00000000 $d
+     /tmp/ccPWGSaC.s:705    .bss.last_elevator_trim.3022:00000000 last_elevator_trim.3022
+     /tmp/ccPWGSaC.s:708    .data.v_ctl_auto_throttle_dash_trim:00000000 $d
+     /tmp/ccPWGSaC.s:715    .bss.last_err.3031:00000000 $d
+     /tmp/ccPWGSaC.s:719    .bss.last_err.3031:00000000 last_err.3031
+     /tmp/ccPWGSaC.s:722    .bss.last_err.2990:00000000 $d
+     /tmp/ccPWGSaC.s:726    .bss.last_err.2990:00000000 last_err.2990
+     /tmp/ccPWGSaC.s:732    .bss.route_ap_time:00000000 $d
+     /tmp/ccPWGSaC.s:734    .data.v_ctl_auto_throttle_loiter_trim:00000000 $d
+     /tmp/ccPWGSaC.s:741    .bss.nav_ratio:00000000 $d
+     /tmp/ccPWGSaC.s:745    .bss.nav_ratio:00000000 nav_ratio
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

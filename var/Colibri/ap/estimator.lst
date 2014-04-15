@@ -395,21 +395,21 @@
  404              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 estimator.c
-     /tmp/ccTExdu5.s:13     .text.alt_kalman_reset:00000000 $a
-     /tmp/ccTExdu5.s:16     .text.alt_kalman_reset:00000000 alt_kalman_reset
-     /tmp/ccTExdu5.s:32     .text.alt_kalman_reset:00000020 $d
-     /tmp/ccTExdu5.s:35     .text.alt_kalman_init:00000000 $a
-     /tmp/ccTExdu5.s:38     .text.alt_kalman_init:00000000 alt_kalman_init
-     /tmp/ccTExdu5.s:50     .text.alt_kalman_init:00000010 $d
+     /tmp/cc5hxAGL.s:13     .text.alt_kalman_reset:00000000 $a
+     /tmp/cc5hxAGL.s:16     .text.alt_kalman_reset:00000000 alt_kalman_reset
+     /tmp/cc5hxAGL.s:32     .text.alt_kalman_reset:00000020 $d
+     /tmp/cc5hxAGL.s:35     .text.alt_kalman_init:00000000 $a
+     /tmp/cc5hxAGL.s:38     .text.alt_kalman_init:00000000 alt_kalman_init
+     /tmp/cc5hxAGL.s:50     .text.alt_kalman_init:00000010 $d
                             *COM*:00000001 alt_kalman_enabled
-     /tmp/ccTExdu5.s:59     .text.alt_kalman:00000000 $a
-     /tmp/ccTExdu5.s:62     .text.alt_kalman:00000000 alt_kalman
-     /tmp/ccTExdu5.s:192    .text.alt_kalman:000001e8 $d
+     /tmp/cc5hxAGL.s:59     .text.alt_kalman:00000000 $a
+     /tmp/cc5hxAGL.s:62     .text.alt_kalman:00000000 alt_kalman
+     /tmp/cc5hxAGL.s:192    .text.alt_kalman:000001e8 $d
                             *COM*:00000004 estimator_z_dot
                             *COM*:00000004 estimator_z
-     /tmp/ccTExdu5.s:199    .text.estimator_init:00000000 $a
-     /tmp/ccTExdu5.s:202    .text.estimator_init:00000000 estimator_init
-     /tmp/ccTExdu5.s:253    .text.estimator_init:000000ac $d
+     /tmp/cc5hxAGL.s:199    .text.estimator_init:00000000 $a
+     /tmp/cc5hxAGL.s:202    .text.estimator_init:00000000 estimator_init
+     /tmp/cc5hxAGL.s:253    .text.estimator_init:000000ac $d
                             *COM*:00000004 estimator_x
                             *COM*:00000004 estimator_y
                             *COM*:00000004 estimator_phi
@@ -422,15 +422,15 @@ DEFINED SYMBOLS
                             *COM*:00000004 estimator_r
                             *COM*:00000002 estimator_flight_time
                             *COM*:00000004 estimator_airspeed
-     /tmp/ccTExdu5.s:275    .text.estimator_update_state_gps:00000000 $a
-     /tmp/ccTExdu5.s:278    .text.estimator_update_state_gps:00000000 estimator_update_state_gps
-     /tmp/ccTExdu5.s:364    .text.estimator_update_state_gps:00000134 $d
+     /tmp/cc5hxAGL.s:275    .text.estimator_update_state_gps:00000000 $a
+     /tmp/cc5hxAGL.s:278    .text.estimator_update_state_gps:00000000 estimator_update_state_gps
+     /tmp/cc5hxAGL.s:364    .text.estimator_update_state_gps:00000134 $d
                             *COM*:00000004 estimator_AOA
                             *COM*:00000004 wind_north
                             *COM*:00000004 wind_east
                             *COM*:00000004 estimator_t
-     /tmp/ccTExdu5.s:398    .bss.p:00000000 $d
-     /tmp/ccTExdu5.s:402    .bss.p:00000000 p
+     /tmp/cc5hxAGL.s:398    .bss.p:00000000 $d
+     /tmp/cc5hxAGL.s:402    .bss.p:00000000 p
 
 UNDEFINED SYMBOLS
 __aeabi_fmul

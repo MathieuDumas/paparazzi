@@ -76,10 +76,6 @@
         <arg flag="-s" constant="57600"/>
       </program>
       <program name="Server"/>
-      <program name="Settings">
-        <arg flag="-ac" constant="Colibri"/>
-      </program>
-      <program name="Messages"/>
       <program name="GCS"/>
     </session>
     <session name="Flight USB-XBee-API@57600">

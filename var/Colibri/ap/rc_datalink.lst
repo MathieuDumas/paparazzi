@@ -81,16 +81,16 @@
   87              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 rc_datalink.c
-     /tmp/ccKbYEhu.s:13     .text.radio_control_impl_init:00000000 $a
-     /tmp/ccKbYEhu.s:16     .text.radio_control_impl_init:00000000 radio_control_impl_init
-     /tmp/ccKbYEhu.s:28     .text.radio_control_impl_init:00000010 $d
+     /tmp/ccCAio6C.s:13     .text.radio_control_impl_init:00000000 $a
+     /tmp/ccCAio6C.s:16     .text.radio_control_impl_init:00000000 radio_control_impl_init
+     /tmp/ccCAio6C.s:28     .text.radio_control_impl_init:00000010 $d
                             *COM*:00000001 rc_dl_frame_available
-     /tmp/ccKbYEhu.s:31     .text.parse_rc_3ch_datalink:00000000 $a
-     /tmp/ccKbYEhu.s:34     .text.parse_rc_3ch_datalink:00000000 parse_rc_3ch_datalink
-     /tmp/ccKbYEhu.s:56     .text.parse_rc_3ch_datalink:00000038 $d
+     /tmp/ccCAio6C.s:31     .text.parse_rc_3ch_datalink:00000000 $a
+     /tmp/ccCAio6C.s:34     .text.parse_rc_3ch_datalink:00000000 parse_rc_3ch_datalink
+     /tmp/ccCAio6C.s:56     .text.parse_rc_3ch_datalink:00000038 $d
                             *COM*:00000005 rc_dl_values
-     /tmp/ccKbYEhu.s:60     .text.parse_rc_4ch_datalink:00000000 $a
-     /tmp/ccKbYEhu.s:63     .text.parse_rc_4ch_datalink:00000000 parse_rc_4ch_datalink
-     /tmp/ccKbYEhu.s:82     .text.parse_rc_4ch_datalink:0000002c $d
+     /tmp/ccCAio6C.s:60     .text.parse_rc_4ch_datalink:00000000 $a
+     /tmp/ccCAio6C.s:63     .text.parse_rc_4ch_datalink:00000000 parse_rc_4ch_datalink
+     /tmp/ccCAio6C.s:82     .text.parse_rc_4ch_datalink:0000002c $d
 
 NO UNDEFINED SYMBOLS

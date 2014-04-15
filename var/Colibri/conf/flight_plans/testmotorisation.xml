@@ -25,6 +25,52 @@
     </block>
 
 <!--  ************************************************************************************************-->
+    <block name="Servo1 avant">
+	<set value="9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block> 
+
+   <block name="Servo1 arriere">
+	<set value="-9600" var="radio_control.values[1]"/>  <!--Controle servo gauche-->
+	<while cond="TRUE"/>
+    </block> 
+
+   <block name="Servo1 centre">
+	<set value="0" var="radio_control.values[1]"/>  <!--Controle servo centre-->
+	<while cond="TRUE"/>
+    </block> 
+
+   <block name="Servo2 avant">
+	<set value="-9600" var="radio_control.values[2]"/>  <!--Controle servo gauche-->
+	<while cond="TRUE"/>
+    </block> 
+
+    <block name="Servo2 arriere">
+	<set value="9600" var="radio_control.values[2]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block> 
+
+   <block name="Servo2 centre">
+	<set value="0" var="radio_control.values[2]"/>  <!--Controle servo centre-->
+	<while cond="TRUE"/>
+    </block> 
+
+    <block name="Servo3 droit">
+	<set value="0" var="radio_control.values[3]"/>  <!--Controle servo-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Servo3 centre">
+	<set value="9600" var="radio_control.values[3]"/>  <!--Controle servo-->
+	<while cond="TRUE"/>
+    </block>
+
+
+    <block name="Servo3 gauche">
+	<set value="-9600" var="radio_control.values[3]"/>  <!--Controle servo-->
+	<while cond="TRUE"/>
+    </block>
+
 
     <block name="100%">
 	<set value="9600*(1)" var="radio_control.values[0]"/>  <!--Controle moteur-->
@@ -33,11 +79,6 @@
 
     <block name="0.05%">
 	<set value="9600*(0.05)" var="radio_control.values[0]"/>  <!--Controle moteur-->
-	<while cond="TRUE"/>
-    </block>
-
-    <block name="0.1%">
-	<set value="9600*(0.1)" var="radio_control.values[0]"/>  <!--Controle moteur-->
 	<while cond="TRUE"/>
     </block>
 

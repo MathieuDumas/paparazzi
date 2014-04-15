@@ -29,8 +29,8 @@
   31              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccNUpt5c.s:13     .text.startup.main:00000000 $a
-     /tmp/ccNUpt5c.s:16     .text.startup.main:00000000 main
+     /tmp/ccMf22Vl.s:13     .text.startup.main:00000000 $a
+     /tmp/ccMf22Vl.s:16     .text.startup.main:00000000 main
 
 UNDEFINED SYMBOLS
 init_fbw

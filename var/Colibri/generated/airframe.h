@@ -6,7 +6,7 @@
 
 #define AIRFRAME_NAME "Colibri"
 #define AC_ID 2
-#define MD5SUM ((uint8_t*)"\247\337\337\131\055\234\033\053\265\375\363\207\315\253\221\003")
+#define MD5SUM ((uint8_t*)"\305\347\012\134\011\203\351\204\007\131\036\100\360\347\210\346")
 
 #define SERVOS_NB 8
 

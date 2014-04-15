@@ -1375,16 +1375,16 @@
  1377              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 datalink.c
-     /tmp/ccApvlsP.s:28     .text.dl_parse_msg:00000000 $a
-     /tmp/ccApvlsP.s:31     .text.dl_parse_msg:00000000 dl_parse_msg
-     /tmp/ccApvlsP.s:823    .text.dl_parse_msg:00000c28 $d
-     /tmp/ccApvlsP.s:855    .text.dl_parse_msg:00000ca4 $a
-     /tmp/ccApvlsP.s:1037   .text.dl_parse_msg:00000ed8 $d
-     /tmp/ccApvlsP.s:1069   .text.dl_parse_msg:00000f54 $a
-     /tmp/ccApvlsP.s:1134   .text.dl_parse_msg:00000ffc $d
+     /tmp/ccik8MgC.s:28     .text.dl_parse_msg:00000000 $a
+     /tmp/ccik8MgC.s:31     .text.dl_parse_msg:00000000 dl_parse_msg
+     /tmp/ccik8MgC.s:823    .text.dl_parse_msg:00000c28 $d
+     /tmp/ccik8MgC.s:855    .text.dl_parse_msg:00000ca4 $a
+     /tmp/ccik8MgC.s:1037   .text.dl_parse_msg:00000ed8 $d
+     /tmp/ccik8MgC.s:1069   .text.dl_parse_msg:00000f54 $a
+     /tmp/ccik8MgC.s:1134   .text.dl_parse_msg:00000ffc $d
                             *COM*:00000080 dl_buffer
                             *COM*:00000002 datalink_time
-     /tmp/ccApvlsP.s:1209   .text.dl_parse_msg:00001124 $a
+     /tmp/ccik8MgC.s:1209   .text.dl_parse_msg:00001124 $a
                             *COM*:00000001 dl_msg_available
 
 UNDEFINED SYMBOLS

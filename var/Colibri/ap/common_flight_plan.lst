@@ -19,8 +19,8 @@
   20 0000 08402DE9 		stmfd	sp!, {r3, lr}
   21 0004 2C309FE5 		ldr	r3, .L3
   22 0008 0020D3E5 		ldrb	r2, [r3, #0]	@ zero_extendqisi2
-  23 000c 130052E3 		cmp	r2, #19
-  24 0010 1320A083 		movhi	r2, #19
+  23 000c 1B0052E3 		cmp	r2, #27
+  24 0010 1B20A083 		movhi	r2, #27
   25 0014 0020C385 		strhib	r2, [r3, #0]
   26 0018 1C209FE5 		ldr	r2, .L3+4
   27 001c 0030A0E3 		mov	r3, #0
@@ -73,15 +73,15 @@
   77              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 common_flight_plan.c
-     /tmp/ccnLGRE7.s:13     .text.nav_init_block:00000000 $a
-     /tmp/ccnLGRE7.s:16     .text.nav_init_block:00000000 nav_init_block
-     /tmp/ccnLGRE7.s:37     .text.nav_init_block:00000038 $d
+     /tmp/ccKcEPYo.s:13     .text.nav_init_block:00000000 $a
+     /tmp/ccKcEPYo.s:16     .text.nav_init_block:00000000 nav_init_block
+     /tmp/ccKcEPYo.s:37     .text.nav_init_block:00000038 $d
                             *COM*:00000001 nav_block
                             *COM*:00000001 nav_stage
                             *COM*:00000002 block_time
-     /tmp/ccnLGRE7.s:42     .text.nav_goto_block:00000000 $a
-     /tmp/ccnLGRE7.s:45     .text.nav_goto_block:00000000 nav_goto_block
-     /tmp/ccnLGRE7.s:66     .text.nav_goto_block:00000030 $d
+     /tmp/ccKcEPYo.s:42     .text.nav_goto_block:00000000 $a
+     /tmp/ccKcEPYo.s:45     .text.nav_goto_block:00000000 nav_goto_block
+     /tmp/ccKcEPYo.s:66     .text.nav_goto_block:00000030 $d
                             *COM*:00000001 last_block
                             *COM*:00000001 last_stage
                             *COM*:00000002 stage_time

@@ -71,9 +71,9 @@
   73              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 servos_4017_hw.c
-     /tmp/cc10tIQp.s:13     .text.actuators_init:00000000 $a
-     /tmp/cc10tIQp.s:16     .text.actuators_init:00000000 actuators_init
-     /tmp/cc10tIQp.s:64     .text.actuators_init:0000009c $d
+     /tmp/ccI9WLvR.s:13     .text.actuators_init:00000000 $a
+     /tmp/ccI9WLvR.s:16     .text.actuators_init:00000000 actuators_init
+     /tmp/ccI9WLvR.s:64     .text.actuators_init:0000009c $d
                             *COM*:00000001 servos_4017_idx
                             *COM*:00000014 servos_values
 

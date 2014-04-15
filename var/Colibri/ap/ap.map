@@ -1260,7 +1260,7 @@ LOAD /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-non
 END GROUP
                 0x00001000                STACK_SIZE = 0x1000
 
-.text           0x00004000    0x180b9
+.text           0x00004000    0x18271
  *(.init)
  .init          0x00004000      0x13c /home/lionel/paparazziProto1/var/Colibri/ap/crt0.o
                 0x00004000                _boot
@@ -1465,258 +1465,258 @@ END GROUP
                 0x000138e0       0x88 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x000138e0                nav_home
  .text.nav_periodic_task
-                0x00013968      0x584 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x00013968      0x73c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
                 0x00013968                nav_periodic_task
  .text.nav_init
-                0x00013eec       0x74 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x00013eec                nav_init
+                0x000140a4       0x74 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x000140a4                nav_init
  .text.nav_without_gps
-                0x00013f60       0x50 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x00013f60                nav_without_gps
+                0x00014118       0x50 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x00014118                nav_without_gps
  .text.nav_init_block
-                0x00013fb0       0x44 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
-                0x00013fb0                nav_init_block
+                0x00014168       0x44 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
+                0x00014168                nav_init_block
  .text.nav_goto_block
-                0x00013ff4       0x40 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
-                0x00013ff4                nav_goto_block
+                0x000141ac       0x40 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/common_flight_plan.o
+                0x000141ac                nav_goto_block
  .text.traffic_info_init
-                0x00014034       0x38 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
-                0x00014034                traffic_info_init
+                0x000141ec       0x38 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/navigation/traffic_info.o
+                0x000141ec                traffic_info_init
  .text.dl_parse_msg
-                0x0001406c     0x1368 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
-                0x0001406c                dl_parse_msg
+                0x00014224     0x1368 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/datalink.o
+                0x00014224                dl_parse_msg
  .text.ahrs_init
-                0x000153d4       0xbc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x000153d4                ahrs_init
+                0x0001558c       0xbc /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x0001558c                ahrs_init
  .text.ahrs_update_fw_estimator
-                0x00015490       0x6c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x00015490                ahrs_update_fw_estimator
+                0x00015648       0x6c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x00015648                ahrs_update_fw_estimator
  .text.ahrs_update_infrared
-                0x000154fc      0x1a0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x000154fc                ahrs_update_infrared
+                0x000156b4      0x1a0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x000156b4                ahrs_update_infrared
  .text.ahrs_update_gps
-                0x0001569c       0xec /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
-                0x0001569c                ahrs_update_gps
+                0x00015854       0xec /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/ahrs/ahrs_infrared.o
+                0x00015854                ahrs_update_gps
  .text.gps_impl_init
-                0x00015788       0x24 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x00015788                gps_impl_init
+                0x00015940       0x24 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x00015940                gps_impl_init
  .text.gps_ubx_read_message
-                0x000157ac      0x534 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x000157ac                gps_ubx_read_message
+                0x00015964      0x534 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x00015964                gps_ubx_read_message
  .text.gps_ubx_parse
-                0x00015ce0      0x1a4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
-                0x00015ce0                gps_ubx_parse
+                0x00015e98      0x1a4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps/gps_ubx.o
+                0x00015e98                gps_ubx_parse
  .text.gps_init
-                0x00015e84       0x34 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps.o
-                0x00015e84                gps_init
+                0x0001603c       0x34 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/gps.o
+                0x0001603c                gps_init
  .text.infrared_struct_init
-                0x00015eb8       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared.o
-                0x00015eb8                infrared_struct_init
+                0x00016070       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared.o
+                0x00016070                infrared_struct_init
  .text.infrared_adc_init
-                0x00015f00       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
-                0x00015f00                infrared_adc_init
+                0x000160b8       0x4c /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+                0x000160b8                infrared_adc_init
  .text.infrared_adc_update
-                0x00015f4c       0xf0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
-                0x00015f4c                infrared_adc_update
- *fill*         0x0001603c        0x4 00
- .text          0x00016040      0x348 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
-                0x00016040                atan
- .text          0x00016388       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_cos.o)
-                0x00016388                cos
- .text          0x00016410        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fabs.o)
-                0x00016410                fabs
- *fill*         0x00016416        0x2 00
- .text          0x00016418       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_sin.o)
-                0x00016418                sin
- .text          0x000164a0       0x60 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_tan.o)
-                0x000164a0                tan
- .text          0x00016500      0x244 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
-                0x00016500                atanf
- .text          0x00016744       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_cos.o)
-                0x00016744                cosf
- .text          0x000167ac        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_fabs.o)
-                0x000167ac                fabsf
- *fill*         0x000167b2        0x2 00
- .text          0x000167b4       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_sin.o)
-                0x000167b4                sinf
- *fill*         0x0001681c        0x4 00
- .text          0x00016820       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
-                0x00016820                asin
- .text          0x000168d0        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_atan2.o)
-                0x000168d0                atan2
- *fill*         0x000168dc        0x4 00
- .text          0x000168e0       0xc0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
-                0x000168e0                cosh
- .text          0x000169a0      0x100 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
-                0x000169a0                exp
- .text          0x00016aa0       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
-                0x00016aa0                log
- .text          0x00016b98       0xe8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
-                0x00016b98                sinh
- .text          0x00016c80        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-wf_atan2.o)
-                0x00016c80                atan2f
- *fill*         0x00016c8c        0x4 00
- .text          0x00016c90      0x428 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_asin.o)
-                0x00016c90                __ieee754_asin
- .text          0x000170b8      0x1e0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_atan2.o)
-                0x000170b8                __ieee754_atan2
- .text          0x00017298      0x140 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_cosh.o)
-                0x00017298                __ieee754_cosh
- .text          0x000173d8      0x2e8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
-                0x000173d8                __ieee754_exp
- .text          0x000176c0      0x410 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_log.o)
-                0x000176c0                __ieee754_log
- .text          0x00017ad0      0x3d0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
-                0x00017ad0                __ieee754_rem_pio2
- .text          0x00017ea0      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sinh.o)
-                0x00017ea0                __ieee754_sinh
- .text          0x00018028      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sqrt.o)
-                0x00018028                __ieee754_sqrt
- .text          0x000181b0      0x12c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_atan2.o)
-                0x000181b0                __ieee754_atan2f
- .text          0x000182dc      0x2bc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
-                0x000182dc                __ieee754_rem_pio2f
- .text          0x00018598      0x1d8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_cos.o)
-                0x00018598                __kernel_cos
- .text          0x00018770      0x738 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
-                0x00018770                __kernel_rem_pio2
- .text          0x00018ea8      0x178 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_sin.o)
-                0x00018ea8                __kernel_sin
- .text          0x00019020      0x3c8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_tan.o)
-                0x00019020                __kernel_tan
- .text          0x000193e8      0x13c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_cos.o)
-                0x000193e8                __kernel_cosf
- .text          0x00019524      0x5c4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
-                0x00019524                __kernel_rem_pio2f
- .text          0x00019ae8       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_sin.o)
-                0x00019ae8                __kernel_sinf
- .text          0x00019be0      0x470 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_expm1.o)
-                0x00019be0                expm1
- .text          0x0001a050       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_finite.o)
-                0x0001a050                finite
- .text          0x0001a060      0x128 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_floor.o)
-                0x0001a060                floor
- .text          0x0001a188       0x90 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fpclassify.o)
-                0x0001a188                __fpclassifyd
- .text          0x0001a218        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_matherr.o)
-                0x0001a218                matherr
- *fill*         0x0001a21c        0x4 00
- .text          0x0001a220       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_nan.o)
-                0x0001a220                nan
- .text          0x0001a230       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_scalbn.o)
-                0x0001a230                scalbn
- .text          0x0001a328       0x84 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_floor.o)
-                0x0001a328                floorf
- .text          0x0001a3ac       0xb4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_scalbn.o)
-                0x0001a3ac                scalbnf
- .text          0x0001a460       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_copysign.o)
-                0x0001a460                copysign
- .text          0x0001a474        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_copysign.o)
-                0x0001a474                copysignf
- .text          0x0001a480        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-errno.o)
-                0x0001a480                __errno
- .text          0x0001a48c       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_thumb1_case_uqi.o)
-                0x0001a48c                __gnu_thumb1_case_uqi
- .text          0x0001a4a0       0x94 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
-                0x0001a4a0                __udivsi3
-                0x0001a4a0                __aeabi_uidiv
-                0x0001a520                __aeabi_uidivmod
- .text          0x0001a534       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
-                0x0001a534                __aeabi_idiv
-                0x0001a534                __divsi3
-                0x0001a5d0                __aeabi_idivmod
- .text          0x0001a5e4        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
-                0x0001a5e4                __aeabi_ldiv0
-                0x0001a5e4                __aeabi_idiv0
- .text          0x0001a5e8      0x41c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
-                0x0001a5e8                __aeabi_drsub
-                0x0001a5f0                __aeabi_dsub
-                0x0001a5f0                __subdf3
-                0x0001a5f4                __adddf3
-                0x0001a5f4                __aeabi_dadd
-                0x0001a904                __aeabi_ui2d
-                0x0001a904                __floatunsidf
-                0x0001a928                __floatsidf
-                0x0001a928                __aeabi_i2d
-                0x0001a950                __extendsfdf2
-                0x0001a950                __aeabi_f2d
-                0x0001a990                __aeabi_ul2d
-                0x0001a990                __floatundidf
-                0x0001a9a4                __floatdidf
-                0x0001a9a4                __aeabi_l2d
- .text          0x0001aa04      0x49c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
-                0x0001aa04                __aeabi_dmul
-                0x0001aa04                __muldf3
-                0x0001ac94                __aeabi_ddiv
-                0x0001ac94                __divdf3
- .text          0x0001aea0      0x144 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
-                0x0001aea0                __gtdf2
-                0x0001aea0                __gedf2
-                0x0001aea8                __ltdf2
-                0x0001aea8                __ledf2
-                0x0001aeb0                __cmpdf2
-                0x0001aeb0                __eqdf2
-                0x0001aeb0                __nedf2
-                0x0001af38                __aeabi_cdrcmple
-                0x0001af54                __aeabi_cdcmple
-                0x0001af54                __aeabi_cdcmpeq
-                0x0001af6c                __aeabi_dcmpeq
-                0x0001af84                __aeabi_dcmplt
-                0x0001af9c                __aeabi_dcmple
-                0x0001afb4                __aeabi_dcmpge
-                0x0001afcc                __aeabi_dcmpgt
- .text          0x0001afe4       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
-                0x0001afe4                __fixdfsi
-                0x0001afe4                __aeabi_d2iz
- .text          0x0001b040       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunsdfsi.o)
-                0x0001b040                __fixunsdfsi
-                0x0001b040                __aeabi_d2uiz
- .text          0x0001b094       0xa0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_truncdfsf2.o)
-                0x0001b094                __aeabi_d2f
-                0x0001b094                __truncdfsf2
- .text          0x0001b134      0x2ac /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubsf3.o)
-                0x0001b134                __aeabi_frsub
-                0x0001b13c                __subsf3
-                0x0001b13c                __aeabi_fsub
-                0x0001b140                __aeabi_fadd
-                0x0001b140                __addsf3
-                0x0001b2fc                __aeabi_ui2f
-                0x0001b2fc                __floatunsisf
-                0x0001b304                __aeabi_i2f
-                0x0001b304                __floatsisf
-                0x0001b324                __floatundisf
-                0x0001b324                __aeabi_ul2f
-                0x0001b334                __floatdisf
-                0x0001b334                __aeabi_l2f
- .text          0x0001b3e0      0x2f8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivsf3.o)
-                0x0001b3e0                __mulsf3
-                0x0001b3e0                __aeabi_fmul
-                0x0001b578                __divsf3
-                0x0001b578                __aeabi_fdiv
- .text          0x0001b6d8      0x114 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpsf2.o)
-                0x0001b6d8                __gtsf2
-                0x0001b6d8                __gesf2
-                0x0001b6e0                __lesf2
-                0x0001b6e0                __ltsf2
-                0x0001b6e8                __nesf2
-                0x0001b6e8                __eqsf2
-                0x0001b6e8                __cmpsf2
-                0x0001b74c                __aeabi_cfrcmple
-                0x0001b75c                __aeabi_cfcmple
-                0x0001b75c                __aeabi_cfcmpeq
-                0x0001b774                __aeabi_fcmpeq
-                0x0001b78c                __aeabi_fcmplt
-                0x0001b7a4                __aeabi_fcmple
-                0x0001b7bc                __aeabi_fcmpge
-                0x0001b7d4                __aeabi_fcmpgt
- .text          0x0001b7ec       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixsfsi.o)
-                0x0001b7ec                __fixsfsi
-                0x0001b7ec                __aeabi_f2iz
- .text          0x0001b848       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunssfsi.o)
-                0x0001b848                __aeabi_f2uiz
-                0x0001b848                __fixunssfsi
- *fill*         0x0001b89c        0x4 00
- .text.stub     0x0001b8a0      0x158 linker stubs
+                0x00016104       0xf0 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
+                0x00016104                infrared_adc_update
+ *fill*         0x000161f4        0x4 00
+ .text          0x000161f8      0x348 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
+                0x000161f8                atan
+ .text          0x00016540       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_cos.o)
+                0x00016540                cos
+ .text          0x000165c8        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fabs.o)
+                0x000165c8                fabs
+ *fill*         0x000165ce        0x2 00
+ .text          0x000165d0       0x88 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_sin.o)
+                0x000165d0                sin
+ .text          0x00016658       0x60 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_tan.o)
+                0x00016658                tan
+ .text          0x000166b8      0x244 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
+                0x000166b8                atanf
+ .text          0x000168fc       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_cos.o)
+                0x000168fc                cosf
+ .text          0x00016964        0x6 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_fabs.o)
+                0x00016964                fabsf
+ *fill*         0x0001696a        0x2 00
+ .text          0x0001696c       0x68 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_sin.o)
+                0x0001696c                sinf
+ *fill*         0x000169d4        0x4 00
+ .text          0x000169d8       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
+                0x000169d8                asin
+ .text          0x00016a88        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_atan2.o)
+                0x00016a88                atan2
+ *fill*         0x00016a94        0x4 00
+ .text          0x00016a98       0xc0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
+                0x00016a98                cosh
+ .text          0x00016b58      0x100 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
+                0x00016b58                exp
+ .text          0x00016c58       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
+                0x00016c58                log
+ .text          0x00016d50       0xe8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
+                0x00016d50                sinh
+ .text          0x00016e38        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-wf_atan2.o)
+                0x00016e38                atan2f
+ *fill*         0x00016e44        0x4 00
+ .text          0x00016e48      0x428 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_asin.o)
+                0x00016e48                __ieee754_asin
+ .text          0x00017270      0x1e0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_atan2.o)
+                0x00017270                __ieee754_atan2
+ .text          0x00017450      0x140 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_cosh.o)
+                0x00017450                __ieee754_cosh
+ .text          0x00017590      0x2e8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
+                0x00017590                __ieee754_exp
+ .text          0x00017878      0x410 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_log.o)
+                0x00017878                __ieee754_log
+ .text          0x00017c88      0x3d0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
+                0x00017c88                __ieee754_rem_pio2
+ .text          0x00018058      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sinh.o)
+                0x00018058                __ieee754_sinh
+ .text          0x000181e0      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_sqrt.o)
+                0x000181e0                __ieee754_sqrt
+ .text          0x00018368      0x12c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_atan2.o)
+                0x00018368                __ieee754_atan2f
+ .text          0x00018494      0x2bc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
+                0x00018494                __ieee754_rem_pio2f
+ .text          0x00018750      0x1d8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_cos.o)
+                0x00018750                __kernel_cos
+ .text          0x00018928      0x738 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
+                0x00018928                __kernel_rem_pio2
+ .text          0x00019060      0x178 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_sin.o)
+                0x00019060                __kernel_sin
+ .text          0x000191d8      0x3c8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_tan.o)
+                0x000191d8                __kernel_tan
+ .text          0x000195a0      0x13c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_cos.o)
+                0x000195a0                __kernel_cosf
+ .text          0x000196dc      0x5c4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
+                0x000196dc                __kernel_rem_pio2f
+ .text          0x00019ca0       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_sin.o)
+                0x00019ca0                __kernel_sinf
+ .text          0x00019d98      0x470 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_expm1.o)
+                0x00019d98                expm1
+ .text          0x0001a208       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_finite.o)
+                0x0001a208                finite
+ .text          0x0001a218      0x128 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_floor.o)
+                0x0001a218                floor
+ .text          0x0001a340       0x90 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_fpclassify.o)
+                0x0001a340                __fpclassifyd
+ .text          0x0001a3d0        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_matherr.o)
+                0x0001a3d0                matherr
+ *fill*         0x0001a3d4        0x4 00
+ .text          0x0001a3d8       0x10 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_nan.o)
+                0x0001a3d8                nan
+ .text          0x0001a3e8       0xf8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_scalbn.o)
+                0x0001a3e8                scalbn
+ .text          0x0001a4e0       0x84 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_floor.o)
+                0x0001a4e0                floorf
+ .text          0x0001a564       0xb4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_scalbn.o)
+                0x0001a564                scalbnf
+ .text          0x0001a618       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_copysign.o)
+                0x0001a618                copysign
+ .text          0x0001a62c        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_copysign.o)
+                0x0001a62c                copysignf
+ .text          0x0001a638        0xc /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-errno.o)
+                0x0001a638                __errno
+ .text          0x0001a644       0x14 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_thumb1_case_uqi.o)
+                0x0001a644                __gnu_thumb1_case_uqi
+ .text          0x0001a658       0x94 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
+                0x0001a658                __udivsi3
+                0x0001a658                __aeabi_uidiv
+                0x0001a6d8                __aeabi_uidivmod
+ .text          0x0001a6ec       0xb0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
+                0x0001a6ec                __aeabi_idiv
+                0x0001a6ec                __divsi3
+                0x0001a788                __aeabi_idivmod
+ .text          0x0001a79c        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
+                0x0001a79c                __aeabi_ldiv0
+                0x0001a79c                __aeabi_idiv0
+ .text          0x0001a7a0      0x41c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
+                0x0001a7a0                __aeabi_drsub
+                0x0001a7a8                __aeabi_dsub
+                0x0001a7a8                __subdf3
+                0x0001a7ac                __adddf3
+                0x0001a7ac                __aeabi_dadd
+                0x0001aabc                __aeabi_ui2d
+                0x0001aabc                __floatunsidf
+                0x0001aae0                __floatsidf
+                0x0001aae0                __aeabi_i2d
+                0x0001ab08                __extendsfdf2
+                0x0001ab08                __aeabi_f2d
+                0x0001ab48                __aeabi_ul2d
+                0x0001ab48                __floatundidf
+                0x0001ab5c                __floatdidf
+                0x0001ab5c                __aeabi_l2d
+ .text          0x0001abbc      0x49c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
+                0x0001abbc                __aeabi_dmul
+                0x0001abbc                __muldf3
+                0x0001ae4c                __aeabi_ddiv
+                0x0001ae4c                __divdf3
+ .text          0x0001b058      0x144 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
+                0x0001b058                __gtdf2
+                0x0001b058                __gedf2
+                0x0001b060                __ltdf2
+                0x0001b060                __ledf2
+                0x0001b068                __cmpdf2
+                0x0001b068                __eqdf2
+                0x0001b068                __nedf2
+                0x0001b0f0                __aeabi_cdrcmple
+                0x0001b10c                __aeabi_cdcmple
+                0x0001b10c                __aeabi_cdcmpeq
+                0x0001b124                __aeabi_dcmpeq
+                0x0001b13c                __aeabi_dcmplt
+                0x0001b154                __aeabi_dcmple
+                0x0001b16c                __aeabi_dcmpge
+                0x0001b184                __aeabi_dcmpgt
+ .text          0x0001b19c       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
+                0x0001b19c                __fixdfsi
+                0x0001b19c                __aeabi_d2iz
+ .text          0x0001b1f8       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunsdfsi.o)
+                0x0001b1f8                __fixunsdfsi
+                0x0001b1f8                __aeabi_d2uiz
+ .text          0x0001b24c       0xa0 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_truncdfsf2.o)
+                0x0001b24c                __aeabi_d2f
+                0x0001b24c                __truncdfsf2
+ .text          0x0001b2ec      0x2ac /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_addsubsf3.o)
+                0x0001b2ec                __aeabi_frsub
+                0x0001b2f4                __subsf3
+                0x0001b2f4                __aeabi_fsub
+                0x0001b2f8                __aeabi_fadd
+                0x0001b2f8                __addsf3
+                0x0001b4b4                __aeabi_ui2f
+                0x0001b4b4                __floatunsisf
+                0x0001b4bc                __aeabi_i2f
+                0x0001b4bc                __floatsisf
+                0x0001b4dc                __floatundisf
+                0x0001b4dc                __aeabi_ul2f
+                0x0001b4ec                __floatdisf
+                0x0001b4ec                __aeabi_l2f
+ .text          0x0001b598      0x2f8 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_muldivsf3.o)
+                0x0001b598                __mulsf3
+                0x0001b598                __aeabi_fmul
+                0x0001b730                __divsf3
+                0x0001b730                __aeabi_fdiv
+ .text          0x0001b890      0x114 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_cmpsf2.o)
+                0x0001b890                __gtsf2
+                0x0001b890                __gesf2
+                0x0001b898                __lesf2
+                0x0001b898                __ltsf2
+                0x0001b8a0                __nesf2
+                0x0001b8a0                __eqsf2
+                0x0001b8a0                __cmpsf2
+                0x0001b904                __aeabi_cfrcmple
+                0x0001b914                __aeabi_cfcmple
+                0x0001b914                __aeabi_cfcmpeq
+                0x0001b92c                __aeabi_fcmpeq
+                0x0001b944                __aeabi_fcmplt
+                0x0001b95c                __aeabi_fcmple
+                0x0001b974                __aeabi_fcmpge
+                0x0001b98c                __aeabi_fcmpgt
+ .text          0x0001b9a4       0x5c /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixsfsi.o)
+                0x0001b9a4                __fixsfsi
+                0x0001b9a4                __aeabi_f2iz
+ .text          0x0001ba00       0x54 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/thumb/libgcc.a(_arm_fixunssfsi.o)
+                0x0001ba00                __aeabi_f2uiz
+                0x0001ba00                __fixunssfsi
+ *fill*         0x0001ba54        0x4 00
+ .text.stub     0x0001ba58      0x158 linker stubs
  *(.gnu.linkonce.t.*)
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
@@ -1724,72 +1724,72 @@ END GROUP
  .glue_7t       0x00000000        0x0 linker stubs
  *(.gcc_except_table)
  *(.rodata)
- *fill*         0x0001ba38        0x0 00
- .rodata        0x0001ba38       0x40 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
- .rodata        0x0001ba78       0x20 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
- .rodata        0x0001ba98       0x30 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
- .rodata        0x0001bac8      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
- .rodata        0x0001bc50      0x398 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
- .rodata        0x0001bfe8       0x50 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
- .rodata        0x0001c038       0x38 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
+ *fill*         0x0001bbf0        0x0 00
+ .rodata        0x0001bbf0       0x40 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_atan.o)
+ .rodata        0x0001bc30       0x20 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-sf_atan.o)
+ .rodata        0x0001bc50       0x30 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_exp.o)
+ .rodata        0x0001bc80      0x188 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-e_rem_pio2.o)
+ .rodata        0x0001be08      0x398 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-ef_rem_pio2.o)
+ .rodata        0x0001c1a0       0x50 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-k_rem_pio2.o)
+ .rodata        0x0001c1f0       0x38 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-kf_rem_pio2.o)
  *(.rodata*)
  .rodata.serie_coeff_proj_mercator
-                0x0001c070       0x14 /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_geodetic_float.o
+                0x0001c228       0x14 /home/lionel/paparazziProto1/var/Colibri/ap/math/pprz_geodetic_float.o
  .rodata.commands_failsafe
-                0x0001c084        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
-                0x0001c084                commands_failsafe
+                0x0001c23c        0x8 /home/lionel/paparazziProto1/var/Colibri/ap/./commands.o
+                0x0001c23c                commands_failsafe
  .rodata.version
-                0x0001c08c        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
+                0x0001c244        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
  .rodata.str1.1
-                0x0001c08e       0x11 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
+                0x0001c246       0x11 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/main_ap.o
  .rodata.nb_waypoint
-                0x0001c09f        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x0001c09f                nb_waypoint
+                0x0001c257        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x0001c257                nb_waypoint
  .rodata.str1.1
-                0x0001c0a0        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
+                0x0001c258        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_asin.o)
                                   0x6 (size before relaxing)
  .rodata.str1.1
-                0x0001c0a5        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
+                0x0001c25d        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_cosh.o)
  .rodata.str1.1
-                0x0001c0aa        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
+                0x0001c262        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_exp.o)
  .rodata.str1.1
-                0x0001c0ae        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
+                0x0001c266        0x4 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_log.o)
                                   0x5 (size before relaxing)
  .rodata.str1.1
-                0x0001c0b2        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
+                0x0001c26a        0x5 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-w_sinh.o)
  .rodata.str1.1
-                0x0001c0b7        0x2 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-impure.o)
+                0x0001c26f        0x2 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libc.a(lib_a-impure.o)
  *(.gnu.linkonce.r.*)
 
-.vfp11_veneer   0x0001c0bc        0x0
+.vfp11_veneer   0x0001c274        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0001c0bc        0x0
+.v4_bx          0x0001c274        0x0
  .v4_bx         0x00000000        0x0 linker stubs
-                0x0001c0bc                . = ALIGN (0x4)
+                0x0001c274                . = ALIGN (0x4)
 
-.ARM.exidx      0x0001c0b9        0x0
-                0x0001c0b9                __exidx_start = .
+.ARM.exidx      0x0001c271        0x0
+                0x0001c271                __exidx_start = .
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0001c0b9                __exidx_end = .
-                0x0001c0bc                . = ALIGN (0x4)
+                0x0001c271                __exidx_end = .
+                0x0001c274                . = ALIGN (0x4)
 
-.ctors          0x0001c0b9        0x0
-                0x0001c0b9                PROVIDE (__ctors_start__, .)
+.ctors          0x0001c271        0x0
+                0x0001c271                PROVIDE (__ctors_start__, .)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0001c0b9                PROVIDE (__ctors_end__, .)
+                0x0001c271                PROVIDE (__ctors_end__, .)
 
-.dtors          0x0001c0b9        0x0
-                0x0001c0b9                PROVIDE (__dtors_start__, .)
+.dtors          0x0001c271        0x0
+                0x0001c271                PROVIDE (__dtors_start__, .)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0001c0b9                PROVIDE (__dtors_end__, .)
-                0x0001c0bc                . = ALIGN (0x4)
-                0x0001c0bc                _etext = .
-                0x0001c0bc                PROVIDE (etext, .)
+                0x0001c271                PROVIDE (__dtors_end__, .)
+                0x0001c274                . = ALIGN (0x4)
+                0x0001c274                _etext = .
+                0x0001c274                PROVIDE (etext, .)
 
-.data           0x40000000      0x498 load address 0x0001c0bc
+.data           0x40000000      0x498 load address 0x0001c274
                 0x40000000                _data = .
  *(.data)
  .data          0x40000000        0x1 /opt/paparazzi/arm-multilib/lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/thumb/libm.a(lib_a-s_lib_ver.o)
@@ -1846,7 +1846,7 @@ END GROUP
                 0x40000498                _edata = .
                 0x40000498                PROVIDE (edata, .)
 
-.bss            0x40000498     0x1084 load address 0x0001c558
+.bss            0x40000498     0x1084 load address 0x0001c710
                 0x40000498                __bss_start = .
                 0x40000498                __bss_start__ = .
  *(.bss)
@@ -2013,21 +2013,21 @@ END GROUP
                 0x400005d4        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/stabilization/stabilization_attitude.o
  .bss.last_err.2969
                 0x400005d8        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/firmwares/fixedwing/guidance/guidance_v.o
- .bss.last_nav_altitude.4004
+ .bss.last_nav_altitude.4076
                 0x400005dc        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
- .bss.nav_in_segment
-                0x400005e0        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x400005e0                nav_in_segment
- *fill*         0x400005e1        0x1 00
- .bss.prescaler.3992
-                0x400005e2        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
  .bss.nav_in_circle
-                0x400005e4        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x400005e4                nav_in_circle
- *fill*         0x400005e5        0x3 00
+                0x400005e0        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x400005e0                nav_in_circle
+ *fill*         0x400005e1        0x1 00
+ .bss.prescaler.4064
+                0x400005e2        0x2 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
  .bss.circle_bank
-                0x400005e8        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
-                0x400005e8                circle_bank
+                0x400005e4        0x4 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x400005e4                circle_bank
+ .bss.nav_in_segment
+                0x400005e8        0x1 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/nav.o
+                0x400005e8                nav_in_segment
+ *fill*         0x400005e9        0x3 00
  .bss.buf_ir1   0x400005ec       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
  .bss.buf_ir2   0x40000634       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
  .bss.buf_ir3   0x4000067c       0x48 /home/lionel/paparazziProto1/var/Colibri/ap/subsystems/sensors/infrared_adc.o
@@ -2229,7 +2229,7 @@ END GROUP
                 0x4000151c                __bss_end__ = .
                 0x4000151c                PROVIDE (__bss_end, .)
 
-.stack          0x40001600     0x1000 load address 0x0001d6c0
+.stack          0x40001600     0x1000 load address 0x0001d878
                 0x40002600                . = (. + STACK_SIZE)
  *fill*         0x40001600     0x1000 00
                 0x40002600                PROVIDE (_stack, .)
