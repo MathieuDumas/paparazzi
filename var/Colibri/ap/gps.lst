@@ -36,9 +36,9 @@
   38              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 gps.c
-     /tmp/cc8nFIWC.s:13     .text.gps_init:00000000 $a
-     /tmp/cc8nFIWC.s:16     .text.gps_init:00000000 gps_init
-     /tmp/cc8nFIWC.s:34     .text.gps_init:0000002c $d
+     /tmp/ccjGrD2u.s:13     .text.gps_init:00000000 $a
+     /tmp/ccjGrD2u.s:16     .text.gps_init:00000000 gps_init
+     /tmp/ccjGrD2u.s:34     .text.gps_init:0000002c $d
                             *COM*:000000f4 gps
 
 UNDEFINED SYMBOLS

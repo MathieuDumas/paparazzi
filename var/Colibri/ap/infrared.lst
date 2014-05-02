@@ -42,9 +42,9 @@
   44              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 infrared.c
-     /tmp/ccFi0l6v.s:13     .text.infrared_struct_init:00000000 $a
-     /tmp/ccFi0l6v.s:16     .text.infrared_struct_init:00000000 infrared_struct_init
-     /tmp/ccFi0l6v.s:39     .text.infrared_struct_init:0000003c $d
+     /tmp/ccN6e8YH.s:13     .text.infrared_struct_init:00000000 $a
+     /tmp/ccN6e8YH.s:16     .text.infrared_struct_init:00000000 infrared_struct_init
+     /tmp/ccN6e8YH.s:39     .text.infrared_struct_init:0000003c $d
                             *COM*:00000038 infrared
 
 NO UNDEFINED SYMBOLS

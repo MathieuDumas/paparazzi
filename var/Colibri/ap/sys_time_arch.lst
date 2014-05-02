@@ -183,12 +183,12 @@
  187              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 sys_time_arch.c
-     /tmp/ccmuUOzV.s:13     .text.TIMER0_ISR:00000000 $a
-     /tmp/ccmuUOzV.s:16     .text.TIMER0_ISR:00000000 TIMER0_ISR
-     /tmp/ccmuUOzV.s:140    .text.TIMER0_ISR:000001a4 $d
-     /tmp/ccmuUOzV.s:149    .text.sys_time_arch_init:00000000 $a
-     /tmp/ccmuUOzV.s:152    .text.sys_time_arch_init:00000000 sys_time_arch_init
-     /tmp/ccmuUOzV.s:183    .text.sys_time_arch_init:0000005c $d
+     /tmp/ccJ11w0X.s:13     .text.TIMER0_ISR:00000000 $a
+     /tmp/ccJ11w0X.s:16     .text.TIMER0_ISR:00000000 TIMER0_ISR
+     /tmp/ccJ11w0X.s:140    .text.TIMER0_ISR:000001a4 $d
+     /tmp/ccJ11w0X.s:149    .text.sys_time_arch_init:00000000 $a
+     /tmp/ccJ11w0X.s:152    .text.sys_time_arch_init:00000000 sys_time_arch_init
+     /tmp/ccJ11w0X.s:183    .text.sys_time_arch_init:0000005c $d
 
 UNDEFINED SYMBOLS
 sys_time

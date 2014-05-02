@@ -14,63 +14,83 @@
   <exceptions/>
 
 <blocks>
-    <block name="initialisation">
-	<set value="1" var="launch"/>
-	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
-	<set value="9600*(0.)" var="radio_control.values[0]"/> <!--Controle moteur-->
-	<set value="9600*(0.)" var="radio_control.values[1]"/>
-	<set value="9600*(0.)" var="radio_control.values[2]"/>
-	<set value="9600*(0.)" var="radio_control.values[3]"/>    
-        <while cond="TRUE"/>
-    </block>
 
-<!--  ************************************************************************************************-->
-    <block name="Servo1 avant">
-	<set value="9600" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+    <block name="Servo Right avant">
+	<set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block> 
 
-   <block name="Servo1 arriere">
-	<set value="-9600" var="radio_control.values[1]"/>  <!--Controle servo gauche-->
+   <block name="Servo Right arriere">
+	<set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo gauche-->
 	<while cond="TRUE"/>
     </block> 
 
-   <block name="Servo1 centre">
+   <block name="Servo Right centre">
 	<set value="0" var="radio_control.values[1]"/>  <!--Controle servo centre-->
 	<while cond="TRUE"/>
     </block> 
 
-   <block name="Servo2 avant">
-	<set value="-9600" var="radio_control.values[2]"/>  <!--Controle servo gauche-->
+   <block name="Servo Left avant">
+	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo gauche-->
 	<while cond="TRUE"/>
     </block> 
 
-    <block name="Servo2 arriere">
-	<set value="9600" var="radio_control.values[2]"/>  <!--Controle servo droit-->
+    <block name="Servo Left arriere">
+	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block> 
-
-   <block name="Servo2 centre">
+   <block name="Servo Left centre">
 	<set value="0" var="radio_control.values[2]"/>  <!--Controle servo centre-->
 	<while cond="TRUE"/>
     </block> 
 
-    <block name="Servo3 droit">
+    <block name="Servo Roll centre">
 	<set value="0" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
 
-    <block name="Servo3 centre">
-	<set value="9600" var="radio_control.values[3]"/>  <!--Controle servo-->
+    <block name="Servo Roll droit">
+	<set value="9600*0.8" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
 
-
-    <block name="Servo3 gauche">
-	<set value="-9600" var="radio_control.values[3]"/>  <!--Controle servo-->
+    <block name="Servo Roll gauche">
+	<set value="-9600*0.8" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
 
+    <block name="Pitch avant">
+	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Pitch arriere">
+	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Yaw droite">
+	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+    <block name="Yaw gauche">
+	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<while cond="TRUE"/>
+    </block>
+
+<!--  ************************************************************************************************-->
+
+    <block name="initialisation">
+	<set value="1" var="launch"/>
+	<set value="FBW_MODE_MANUAL" var="fbw_mode"/>
+	<set value="9600*(0.)" var="radio_control.values[0]"/> <!--Controle moteur--> 
+        <while cond="TRUE"/>
+    </block>
 
     <block name="100%">
 	<set value="9600*(1)" var="radio_control.values[0]"/>  <!--Controle moteur-->
