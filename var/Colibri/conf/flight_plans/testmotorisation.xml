@@ -16,12 +16,12 @@
 <blocks>
 
     <block name="Servo Right avant">
-	<set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<set value="9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block> 
 
    <block name="Servo Right arriere">
-	<set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo gauche-->
+	<set value="-9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo gauche-->
 	<while cond="TRUE"/>
     </block> 
 
@@ -31,12 +31,12 @@
     </block> 
 
    <block name="Servo Left avant">
-	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo gauche-->
+	<set value="-9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo gauche-->
 	<while cond="TRUE"/>
     </block> 
 
     <block name="Servo Left arriere">
-	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo droit-->
+	<set value="9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block> 
    <block name="Servo Left centre">
@@ -50,36 +50,36 @@
     </block>
 
     <block name="Servo Roll droit">
-	<set value="9600*0.8" var="radio_control.values[3]"/>  <!--Controle servo-->
+	<set value="9600*0.6" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
 
     <block name="Servo Roll gauche">
-	<set value="-9600*0.8" var="radio_control.values[3]"/>  <!--Controle servo-->
+	<set value="-9600*0.6" var="radio_control.values[3]"/>  <!--Controle servo-->
 	<while cond="TRUE"/>
     </block>
 
     <block name="Pitch avant">
-	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
-        <set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<set value="-9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block>
 
     <block name="Pitch arriere">
-	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
-        <set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<set value="9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block>
 
     <block name="Yaw droite">
-	<set value="9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
-        <set value="9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<set value="9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block>
 
     <block name="Yaw gauche">
-	<set value="-9600*0.8" var="radio_control.values[2]"/>  <!--Controle servo-->
-        <set value="-9600*0.8" var="radio_control.values[1]"/>  <!--Controle servo droit-->
+	<set value="-9600*0.6" var="radio_control.values[2]"/>  <!--Controle servo-->
+        <set value="-9600*0.6" var="radio_control.values[1]"/>  <!--Controle servo droit-->
 	<while cond="TRUE"/>
     </block>
 

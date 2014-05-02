@@ -1115,27 +1115,27 @@
  1118              	.L262:
  1119              		.align	2
  1120              	.L261:
- 1121 0f80 00000000 		.word	.LANCHOR0
+ 1121 0f80 00000000 		.word	.LANCHOR1
  1122 0f84 00000000 		.word	uart1
- 1123 0f88 00000000 		.word	.LANCHOR1
+ 1123 0f88 00000000 		.word	.LANCHOR2
  1124 0f8c 00000000 		.word	telemetry_mode_Ap
- 1125 0f90 00000000 		.word	.LANCHOR2
- 1126 0f94 00000000 		.word	.LANCHOR3
- 1127 0f98 00000000 		.word	.LANCHOR6
- 1128 0f9c 00000000 		.word	.LANCHOR7
- 1129 0fa0 00000000 		.word	.LANCHOR8
- 1130 0fa4 00000000 		.word	.LANCHOR9
- 1131 0fa8 00000000 		.word	.LANCHOR10
- 1132 0fac 00000000 		.word	.LANCHOR11
- 1133 0fb0 00000000 		.word	.LANCHOR12
- 1134 0fb4 00000000 		.word	.LANCHOR13
+ 1125 0f90 00000000 		.word	.LANCHOR3
+ 1126 0f94 00000000 		.word	.LANCHOR4
+ 1127 0f98 00000000 		.word	.LANCHOR7
+ 1128 0f9c 00000000 		.word	.LANCHOR8
+ 1129 0fa0 00000000 		.word	.LANCHOR9
+ 1130 0fa4 00000000 		.word	.LANCHOR10
+ 1131 0fa8 00000000 		.word	.LANCHOR11
+ 1132 0fac 00000000 		.word	.LANCHOR12
+ 1133 0fb0 00000000 		.word	.LANCHOR13
+ 1134 0fb4 00000000 		.word	.LANCHOR14
  1135 0fb8 31010000 		.word	305
- 1136 0fbc 00000000 		.word	.LANCHOR14
+ 1136 0fbc 00000000 		.word	.LANCHOR15
  1137 0fc0 00000000 		.word	gps
  1138 0fc4 F8C1631A 		.word	442745336
  1139 0fc8 DCA54C40 		.word	1078765020
  1140 0fcc 80842E41 		.word	1093567616
- 1141 0fd0 00000000 		.word	.LANCHOR15
+ 1141 0fd0 00000000 		.word	.LANCHOR16
  1142 0fd4 00000000 		.word	estimator_z
  1143 0fd8 00000000 		.word	estimator_z_dot
  1144 0fdc 00000000 		.word	estimator_phi
@@ -1145,10 +1145,10 @@
  1148 0fec 00000000 		.word	nav_utm_east0
  1149 0ff0 00000000 		.word	waypoints
  1150 0ff4 00000000 		.word	nav_utm_north0
- 1151 0ff8 00000000 		.word	.LANCHOR16
+ 1151 0ff8 00000000 		.word	.LANCHOR17
  1152 0ffc 00000000 		.word	downlink_nb_bytes
  1153 1000 00000000 		.word	nav_utm_zone0
- 1154 1004 00000000 		.word	.LANCHOR4
+ 1154 1004 00000000 		.word	.LANCHOR5
  1155 1008 00000000 		.word	nav_circle_radians
  1156 100c 182D4454 		.word	1413754136
  1157 1010 FB211940 		.word	1075388923
@@ -1162,7 +1162,7 @@
  1165 1030 00000000 		.word	dist2_to_home
  1166 1034 00000000 		.word	nav_oval_count
  1167 1038 00000000 		.word	downlink_nb_ovrn
- 1168 103c 00000000 		.word	.LANCHOR5
+ 1168 103c 00000000 		.word	.LANCHOR6
  1169 1040 00000000 		.word	nav_in_circle
  1170 1044 00000000 		.word	ck_b
  1171 1048 00000000 		.word	nav_circle_x
@@ -3251,23 +3251,23 @@
  3254              	.L263:
  3255 2fe8 00000000 		.word	uart1
  3256 2fec 00000000 		.word	downlink_nb_ovrn
- 3257 2ff0 00000000 		.word	.LANCHOR6
- 3258 2ff4 00000000 		.word	.LANCHOR17
+ 3257 2ff0 00000000 		.word	.LANCHOR7
+ 3258 2ff4 00000000 		.word	.LANCHOR18
  3259 2ff8 00000000 		.word	energy
  3260 2ffc 00000000 		.word	v_ctl_throttle_slewed
  3261 3000 00000000 		.word	electrical
  3262 3004 00000000 		.word	estimator_flight_time
- 3263 3008 00000000 		.word	.LANCHOR18
+ 3263 3008 00000000 		.word	.LANCHOR19
  3264 300c 00000000 		.word	block_time
  3265 3010 00000000 		.word	stage_time
- 3266 3014 00000000 		.word	.LANCHOR7
+ 3266 3014 00000000 		.word	.LANCHOR8
  3267 3018 00000000 		.word	nav_in_segment
  3268 301c 00000000 		.word	nav_segment_x_1
  3269 3020 00000000 		.word	nav_segment_y_1
  3270 3024 00000000 		.word	nav_segment_x_2
  3271 3028 00000000 		.word	nav_segment_y_2
- 3272 302c 00000000 		.word	.LANCHOR8
- 3273 3030 00000000 		.word	.LANCHOR19
+ 3272 302c 00000000 		.word	.LANCHOR9
+ 3273 3030 00000000 		.word	.LANCHOR20
  3274 3034 00000000 		.word	telemetry_mode_Ap
  3275 3038 00000000 		.word	telemetry_mode_Fbw
  3276 303c 00000000 		.word	h_ctl_pitch_pgain
@@ -3294,10 +3294,10 @@
  3297 3090 00000000 		.word	nav_shift
  3298 3094 00000000 		.word	nav_radius
  3299 3098 00000000 		.word	route_ap_time
- 3300 309c 00000000 		.word	.LANCHOR21
+ 3300 309c 00000000 		.word	.LANCHOR22
  3301 30a0 00000000 		.word	gps
- 3302 30a4 00000000 		.word	.LANCHOR9
- 3303 30a8 00000000 		.word	.LANCHOR10
+ 3302 30a4 00000000 		.word	.LANCHOR10
+ 3303 30a8 00000000 		.word	.LANCHOR11
  3304 30ac 00000000 		.word	v_ctl_auto_throttle_sum_err
  3305 30b0 00000000 		.word	v_ctl_auto_throttle_submode
  3306 30b4 00000000 		.word	nav_survey_active
@@ -3305,30 +3305,30 @@
  3308 30bc 00000000 		.word	nav_survey_north
  3309 30c0 00000000 		.word	nav_survey_west
  3310 30c4 00000000 		.word	nav_survey_south
- 3311 30c8 00000000 		.word	.LANCHOR11
+ 3311 30c8 00000000 		.word	.LANCHOR12
  3312 30cc 00000000 		.word	energy
  3313 30d0 00000000 		.word	vsupply
  3314 30d4 00002041 		.word	1092616192
- 3315 30d8 00000000 		.word	.LANCHOR17
+ 3315 30d8 00000000 		.word	.LANCHOR18
  3316 30dc 00007A44 		.word	1148846080
- 3317 30e0 00000000 		.word	.LANCHOR12
+ 3317 30e0 00000000 		.word	.LANCHOR13
  3318 30e4 00000000 		.word	downlink_nb_bytes
- 3319 30e8 00000000 		.word	.LC0
+ 3319 30e8 00000000 		.word	.LANCHOR0
  3320 30ec 00000000 		.word	downlink_nb_msgs
- 3321 30f0 00000000 		.word	.LANCHOR20
+ 3321 30f0 00000000 		.word	.LANCHOR21
  3322 30f4 00000000 		.word	v_ctl_mode
- 3323 30f8 00000000 		.word	.LANCHOR22
+ 3323 30f8 00000000 		.word	.LANCHOR23
  3324 30fc 00000000 		.word	horizontal_mode
- 3325 3100 00000000 		.word	.LANCHOR23
+ 3325 3100 00000000 		.word	.LANCHOR24
  3326 3104 00000000 		.word	infrared
  3327 3108 00000000 		.word	ck_a
  3328 310c 00000000 		.word	ck_b
- 3329 3110 00000000 		.word	.LANCHOR13
- 3330 3114 00000000 		.word	.LANCHOR24
+ 3329 3110 00000000 		.word	.LANCHOR14
+ 3330 3114 00000000 		.word	.LANCHOR25
  3331 3118 66666666 		.word	1717986918
  3332 311c 66661440 		.word	1075078758
  3333 3120 00000000 		.word	downlink_nb_ovrn
- 3334 3124 00000000 		.word	.LANCHOR14
+ 3334 3124 00000000 		.word	.LANCHOR15
  3335 3128 00000000 		.word	downlink_nb_bytes
  3336 312c 00000000 		.word	downlink_nb_msgs
  3337 3130 00000000 		.word	ck_a
@@ -3922,7 +3922,7 @@
  3925 3a40 60791FE5 		ldr	r7, .L263+256
  3926 3a44 0060A0E3 		mov	r6, #0
  3927              	.L97:
- 3928 3a48 0610D7E7 		ldrb	r1, [r7, r6]	@ zero_extendqisi2
+ 3928 3a48 0710D6E7 		ldrb	r1, [r6, r7]	@ zero_extendqisi2
  3929 3a4c 0030D5E5 		ldrb	r3, [r5, #0]	@ zero_extendqisi2
  3930 3a50 0020D4E5 		ldrb	r2, [r4, #0]	@ zero_extendqisi2
  3931 3a54 033081E0 		add	r3, r1, r3
@@ -5303,41 +5303,41 @@
  5306              	.L266:
  5307              		.align	2
  5308              	.L265:
- 5309 4f90 00000000 		.word	.LANCHOR25
- 5310 4f94 00000000 		.word	.LANCHOR26
- 5311 4f98 00000000 		.word	.LANCHOR32
- 5312 4f9c 00000000 		.word	.LANCHOR33
- 5313 4fa0 00000000 		.word	.LANCHOR34
- 5314 4fa4 00000000 		.word	.LANCHOR35
- 5315 4fa8 00000000 		.word	.LANCHOR36
- 5316 4fac 00000000 		.word	.LANCHOR37
+ 5309 4f90 00000000 		.word	.LANCHOR26
+ 5310 4f94 00000000 		.word	.LANCHOR27
+ 5311 4f98 00000000 		.word	.LANCHOR33
+ 5312 4f9c 00000000 		.word	.LANCHOR34
+ 5313 4fa0 00000000 		.word	.LANCHOR35
+ 5314 4fa4 00000000 		.word	.LANCHOR36
+ 5315 4fa8 00000000 		.word	.LANCHOR37
+ 5316 4fac 00000000 		.word	.LANCHOR38
  5317 4fb0 31010000 		.word	305
- 5318 4fb4 00000000 		.word	.LANCHOR38
- 5319 4fb8 00000000 		.word	.LANCHOR39
- 5320 4fbc 00000000 		.word	.LANCHOR40
+ 5318 4fb4 00000000 		.word	.LANCHOR39
+ 5319 4fb8 00000000 		.word	.LANCHOR40
+ 5320 4fbc 00000000 		.word	.LANCHOR41
  5321 4fc0 5D020000 		.word	605
  5322 4fc4 F8C1631A 		.word	442745336
  5323 4fc8 DCA54C40 		.word	1078765020
  5324 4fcc 80842E41 		.word	1093567616
- 5325 4fd0 00000000 		.word	.LANCHOR41
- 5326 4fd4 00000000 		.word	.LANCHOR17
+ 5325 4fd0 00000000 		.word	.LANCHOR42
+ 5326 4fd4 00000000 		.word	.LANCHOR18
  5327 4fd8 00000000 		.word	energy
  5328 4fdc 00000000 		.word	v_ctl_throttle_slewed
  5329 4fe0 00000000 		.word	vsupply
  5330 4fe4 00000000 		.word	electrical
  5331 4fe8 00000000 		.word	block_time
  5332 4fec 00000000 		.word	stage_time
- 5333 4ff0 00000000 		.word	.LANCHOR27
+ 5333 4ff0 00000000 		.word	.LANCHOR28
  5334 4ff4 00000000 		.word	estimator_z
  5335 4ff8 00000000 		.word	estimator_z_dot
- 5336 4ffc 00000000 		.word	.LANCHOR28
+ 5336 4ffc 00000000 		.word	.LANCHOR29
  5337 5000 00000000 		.word	nb_waypoint
  5338 5004 00000000 		.word	nav_utm_east0
  5339 5008 00000000 		.word	waypoints
  5340 500c 00000000 		.word	nav_utm_north0
- 5341 5010 00000000 		.word	.LANCHOR42
+ 5341 5010 00000000 		.word	.LANCHOR43
  5342 5014 00000000 		.word	nav_utm_zone0
- 5343 5018 00000000 		.word	.LANCHOR29
+ 5343 5018 00000000 		.word	.LANCHOR30
  5344 501c 00000000 		.word	telemetry_mode_Ap
  5345 5020 00000000 		.word	telemetry_mode_Fbw
  5346 5024 00000000 		.word	h_ctl_pitch_pgain
@@ -5365,19 +5365,19 @@
  5368 507c 00000000 		.word	estimator_flight_time
  5369 5080 00000000 		.word	nav_radius
  5370 5084 00000000 		.word	route_ap_time
- 5371 5088 00000000 		.word	.LANCHOR20
- 5372 508c 00000000 		.word	.LANCHOR21
- 5373 5090 00000000 		.word	.LANCHOR18
+ 5371 5088 00000000 		.word	.LANCHOR21
+ 5372 508c 00000000 		.word	.LANCHOR22
+ 5373 5090 00000000 		.word	.LANCHOR19
  5374 5094 00000000 		.word	gps
- 5375 5098 00000000 		.word	.LANCHOR43
- 5376 509c 00000000 		.word	.LANCHOR30
+ 5375 5098 00000000 		.word	.LANCHOR44
+ 5376 509c 00000000 		.word	.LANCHOR31
  5377 50a0 00000000 		.word	nav_survey_active
  5378 50a4 00000000 		.word	nav_survey_east
  5379 50a8 00000000 		.word	nav_survey_north
  5380 50ac 00000000 		.word	nav_survey_west
  5381 50b0 00000000 		.word	nav_survey_south
  5382 50b4 00000000 		.word	downlink_nb_ovrn
- 5383 50b8 00000000 		.word	.LANCHOR31
+ 5383 50b8 00000000 		.word	.LANCHOR32
  5384 50bc 00000000 		.word	nav_circle_radians
  5385 50c0 182D4454 		.word	1413754136
  5386 50c4 FB211940 		.word	1075388923
@@ -7486,22 +7486,22 @@
  7489              	.L267:
  7490 70b4 00000000 		.word	uart1
  7491 70b8 00000000 		.word	nav_oval_count
- 7492 70bc 00000000 		.word	.LANCHOR32
+ 7492 70bc 00000000 		.word	.LANCHOR33
  7493 70c0 00000000 		.word	nav_in_circle
  7494 70c4 00000000 		.word	nav_circle_x
  7495 70c8 00000000 		.word	nav_circle_y
  7496 70cc 00000000 		.word	nav_circle_radius
- 7497 70d0 00000000 		.word	.LANCHOR33
+ 7497 70d0 00000000 		.word	.LANCHOR34
  7498 70d4 00000000 		.word	nav_in_segment
  7499 70d8 00000000 		.word	nav_segment_x_1
  7500 70dc 00000000 		.word	nav_segment_y_1
  7501 70e0 00000000 		.word	nav_segment_x_2
  7502 70e4 00000000 		.word	nav_segment_y_2
- 7503 70e8 00000000 		.word	.LANCHOR34
+ 7503 70e8 00000000 		.word	.LANCHOR35
  7504 70ec 00000000 		.word	estimator_phi
  7505 70f0 00000000 		.word	estimator_psi
  7506 70f4 00000000 		.word	estimator_theta
- 7507 70f8 00000000 		.word	.LANCHOR35
+ 7507 70f8 00000000 		.word	.LANCHOR36
  7508 70fc 00009041 		.word	1099956224
  7509 7100 00000000 		.word	h_ctl_roll_setpoint
  7510 7104 00000000 		.word	h_ctl_pitch_loop_setpoint
@@ -7510,23 +7510,23 @@
  7513 7110 00000000 		.word	desired_y
  7514 7114 00000000 		.word	v_ctl_altitude_setpoint
  7515 7118 00000000 		.word	v_ctl_climb_setpoint
- 7516 711c 00000000 		.word	.LANCHOR36
- 7517 7120 00000000 		.word	.LC0
- 7518 7124 00000000 		.word	.LANCHOR20
+ 7516 711c 00000000 		.word	.LANCHOR37
+ 7517 7120 00000000 		.word	.LANCHOR0
+ 7518 7124 00000000 		.word	.LANCHOR21
  7519 7128 00000000 		.word	v_ctl_mode
- 7520 712c 00000000 		.word	.LANCHOR22
+ 7520 712c 00000000 		.word	.LANCHOR23
  7521 7130 00000000 		.word	horizontal_mode
- 7522 7134 00000000 		.word	.LANCHOR23
+ 7522 7134 00000000 		.word	.LANCHOR24
  7523 7138 00000000 		.word	gps
- 7524 713c 00000000 		.word	.LANCHOR37
+ 7524 713c 00000000 		.word	.LANCHOR38
  7525 7140 00000000 		.word	v_ctl_auto_throttle_sum_err
  7526 7144 00000000 		.word	v_ctl_auto_throttle_submode
- 7527 7148 00000000 		.word	.LANCHOR44
+ 7527 7148 00000000 		.word	.LANCHOR45
  7528 714c 66666666 		.word	1717986918
  7529 7150 66661440 		.word	1075078758
- 7530 7154 00000000 		.word	.LANCHOR38
+ 7530 7154 00000000 		.word	.LANCHOR39
  7531 7158 00000000 		.word	infrared
- 7532 715c 00000000 		.word	.LANCHOR39
+ 7532 715c 00000000 		.word	.LANCHOR40
  7533 7160 00000000 		.word	ck_a
  7534 7164 00000000 		.word	ck_b
  7535 7168 00000000 		.word	nav_utm_east0
@@ -7534,20 +7534,20 @@
  7537 7170 00000000 		.word	nav_utm_zone0
  7538 7174 00000000 		.word	downlink_nb_ovrn
  7539 7178 00000000 		.word	telemetry_mode_Ap
- 7540 717c 00000000 		.word	.LANCHOR46
+ 7540 717c 00000000 		.word	.LANCHOR47
  7541 7180 31010000 		.word	305
- 7542 7184 00000000 		.word	.LANCHOR47
+ 7542 7184 00000000 		.word	.LANCHOR48
  7543 7188 3D010000 		.word	317
- 7544 718c 00000000 		.word	.LANCHOR48
- 7545 7190 00000000 		.word	.LANCHOR49
+ 7544 718c 00000000 		.word	.LANCHOR49
+ 7545 7190 00000000 		.word	.LANCHOR50
  7546 7194 49010000 		.word	329
- 7547 7198 00000000 		.word	.LANCHOR50
+ 7547 7198 00000000 		.word	.LANCHOR51
  7548 719c 55010000 		.word	341
- 7549 71a0 00000000 		.word	.LANCHOR51
- 7550 71a4 00000000 		.word	.LANCHOR52
+ 7549 71a0 00000000 		.word	.LANCHOR52
+ 7550 71a4 00000000 		.word	.LANCHOR53
  7551 71a8 5D020000 		.word	605
- 7552 71ac 00000000 		.word	.LANCHOR53
- 7553 71b0 00000000 		.word	.LANCHOR45
+ 7552 71ac 00000000 		.word	.LANCHOR54
+ 7553 71b0 00000000 		.word	.LANCHOR46
  7554 71b4 00000000 		.word	uart1
  7555 71b8 00000000 		.word	downlink_nb_bytes
  7556 71bc 00000000 		.word	downlink_nb_msgs
@@ -7612,7 +7612,7 @@
  7615 72a0 88711FE5 		ldr	r7, .L267+108
  7616 72a4 0060A0E3 		mov	r6, #0
  7617              	.L189:
- 7618 72a8 0610D7E7 		ldrb	r1, [r7, r6]	@ zero_extendqisi2
+ 7618 72a8 0710D6E7 		ldrb	r1, [r6, r7]	@ zero_extendqisi2
  7619 72ac 0030D5E5 		ldrb	r3, [r5, #0]	@ zero_extendqisi2
  7620 72b0 0020D4E5 		ldrb	r2, [r4, #0]	@ zero_extendqisi2
  7621 72b4 033081E0 		add	r3, r1, r3
@@ -8627,7 +8627,7 @@
  8630 823c FEFFFFEB 		bl	uart_transmit
  8631 8240 A07E9FE5 		ldr	r7, .L269
  8632              	.L215:
- 8633 8244 0610D7E7 		ldrb	r1, [r7, r6]	@ zero_extendqisi2
+ 8633 8244 0710D6E7 		ldrb	r1, [r6, r7]	@ zero_extendqisi2
  8634 8248 0030D5E5 		ldrb	r3, [r5, #0]	@ zero_extendqisi2
  8635 824c 0020D4E5 		ldrb	r2, [r4, #0]	@ zero_extendqisi2
  8636 8250 033081E0 		add	r3, r1, r3
@@ -9577,17 +9577,17 @@
  9580              	.L270:
  9581              		.align	2
  9582              	.L269:
- 9583 90e8 00000000 		.word	.LC0
- 9584 90ec 00000000 		.word	.LANCHOR46
+ 9583 90e8 00000000 		.word	.LANCHOR0
+ 9584 90ec 00000000 		.word	.LANCHOR47
  9585 90f0 00000000 		.word	gps
  9586 90f4 F8C1631A 		.word	442745336
  9587 90f8 DCA54C40 		.word	1078765020
  9588 90fc 80842E41 		.word	1093567616
- 9589 9100 00000000 		.word	.LANCHOR54
- 9590 9104 00000000 		.word	.LANCHOR47
+ 9589 9100 00000000 		.word	.LANCHOR55
+ 9590 9104 00000000 		.word	.LANCHOR48
  9591 9108 00000000 		.word	estimator_z
  9592 910c 00000000 		.word	estimator_z_dot
- 9593 9110 00000000 		.word	.LANCHOR48
+ 9593 9110 00000000 		.word	.LANCHOR49
  9594 9114 00000000 		.word	nav_circle_radians
  9595 9118 182D4454 		.word	1413754136
  9596 911c FB211940 		.word	1075388923
@@ -9598,30 +9598,30 @@
  9601 9130 00000000 		.word	dist2_to_wp
  9602 9134 00000000 		.word	dist2_to_home
  9603 9138 00000000 		.word	nav_oval_count
- 9604 913c 00000000 		.word	.LANCHOR49
- 9605 9140 00000000 		.word	.LANCHOR20
+ 9604 913c 00000000 		.word	.LANCHOR50
+ 9605 9140 00000000 		.word	.LANCHOR21
  9606 9144 00000000 		.word	v_ctl_mode
- 9607 9148 00000000 		.word	.LANCHOR22
+ 9607 9148 00000000 		.word	.LANCHOR23
  9608 914c 00000000 		.word	horizontal_mode
- 9609 9150 00000000 		.word	.LANCHOR23
- 9610 9154 00000000 		.word	.LANCHOR50
- 9611 9158 00000000 		.word	.LANCHOR55
+ 9609 9150 00000000 		.word	.LANCHOR24
+ 9610 9154 00000000 		.word	.LANCHOR51
+ 9611 9158 00000000 		.word	.LANCHOR56
  9612 915c 66666666 		.word	1717986918
  9613 9160 66661440 		.word	1075078758
- 9614 9164 00000000 		.word	.LANCHOR51
+ 9614 9164 00000000 		.word	.LANCHOR52
  9615 9168 00000000 		.word	infrared
- 9616 916c 00000000 		.word	.LANCHOR52
- 9617 9170 00000000 		.word	.LANCHOR17
+ 9616 916c 00000000 		.word	.LANCHOR53
+ 9617 9170 00000000 		.word	.LANCHOR18
  9618 9174 00000000 		.word	energy
  9619 9178 00000000 		.word	v_ctl_throttle_slewed
  9620 917c 00000000 		.word	vsupply
  9621 9180 00000000 		.word	electrical
  9622 9184 00000000 		.word	estimator_flight_time
- 9623 9188 00000000 		.word	.LANCHOR18
+ 9623 9188 00000000 		.word	.LANCHOR19
  9624 918c 00000000 		.word	block_time
  9625 9190 00000000 		.word	stage_time
  9626 9194 00000000 		.word	uart1
- 9627 9198 00000000 		.word	.LANCHOR53
+ 9627 9198 00000000 		.word	.LANCHOR54
  9628 919c 00009041 		.word	1099956224
  9629 91a0 00000000 		.word	downlink_nb_bytes
  9630 91a4 00000000 		.word	downlink_nb_msgs
@@ -10929,7 +10929,7 @@
  10934              	.L280:
  10935              		.align	2
  10936              	.L279:
- 10937 04c4 00000000 		.word	.LANCHOR20
+ 10937 04c4 00000000 		.word	.LANCHOR21
  10938 04c8 00000000 		.word	nav_circle_radians
  10939 04cc 00000000 		.word	uart1
  10940 04d0 182D4454 		.word	1413754136
@@ -10947,8 +10947,8 @@
  10952 0500 00000000 		.word	nav_oval_count
  10953 0504 00000000 		.word	downlink_nb_ovrn
  10954 0508 00000000 		.word	v_ctl_mode
- 10955 050c 00000000 		.word	.LANCHOR22
- 10956 0510 00000000 		.word	.LANCHOR17
+ 10955 050c 00000000 		.word	.LANCHOR23
+ 10956 0510 00000000 		.word	.LANCHOR18
  10957 0514 00006145 		.word	1163984896
  10958 0518 00000000 		.word	energy
  10960              		.global	__aeabi_dcmpgt
@@ -11067,7 +11067,7 @@
  11074              	.L297:
  11075              		.align	2
  11076              	.L296:
- 11077 0180 00000000 		.word	.LANCHOR20
+ 11077 0180 00000000 		.word	.LANCHOR21
  11078 0184 00000000 		.word	v_ctl_mode
  11079 0188 00000000 		.word	nav_throttle_setpoint
  11080 018c 00000000 		.word	v_ctl_throttle_setpoint
@@ -11078,9 +11078,9 @@
  11085 01a0 DB0F493F 		.word	1061752795
  11086 01a4 FB21E9BF 		.word	-1075240453
  11087 01a8 DB0F49BF 		.word	-1085730853
- 11088 01ac 00000000 		.word	.LANCHOR18
+ 11088 01ac 00000000 		.word	.LANCHOR19
  11089 01b0 00000000 		.word	estimator_flight_time
- 11090 01b4 00000000 		.word	.LANCHOR21
+ 11090 01b4 00000000 		.word	.LANCHOR22
  11091 01b8 00000000 		.word	ap_state
  11092 01bc 00000000 		.word	v_ctl_throttle_slewed
  11093 01c0 00000000 		.word	h_ctl_aileron_setpoint
@@ -11245,9 +11245,9 @@
  11256 0208 00000000 		.word	datalink_time
  11257 020c 00000000 		.word	vsupply
  11258 0210 00806640 		.word	1080459264
- 11259 0214 00000000 		.word	.LANCHOR56
- 11260 0218 00000000 		.word	.LANCHOR18
- 11261 021c 00000000 		.word	.LANCHOR21
+ 11259 0214 00000000 		.word	.LANCHOR57
+ 11260 0218 00000000 		.word	.LANCHOR19
+ 11261 021c 00000000 		.word	.LANCHOR22
  11262 0220 00000000 		.word	dist2_to_home
  11263 0224 C87E9A4A 		.word	1251638984
  11264 0228 00000000 		.word	estimator_hspeed_mod
@@ -11387,7 +11387,7 @@
  11402 0168 00000000 		.word	navigation_tid
  11403 016c 00000000 		.word	attitude_tid
  11404 0170 00000000 		.word	modules_tid
- 11405 0174 00000000 		.word	.LANCHOR57
+ 11405 0174 00000000 		.word	.LANCHOR58
  11406 0178 00000000 		.word	monitor_tid
  11407 017c 00000000 		.word	telemetry_tid
  11408 0180 00000000 		.word	fptransition_tid
@@ -11812,22 +11812,22 @@
  11829 05e4 00000000 		.word	dl_msg_available
  11830 05e8 00000000 		.word	inter_mcu_received_fbw
  11831 05ec 00000000 		.word	fbw_state
- 11832 05f0 00000000 		.word	.LANCHOR20
- 11833 05f4 00000000 		.word	.LANCHOR21
+ 11832 05f0 00000000 		.word	.LANCHOR21
+ 11833 05f4 00000000 		.word	.LANCHOR22
  11834 05f8 00000000 		.word	too_far_from_home
- 11835 05fc 00000000 		.word	.LANCHOR23
+ 11835 05fc 00000000 		.word	.LANCHOR24
  11836 0600 00000000 		.word	downlink_nb_bytes
  11837 0604 00000000 		.word	downlink_nb_msgs
  11838 0608 00000000 		.word	ck_a
  11839 060c 00000000 		.word	ck_b
  11840 0610 00000000 		.word	v_ctl_mode
- 11841 0614 00000000 		.word	.LANCHOR22
+ 11841 0614 00000000 		.word	.LANCHOR23
  11842 0618 00000000 		.word	horizontal_mode
  11843 061c 00000000 		.word	downlink_nb_ovrn
  11844 0620 00000000 		.word	v_ctl_throttle_setpoint
- 11845 0624 00000000 		.word	.LANCHOR58
+ 11845 0624 00000000 		.word	.LANCHOR59
  11846 0628 00000000 		.word	vsupply
- 11847 062c 00000000 		.word	.LANCHOR17
+ 11847 062c 00000000 		.word	.LANCHOR18
  11848 0630 00000000 		.word	estimator_flight_time
  11850              		.comm	fptransition_tid,1,1
  11851              		.comm	monitor_tid,1,1
@@ -11846,280 +11846,281 @@
  11864              		.comm	power_switch,1,1
  11865              		.comm	combi_switch_value,4,4
  11866              		.comm	combi_switch_status,1,1
- 11867              		.section	.bss.mcu1_ppm_cpt,"aw",%nobits
- 11868              		.set	.LANCHOR58,. + 0
- 11871              	mcu1_ppm_cpt:
- 11872 0000 00       		.space	1
- 11873              		.section	.bss.i300.4206,"aw",%nobits
- 11874              		.align	1
- 11875              		.set	.LANCHOR36,. + 0
- 11878              	i300.4206:
- 11879 0000 0000     		.space	2
- 11880              		.section	.bss.i306.3863,"aw",%nobits
- 11881              		.align	1
- 11882              		.set	.LANCHOR13,. + 0
- 11885              	i306.3863:
- 11886 0000 0000     		.space	2
- 11887              		.section	.data.boot.3848,"aw",%progbits
- 11888              		.set	.LANCHOR0,. + 0
- 11891              	boot.3848:
- 11892 0000 01       		.byte	1
- 11893              		.section	.bss.i540.3864,"aw",%nobits
- 11894              		.align	1
- 11895              		.set	.LANCHOR14,. + 0
- 11898              	i540.3864:
- 11899 0000 0000     		.space	2
- 11900              		.section	.bss.i540.4209,"aw",%nobits
- 11901              		.align	1
- 11902              		.set	.LANCHOR39,. + 0
- 11905              	i540.4209:
- 11906 0000 0000     		.space	2
- 11907              		.section	.bss.i180.4201,"aw",%nobits
- 11908              		.set	.LANCHOR31,. + 0
- 11911              	i180.4201:
- 11912 0000 00       		.space	1
- 11913              		.section	.bss.i306.4523,"aw",%nobits
- 11914              		.align	1
- 11915              		.set	.LANCHOR46,. + 0
- 11918              	i306.4523:
- 11919 0000 0000     		.space	2
- 11920              		.section	.bss.i84.4198,"aw",%nobits
- 11921              		.set	.LANCHOR28,. + 0
- 11924              	i84.4198:
- 11925 0000 00       		.space	1
- 11926              		.section	.bss.i1.3610,"aw",%nobits
- 11927              		.set	.LANCHOR57,. + 0
- 11930              	i1.3610:
- 11931 0000 00       		.space	1
- 11932              		.section	.bss.i.4280,"aw",%nobits
- 11933              		.set	.LANCHOR42,. + 0
- 11936              	i.4280:
- 11937 0000 00       		.space	1
- 11938              		.section	.bss.i342.4527,"aw",%nobits
- 11939              		.align	1
- 11940              		.set	.LANCHOR50,. + 0
- 11943              	i342.4527:
- 11944 0000 0000     		.space	2
- 11945              		.section	.bss.last.4493,"aw",%nobits
- 11946              		.align	1
- 11947              		.set	.LANCHOR44,. + 0
- 11950              	last.4493:
- 11951 0000 0000     		.space	2
- 11952              		.section	.bss.i78.4197,"aw",%nobits
- 11953              		.set	.LANCHOR27,. + 0
- 11956              	i78.4197:
- 11957 0000 00       		.space	1
- 11958              		.section	.bss.i120.3859,"aw",%nobits
- 11959              		.set	.LANCHOR9,. + 0
- 11962              	i120.3859:
- 11963 0000 00       		.space	1
- 11964              		.section	.bss.i.3927,"aw",%nobits
- 11965              		.set	.LANCHOR16,. + 0
- 11968              	i.3927:
- 11969 0000 00       		.space	1
- 11970              		.section	.bss.launch,"aw",%nobits
- 11971              		.set	.LANCHOR21,. + 0
- 11974              	launch:
- 11975 0000 00       		.space	1
- 11976              		.section	.bss.pprz_mode,"aw",%nobits
- 11977              		.set	.LANCHOR20,. + 0
- 11980              	pprz_mode:
- 11981 0000 00       		.space	1
- 11982              		.section	.bss.lateral_mode,"aw",%nobits
- 11983              		.set	.LANCHOR22,. + 0
- 11986              	lateral_mode:
- 11987 0000 00       		.space	1
- 11988              		.section	.bss.mcu1_status,"aw",%nobits
- 11989              		.set	.LANCHOR23,. + 0
- 11992              	mcu1_status:
- 11993 0000 00       		.space	1
- 11994              		.section	.bss.i72.3857,"aw",%nobits
- 11995              		.set	.LANCHOR7,. + 0
- 11998              	i72.3857:
- 11999 0000 00       		.space	1
- 12000              		.section	.bss.i30.3853,"aw",%nobits
- 12001              		.set	.LANCHOR3,. + 0
- 12004              	i30.3853:
- 12005 0000 00       		.space	1
- 12006              		.section	.bss.i183.4202,"aw",%nobits
- 12007              		.set	.LANCHOR32,. + 0
- 12010              	i183.4202:
- 12011 0000 00       		.space	1
- 12012              		.section	.bss.i.4211,"aw",%nobits
- 12013              		.set	.LANCHOR41,. + 0
- 12016              	i.4211:
- 12017 0000 00       		.space	1
- 12018              		.section	.bss.i6.3852,"aw",%nobits
- 12019              		.set	.LANCHOR2,. + 0
- 12022              	i6.3852:
- 12023 0000 00       		.space	1
- 12024              		.section	.bss.i300.4522,"aw",%nobits
- 12025              		.align	1
- 12026              		.set	.LANCHOR45,. + 0
- 12029              	i300.4522:
- 12030 0000 0000     		.space	2
- 12031              		.section	.bss.i420.4528,"aw",%nobits
- 12032              		.align	1
- 12033              		.set	.LANCHOR51,. + 0
- 12036              	i420.4528:
- 12037 0000 0000     		.space	2
- 12038              		.section	.bss.i66.4196,"aw",%nobits
- 12039              		.set	.LANCHOR26,. + 0
- 12042              	i66.4196:
- 12043 0000 00       		.space	1
- 12044              		.section	.bss.i300.3862,"aw",%nobits
- 12045              		.align	1
- 12046              		.set	.LANCHOR12,. + 0
- 12049              	i300.3862:
- 12050 0000 0000     		.space	2
- 12051              		.section	.bss.i606.4529,"aw",%nobits
- 12052              		.align	1
- 12053              		.set	.LANCHOR52,. + 0
- 12056              	i606.4529:
- 12057 0000 0000     		.space	2
- 12058              		.section	.bss.i243.4205,"aw",%nobits
- 12059              		.set	.LANCHOR35,. + 0
- 12062              	i243.4205:
- 12063 0000 00       		.space	1
- 12064              		.section	.bss.i.4298,"aw",%nobits
- 12065              		.set	.LANCHOR43,. + 0
- 12068              	i.4298:
- 12069 0000 00       		.space	1
- 12070              		.section	.bss.i63.4195,"aw",%nobits
- 12071              		.set	.LANCHOR25,. + 0
- 12074              	i63.4195:
- 12075 0000 00       		.space	1
- 12076              		.section	.bss.i126.3860,"aw",%nobits
- 12077              		.set	.LANCHOR10,. + 0
- 12080              	i126.3860:
- 12081 0000 00       		.space	1
- 12082              		.section	.bss.i240.4204,"aw",%nobits
- 12083              		.set	.LANCHOR34,. + 0
- 12086              	i240.4204:
- 12087 0000 00       		.space	1
- 12088              		.section	.bss.i66.3856,"aw",%nobits
- 12089              		.set	.LANCHOR6,. + 0
- 12092              	i66.3856:
- 12093 0000 00       		.space	1
- 12094              		.section	.bss.i324.4525,"aw",%nobits
- 12095              		.align	1
- 12096              		.set	.LANCHOR48,. + 0
- 12099              	i324.4525:
- 12100 0000 0000     		.space	2
- 12101              		.section	.bss.last.4177,"aw",%nobits
- 12102              		.align	1
- 12103              		.set	.LANCHOR24,. + 0
- 12106              	last.4177:
- 12107 0000 0000     		.space	2
- 12108              		.section	.bss.t.4718,"aw",%nobits
- 12109              		.set	.LANCHOR56,. + 0
- 12112              	t.4718:
- 12113 0000 00       		.space	1
- 12114              		.section	.bss.kill_throttle,"aw",%nobits
- 12115              		.set	.LANCHOR18,. + 0
- 12118              	kill_throttle:
- 12119 0000 00       		.space	1
- 12120              		.section	.bss.i63.3855,"aw",%nobits
- 12121              		.set	.LANCHOR5,. + 0
- 12124              	i63.3855:
- 12125 0000 00       		.space	1
- 12126              		.section	.bss.last.4616,"aw",%nobits
- 12127              		.align	1
- 12128              		.set	.LANCHOR55,. + 0
- 12131              	last.4616:
- 12132 0000 0000     		.space	2
- 12133              		.section	.bss.gps_lost,"aw",%nobits
- 12136              	gps_lost:
- 12137 0000 00       		.space	1
- 12138              		.section	.rodata.version,"a",%progbits
- 12139              		.align	1
- 12140              		.set	.LANCHOR1,. + 0
- 12143              	version:
- 12144 0000 0100     		.short	1
- 12145              		.section	.bss.i60.3854,"aw",%nobits
- 12146              		.set	.LANCHOR4,. + 0
- 12149              	i60.3854:
- 12150 0000 00       		.space	1
- 12151              		.section	.bss.i.4062,"aw",%nobits
- 12152              		.set	.LANCHOR19,. + 0
- 12155              	i.4062:
- 12156 0000 00       		.space	1
- 12157              		.section	.bss.i126.4200,"aw",%nobits
- 12158              		.set	.LANCHOR30,. + 0
- 12161              	i126.4200:
- 12162 0000 00       		.space	1
- 12163              		.section	.bss.i612.4530,"aw",%nobits
- 12164              		.align	1
- 12165              		.set	.LANCHOR53,. + 0
- 12168              	i612.4530:
- 12169 0000 0000     		.space	2
- 12170              		.section	.bss.i306.4207,"aw",%nobits
- 12171              		.align	1
- 12172              		.set	.LANCHOR37,. + 0
- 12175              	i306.4207:
- 12176 0000 0000     		.space	2
- 12177              		.section	.bss.i318.4524,"aw",%nobits
- 12178              		.align	1
- 12179              		.set	.LANCHOR47,. + 0
- 12182              	i318.4524:
- 12183 0000 0000     		.space	2
- 12184              		.section	.bss.i150.3861,"aw",%nobits
- 12185              		.set	.LANCHOR11,. + 0
- 12188              	i150.3861:
- 12189 0000 00       		.space	1
- 12190              		.section	.bss.i312.4208,"aw",%nobits
- 12191              		.align	1
- 12192              		.set	.LANCHOR38,. + 0
- 12195              	i312.4208:
- 12196 0000 0000     		.space	2
- 12197              		.section	.bss.i606.4210,"aw",%nobits
- 12198              		.align	1
- 12199              		.set	.LANCHOR40,. + 0
- 12202              	i606.4210:
- 12203 0000 0000     		.space	2
- 12204              		.section	.bss.i.4537,"aw",%nobits
- 12205              		.set	.LANCHOR54,. + 0
- 12208              	i.4537:
- 12209 0000 00       		.space	1
- 12210              		.section	.bss.i192.4203,"aw",%nobits
- 12211              		.set	.LANCHOR33,. + 0
- 12214              	i192.4203:
- 12215 0000 00       		.space	1
- 12216              		.section	.bss.i90.4199,"aw",%nobits
- 12217              		.set	.LANCHOR29,. + 0
- 12220              	i90.4199:
- 12221 0000 00       		.space	1
- 12222              		.section	.bss.current,"aw",%nobits
- 12223              		.align	2
- 12224              		.set	.LANCHOR17,. + 0
- 12227              	current:
- 12228 0000 00000000 		.space	4
- 12229              		.section	.rodata.str1.1,"aMS",%progbits,1
- 12230              	.LC0:
- 12231 0000 922AC922 		.ascii	"\222*\311\"=4\344%\304*\253r\022\357T\010\000"
- 12231      3D34E425 
- 12231      C42AAB72 
- 12231      12EF5408 
- 12231      00
- 12232              		.section	.bss.i.3865,"aw",%nobits
- 12233              		.set	.LANCHOR15,. + 0
- 12236              	i.3865:
- 12237 0000 00       		.space	1
- 12238              		.section	.bss.i330.4526,"aw",%nobits
- 12239              		.align	1
- 12240              		.set	.LANCHOR49,. + 0
- 12243              	i330.4526:
- 12244 0000 0000     		.space	2
- 12245              		.section	.bss.i90.3858,"aw",%nobits
- 12246              		.set	.LANCHOR8,. + 0
- 12249              	i90.3858:
- 12250 0000 00       		.space	1
- 12251              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
+ 11867              		.section	.rodata
+ 11868              		.set	.LANCHOR0,. + 0
+ 11869              	.LC0:
+ 11870 0000 BA2EEDFF 		.ascii	"\272.\355\377\216\202\3222)\214\246\000\225A\241\351"
+ 11870      8E82D232 
+ 11870      298CA600 
+ 11870      9541A1E9 
+ 11871 0010 00       		.ascii	"\000"
+ 11872              		.section	.bss.i300.4206,"aw",%nobits
+ 11873              		.align	1
+ 11874              		.set	.LANCHOR37,. + 0
+ 11877              	i300.4206:
+ 11878 0000 0000     		.space	2
+ 11879              		.section	.bss.i306.3863,"aw",%nobits
+ 11880              		.align	1
+ 11881              		.set	.LANCHOR14,. + 0
+ 11884              	i306.3863:
+ 11885 0000 0000     		.space	2
+ 11886              		.section	.data.boot.3848,"aw",%progbits
+ 11887              		.set	.LANCHOR1,. + 0
+ 11890              	boot.3848:
+ 11891 0000 01       		.byte	1
+ 11892              		.section	.bss.i540.3864,"aw",%nobits
+ 11893              		.align	1
+ 11894              		.set	.LANCHOR15,. + 0
+ 11897              	i540.3864:
+ 11898 0000 0000     		.space	2
+ 11899              		.section	.bss.i540.4209,"aw",%nobits
+ 11900              		.align	1
+ 11901              		.set	.LANCHOR40,. + 0
+ 11904              	i540.4209:
+ 11905 0000 0000     		.space	2
+ 11906              		.section	.bss.i180.4201,"aw",%nobits
+ 11907              		.set	.LANCHOR32,. + 0
+ 11910              	i180.4201:
+ 11911 0000 00       		.space	1
+ 11912              		.section	.bss.i306.4523,"aw",%nobits
+ 11913              		.align	1
+ 11914              		.set	.LANCHOR47,. + 0
+ 11917              	i306.4523:
+ 11918 0000 0000     		.space	2
+ 11919              		.section	.bss.i84.4198,"aw",%nobits
+ 11920              		.set	.LANCHOR29,. + 0
+ 11923              	i84.4198:
+ 11924 0000 00       		.space	1
+ 11925              		.section	.bss.i1.3610,"aw",%nobits
+ 11926              		.set	.LANCHOR58,. + 0
+ 11929              	i1.3610:
+ 11930 0000 00       		.space	1
+ 11931              		.section	.bss.i.4280,"aw",%nobits
+ 11932              		.set	.LANCHOR43,. + 0
+ 11935              	i.4280:
+ 11936 0000 00       		.space	1
+ 11937              		.section	.bss.i342.4527,"aw",%nobits
+ 11938              		.align	1
+ 11939              		.set	.LANCHOR51,. + 0
+ 11942              	i342.4527:
+ 11943 0000 0000     		.space	2
+ 11944              		.section	.bss.last.4493,"aw",%nobits
+ 11945              		.align	1
+ 11946              		.set	.LANCHOR45,. + 0
+ 11949              	last.4493:
+ 11950 0000 0000     		.space	2
+ 11951              		.section	.bss.i78.4197,"aw",%nobits
+ 11952              		.set	.LANCHOR28,. + 0
+ 11955              	i78.4197:
+ 11956 0000 00       		.space	1
+ 11957              		.section	.bss.i120.3859,"aw",%nobits
+ 11958              		.set	.LANCHOR10,. + 0
+ 11961              	i120.3859:
+ 11962 0000 00       		.space	1
+ 11963              		.section	.bss.i.3927,"aw",%nobits
+ 11964              		.set	.LANCHOR17,. + 0
+ 11967              	i.3927:
+ 11968 0000 00       		.space	1
+ 11969              		.section	.bss.mcu1_ppm_cpt,"aw",%nobits
+ 11970              		.set	.LANCHOR59,. + 0
+ 11973              	mcu1_ppm_cpt:
+ 11974 0000 00       		.space	1
+ 11975              		.section	.bss.launch,"aw",%nobits
+ 11976              		.set	.LANCHOR22,. + 0
+ 11979              	launch:
+ 11980 0000 00       		.space	1
+ 11981              		.section	.bss.pprz_mode,"aw",%nobits
+ 11982              		.set	.LANCHOR21,. + 0
+ 11985              	pprz_mode:
+ 11986 0000 00       		.space	1
+ 11987              		.section	.bss.lateral_mode,"aw",%nobits
+ 11988              		.set	.LANCHOR23,. + 0
+ 11991              	lateral_mode:
+ 11992 0000 00       		.space	1
+ 11993              		.section	.bss.mcu1_status,"aw",%nobits
+ 11994              		.set	.LANCHOR24,. + 0
+ 11997              	mcu1_status:
+ 11998 0000 00       		.space	1
+ 11999              		.section	.bss.i72.3857,"aw",%nobits
+ 12000              		.set	.LANCHOR8,. + 0
+ 12003              	i72.3857:
+ 12004 0000 00       		.space	1
+ 12005              		.section	.bss.i30.3853,"aw",%nobits
+ 12006              		.set	.LANCHOR4,. + 0
+ 12009              	i30.3853:
+ 12010 0000 00       		.space	1
+ 12011              		.section	.bss.i183.4202,"aw",%nobits
+ 12012              		.set	.LANCHOR33,. + 0
+ 12015              	i183.4202:
+ 12016 0000 00       		.space	1
+ 12017              		.section	.bss.i.4211,"aw",%nobits
+ 12018              		.set	.LANCHOR42,. + 0
+ 12021              	i.4211:
+ 12022 0000 00       		.space	1
+ 12023              		.section	.bss.i6.3852,"aw",%nobits
+ 12024              		.set	.LANCHOR3,. + 0
+ 12027              	i6.3852:
+ 12028 0000 00       		.space	1
+ 12029              		.section	.bss.i300.4522,"aw",%nobits
+ 12030              		.align	1
+ 12031              		.set	.LANCHOR46,. + 0
+ 12034              	i300.4522:
+ 12035 0000 0000     		.space	2
+ 12036              		.section	.bss.i420.4528,"aw",%nobits
+ 12037              		.align	1
+ 12038              		.set	.LANCHOR52,. + 0
+ 12041              	i420.4528:
+ 12042 0000 0000     		.space	2
+ 12043              		.section	.bss.i66.4196,"aw",%nobits
+ 12044              		.set	.LANCHOR27,. + 0
+ 12047              	i66.4196:
+ 12048 0000 00       		.space	1
+ 12049              		.section	.bss.i300.3862,"aw",%nobits
+ 12050              		.align	1
+ 12051              		.set	.LANCHOR13,. + 0
+ 12054              	i300.3862:
+ 12055 0000 0000     		.space	2
+ 12056              		.section	.bss.i606.4529,"aw",%nobits
+ 12057              		.align	1
+ 12058              		.set	.LANCHOR53,. + 0
+ 12061              	i606.4529:
+ 12062 0000 0000     		.space	2
+ 12063              		.section	.bss.i243.4205,"aw",%nobits
+ 12064              		.set	.LANCHOR36,. + 0
+ 12067              	i243.4205:
+ 12068 0000 00       		.space	1
+ 12069              		.section	.bss.i.4298,"aw",%nobits
+ 12070              		.set	.LANCHOR44,. + 0
+ 12073              	i.4298:
+ 12074 0000 00       		.space	1
+ 12075              		.section	.bss.i63.4195,"aw",%nobits
+ 12076              		.set	.LANCHOR26,. + 0
+ 12079              	i63.4195:
+ 12080 0000 00       		.space	1
+ 12081              		.section	.bss.i126.3860,"aw",%nobits
+ 12082              		.set	.LANCHOR11,. + 0
+ 12085              	i126.3860:
+ 12086 0000 00       		.space	1
+ 12087              		.section	.bss.i240.4204,"aw",%nobits
+ 12088              		.set	.LANCHOR35,. + 0
+ 12091              	i240.4204:
+ 12092 0000 00       		.space	1
+ 12093              		.section	.bss.i66.3856,"aw",%nobits
+ 12094              		.set	.LANCHOR7,. + 0
+ 12097              	i66.3856:
+ 12098 0000 00       		.space	1
+ 12099              		.section	.bss.i324.4525,"aw",%nobits
+ 12100              		.align	1
+ 12101              		.set	.LANCHOR49,. + 0
+ 12104              	i324.4525:
+ 12105 0000 0000     		.space	2
+ 12106              		.section	.bss.last.4177,"aw",%nobits
+ 12107              		.align	1
+ 12108              		.set	.LANCHOR25,. + 0
+ 12111              	last.4177:
+ 12112 0000 0000     		.space	2
+ 12113              		.section	.bss.t.4718,"aw",%nobits
+ 12114              		.set	.LANCHOR57,. + 0
+ 12117              	t.4718:
+ 12118 0000 00       		.space	1
+ 12119              		.section	.bss.kill_throttle,"aw",%nobits
+ 12120              		.set	.LANCHOR19,. + 0
+ 12123              	kill_throttle:
+ 12124 0000 00       		.space	1
+ 12125              		.section	.bss.i63.3855,"aw",%nobits
+ 12126              		.set	.LANCHOR6,. + 0
+ 12129              	i63.3855:
+ 12130 0000 00       		.space	1
+ 12131              		.section	.bss.last.4616,"aw",%nobits
+ 12132              		.align	1
+ 12133              		.set	.LANCHOR56,. + 0
+ 12136              	last.4616:
+ 12137 0000 0000     		.space	2
+ 12138              		.section	.bss.gps_lost,"aw",%nobits
+ 12141              	gps_lost:
+ 12142 0000 00       		.space	1
+ 12143              		.section	.rodata.version,"a",%progbits
+ 12144              		.align	1
+ 12145              		.set	.LANCHOR2,. + 0
+ 12148              	version:
+ 12149 0000 0100     		.short	1
+ 12150              		.section	.bss.i60.3854,"aw",%nobits
+ 12151              		.set	.LANCHOR5,. + 0
+ 12154              	i60.3854:
+ 12155 0000 00       		.space	1
+ 12156              		.section	.bss.i.4062,"aw",%nobits
+ 12157              		.set	.LANCHOR20,. + 0
+ 12160              	i.4062:
+ 12161 0000 00       		.space	1
+ 12162              		.section	.bss.i126.4200,"aw",%nobits
+ 12163              		.set	.LANCHOR31,. + 0
+ 12166              	i126.4200:
+ 12167 0000 00       		.space	1
+ 12168              		.section	.bss.i612.4530,"aw",%nobits
+ 12169              		.align	1
+ 12170              		.set	.LANCHOR54,. + 0
+ 12173              	i612.4530:
+ 12174 0000 0000     		.space	2
+ 12175              		.section	.bss.i306.4207,"aw",%nobits
+ 12176              		.align	1
+ 12177              		.set	.LANCHOR38,. + 0
+ 12180              	i306.4207:
+ 12181 0000 0000     		.space	2
+ 12182              		.section	.bss.i318.4524,"aw",%nobits
+ 12183              		.align	1
+ 12184              		.set	.LANCHOR48,. + 0
+ 12187              	i318.4524:
+ 12188 0000 0000     		.space	2
+ 12189              		.section	.bss.i150.3861,"aw",%nobits
+ 12190              		.set	.LANCHOR12,. + 0
+ 12193              	i150.3861:
+ 12194 0000 00       		.space	1
+ 12195              		.section	.bss.i312.4208,"aw",%nobits
+ 12196              		.align	1
+ 12197              		.set	.LANCHOR39,. + 0
+ 12200              	i312.4208:
+ 12201 0000 0000     		.space	2
+ 12202              		.section	.bss.i606.4210,"aw",%nobits
+ 12203              		.align	1
+ 12204              		.set	.LANCHOR41,. + 0
+ 12207              	i606.4210:
+ 12208 0000 0000     		.space	2
+ 12209              		.section	.bss.i.4537,"aw",%nobits
+ 12210              		.set	.LANCHOR55,. + 0
+ 12213              	i.4537:
+ 12214 0000 00       		.space	1
+ 12215              		.section	.bss.i192.4203,"aw",%nobits
+ 12216              		.set	.LANCHOR34,. + 0
+ 12219              	i192.4203:
+ 12220 0000 00       		.space	1
+ 12221              		.section	.bss.i90.4199,"aw",%nobits
+ 12222              		.set	.LANCHOR30,. + 0
+ 12225              	i90.4199:
+ 12226 0000 00       		.space	1
+ 12227              		.section	.bss.current,"aw",%nobits
+ 12228              		.align	2
+ 12229              		.set	.LANCHOR18,. + 0
+ 12232              	current:
+ 12233 0000 00000000 		.space	4
+ 12234              		.section	.bss.i.3865,"aw",%nobits
+ 12235              		.set	.LANCHOR16,. + 0
+ 12238              	i.3865:
+ 12239 0000 00       		.space	1
+ 12240              		.section	.bss.i330.4526,"aw",%nobits
+ 12241              		.align	1
+ 12242              		.set	.LANCHOR50,. + 0
+ 12245              	i330.4526:
+ 12246 0000 0000     		.space	2
+ 12247              		.section	.bss.i90.3858,"aw",%nobits
+ 12248              		.set	.LANCHOR9,. + 0
+ 12251              	i90.3858:
+ 12252 0000 00       		.space	1
+ 12253              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 main_ap.c
-     /tmp/ccHD89QN.s:13     .text.init_ap:00000000 $a
-     /tmp/ccHD89QN.s:16     .text.init_ap:00000000 init_ap
-     /tmp/ccHD89QN.s:82     .text.init_ap:000000ec $d
+     /tmp/ccAi5i1Q.s:13     .text.init_ap:00000000 $a
+     /tmp/ccAi5i1Q.s:16     .text.init_ap:00000000 init_ap
+     /tmp/ccAi5i1Q.s:82     .text.init_ap:000000ec $d
                             *COM*:00000001 combi_switch_status
                             *COM*:00000004 combi_switch_value
                             *COM*:00000001 sensors_tid
@@ -12130,165 +12131,165 @@ DEFINED SYMBOLS
                             *COM*:00000001 monitor_tid
                             *COM*:00000001 fptransition_tid
                             *COM*:00000001 power_switch
-     /tmp/ccHD89QN.s:108    .text.reporting_task:00000000 $a
-     /tmp/ccHD89QN.s:111    .text.reporting_task:00000000 reporting_task
-     /tmp/ccHD89QN.s:1121   .text.reporting_task:00000f80 $d
-     /tmp/ccHD89QN.s:1188   .text.reporting_task:00001088 $a
-     /tmp/ccHD89QN.s:2847   .text.reporting_task:00002a34 $d
-     /tmp/ccHD89QN.s:2879   .text.reporting_task:00002ab0 $a
-     /tmp/ccHD89QN.s:3255   .text.reporting_task:00002fe8 $d
+     /tmp/ccAi5i1Q.s:108    .text.reporting_task:00000000 $a
+     /tmp/ccAi5i1Q.s:111    .text.reporting_task:00000000 reporting_task
+     /tmp/ccAi5i1Q.s:1121   .text.reporting_task:00000f80 $d
+     /tmp/ccAi5i1Q.s:1188   .text.reporting_task:00001088 $a
+     /tmp/ccAi5i1Q.s:2847   .text.reporting_task:00002a34 $d
+     /tmp/ccAi5i1Q.s:2879   .text.reporting_task:00002ab0 $a
+     /tmp/ccAi5i1Q.s:3255   .text.reporting_task:00002fe8 $d
                             *COM*:00000004 energy
                             *COM*:00000002 vsupply
-     /tmp/ccHD89QN.s:3343   .text.reporting_task:00003144 $a
-     /tmp/ccHD89QN.s:5309   .text.reporting_task:00004f90 $d
-     /tmp/ccHD89QN.s:5399   .text.reporting_task:000050f4 $a
-     /tmp/ccHD89QN.s:5787   .text.reporting_task:000056ec $d
-     /tmp/ccHD89QN.s:5819   .text.reporting_task:00005768 $a
-     /tmp/ccHD89QN.s:7490   .text.reporting_task:000070b4 $d
-     /tmp/ccHD89QN.s:7558   .text.reporting_task:000071c0 $a
-     /tmp/ccHD89QN.s:9583   .text.reporting_task:000090e8 $d
-     /tmp/ccHD89QN.s:9643   .text.reporting_task:000091d4 $a
-     /tmp/ccHD89QN.s:10615  .text.navigation_task:00000000 $a
-     /tmp/ccHD89QN.s:10618  .text.navigation_task:00000000 navigation_task
-     /tmp/ccHD89QN.s:10937  .text.navigation_task:000004c4 $d
-     /tmp/ccHD89QN.s:10963  .text.attitude_loop:00000000 $a
-     /tmp/ccHD89QN.s:10966  .text.attitude_loop:00000000 attitude_loop
-     /tmp/ccHD89QN.s:11077  .text.attitude_loop:00000180 $d
-     /tmp/ccHD89QN.s:11101  .text.sensors_task:00000000 $a
-     /tmp/ccHD89QN.s:11104  .text.sensors_task:00000000 sensors_task
-     /tmp/ccHD89QN.s:11113  .text.monitor_task:00000000 $a
-     /tmp/ccHD89QN.s:11116  .text.monitor_task:00000000 monitor_task
-     /tmp/ccHD89QN.s:11255  .text.monitor_task:00000204 $d
-     /tmp/ccHD89QN.s:11275  .text.fptransition_task:00000000 $a
-     /tmp/ccHD89QN.s:11278  .text.fptransition_task:00000000 fptransition_task
-     /tmp/ccHD89QN.s:11293  .text.fptransition_task:00000020 $d
-     /tmp/ccHD89QN.s:11296  .text.handle_periodic_tasks_ap:00000000 $a
-     /tmp/ccHD89QN.s:11299  .text.handle_periodic_tasks_ap:00000000 handle_periodic_tasks_ap
-     /tmp/ccHD89QN.s:11400  .text.handle_periodic_tasks_ap:00000160 $d
-     /tmp/ccHD89QN.s:11411  .text.event_task_ap:00000000 $a
-     /tmp/ccHD89QN.s:11414  .text.event_task_ap:00000000 event_task_ap
-     /tmp/ccHD89QN.s:11495  .text.event_task_ap:00000114 $d
-     /tmp/ccHD89QN.s:11501  .text.event_task_ap:00000128 $a
-     /tmp/ccHD89QN.s:11822  .text.event_task_ap:000005c8 $d
-     /tmp/ccHD89QN.s:12136  .bss.gps_lost:00000000 gps_lost
-     /tmp/ccHD89QN.s:11974  .bss.launch:00000000 launch
-     /tmp/ccHD89QN.s:12118  .bss.kill_throttle:00000000 kill_throttle
-     /tmp/ccHD89QN.s:11986  .bss.lateral_mode:00000000 lateral_mode
-     /tmp/ccHD89QN.s:11980  .bss.pprz_mode:00000000 pprz_mode
-     /tmp/ccHD89QN.s:11871  .bss.mcu1_ppm_cpt:00000000 mcu1_ppm_cpt
-     /tmp/ccHD89QN.s:11872  .bss.mcu1_ppm_cpt:00000000 $d
-     /tmp/ccHD89QN.s:11874  .bss.i300.4206:00000000 $d
-     /tmp/ccHD89QN.s:11878  .bss.i300.4206:00000000 i300.4206
-     /tmp/ccHD89QN.s:11881  .bss.i306.3863:00000000 $d
-     /tmp/ccHD89QN.s:11885  .bss.i306.3863:00000000 i306.3863
-     /tmp/ccHD89QN.s:11891  .data.boot.3848:00000000 boot.3848
-     /tmp/ccHD89QN.s:11894  .bss.i540.3864:00000000 $d
-     /tmp/ccHD89QN.s:11898  .bss.i540.3864:00000000 i540.3864
-     /tmp/ccHD89QN.s:11901  .bss.i540.4209:00000000 $d
-     /tmp/ccHD89QN.s:11905  .bss.i540.4209:00000000 i540.4209
-     /tmp/ccHD89QN.s:11911  .bss.i180.4201:00000000 i180.4201
-     /tmp/ccHD89QN.s:11912  .bss.i180.4201:00000000 $d
-     /tmp/ccHD89QN.s:11914  .bss.i306.4523:00000000 $d
-     /tmp/ccHD89QN.s:11918  .bss.i306.4523:00000000 i306.4523
-     /tmp/ccHD89QN.s:11924  .bss.i84.4198:00000000 i84.4198
-     /tmp/ccHD89QN.s:11925  .bss.i84.4198:00000000 $d
-     /tmp/ccHD89QN.s:11930  .bss.i1.3610:00000000 i1.3610
-     /tmp/ccHD89QN.s:11931  .bss.i1.3610:00000000 $d
-     /tmp/ccHD89QN.s:11936  .bss.i.4280:00000000 i.4280
-     /tmp/ccHD89QN.s:11937  .bss.i.4280:00000000 $d
-     /tmp/ccHD89QN.s:11939  .bss.i342.4527:00000000 $d
-     /tmp/ccHD89QN.s:11943  .bss.i342.4527:00000000 i342.4527
-     /tmp/ccHD89QN.s:11946  .bss.last.4493:00000000 $d
-     /tmp/ccHD89QN.s:11950  .bss.last.4493:00000000 last.4493
-     /tmp/ccHD89QN.s:11956  .bss.i78.4197:00000000 i78.4197
-     /tmp/ccHD89QN.s:11957  .bss.i78.4197:00000000 $d
-     /tmp/ccHD89QN.s:11962  .bss.i120.3859:00000000 i120.3859
-     /tmp/ccHD89QN.s:11963  .bss.i120.3859:00000000 $d
-     /tmp/ccHD89QN.s:11968  .bss.i.3927:00000000 i.3927
-     /tmp/ccHD89QN.s:11969  .bss.i.3927:00000000 $d
-     /tmp/ccHD89QN.s:11975  .bss.launch:00000000 $d
-     /tmp/ccHD89QN.s:11981  .bss.pprz_mode:00000000 $d
-     /tmp/ccHD89QN.s:11987  .bss.lateral_mode:00000000 $d
-     /tmp/ccHD89QN.s:11992  .bss.mcu1_status:00000000 mcu1_status
-     /tmp/ccHD89QN.s:11993  .bss.mcu1_status:00000000 $d
-     /tmp/ccHD89QN.s:11998  .bss.i72.3857:00000000 i72.3857
-     /tmp/ccHD89QN.s:11999  .bss.i72.3857:00000000 $d
-     /tmp/ccHD89QN.s:12004  .bss.i30.3853:00000000 i30.3853
-     /tmp/ccHD89QN.s:12005  .bss.i30.3853:00000000 $d
-     /tmp/ccHD89QN.s:12010  .bss.i183.4202:00000000 i183.4202
-     /tmp/ccHD89QN.s:12011  .bss.i183.4202:00000000 $d
-     /tmp/ccHD89QN.s:12016  .bss.i.4211:00000000 i.4211
-     /tmp/ccHD89QN.s:12017  .bss.i.4211:00000000 $d
-     /tmp/ccHD89QN.s:12022  .bss.i6.3852:00000000 i6.3852
-     /tmp/ccHD89QN.s:12023  .bss.i6.3852:00000000 $d
-     /tmp/ccHD89QN.s:12025  .bss.i300.4522:00000000 $d
-     /tmp/ccHD89QN.s:12029  .bss.i300.4522:00000000 i300.4522
-     /tmp/ccHD89QN.s:12032  .bss.i420.4528:00000000 $d
-     /tmp/ccHD89QN.s:12036  .bss.i420.4528:00000000 i420.4528
-     /tmp/ccHD89QN.s:12042  .bss.i66.4196:00000000 i66.4196
-     /tmp/ccHD89QN.s:12043  .bss.i66.4196:00000000 $d
-     /tmp/ccHD89QN.s:12045  .bss.i300.3862:00000000 $d
-     /tmp/ccHD89QN.s:12049  .bss.i300.3862:00000000 i300.3862
-     /tmp/ccHD89QN.s:12052  .bss.i606.4529:00000000 $d
-     /tmp/ccHD89QN.s:12056  .bss.i606.4529:00000000 i606.4529
-     /tmp/ccHD89QN.s:12062  .bss.i243.4205:00000000 i243.4205
-     /tmp/ccHD89QN.s:12063  .bss.i243.4205:00000000 $d
-     /tmp/ccHD89QN.s:12068  .bss.i.4298:00000000 i.4298
-     /tmp/ccHD89QN.s:12069  .bss.i.4298:00000000 $d
-     /tmp/ccHD89QN.s:12074  .bss.i63.4195:00000000 i63.4195
-     /tmp/ccHD89QN.s:12075  .bss.i63.4195:00000000 $d
-     /tmp/ccHD89QN.s:12080  .bss.i126.3860:00000000 i126.3860
-     /tmp/ccHD89QN.s:12081  .bss.i126.3860:00000000 $d
-     /tmp/ccHD89QN.s:12086  .bss.i240.4204:00000000 i240.4204
-     /tmp/ccHD89QN.s:12087  .bss.i240.4204:00000000 $d
-     /tmp/ccHD89QN.s:12092  .bss.i66.3856:00000000 i66.3856
-     /tmp/ccHD89QN.s:12093  .bss.i66.3856:00000000 $d
-     /tmp/ccHD89QN.s:12095  .bss.i324.4525:00000000 $d
-     /tmp/ccHD89QN.s:12099  .bss.i324.4525:00000000 i324.4525
-     /tmp/ccHD89QN.s:12102  .bss.last.4177:00000000 $d
-     /tmp/ccHD89QN.s:12106  .bss.last.4177:00000000 last.4177
-     /tmp/ccHD89QN.s:12112  .bss.t.4718:00000000 t.4718
-     /tmp/ccHD89QN.s:12113  .bss.t.4718:00000000 $d
-     /tmp/ccHD89QN.s:12119  .bss.kill_throttle:00000000 $d
-     /tmp/ccHD89QN.s:12124  .bss.i63.3855:00000000 i63.3855
-     /tmp/ccHD89QN.s:12125  .bss.i63.3855:00000000 $d
-     /tmp/ccHD89QN.s:12127  .bss.last.4616:00000000 $d
-     /tmp/ccHD89QN.s:12131  .bss.last.4616:00000000 last.4616
-     /tmp/ccHD89QN.s:12137  .bss.gps_lost:00000000 $d
-     /tmp/ccHD89QN.s:12139  .rodata.version:00000000 $d
-     /tmp/ccHD89QN.s:12143  .rodata.version:00000000 version
-     /tmp/ccHD89QN.s:12149  .bss.i60.3854:00000000 i60.3854
-     /tmp/ccHD89QN.s:12150  .bss.i60.3854:00000000 $d
-     /tmp/ccHD89QN.s:12155  .bss.i.4062:00000000 i.4062
-     /tmp/ccHD89QN.s:12156  .bss.i.4062:00000000 $d
-     /tmp/ccHD89QN.s:12161  .bss.i126.4200:00000000 i126.4200
-     /tmp/ccHD89QN.s:12162  .bss.i126.4200:00000000 $d
-     /tmp/ccHD89QN.s:12164  .bss.i612.4530:00000000 $d
-     /tmp/ccHD89QN.s:12168  .bss.i612.4530:00000000 i612.4530
-     /tmp/ccHD89QN.s:12171  .bss.i306.4207:00000000 $d
-     /tmp/ccHD89QN.s:12175  .bss.i306.4207:00000000 i306.4207
-     /tmp/ccHD89QN.s:12178  .bss.i318.4524:00000000 $d
-     /tmp/ccHD89QN.s:12182  .bss.i318.4524:00000000 i318.4524
-     /tmp/ccHD89QN.s:12188  .bss.i150.3861:00000000 i150.3861
-     /tmp/ccHD89QN.s:12189  .bss.i150.3861:00000000 $d
-     /tmp/ccHD89QN.s:12191  .bss.i312.4208:00000000 $d
-     /tmp/ccHD89QN.s:12195  .bss.i312.4208:00000000 i312.4208
-     /tmp/ccHD89QN.s:12198  .bss.i606.4210:00000000 $d
-     /tmp/ccHD89QN.s:12202  .bss.i606.4210:00000000 i606.4210
-     /tmp/ccHD89QN.s:12208  .bss.i.4537:00000000 i.4537
-     /tmp/ccHD89QN.s:12209  .bss.i.4537:00000000 $d
-     /tmp/ccHD89QN.s:12214  .bss.i192.4203:00000000 i192.4203
-     /tmp/ccHD89QN.s:12215  .bss.i192.4203:00000000 $d
-     /tmp/ccHD89QN.s:12220  .bss.i90.4199:00000000 i90.4199
-     /tmp/ccHD89QN.s:12221  .bss.i90.4199:00000000 $d
-     /tmp/ccHD89QN.s:12223  .bss.current:00000000 $d
-     /tmp/ccHD89QN.s:12227  .bss.current:00000000 current
-     /tmp/ccHD89QN.s:12236  .bss.i.3865:00000000 i.3865
-     /tmp/ccHD89QN.s:12237  .bss.i.3865:00000000 $d
-     /tmp/ccHD89QN.s:12239  .bss.i330.4526:00000000 $d
-     /tmp/ccHD89QN.s:12243  .bss.i330.4526:00000000 i330.4526
-     /tmp/ccHD89QN.s:12249  .bss.i90.3858:00000000 i90.3858
-     /tmp/ccHD89QN.s:12250  .bss.i90.3858:00000000 $d
+     /tmp/ccAi5i1Q.s:3343   .text.reporting_task:00003144 $a
+     /tmp/ccAi5i1Q.s:5309   .text.reporting_task:00004f90 $d
+     /tmp/ccAi5i1Q.s:5399   .text.reporting_task:000050f4 $a
+     /tmp/ccAi5i1Q.s:5787   .text.reporting_task:000056ec $d
+     /tmp/ccAi5i1Q.s:5819   .text.reporting_task:00005768 $a
+     /tmp/ccAi5i1Q.s:7490   .text.reporting_task:000070b4 $d
+     /tmp/ccAi5i1Q.s:7558   .text.reporting_task:000071c0 $a
+     /tmp/ccAi5i1Q.s:9583   .text.reporting_task:000090e8 $d
+     /tmp/ccAi5i1Q.s:9643   .text.reporting_task:000091d4 $a
+     /tmp/ccAi5i1Q.s:10615  .text.navigation_task:00000000 $a
+     /tmp/ccAi5i1Q.s:10618  .text.navigation_task:00000000 navigation_task
+     /tmp/ccAi5i1Q.s:10937  .text.navigation_task:000004c4 $d
+     /tmp/ccAi5i1Q.s:10963  .text.attitude_loop:00000000 $a
+     /tmp/ccAi5i1Q.s:10966  .text.attitude_loop:00000000 attitude_loop
+     /tmp/ccAi5i1Q.s:11077  .text.attitude_loop:00000180 $d
+     /tmp/ccAi5i1Q.s:11101  .text.sensors_task:00000000 $a
+     /tmp/ccAi5i1Q.s:11104  .text.sensors_task:00000000 sensors_task
+     /tmp/ccAi5i1Q.s:11113  .text.monitor_task:00000000 $a
+     /tmp/ccAi5i1Q.s:11116  .text.monitor_task:00000000 monitor_task
+     /tmp/ccAi5i1Q.s:11255  .text.monitor_task:00000204 $d
+     /tmp/ccAi5i1Q.s:11275  .text.fptransition_task:00000000 $a
+     /tmp/ccAi5i1Q.s:11278  .text.fptransition_task:00000000 fptransition_task
+     /tmp/ccAi5i1Q.s:11293  .text.fptransition_task:00000020 $d
+     /tmp/ccAi5i1Q.s:11296  .text.handle_periodic_tasks_ap:00000000 $a
+     /tmp/ccAi5i1Q.s:11299  .text.handle_periodic_tasks_ap:00000000 handle_periodic_tasks_ap
+     /tmp/ccAi5i1Q.s:11400  .text.handle_periodic_tasks_ap:00000160 $d
+     /tmp/ccAi5i1Q.s:11411  .text.event_task_ap:00000000 $a
+     /tmp/ccAi5i1Q.s:11414  .text.event_task_ap:00000000 event_task_ap
+     /tmp/ccAi5i1Q.s:11495  .text.event_task_ap:00000114 $d
+     /tmp/ccAi5i1Q.s:11501  .text.event_task_ap:00000128 $a
+     /tmp/ccAi5i1Q.s:11822  .text.event_task_ap:000005c8 $d
+     /tmp/ccAi5i1Q.s:12141  .bss.gps_lost:00000000 gps_lost
+     /tmp/ccAi5i1Q.s:11979  .bss.launch:00000000 launch
+     /tmp/ccAi5i1Q.s:12123  .bss.kill_throttle:00000000 kill_throttle
+     /tmp/ccAi5i1Q.s:11991  .bss.lateral_mode:00000000 lateral_mode
+     /tmp/ccAi5i1Q.s:11985  .bss.pprz_mode:00000000 pprz_mode
+     /tmp/ccAi5i1Q.s:11873  .bss.i300.4206:00000000 $d
+     /tmp/ccAi5i1Q.s:11877  .bss.i300.4206:00000000 i300.4206
+     /tmp/ccAi5i1Q.s:11880  .bss.i306.3863:00000000 $d
+     /tmp/ccAi5i1Q.s:11884  .bss.i306.3863:00000000 i306.3863
+     /tmp/ccAi5i1Q.s:11890  .data.boot.3848:00000000 boot.3848
+     /tmp/ccAi5i1Q.s:11893  .bss.i540.3864:00000000 $d
+     /tmp/ccAi5i1Q.s:11897  .bss.i540.3864:00000000 i540.3864
+     /tmp/ccAi5i1Q.s:11900  .bss.i540.4209:00000000 $d
+     /tmp/ccAi5i1Q.s:11904  .bss.i540.4209:00000000 i540.4209
+     /tmp/ccAi5i1Q.s:11910  .bss.i180.4201:00000000 i180.4201
+     /tmp/ccAi5i1Q.s:11911  .bss.i180.4201:00000000 $d
+     /tmp/ccAi5i1Q.s:11913  .bss.i306.4523:00000000 $d
+     /tmp/ccAi5i1Q.s:11917  .bss.i306.4523:00000000 i306.4523
+     /tmp/ccAi5i1Q.s:11923  .bss.i84.4198:00000000 i84.4198
+     /tmp/ccAi5i1Q.s:11924  .bss.i84.4198:00000000 $d
+     /tmp/ccAi5i1Q.s:11929  .bss.i1.3610:00000000 i1.3610
+     /tmp/ccAi5i1Q.s:11930  .bss.i1.3610:00000000 $d
+     /tmp/ccAi5i1Q.s:11935  .bss.i.4280:00000000 i.4280
+     /tmp/ccAi5i1Q.s:11936  .bss.i.4280:00000000 $d
+     /tmp/ccAi5i1Q.s:11938  .bss.i342.4527:00000000 $d
+     /tmp/ccAi5i1Q.s:11942  .bss.i342.4527:00000000 i342.4527
+     /tmp/ccAi5i1Q.s:11945  .bss.last.4493:00000000 $d
+     /tmp/ccAi5i1Q.s:11949  .bss.last.4493:00000000 last.4493
+     /tmp/ccAi5i1Q.s:11955  .bss.i78.4197:00000000 i78.4197
+     /tmp/ccAi5i1Q.s:11956  .bss.i78.4197:00000000 $d
+     /tmp/ccAi5i1Q.s:11961  .bss.i120.3859:00000000 i120.3859
+     /tmp/ccAi5i1Q.s:11962  .bss.i120.3859:00000000 $d
+     /tmp/ccAi5i1Q.s:11967  .bss.i.3927:00000000 i.3927
+     /tmp/ccAi5i1Q.s:11968  .bss.i.3927:00000000 $d
+     /tmp/ccAi5i1Q.s:11973  .bss.mcu1_ppm_cpt:00000000 mcu1_ppm_cpt
+     /tmp/ccAi5i1Q.s:11974  .bss.mcu1_ppm_cpt:00000000 $d
+     /tmp/ccAi5i1Q.s:11980  .bss.launch:00000000 $d
+     /tmp/ccAi5i1Q.s:11986  .bss.pprz_mode:00000000 $d
+     /tmp/ccAi5i1Q.s:11992  .bss.lateral_mode:00000000 $d
+     /tmp/ccAi5i1Q.s:11997  .bss.mcu1_status:00000000 mcu1_status
+     /tmp/ccAi5i1Q.s:11998  .bss.mcu1_status:00000000 $d
+     /tmp/ccAi5i1Q.s:12003  .bss.i72.3857:00000000 i72.3857
+     /tmp/ccAi5i1Q.s:12004  .bss.i72.3857:00000000 $d
+     /tmp/ccAi5i1Q.s:12009  .bss.i30.3853:00000000 i30.3853
+     /tmp/ccAi5i1Q.s:12010  .bss.i30.3853:00000000 $d
+     /tmp/ccAi5i1Q.s:12015  .bss.i183.4202:00000000 i183.4202
+     /tmp/ccAi5i1Q.s:12016  .bss.i183.4202:00000000 $d
+     /tmp/ccAi5i1Q.s:12021  .bss.i.4211:00000000 i.4211
+     /tmp/ccAi5i1Q.s:12022  .bss.i.4211:00000000 $d
+     /tmp/ccAi5i1Q.s:12027  .bss.i6.3852:00000000 i6.3852
+     /tmp/ccAi5i1Q.s:12028  .bss.i6.3852:00000000 $d
+     /tmp/ccAi5i1Q.s:12030  .bss.i300.4522:00000000 $d
+     /tmp/ccAi5i1Q.s:12034  .bss.i300.4522:00000000 i300.4522
+     /tmp/ccAi5i1Q.s:12037  .bss.i420.4528:00000000 $d
+     /tmp/ccAi5i1Q.s:12041  .bss.i420.4528:00000000 i420.4528
+     /tmp/ccAi5i1Q.s:12047  .bss.i66.4196:00000000 i66.4196
+     /tmp/ccAi5i1Q.s:12048  .bss.i66.4196:00000000 $d
+     /tmp/ccAi5i1Q.s:12050  .bss.i300.3862:00000000 $d
+     /tmp/ccAi5i1Q.s:12054  .bss.i300.3862:00000000 i300.3862
+     /tmp/ccAi5i1Q.s:12057  .bss.i606.4529:00000000 $d
+     /tmp/ccAi5i1Q.s:12061  .bss.i606.4529:00000000 i606.4529
+     /tmp/ccAi5i1Q.s:12067  .bss.i243.4205:00000000 i243.4205
+     /tmp/ccAi5i1Q.s:12068  .bss.i243.4205:00000000 $d
+     /tmp/ccAi5i1Q.s:12073  .bss.i.4298:00000000 i.4298
+     /tmp/ccAi5i1Q.s:12074  .bss.i.4298:00000000 $d
+     /tmp/ccAi5i1Q.s:12079  .bss.i63.4195:00000000 i63.4195
+     /tmp/ccAi5i1Q.s:12080  .bss.i63.4195:00000000 $d
+     /tmp/ccAi5i1Q.s:12085  .bss.i126.3860:00000000 i126.3860
+     /tmp/ccAi5i1Q.s:12086  .bss.i126.3860:00000000 $d
+     /tmp/ccAi5i1Q.s:12091  .bss.i240.4204:00000000 i240.4204
+     /tmp/ccAi5i1Q.s:12092  .bss.i240.4204:00000000 $d
+     /tmp/ccAi5i1Q.s:12097  .bss.i66.3856:00000000 i66.3856
+     /tmp/ccAi5i1Q.s:12098  .bss.i66.3856:00000000 $d
+     /tmp/ccAi5i1Q.s:12100  .bss.i324.4525:00000000 $d
+     /tmp/ccAi5i1Q.s:12104  .bss.i324.4525:00000000 i324.4525
+     /tmp/ccAi5i1Q.s:12107  .bss.last.4177:00000000 $d
+     /tmp/ccAi5i1Q.s:12111  .bss.last.4177:00000000 last.4177
+     /tmp/ccAi5i1Q.s:12117  .bss.t.4718:00000000 t.4718
+     /tmp/ccAi5i1Q.s:12118  .bss.t.4718:00000000 $d
+     /tmp/ccAi5i1Q.s:12124  .bss.kill_throttle:00000000 $d
+     /tmp/ccAi5i1Q.s:12129  .bss.i63.3855:00000000 i63.3855
+     /tmp/ccAi5i1Q.s:12130  .bss.i63.3855:00000000 $d
+     /tmp/ccAi5i1Q.s:12132  .bss.last.4616:00000000 $d
+     /tmp/ccAi5i1Q.s:12136  .bss.last.4616:00000000 last.4616
+     /tmp/ccAi5i1Q.s:12142  .bss.gps_lost:00000000 $d
+     /tmp/ccAi5i1Q.s:12144  .rodata.version:00000000 $d
+     /tmp/ccAi5i1Q.s:12148  .rodata.version:00000000 version
+     /tmp/ccAi5i1Q.s:12154  .bss.i60.3854:00000000 i60.3854
+     /tmp/ccAi5i1Q.s:12155  .bss.i60.3854:00000000 $d
+     /tmp/ccAi5i1Q.s:12160  .bss.i.4062:00000000 i.4062
+     /tmp/ccAi5i1Q.s:12161  .bss.i.4062:00000000 $d
+     /tmp/ccAi5i1Q.s:12166  .bss.i126.4200:00000000 i126.4200
+     /tmp/ccAi5i1Q.s:12167  .bss.i126.4200:00000000 $d
+     /tmp/ccAi5i1Q.s:12169  .bss.i612.4530:00000000 $d
+     /tmp/ccAi5i1Q.s:12173  .bss.i612.4530:00000000 i612.4530
+     /tmp/ccAi5i1Q.s:12176  .bss.i306.4207:00000000 $d
+     /tmp/ccAi5i1Q.s:12180  .bss.i306.4207:00000000 i306.4207
+     /tmp/ccAi5i1Q.s:12183  .bss.i318.4524:00000000 $d
+     /tmp/ccAi5i1Q.s:12187  .bss.i318.4524:00000000 i318.4524
+     /tmp/ccAi5i1Q.s:12193  .bss.i150.3861:00000000 i150.3861
+     /tmp/ccAi5i1Q.s:12194  .bss.i150.3861:00000000 $d
+     /tmp/ccAi5i1Q.s:12196  .bss.i312.4208:00000000 $d
+     /tmp/ccAi5i1Q.s:12200  .bss.i312.4208:00000000 i312.4208
+     /tmp/ccAi5i1Q.s:12203  .bss.i606.4210:00000000 $d
+     /tmp/ccAi5i1Q.s:12207  .bss.i606.4210:00000000 i606.4210
+     /tmp/ccAi5i1Q.s:12213  .bss.i.4537:00000000 i.4537
+     /tmp/ccAi5i1Q.s:12214  .bss.i.4537:00000000 $d
+     /tmp/ccAi5i1Q.s:12219  .bss.i192.4203:00000000 i192.4203
+     /tmp/ccAi5i1Q.s:12220  .bss.i192.4203:00000000 $d
+     /tmp/ccAi5i1Q.s:12225  .bss.i90.4199:00000000 i90.4199
+     /tmp/ccAi5i1Q.s:12226  .bss.i90.4199:00000000 $d
+     /tmp/ccAi5i1Q.s:12228  .bss.current:00000000 $d
+     /tmp/ccAi5i1Q.s:12232  .bss.current:00000000 current
+     /tmp/ccAi5i1Q.s:12238  .bss.i.3865:00000000 i.3865
+     /tmp/ccAi5i1Q.s:12239  .bss.i.3865:00000000 $d
+     /tmp/ccAi5i1Q.s:12241  .bss.i330.4526:00000000 $d
+     /tmp/ccAi5i1Q.s:12245  .bss.i330.4526:00000000 i330.4526
+     /tmp/ccAi5i1Q.s:12251  .bss.i90.3858:00000000 i90.3858
+     /tmp/ccAi5i1Q.s:12252  .bss.i90.3858:00000000 $d
 
 UNDEFINED SYMBOLS
 gps_init

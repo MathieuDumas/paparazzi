@@ -25,7 +25,7 @@
   27              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c.c
-     /tmp/ccbqTLuS.s:13     .text.i2c_init:00000000 $a
-     /tmp/ccbqTLuS.s:16     .text.i2c_init:00000000 i2c_init
+     /tmp/ccK9xm8z.s:13     .text.i2c_init:00000000 $a
+     /tmp/ccK9xm8z.s:16     .text.i2c_init:00000000 i2c_init
 
 NO UNDEFINED SYMBOLS

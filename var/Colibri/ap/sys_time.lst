@@ -160,19 +160,19 @@
  168              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 sys_time.c
-     /tmp/ccneMm8v.s:17     .text.sys_time_register_timer:00000000 $a
-     /tmp/ccneMm8v.s:20     .text.sys_time_register_timer:00000000 sys_time_register_timer
-     /tmp/ccneMm8v.s:64     .text.sys_time_register_timer:00000088 $d
+     /tmp/cc26KUzG.s:17     .text.sys_time_register_timer:00000000 $a
+     /tmp/cc26KUzG.s:20     .text.sys_time_register_timer:00000000 sys_time_register_timer
+     /tmp/cc26KUzG.s:64     .text.sys_time_register_timer:00000088 $d
                             *COM*:000000ac sys_time
-     /tmp/ccneMm8v.s:70     .text.sys_time_cancel_timer:00000000 $a
-     /tmp/ccneMm8v.s:73     .text.sys_time_cancel_timer:00000000 sys_time_cancel_timer
-     /tmp/ccneMm8v.s:87     .text.sys_time_cancel_timer:00000018 $d
-     /tmp/ccneMm8v.s:90     .text.sys_time_update_timer:00000000 $a
-     /tmp/ccneMm8v.s:93     .text.sys_time_update_timer:00000000 sys_time_update_timer
-     /tmp/ccneMm8v.s:125    .text.sys_time_update_timer:00000064 $d
-     /tmp/ccneMm8v.s:131    .text.sys_time_init:00000000 $a
-     /tmp/ccneMm8v.s:134    .text.sys_time_init:00000000 sys_time_init
-     /tmp/ccneMm8v.s:165    .text.sys_time_init:0000005c $d
+     /tmp/cc26KUzG.s:70     .text.sys_time_cancel_timer:00000000 $a
+     /tmp/cc26KUzG.s:73     .text.sys_time_cancel_timer:00000000 sys_time_cancel_timer
+     /tmp/cc26KUzG.s:87     .text.sys_time_cancel_timer:00000018 $d
+     /tmp/cc26KUzG.s:90     .text.sys_time_update_timer:00000000 $a
+     /tmp/cc26KUzG.s:93     .text.sys_time_update_timer:00000000 sys_time_update_timer
+     /tmp/cc26KUzG.s:125    .text.sys_time_update_timer:00000064 $d
+     /tmp/cc26KUzG.s:131    .text.sys_time_init:00000000 $a
+     /tmp/cc26KUzG.s:134    .text.sys_time_init:00000000 sys_time_init
+     /tmp/cc26KUzG.s:165    .text.sys_time_init:0000005c $d
 
 UNDEFINED SYMBOLS
 __aeabi_f2d

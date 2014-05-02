@@ -32,10 +32,10 @@
   36              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 settings.c
-     /tmp/ccmXGHga.s:13     .text.settings_init:00000000 $a
-     /tmp/ccmXGHga.s:16     .text.settings_init:00000000 settings_init
-     /tmp/ccmXGHga.s:24     .text.settings_store:00000000 $a
-     /tmp/ccmXGHga.s:27     .text.settings_store:00000000 settings_store
+     /tmp/ccTpCFPE.s:13     .text.settings_init:00000000 $a
+     /tmp/ccTpCFPE.s:16     .text.settings_init:00000000 settings_init
+     /tmp/ccTpCFPE.s:24     .text.settings_store:00000000 $a
+     /tmp/ccTpCFPE.s:27     .text.settings_store:00000000 settings_store
                             *COM*:00000001 settings_store_now
                             *COM*:00000000 pers_settings
 

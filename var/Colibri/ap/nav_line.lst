@@ -1094,16 +1094,16 @@
  1100              		.ident	"GCC: (Linaro GCC 4.6-2011.09-1) 4.6.2 20110908 (prerelease)"
 DEFINED SYMBOLS
                             *ABS*:00000000 nav_line.c
-     /tmp/ccucAP89.s:13     .text.nav_line_init:00000000 $a
-     /tmp/ccucAP89.s:16     .text.nav_line_init:00000000 nav_line_init
-     /tmp/ccucAP89.s:28     .text.nav_line_init:00000010 $d
-     /tmp/ccucAP89.s:43     .text.nav_line:00000000 $a
-     /tmp/ccucAP89.s:46     .text.nav_line:00000000 nav_line
-     /tmp/ccucAP89.s:195    .text.nav_line:00000240 $d
-     /tmp/ccucAP89.s:204    .text.nav_line:00000260 $a
-     /tmp/ccucAP89.s:1070   .text.nav_line:00000ea4 $d
-     /tmp/ccucAP89.s:1098   .bss.line_status:00000000 line_status
-     /tmp/ccucAP89.s:1099   .bss.line_status:00000000 $d
+     /tmp/cc5vECiw.s:13     .text.nav_line_init:00000000 $a
+     /tmp/cc5vECiw.s:16     .text.nav_line_init:00000000 nav_line_init
+     /tmp/cc5vECiw.s:28     .text.nav_line_init:00000010 $d
+     /tmp/cc5vECiw.s:43     .text.nav_line:00000000 $a
+     /tmp/cc5vECiw.s:46     .text.nav_line:00000000 nav_line
+     /tmp/cc5vECiw.s:195    .text.nav_line:00000240 $d
+     /tmp/cc5vECiw.s:204    .text.nav_line:00000260 $a
+     /tmp/cc5vECiw.s:1070   .text.nav_line:00000ea4 $d
+     /tmp/cc5vECiw.s:1098   .bss.line_status:00000000 line_status
+     /tmp/cc5vECiw.s:1099   .bss.line_status:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_fsub

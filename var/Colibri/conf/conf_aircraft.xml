@@ -22,11 +22,11 @@
         <exceptions/>
         <blocks>
           <block name="Servo Right avant">
-            <set var="radio_control.values[1]" value="9600*0.8"/>
+            <set var="radio_control.values[1]" value="9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Servo Right arriere">
-            <set var="radio_control.values[1]" value="-9600*0.8"/>
+            <set var="radio_control.values[1]" value="-9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Servo Right centre">
@@ -34,11 +34,11 @@
             <while cond="TRUE"/>
           </block>
           <block name="Servo Left avant">
-            <set var="radio_control.values[2]" value="-9600*0.8"/>
+            <set var="radio_control.values[2]" value="-9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Servo Left arriere">
-            <set var="radio_control.values[2]" value="9600*0.8"/>
+            <set var="radio_control.values[2]" value="9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Servo Left centre">
@@ -50,31 +50,31 @@
             <while cond="TRUE"/>
           </block>
           <block name="Servo Roll droit">
-            <set var="radio_control.values[3]" value="9600*0.8"/>
+            <set var="radio_control.values[3]" value="9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Servo Roll gauche">
-            <set var="radio_control.values[3]" value="-9600*0.8"/>
+            <set var="radio_control.values[3]" value="-9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Pitch avant">
-            <set var="radio_control.values[2]" value="-9600*0.8"/>
-            <set var="radio_control.values[1]" value="9600*0.8"/>
+            <set var="radio_control.values[2]" value="-9600*0.6"/>
+            <set var="radio_control.values[1]" value="9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Pitch arriere">
-            <set var="radio_control.values[2]" value="9600*0.8"/>
-            <set var="radio_control.values[1]" value="-9600*0.8"/>
+            <set var="radio_control.values[2]" value="9600*0.6"/>
+            <set var="radio_control.values[1]" value="-9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Yaw droite">
-            <set var="radio_control.values[2]" value="9600*0.8"/>
-            <set var="radio_control.values[1]" value="9600*0.8"/>
+            <set var="radio_control.values[2]" value="9600*0.6"/>
+            <set var="radio_control.values[1]" value="9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="Yaw gauche">
-            <set var="radio_control.values[2]" value="-9600*0.8"/>
-            <set var="radio_control.values[1]" value="-9600*0.8"/>
+            <set var="radio_control.values[2]" value="-9600*0.6"/>
+            <set var="radio_control.values[1]" value="-9600*0.6"/>
             <while cond="TRUE"/>
           </block>
           <block name="initialisation">

@@ -45,7 +45,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[1] = (9600*0.800000);
+        radio_control.values[1] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Label(while_1)
@@ -66,7 +66,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[1] = (-(9600)*0.800000);
+        radio_control.values[1] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Label(while_3)
@@ -108,7 +108,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (-(9600)*0.800000);
+        radio_control.values[2] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Label(while_7)
@@ -129,7 +129,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (9600*0.800000);
+        radio_control.values[2] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Label(while_9)
@@ -192,7 +192,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[3] = (9600*0.800000);
+        radio_control.values[3] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Label(while_15)
@@ -213,7 +213,7 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[3] = (-(9600)*0.800000);
+        radio_control.values[3] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Label(while_17)
@@ -234,11 +234,11 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (-(9600)*0.800000);
+        radio_control.values[2] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[1] = (9600*0.800000);
+        radio_control.values[1] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Label(while_19)
@@ -259,11 +259,11 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (9600*0.800000);
+        radio_control.values[2] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[1] = (-(9600)*0.800000);
+        radio_control.values[1] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Label(while_21)
@@ -284,11 +284,11 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (9600*0.800000);
+        radio_control.values[2] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[1] = (9600*0.800000);
+        radio_control.values[1] = (9600*0.600000);
         NextStageAndBreak();
         break;
       Label(while_23)
@@ -309,11 +309,11 @@ static inline void auto_nav(void) {
     ; // pre_call
     switch(nav_stage) {
       Stage(0)
-        radio_control.values[2] = (-(9600)*0.800000);
+        radio_control.values[2] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Stage(1)
-        radio_control.values[1] = (-(9600)*0.800000);
+        radio_control.values[1] = (-(9600)*0.600000);
         NextStageAndBreak();
         break;
       Label(while_25)
